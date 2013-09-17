@@ -1,0 +1,8 @@
+alias rmi="rm -i"
+alias mvi="mv -i"
+alias cpi="cp -i"
+alias grep="grep --color -n"
+alias ll="ls -lh"
+alias ev="evince"
+alias xo="xdg-open"
+alias df="df -Th"
