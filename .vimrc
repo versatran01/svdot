@@ -76,15 +76,12 @@ if exists('$TMUX')  " Support resizing in tmux
 endif
 
 " Key mapping
-map <C-n> :NERDTreeToggle<CR>
+let mapleader = ','
+map <leader>dt :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Move through wrapped lines
 map  <silent> <Up>   gk
-imap <silent> <Up>   <C-o>gk
 map  <silent> <Down> gj
-imap <silent> <Down> <C-o>gj
 map  <silent> <home> g<home>
-imap <silent> <home> <C-o>g<home>
 map  <silent> <End>  g<End>
-imap <silent> <End>  <C-o>g<End>
