@@ -77,6 +77,7 @@ endif
 
 " Key mapping
 map <C-n> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Move through wrapped lines
 map  <silent> <Up>   gk
