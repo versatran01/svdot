@@ -55,7 +55,7 @@ set shiftwidth=2
 set softtabstop=2
 " set spell
 set tabstop=2
-set textwidth=80            " Text wrapping
+set textwidth=500           " Text wrapping
 set ttyfast
 set wildignore=*.o,*~,*.pyc " Ignore compiled files
 set wildmenu                " Show a navigable menu for tab completion
