@@ -117,11 +117,15 @@ export PS1="\e[1;33m[\u@\h:\w] \e[m"
 source /usr/share/autojump/autojump.sh
 
 # ros
-source /opt/ros/fuerte/setup.bash
+if [ -f /opt/ros/fuerte/setup.bash ]; then
+  source /opt/ros/fuerte/setup.bash
+fi
+
 # trooper
 source ~/trooper/setup.sh
 source ~/Documents/trooper_command.sh
+
 # april tags
-export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/april/java/april.jar:./
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/april/lib
+export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
