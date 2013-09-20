@@ -1,4 +1,4 @@
-execute pathogen#infect()
+execute pathogen#infect('/.vim/bundle/{}')
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
@@ -18,7 +18,6 @@ set history=700
 filetype plugin on
 filetype indent on
 syntax enable
-colorscheme desert
 set autoindent
 set autoread                " reload files when changed on disk
 set background=dark
