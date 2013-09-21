@@ -1,4 +1,4 @@
-execute pathogen#infect('/.vim/bundle/{}')
+execute pathogen#infect('~/.vim/bundle/{}')
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
@@ -59,6 +59,7 @@ set ttyfast
 set wildignore=*.o,*~,*.pyc " Ignore compiled files
 set wildmenu                " Show a navigable menu for tab completion
 set wildmode=longest,list,full
+set whichwrap+=<,>,[,]
 set wrap
 
 if !&scrolloff
