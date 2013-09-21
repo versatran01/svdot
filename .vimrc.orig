@@ -18,6 +18,10 @@ set history=700
 filetype plugin on
 filetype indent on
 syntax enable
+<<<<<<< HEAD
+"colorscheme desert
+=======
+>>>>>>> d24d78150e36d12fdcda177ceaa742632bc83c52
 set autoindent
 set autoread                " reload files when changed on disk
 set background=dark
