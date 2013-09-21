@@ -60,7 +60,7 @@ set ttyfast
 set wildignore=*.o,*~,*.pyc " Ignore compiled files
 set wildmenu                " Show a navigable menu for tab completion
 set wildmode=longest,list,full
-set whichwrap+=<,>,[,]
+set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
 set wrap
 if !&scrolloff
   set scrolloff=3
