@@ -18,13 +18,14 @@ set history=700
 filetype plugin on
 filetype indent on
 syntax enable
-colorscheme desert
+"colorscheme desert
 set autoindent
 set autoread                " reload files when changed on disk
 set background=dark
 set backspace=indent,eol,start
 set cmdheight=2             " Height of the command bar
 set cindent                 " C-style indentation
+set clipboard=unnamed
 set cursorcolumn            " Highlight current column
 set cursorline              " Highlight current and column
 set encoding=utf8           " Set utf-8 as standard encoding
@@ -61,7 +62,6 @@ set wildignore=*.o,*~,*.pyc " Ignore compiled files
 set wildmenu                " Show a navigable menu for tab completion
 set wildmode=longest,list,full
 set wrap
-
 if !&scrolloff
   set scrolloff=3
 endif
