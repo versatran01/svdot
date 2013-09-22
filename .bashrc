@@ -106,6 +106,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+export GREP_OPTIONS='--color=auto'
 # colorgcc
 if [ -d /usr/lib/colorgcc/bin ]; then
   export PATH="/usr/lib/colorgcc/bin:$PATH"
@@ -129,3 +131,5 @@ source ~/Documents/trooper_command.sh
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
+
+export INPUTRC=~/.inputrc

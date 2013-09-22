@@ -1,0 +1,6 @@
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+set match-hidden-files off
+set page-completions off
+set completion-query-items 350
+set show-all-if-ambiguous on
