@@ -114,7 +114,7 @@ if [ -d /usr/lib/colorgcc/bin ]; then
 fi
 
 # change PS1 color
-export PS1="\e[1;33m[\u@\h:\w] \e[m"
+export PS1="\e[1;33m[\u@\h:\e[m\e[1;35m\w] \e[m"
 # autojump
 source /usr/share/autojump/autojump.sh
 
