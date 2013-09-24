@@ -37,13 +37,12 @@ set laststatus=2            " Always show the status line
 "set list                   " Show trailing whitespace
 set lazyredraw
 set linebreak
-set lbr
 set magic                   " For regular expressions turn magic on
 set mat=2                   " How many tenths of a second to blink when matching brackets
 set nobackup
-set noswapfile
-set nowb
-set nolist
+set noswapfile              
+set nowb                    " Prevents automatic write backup before overwriting file
+set nolist                  " List disables linebreak
 set number                  " Display line numbers
 set ruler                   " Show current position
 set smarttab                " Be smart when using tabs
@@ -62,6 +61,9 @@ set wildmenu                " Show a navigable menu for tab completion
 set wildmode=longest,list,full
 set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
 set wrap
+
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4
 if !&scrolloff
   set scrolloff=3
 endif
