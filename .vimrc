@@ -24,8 +24,11 @@ set background=dark
 set backspace=indent,eol,start
 set cmdheight=2             " Height of the command bar
 set cindent                 " C-style indentation
-set clipboard=unnamed
+"set clipboard=unnamed
+set colorcolumn=85
+highlight ColorColumn ctermbg=darkgray
 set cursorcolumn            " Highlight current column
+highlight CursorColumn ctermbg=darkgray ctermfg=none
 set cursorline              " Highlight current and column
 set encoding=utf8           " Set utf-8 as standard encoding
 set expandtab               " Use spaces instead of tabs
