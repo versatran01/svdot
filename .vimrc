@@ -28,7 +28,7 @@ set cindent                 " C-style indentation
 "set colorcolumn=85
 "highlight ColorColumn ctermbg=darkgray
 set cursorcolumn            " Highlight current column
-"highlight CursorColumn ctermbg=darkgray ctermfg=none
+highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set cursorline              " Highlight current and column
 set encoding=utf8           " Set utf-8 as standard encoding
 set expandtab               " Use spaces instead of tabs
