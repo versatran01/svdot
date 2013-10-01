@@ -1,3 +1,7 @@
+#"\e[1;3A": history-search-backward
+#"\e[1;3B": history-search-backward
+#"\e[1;3D": backward-word
+#"\e[1;3C": forward-word
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
 set match-hidden-files off
