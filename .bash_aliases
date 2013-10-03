@@ -11,6 +11,7 @@ alias df="df -Th"
 alias matlabnd="matlab -nodesktop -nosplash"
 alias eniac="ssh quchao@eniac.seas.upenn.edu"
 alias biglab="ssh quchao@biglab.seas.upenn.edu"
+alias mrsl="ssh chao@192.168.129.221"
 alias rdesk="rdesktop vlab-rdp.seas.upenn.edu"
 #cd
 alias cd..="cd .."
