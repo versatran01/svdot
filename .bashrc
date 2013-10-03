@@ -115,7 +115,8 @@ fi
 
 export PS1="\e[1;33m[\u@\h:\e[m\e[1;35m\w] \e[m"
 # autojump
-source /usr/share/autojump/autojump.sh
+#source /usr/share/autojump/autojump.sh
+[[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 
 # ros
 if [ -f /opt/ros/fuerte/setup.bash ]; then
