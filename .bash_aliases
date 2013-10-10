@@ -20,6 +20,7 @@ alias cd....="cd ../../.."
 alias cd.....="cd ../../../.."
 alias cd......="cd ../../../../.."
 #nanoplus
+alias nanoplus20="ssh root@192.168.129.77"
 alias nanoplus21="ssh root@192.168.129.78"
 alias uri_nanoplus="export ROS_MASTER_URI=http://192.168.129.77:11311; env | grep ROS_MASTER_URI"
 alias uri_local="export ROS_MASTER_URI=http://localhost:11311; env | grep ROS_MASTER_URI"
