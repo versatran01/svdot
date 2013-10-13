@@ -125,19 +125,27 @@ alias java='java -ea -server'
 
 export INPUTRC=~/.inputrc
 
-MODE=1
+export MODE=0
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
 NC='\e[0m' 
-if [ $MODE == 1 ]; then
+if [ $MODE == 0 ]; then
+  if [ -f /opt/ros/groovy/setup.bash ]; then
+    source /opt/ros/groovy/setup.bash
+  else
+    echo "cannot find ros_groovy"
+  fi
+  MODE_STRING="${GREEN}** default **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
+  echo -e $MODE_STRING
+elif [ $MODE == 1 ]; then
   if [ -f /opt/ros/groovy/setup.bash ]; then
     source /opt/ros/groovy/setup.bash
   else
     echo "cannot find ros_groovy"
   fi
   export ROS_MASTER_URI=http://192.168.129.77:11311
-  ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}** nanoplus20 **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
   #echo -e "${GREEN}*** nanoplus20 ***${NC}"
