@@ -24,7 +24,7 @@ set background=dark
 set backspace=indent,eol,start
 set cmdheight=2             " Height of the command bar
 set cindent                 " C-style indentation
-"set clipboard=unnamed
+set clipboard=unnamedplus
 "set colorcolumn=85
 "highlight ColorColumn ctermbg=darkgray
 set cursorcolumn            " Highlight current column
