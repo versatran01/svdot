@@ -13,6 +13,8 @@ alias eniac="ssh -X quchao@eniac.seas.upenn.edu"
 alias biglab="ssh -X quchao@biglab.seas.upenn.edu"
 alias mrsl="ssh -X chao@192.168.129.221"
 alias rdesk="rdesktop vlab-rdp.seas.upenn.edu"
+alias sbrc="source ~/.bashrc"
+alias vbrc="vim ~/.bashrc"
 #cd
 alias cd..="cd .."
 alias cd...="cd ../.."
