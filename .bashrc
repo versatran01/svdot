@@ -13,8 +13,9 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000 
+HISTSIZE=10000
+HISTFILESIZE=20000
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -39,8 +40,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
+force_color_prompt=yes
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -53,7 +53,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -112,19 +112,11 @@ if [ -d /usr/lib/colorgcc/bin ]; then
   export PATH="/usr/lib/colorgcc/bin:$PATH"
 fi
 
-export PS1="\e[1;33m[\u@\h:\e[m\e[1;35m\w] \e[m"
+# customize prompt color
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[01;35m\]\w]\[\033[00m\]\$ '
 # autojump
-#source /usr/share/autojump/autojump.sh
-[[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
-
-# ros
-if [ -f /opt/ros/fuerte/setup.bash ]; then
-  source /opt/ros/fuerte/setup.bash
-fi
-
-# trooper
-#source ~/trooper/setup.sh
-#source ~/Documents/trooper_command.sh
+source /usr/share/autojump/autojump.sh
+#[[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 
 # april tags
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
@@ -132,3 +124,25 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
 
 export INPUTRC=~/.inputrc
+
+MODE=1
+DELIM=" | "
+RED='\e[1;31m'
+GREEN='\e[1;32m'
+NC='\e[0m' 
+if [ $MODE == 1 ]; then
+  if [ -f /opt/ros/groovy/setup.bash ]; then
+    source /opt/ros/groovy/setup.bash
+  else
+    echo "cannot find ros_groovy"
+  fi
+  export ROS_MASTER_URI=http://192.168.129.77:11311
+  ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
+  MODE_STRING="${GREEN}** nanoplus20 **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
+  echo -e $MODE_STRING
+  #echo -e "${GREEN}*** nanoplus20 ***${NC}"
+  #echo -e ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}
+fi
+# trooper
+#source ~/trooper/setup.sh
+#source ~/Documents/trooper_command.sh

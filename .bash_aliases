@@ -22,11 +22,9 @@ alias cd......="cd ../../../../.."
 #nanoplus
 alias nanoplus20="ssh root@192.168.129.77"
 alias nanoplus21="ssh root@192.168.129.78"
-alias uri_nanoplus="export ROS_MASTER_URI=http://192.168.129.77:11311; env | grep ROS_MASTER_URI"
-alias uri_local="export ROS_MASTER_URI=http://localhost:11311; env | grep ROS_MASTER_URI"
+alias uri_nanoplus='export ROS_MASTER_URI=http://192.168.129.77:11311;echo $ROS_MASTER_URI'
+alias uri_local='export ROS_MASTER_URI=http://localhost:11311;echo $ROS_MASTER_URI'
 alias ros_var="env | grep ROS_"
-alias ros_hydro="source /opt/ros/hydro/setup.bash; ros_var"
-alias ros_groovy="source /opt/ros/groovy/setup.bash; ros_var"
-alias ros_fuerte="source /opt/ros/fuerte/setup.bash; ros_var"
-alias ros_nanoplus="uri_nanoplus; ros_groovy"
-alias ros_trooper="source ~/trooper/setup.sh; uri_local; ros_var"
+alias ros_hydro="source /opt/ros/hydro/setup.bash"
+alias ros_groovy="source /opt/ros/groovy/setup.bash"
+alias ros_path="ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros"
