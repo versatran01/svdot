@@ -125,7 +125,7 @@ alias java='java -ea -server'
 
 export INPUTRC=~/.inputrc
 
-MODE=0
+MODE=1
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
