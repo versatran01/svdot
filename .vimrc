@@ -9,7 +9,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
-
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 syntax on
 
 " => General
@@ -30,6 +33,7 @@ set clipboard=unnamedplus
 set cursorcolumn            " Highlight current column
 highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set cursorline              " Highlight current and column
+"highlight CursorLine ctermbg=darkmagenta ctermfg=none
 set encoding=utf8           " Set utf-8 as standard encoding
 set expandtab               " Use spaces instead of tabs
 set ffs=unix,dos,mac
