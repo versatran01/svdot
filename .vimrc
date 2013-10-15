@@ -9,10 +9,21 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'garbas/vim-snipmate'
+Bundle 'tpope/vim-commentary'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-surround'
+Bundle 'honza/vim-snippets'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'slim-template/vim-slim'
+Bundle 'vim-scripts/Align'
+Bundle 'tpope/vim-repeat'
+"Bundle "taketwo/vim-ros"
 syntax on
 
 " => General
