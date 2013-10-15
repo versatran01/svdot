@@ -1,6 +1,5 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc) # for examples
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -115,8 +114,11 @@ fi
 # customize prompt color
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[01;35m\]\w]\[\033[00m\]\$ '
 # autojump
-source /usr/share/autojump/autojump.sh
-#[[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+if [ -f /usr/share/autojump/autojump.sh ]; then
+  source /usr/share/autojump/autojump.sh
+else
+  [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+fi
 
 # april tags
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
@@ -125,7 +127,8 @@ alias java='java -ea -server'
 
 export INPUTRC=~/.inputrc
 
-MODE=1
+#Mode switching
+MODE=0
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
@@ -149,9 +152,8 @@ elif [ $MODE == 1 ]; then
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}** nanoplus20 **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
-  #echo -e "${GREEN}*** nanoplus20 ***${NC}"
-  #echo -e ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}
 fi
+
 # trooper
 #source ~/trooper/setup.sh
 #source ~/Documents/trooper_command.sh
