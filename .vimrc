@@ -24,6 +24,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'vim-scripts/Align'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-endwise'
+Bundle 'Lokaltog/vim-powerline'
 "Bundle "taketwo/vim-ros"
 syntax on
 
@@ -111,7 +112,6 @@ let mapleader = ','
 nmap <leader>d :NERDTree<CR>
 nmap <leader>dt :NERDTreeToggle<CR>
 nmap <leader>df :NERDTreeFind<CR>
-"nmap <F8> :TagbarToggle<CR>
 
 " Move through wrapped lines
 map  <silent> <Up>   gk
