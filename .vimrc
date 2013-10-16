@@ -23,6 +23,7 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'slim-template/vim-slim'
 Bundle 'vim-scripts/Align'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-endwise'
 "Bundle "taketwo/vim-ros"
 syntax on
 
@@ -107,8 +108,10 @@ au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
 " Key mapping
 let mapleader = ','
-map <leader>dt :NERDTreeToggle<CR>
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>d :NERDTree<CR>
+nmap <leader>dt :NERDTreeToggle<CR>
+nmap <leader>df :NERDTreeFind<CR>
+"nmap <F8> :TagbarToggle<CR>
 
 " Move through wrapped lines
 map  <silent> <Up>   gk
