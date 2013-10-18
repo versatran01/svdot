@@ -22,9 +22,11 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'slim-template/vim-slim'
 Bundle 'vim-scripts/Align'
+Bundle 'vim-scripts/a.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-endwise'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'ervandew/supertab'
 "Bundle "taketwo/vim-ros"
 syntax on
 
@@ -112,6 +114,10 @@ let mapleader = ','
 nmap <leader>d :NERDTree<CR>
 nmap <leader>dt :NERDTreeToggle<CR>
 nmap <leader>df :NERDTreeFind<CR>
+nmap <leader>tb :TagbarToggle<CR>
+nmap <leader>a :A<CR>
+nmap <leader>as :AS<CR>
+nmap <leader>av :AV<CR>
 
 " Move through wrapped lines
 map  <silent> <Up>   gk
