@@ -24,9 +24,12 @@ Bundle 'slim-template/vim-slim'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/a.vim'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
+Bundle 'tsaleh/vim-matchit'
 "Bundle "taketwo/vim-ros"
 syntax on
 
