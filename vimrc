@@ -54,7 +54,7 @@ set cursorline              " Highlight current and column
 "highlight CursorLine ctermbg=darkmagenta ctermfg=none
 set encoding=utf8           " Set utf-8 as standard encoding
 set expandtab               " Use spaces instead of tabs
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 set hlsearch                " Highlight search results
 set ignorecase              " Ignore case when searching
 set incsearch               " Search as you type
@@ -66,7 +66,7 @@ set magic                   " For regular expressions turn magic on
 set mat=2                   " How many tenths of a second to blink when matching brackets
 set nobackup
 set noswapfile              
-set nowb                    " Prevents automatic write backup before overwriting file
+set nowritebackup           " Prevents automatic write backup before overwriting file
 set nolist                  " List disables linebreak
 set number                  " Display line numbers
 set ruler                   " Show current position
@@ -110,8 +110,10 @@ endif
   "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 "endif
+
 au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
+
 " Key mapping
 let mapleader = ','
 nmap <leader>d :NERDTree<CR>
