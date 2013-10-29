@@ -41,6 +41,7 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 alias v='f -e vim'       # quick opening files with vim
 alias m='f -e mplayer'   # quick opening files with mplayer
 alias o='a -e xdg-open'  # quick opening files with xdg-open
+alias p='f -e evince'    # quick opening pdf files with evince
 
 #cd
 alias cd..='cd ..'
