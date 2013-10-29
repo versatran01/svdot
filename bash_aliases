@@ -26,6 +26,7 @@ alias sbrc='source ~/.bashrc'
 alias vbrc='vim ~/.bashrc'
 alias vvrc='vim ~/.vimrc'
 alias vbal='vim ~/.bash_aliases'
+alias vtmc='vim ~/.tmux.conf'
 
 #cd
 alias cd..='cd ..'
