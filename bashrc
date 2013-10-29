@@ -119,6 +119,7 @@ if [ -f /usr/share/autojump/autojump.sh ]; then
 else
   [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 fi
+eval "$(fasd --init auto)"
 
 # april tags
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
@@ -128,7 +129,7 @@ alias java='java -ea -server'
 export INPUTRC=~/.inputrc
 
 #Mode switching
-MODE=1
+MODE=0
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
