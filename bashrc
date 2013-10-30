@@ -8,8 +8,7 @@
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it
-shopt -s histappend
+# append to the history file, don't overwrite it shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
@@ -106,6 +105,11 @@ fi
 
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 export GREP_OPTIONS='--color=auto'
+
+# improve history
+export HISTCONTROL="ignoredups"
+export HISTIGNORE="&:ls:[bf]g:exit"
+
 # colorgcc
 if [ -d /usr/lib/colorgcc/bin ]; then
   export PATH="/usr/lib/colorgcc/bin:$PATH"
@@ -158,3 +162,11 @@ fi
 # trooper
 #source ~/trooper/setup.sh
 #source ~/Documents/trooper_command.sh
+
+# Colored man page
+export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
+export LESS_TERMCAP_me=$'\E[0m' # end mode
+export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m' # begin standout-mode - info box export LESS_TERMCAP_ue=$'\E[0m' # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline

@@ -1,6 +1,7 @@
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
 #set editing-mode vi
+
 # Completion Options
 set page-completions on
 set completion-ignore-case on
