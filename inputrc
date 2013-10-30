@@ -1,11 +1,30 @@
-#"\e[1;3A": history-search-backward
-#"\e[1;3B": history-search-backward
-#"\e[1;3D": backward-word
-#"\e[1;3C": forward-word
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
-set match-hidden-files off
-set page-completions off
+#set editing-mode vi
+# Completion Options
+set page-completions on
+set completion-ignore-case on
 set completion-query-items 350
 set show-all-if-ambiguous on
-set completion-ignore-case on
+set show-all-if-unmodified on
+set visible-stats on
+set match-hidden-files off
+
+# Useful stuff for UTF-8
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+$if mode=vi
+    set keymap vi-command
+    "gg": beginning-of-history
+    "G": end-of-history
+
+    set keymap vi-insert
+    "\C-l": clear-screen
+    "\C-w": backward-kill-word
+    # auto-complete from the history
+    "\C-p": history-search-backward
+    "\C-n": history-search-forward
+$endif

@@ -27,6 +27,7 @@ alias sbrc='source ~/.bashrc'
 alias vbrc='vim ~/.bashrc'
 alias vvrc='vim ~/.vimrc'
 alias vbal='vim ~/.bash_aliases'
+alias virc='vim ~/.inputrc'
 alias vtmc='vim ~/.tmux.conf'
 
 # fasd
