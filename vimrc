@@ -31,85 +31,92 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 "Bundle "taketwo/vim-ros"
+
 syntax on
-
-" => General
-set history=700
-
 filetype plugin on
 filetype indent on
 syntax enable
-set autoindent
+
+" => General
 set autoread                " reload files when changed on disk
-set background=dark
+set encoding=utf8           " Set utf-8 as standard encoding
 set backspace=indent,eol,start
-set cmdheight=2             " Height of the command bar
-set cindent                 " C-style indentation
 set clipboard=unnamedplus
-"set colorcolumn=85
-"highlight ColorColumn ctermbg=darkgray
+set fileformats=unix,dos,mac
+set history=1000
+set ttyfast
+
+" => Beautiful
+set background=dark
 set cursorcolumn            " Highlight current column
 highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set cursorline              " Highlight current and column
-"highlight CursorLine ctermbg=darkmagenta ctermfg=none
-set encoding=utf8           " Set utf-8 as standard encoding
+set number                  " Display line numbers
+set ruler                   " Show current position
+set cmdheight=2             " Height of the command bar
+set laststatus=2            " Always show the status line
+set showcmd                 " Show command
+set showmode
+set showmatch               " Show matching brackets
+set scrolloff=3
+set sidescrolloff=5
+set display+=lastline
+set visualbell
+
+" => Indent
+set autoindent
+set cindent                 " C-style indentation
+set smartindent             " Smart indent 
 set expandtab               " Use spaces instead of tabs
-set fileformats=unix,dos,mac
+set shiftwidth=2
+set softtabstop=2
+set smarttab                " Be smart when using tabs
+set tabstop=2
+set textwidth=500           " Text wrapping
+set wrap
+set linebreak
+set nolist                  " List disables linebreak
+set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
+
+" => Search
 set hlsearch                " Highlight search results
+set smartcase               " Case insensitive search
 set ignorecase              " Ignore case when searching
 set incsearch               " Search as you type
-set laststatus=2            " Always show the status line
-"set list                   " Show trailing whitespace
-set lazyredraw
-set linebreak
-set magic                   " For regular expressions turn magic on
-set mat=2                   " How many tenths of a second to blink when matching brackets
+
+" => No Swap
 set nobackup
 set noswapfile              
 set nowritebackup           " Prevents automatic write backup before overwriting file
-set nolist                  " List disables linebreak
-set number                  " Display line numbers
-set ruler                   " Show current position
-set smarttab                " Be smart when using tabs
-set smartcase               " Case insensitive search
-set smartindent             " Smart indent 
-set showcmd                 
-set showmatch               " Show matching brackets
-set shiftwidth=2
-set softtabstop=2
-" set spell
-set tabstop=2
-set textwidth=500           " Text wrapping
-set ttyfast
-set wildignore=*.o,*~,*.pyc " Ignore compiled files
-set wildmenu                " Show a navigable menu for tab completion
+
+" => Fold
+set foldmethod=indent       " fold based on indent
+set foldnestmax=3           " deepest fold is 3 levels
+set nofoldenable            " dont fold by default
+
+" => Other
+set magic                   " For regular expressions turn magic on
+set mat=2                   " How many tenths of a second to blink when matching brackets
 set wildmode=longest,list,full
-set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
-set wrap
+set wildmenu                " Show a navigable menu for tab completion
+set wildignore=*.o,*~,*.pyc " Ignore compiled files
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4
-if !&scrolloff
-  set scrolloff=3
-endif
-if !&sidescrolloff
-  set sidescrolloff=5
-endif
-set display+=lastline
 
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
     set ttymouse=xterm2
 endif
-
-" Fix Cursor in TMUX
-"if exists('$TMUX')
-  "let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  "let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-"else
-  "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-"endif
 
 au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
