@@ -74,6 +74,7 @@ set smarttab                " Be smart when using tabs
 set tabstop=2
 set textwidth=500           " Text wrapping
 set wrap
+set showbreak=↪\ \          " string to put before wrapped screen lines
 set linebreak
 set nolist                  " List disables linebreak
 set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
@@ -97,6 +98,7 @@ set nofoldenable            " dont fold by default
 " => Other
 set magic                   " For regular expressions turn magic on
 set mat=2                   " How many tenths of a second to blink when matching brackets
+set nostartofline           " keep cursor in same column for long-range motion cmds
 set wildmode=longest,list,full
 set wildmenu                " Show a navigable menu for tab completion
 set wildignore=*.o,*~,*.pyc " Ignore compiled files
