@@ -16,6 +16,8 @@ alias bp='bpython'
 alias pc='pcmanfm'
 alias df='df -Th'
 alias matlabnd='matlab -nodesktop -nosplash'
+alias sup='sudo apt-get update'
+alias sug='sudo apt-get upgrade'
 
 # ssh
 alias eniac='ssh -X quchao@eniac.seas.upenn.edu'

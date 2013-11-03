@@ -61,7 +61,7 @@ set showmatch               " Show matching brackets
 set scrolloff=3
 set sidescrolloff=5
 set display+=lastline
-set visualbell
+"set visualbell
 
 " => Indent
 set autoindent
@@ -98,7 +98,7 @@ set nofoldenable            " dont fold by default
 " => Other
 set magic                   " For regular expressions turn magic on
 set mat=2                   " How many tenths of a second to blink when matching brackets
-set nostartofline           " keep cursor in same column for long-range motion cmds
+"set nostartofline           " keep cursor in same column for long-range motion cmds
 set wildmode=longest,list,full
 set wildmenu                " Show a navigable menu for tab completion
 set wildignore=*.o,*~,*.pyc " Ignore compiled files
