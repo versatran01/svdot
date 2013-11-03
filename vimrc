@@ -27,7 +27,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 "Bundle "taketwo/vim-ros"
@@ -67,7 +68,7 @@ set display+=lastline
 " => Indent
 set autoindent
 set cindent                 " C-style indentation
-set smartindent             " Smart indent 
+set smartindent             " Smart indent
 set expandtab               " Use spaces instead of tabs
 set shiftwidth=2
 set softtabstop=2
