@@ -6,6 +6,7 @@ alias grep='grep --color -n'
 alias ll='ls -lh'
 alias lm='ls -al | more'
 alias eecho='echo -e'
+alias tmux='tmux -2'
 
 # programs
 alias pg='ping www.google.com'
