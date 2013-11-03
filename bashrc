@@ -137,7 +137,7 @@ alias java='java -ea -server'
 export INPUTRC=~/.inputrc
 
 #Mode switching
-MODE=0
+MODE=1
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
@@ -149,6 +149,7 @@ if [ $MODE == 0 ]; then
     echo "cannot find ros_groovy"
   fi
   export ROS_MASTER_URI=http://localhost:11311
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}** default **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
 elif [ $MODE == 1 ]; then
