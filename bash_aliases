@@ -25,7 +25,7 @@ alias biglab='ssh -X quchao@biglab.seas.upenn.edu'
 alias mrsl='ssh -X chao@192.168.129.221'
 alias rdesk='rdesktop vlab-rdp.seas.upenn.edu'
 
-# bash, vim 
+# bash, vim
 alias sbrc='source ~/.bashrc'
 alias vbrc='vim ~/.bashrc'
 alias vvrc='vim ~/.vimrc'

@@ -41,12 +41,12 @@ esac
 force_color_prompt=yes
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+      # We have color support; assume it's compliant with Ecma-48
+      # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+      # a case would tend to support setf rather than setaf.)
+      color_prompt=yes
     else
-	color_prompt=
+      color_prompt=
     fi
 fi
 
@@ -141,7 +141,7 @@ MODE=1
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
-NC='\e[0m' 
+NC='\e[0m'
 if [ $MODE == 0 ]; then
   if [ -f /opt/ros/groovy/setup.bash ]; then
     source /opt/ros/groovy/setup.bash

@@ -89,7 +89,7 @@ set incsearch               " Search as you type
 
 " => No Swap
 set nobackup
-set noswapfile              
+set noswapfile
 set nowritebackup           " Prevents automatic write backup before overwriting file
 
 " => Fold
