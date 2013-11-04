@@ -51,7 +51,7 @@ set ttyfast
 " => Beautiful
 set background=dark
 set cursorcolumn            " Highlight current column
-highlight CursorColumn ctermbg=darkmagenta ctermfg=none
+"highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
