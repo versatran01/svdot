@@ -31,6 +31,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/taglist.vim'
 "Bundle "taketwo/vim-ros"
 
 syntax on
