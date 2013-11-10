@@ -50,6 +50,7 @@ set history=1000
 set ttyfast
 
 " => Beautiful
+set icon
 set background=dark
 set cursorcolumn            " Highlight current column
 "highlight CursorColumn ctermbg=darkmagenta ctermfg=none
@@ -78,6 +79,8 @@ set tabstop=2
 set textwidth=500           " Text wrapping
 set wrap
 set showbreak=↪\ \          " string to put before wrapped screen lines
+"set list
+set listchars=tab:▸\ ,trail:▫
 set linebreak
 set nolist                  " List disables linebreak
 set whichwrap+=<,>,[,]      " Make arrow keys wrap lines
@@ -141,3 +144,12 @@ map  <silent> <Up>   gk
 map  <silent> <Down> gj
 map  <silent> <home> g<home>
 map  <silent> <End>  g<End>
+
+" Move through split windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Reload vimrc
+map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
