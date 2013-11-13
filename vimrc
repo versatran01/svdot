@@ -11,16 +11,16 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+Bundle 'tpope/vim-commentary'
+Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'garbas/vim-snipmate'
-Bundle 'tpope/vim-commentary'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-surround'
+Bundle 'slim-template/vim-slim'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'honza/vim-snippets'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
-Bundle 'slim-template/vim-slim'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/a.vim'
 Bundle 'tpope/vim-repeat'
@@ -32,6 +32,7 @@ Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'matze/vim-move'
 "Bundle "taketwo/vim-ros"
 
 syntax on
@@ -153,3 +154,12 @@ map <C-l> <C-w>l
 
 " Reload vimrc
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" Moving lines
+"let g:move_key_modifier = 'Esc'
+nnoremap <Esc>j :m .+1<CR>==
+nnoremap <Esc>k :m .-2<CR>==
+inoremap <Esc>j <Esc>:m .+1<CR>==gi
+inoremap <Esc>k <Esc>:m .-2<CR>==gi
+vnoremap <Esc>j :m '>+1<CR>gv=gv
+vnoremap <Esc>k :m '<-2<CR>gv=gv
