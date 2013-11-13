@@ -157,9 +157,9 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 
 " Moving lines
 "let g:move_key_modifier = 'Esc'
-nnoremap <Esc>j :m .+1<CR>==
-nnoremap <Esc>k :m .-2<CR>==
-inoremap <Esc>j <Esc>:m .+1<CR>==gi
-inoremap <Esc>k <Esc>:m .-2<CR>==gi
-vnoremap <Esc>j :m '>+1<CR>gv=gv
-vnoremap <Esc>k :m '<-2<CR>gv=gv
+nnoremap <Esc><Down> :m .+1<CR>==
+nnoremap <Esc><Up> :m .-2<CR>==
+inoremap <Esc><Down> <Esc>:m .+1<CR>==gi
+inoremap <Esc><Up> <Esc>:m .-2<CR>==gi
+vnoremap <Esc><Down> :m '>+1<CR>gv=gv
+vnoremap <Esc><Up> :m '<-2<CR>gv=gv
