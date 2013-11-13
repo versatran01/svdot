@@ -7,6 +7,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -27,13 +28,12 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
-"Bundle 'Lokaltog/vim-powerline'
 Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'matze/vim-move'
-"Bundle "taketwo/vim-ros"
+Bundle 'wincent/Command-T'
 
 syntax on
 filetype plugin on
@@ -48,6 +48,7 @@ set backspace=indent,eol,start
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
 set history=1000
+set hidden
 set ttyfast
 
 " => Beautiful
@@ -118,13 +119,14 @@ set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4
 
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
-    set ttymouse=xterm2
+  set ttymouse=xterm2
 endif
 
 au BufNewFile,BufRead *.launch setf xml
@@ -141,8 +143,8 @@ nmap <leader>as :AS<CR>
 nmap <leader>av :AV<CR>
 
 " Move through wrapped lines
-map  <silent> <Up>   gk
-map  <silent> <Down> gj
+nnoremap  <silent> j gj
+nnoremap  <silent> k gk
 map  <silent> <home> g<home>
 map  <silent> <End>  g<End>
 
@@ -152,14 +154,17 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Reload vimrc
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
 " Moving lines
-"let g:move_key_modifier = 'Esc'
 nnoremap <Esc><Down> :m .+1<CR>==
 nnoremap <Esc><Up> :m .-2<CR>==
 inoremap <Esc><Down> <Esc>:m .+1<CR>==gi
 inoremap <Esc><Up> <Esc>:m .-2<CR>==gi
 vnoremap <Esc><Down> :m '>+1<CR>gv=gv
 vnoremap <Esc><Up> :m '<-2<CR>gv=gv
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e ~/.vimrc<CR>
+nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+set pastetoggle=<F2>
+nmap <silent> ,/ :nohlsearch<CR>
