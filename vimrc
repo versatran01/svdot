@@ -168,3 +168,5 @@ nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vim
 
 set pastetoggle=<F2>
 nmap <silent> ,/ :nohlsearch<CR>
+let g:ctrlp_map = '<C-T>'
+let g:ctrlp_cmd = 'CtrlP'
