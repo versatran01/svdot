@@ -34,10 +34,19 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 " Easymotion
+" <leader><leader>w,b,e to jump
+" <leader><leader>f{char} to search
 Bundle 'Lokaltog/vim-easymotion'
-let g:EasyMotion_leader_key = 'f'
 
+" Expand region
+" Press + to expand the visual selection and _ to shrink it.
+Bundle 'terryma/vim-expand-region'
+
+" Multiple cursors
+" Ctrl-n to select, again to search more
+" Ctrl-p redo, Ctrl-x skip
 Bundle 'terryma/vim-multiple-cursors'
+
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
