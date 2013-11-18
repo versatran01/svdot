@@ -3,18 +3,46 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
 
+" Key mapping
+let mapleader = ','
+
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+
+" Nerdtree
+Bundle 'scrooloose/nerdtree'
+nmap <leader>d :NERDTree<CR>
+nmap <leader>dt :NERDTreeToggle<CR>
+nmap <leader>df :NERDTreeFind<CR>
+
+" Alternative
+Bundle 'vim-scripts/a.vim'
+nmap <leader>a :A<CR>
+nmap <leader>as :AS<CR>
+nmap <leader>av :AV<CR>
+
+" CtrlP
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<C-T>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" Airline
+Bundle 'bling/vim-airline'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
+" Easymotion
 Bundle 'Lokaltog/vim-easymotion'
+let g:EasyMotion_leader_key = 'f'
+
+Bundle 'terryma/vim-multiple-cursors'
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'garbas/vim-snipmate'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
@@ -24,12 +52,10 @@ Bundle 'honza/vim-snippets'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'vim-scripts/Align'
-Bundle 'vim-scripts/a.vim'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
-Bundle 'bling/vim-airline'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'matze/vim-move'
@@ -132,15 +158,6 @@ endif
 au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
 
-" Key mapping
-let mapleader = ','
-nmap <leader>d :NERDTree<CR>
-nmap <leader>dt :NERDTreeToggle<CR>
-nmap <leader>df :NERDTreeFind<CR>
-nmap <leader>tb :TagbarToggle<CR>
-nmap <leader>a :A<CR>
-nmap <leader>as :AS<CR>
-nmap <leader>av :AV<CR>
 
 " Move through wrapped lines
 nnoremap  <silent> j gj
@@ -168,5 +185,3 @@ nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vim
 
 set pastetoggle=<F2>
 nmap <silent> ,/ :nohlsearch<CR>
-let g:ctrlp_map = '<C-T>'
-let g:ctrlp_cmd = 'CtrlP'
