@@ -146,6 +146,8 @@ case `hostname` in
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;42m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\w\[\033[00m\]\$ ' ;;
   'plus' )
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;41m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ ' ;;
+  'biglab' )
+    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;43m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ ' ;;
 esac
 
 #Mode switching
