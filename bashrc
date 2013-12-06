@@ -10,8 +10,7 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1) HISTSIZE=10000
 HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
@@ -151,12 +150,12 @@ case `hostname` in
 esac
 
 #Mode switching
-MODE=1
+MODE=2
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
 NC='\e[0m'
-if [ $MODE == 1 ]; then
+if [ $MODE == 0 ]; then
   if [ -f /opt/ros/groovy/setup.bash ]; then
     source /opt/ros/groovy/setup.bash
   else
@@ -176,11 +175,14 @@ elif [ $MODE == 1 ]; then
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}** nanoplus20 **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
+elif [ $MODE == 2 ]; then
+  source ~/trooper/setup.sh
+  source ~/Documents/trooper_command.sh
+  export ROS_MASTER_URI=http://localhost:11311
+  MODE_STRING="${GREEN}** trooper **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC}"
+  echo -e $MODE_STRING
 fi
 
-# trooper
-#source ~/trooper/setup.sh
-#source ~/Documents/trooper_command.sh
 
 # Colored man page
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
