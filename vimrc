@@ -46,21 +46,20 @@ Bundle 'terryma/vim-expand-region'
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
 Bundle 'terryma/vim-multiple-cursors'
-
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'othree/xml.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/Align'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'garbas/vim-snipmate'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
 Bundle 'slim-template/vim-slim'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'honza/vim-snippets'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'vim-scripts/Align'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'mileszs/ack.vim'
@@ -165,6 +164,8 @@ if exists('$TMUX')  " Support resizing in tmux
 endif
 
 au BufNewFile,BufRead *.launch setf xml
+au BufNewFile,BufRead *.sdf setf xml
+au BufNewFile,BufRead *.world setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
 
 

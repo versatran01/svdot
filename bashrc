@@ -118,7 +118,7 @@ fi
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[01;35m\]\w]\[\033[00m\]\$ '
 
 # simple path shortener
-export PROMPT_DIRTRIM=5
+export PROMPT_DIRTRIM=4
 
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
