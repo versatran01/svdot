@@ -195,3 +195,8 @@ nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vim
 
 set pastetoggle=<F2>
 nmap <silent> ,/ :nohlsearch<CR>
+
+" Enable 256
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
