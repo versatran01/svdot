@@ -8,7 +8,8 @@
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# append to the history file, don't overwrite it shopt -s histappend
+# append to the history file, don't overwrite it 
+shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1) 
 HISTSIZE=100000
@@ -103,7 +104,10 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+#PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+
 export GREP_OPTIONS='--color=auto'
 
 # improve history
