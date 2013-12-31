@@ -5,6 +5,6 @@ dotfiles
 INTRODUCTION
 ---
 
-dotfiles for my ubuntu
+dotfiles for my linux
 inspired by Kartik Mohta
 vimrc by Menglong Zhu
