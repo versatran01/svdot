@@ -1,0 +1,6 @@
+#!/bin/sh
+apt-get update
+#vim
+apt-get install vim -y
+#guake
+apt-get install guake -y
