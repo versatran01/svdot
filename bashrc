@@ -146,7 +146,7 @@ case `hostname` in
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;45m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\$ ' ;;
   'chao-t430' )
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;46m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ ' ;;
-  'chao-ubuntu' )
+  'chao-e40' )
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;42m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\w\[\033[00m\]\$ ' ;;
   'plus' )
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;41m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\$ ' ;;
