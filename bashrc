@@ -131,7 +131,7 @@ if [ -f /usr/share/autojump/autojump.sh ]; then
 else
   [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 fi
-eval "$(fasd --init auto)"
+#eval "$(fasd --init auto)"
 
 # april tags
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
@@ -168,20 +168,25 @@ export TERM=xterm-256color
 #0 -- default
 #1 -- nanoplus20
 #2 -- trooper
-MODE=1
+MODE=0
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
 NC='\e[0m'
 if [ $MODE == 0 ]; then
-  if [ -f /opt/ros/groovy/setup.bash ]; then
-    source /opt/ros/groovy/setup.bash
+  if [ -f /opt/ros/hydro/setup.bash ]; then
+    source /opt/ros/hydro/setup.bash
   else
-    echo "cannot find ros_groovy"
+    echo "cannot find ros_hydro"
+    if [ -f /opt/ros/groovy/setup.bash ]; then
+      source /opt/ros/groovy/setup.bash
+    else
+      echo "cannot find ros_groovy"
+    fi
   fi
   export ROS_MASTER_URI=http://localhost:11311
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
-  MODE_STRING="${GREEN}** default **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
+  MODE_STRING="${GREEN}default${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
 elif [ $MODE == 1 ]; then
   if [ -f /opt/ros/groovy/setup.bash ]; then
@@ -191,13 +196,13 @@ elif [ $MODE == 1 ]; then
   fi
   export ROS_MASTER_URI=http://192.168.129.77:11311
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
-  MODE_STRING="${GREEN}** nanoplus20 **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
+  MODE_STRING="${GREEN}nanoplus20${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
 elif [ $MODE == 2 ]; then
   source ~/trooper/setup.sh
   source ~/Documents/trooper_command.sh
   export ROS_MASTER_URI=http://localhost:11311
-  MODE_STRING="${GREEN}** trooper **${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC}"
+  MODE_STRING="${GREEN}trooper${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC}"
   echo -e $MODE_STRING
 fi
 

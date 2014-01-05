@@ -1,15 +1,13 @@
-"execute pathogen#infect('~/.vim/bundle/{}')
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
-
-" Key mapping
-let mapleader = ','
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+
+" Key mapping
+let mapleader = ','
 
 " Nerdtree
 Bundle 'scrooloose/nerdtree'
@@ -46,7 +44,6 @@ Bundle 'terryma/vim-expand-region'
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
 Bundle 'terryma/vim-multiple-cursors'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'othree/xml.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
