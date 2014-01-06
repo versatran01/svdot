@@ -9,6 +9,8 @@ PACKAGES=(git
           cmake
           tmux
           ubuntu-tweak
+          gimp
+          openshot
           autojump
           python-pip
           python-numpy
@@ -24,8 +26,10 @@ PACKAGES=(git
           copyq
           indicator-sensors
           lm-sensors
-          indicator-brightness
           fluxgui
+          indicator-notifications
+          recent-notifications
+          tracker-gui
           )
 
 #Stop if a command ends in an error
@@ -58,6 +62,6 @@ apt-get update --force-yes
 
 #Intall packages
 apt-get -y --force-yes install ${PACKAGES[@]}
-          
+
 #git setup
 git config --global color.ui true
