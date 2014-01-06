@@ -1,13 +1,15 @@
+"execute pathogen#infect('~/.vim/bundle/{}')
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
+
+" Key mapping
+let mapleader = ','
 
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-
-" Key mapping
-let mapleader = ','
 
 " Nerdtree
 Bundle 'scrooloose/nerdtree'
