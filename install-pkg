@@ -17,6 +17,9 @@ PACKAGES=(git
           python-scipy
           python-matplotlib
           openjdk-7-jre
+          openjdk-7-jdk
+          gitg
+          nemiver
           filezilla
           texmaker
           bpython
