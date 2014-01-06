@@ -46,6 +46,7 @@ Bundle 'terryma/vim-expand-region'
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
