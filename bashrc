@@ -122,6 +122,14 @@ fi
 # customize prompt color
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[01;35m\]\w]\[\033[00m\]\$ '
 
+# Functions definitions.
+# You may want to put all your funtions into a separate file like
+# ~/.bash_functions, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
 # simple path shortener
 export PROMPT_DIRTRIM=4
 
@@ -131,7 +139,7 @@ if [ -f /usr/share/autojump/autojump.sh ]; then
 else
   [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 fi
-#eval "$(fasd --init auto)"
+eval "$(fasd --init auto)"
 
 # april tags
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
@@ -205,4 +213,3 @@ elif [ $MODE == 2 ]; then
   MODE_STRING="${GREEN}trooper${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC}"
   echo -e $MODE_STRING
 fi
-

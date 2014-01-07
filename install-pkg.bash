@@ -22,6 +22,7 @@ PACKAGES=(git
           nemiver
           filezilla
           texmaker
+          texmacs
           bpython
           calibre
           indicator-multiload
