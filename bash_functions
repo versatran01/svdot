@@ -47,5 +47,5 @@ function nanoplus()
       ;;
   esac
 
-  ssh "192.168.129.$IP"
+  ssh "root@192.168.129.$IP"
 }
