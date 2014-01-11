@@ -35,7 +35,7 @@ function nanoplus()
 {
   OK=1
   case "$1" in
-    "20") 
+    "20")
       IP=77
       ;;
     "21")
