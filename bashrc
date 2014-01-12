@@ -182,15 +182,10 @@ RED='\e[1;31m'
 GREEN='\e[1;32m'
 NC='\e[0m'
 if [ $MODE == 0 ]; then
-  if [ -f /opt/ros/hydro/setup.bash ]; then
-    source /opt/ros/hydro/setup.bash
+  if [ -f /opt/ros/groovy/setup.bash ]; then
+    source /opt/ros/groovy/setup.bash
   else
-    echo "cannot find ros_hydro"
-    if [ -f /opt/ros/groovy/setup.bash ]; then
-      source /opt/ros/groovy/setup.bash
-    else
-      echo "cannot find ros_groovy"
-    fi
+    echo "cannot find ros_groovy"
   fi
   export ROS_MASTER_URI=http://localhost:11311
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
