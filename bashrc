@@ -193,7 +193,7 @@ if [ $MODE == 0 ]; then
     fi
   fi
   export ROS_MASTER_URI=http://localhost:11311
-  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}default${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
 elif [ $MODE == 1 ]; then
@@ -203,7 +203,7 @@ elif [ $MODE == 1 ]; then
     echo "cannot find ros_groovy"
   fi
   export ROS_MASTER_URI=http://192.168.129.77:11311
-  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
   MODE_STRING="${GREEN}nanoplus20${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
   echo -e $MODE_STRING
 elif [ $MODE == 2 ]; then
