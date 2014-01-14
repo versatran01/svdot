@@ -1,4 +1,4 @@
-"execute pathogen#infect('~/.vim/bundle/{}')
+execute pathogen#infect('~/.vim/bundle/{}')
 "set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off

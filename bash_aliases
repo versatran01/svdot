@@ -20,6 +20,7 @@ alias matlabnd='matlab -nodesktop -nosplash'
 alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
 alias groot='cd "$(git rev-parse --show-toplevel)"'
+alias gstat='git status'
 
 # ssh
 alias eniac='ssh -X quchao@eniac.seas.upenn.edu'
