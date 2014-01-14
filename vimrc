@@ -42,6 +42,15 @@ Bundle 'Lokaltog/vim-easymotion'
 " Press + to expand the visual selection and _ to shrink it.
 Bundle 'terryma/vim-expand-region'
 
+" Tagbar
+Bundle 'majutsushi/tagbar'
+nmap <leader>b :Tagbar<CR>
+nmap <leader>bt :TagbarToggle<CR>
+
+" Taglist
+Bundle 'vim-scripts/taglist.vim'
+nmap <leader>l : Tlist<CR>
+nmap <leader>lt : TlistToggle<CR>
 " Multiple cursors
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
@@ -53,7 +62,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/Align'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'majutsushi/tagbar'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-commentary'
