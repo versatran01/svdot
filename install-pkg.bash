@@ -1,39 +1,44 @@
 #!/bin/bash
-PACKAGES=(git
-          git-review
-          mercurial
-          vim
-          vim-gtk
-          guake
-          pkg-config
-          cmake
-          tmux
-          ubuntu-tweak
-          gimp
-          openshot
-          autojump
-          python-pip
-          python-numpy
-          python-scipy
-          python-matplotlib
-          openjdk-7-jre
-          openjdk-7-jdk
-          gitg
-          nemiver
-          filezilla
-          texmaker
-          texmacs
+PACKAGES=(autojump
+          banshee
           bpython
           calibre
-          indicator-multiload
-          indicator-cpufreq
+          cmake
+          compiz
+          compizconfig-settings-manager
+          compiz-plugins
           copyq
+          filezilla
+          fluxgui
+          gimp
+          git
+          git-review
+          gitg
+          guake
+          handbrake
+          indicator-cpufreq
+          indicator-multiload
+          indicator-notifications
           indicator-sensors
           lm-sensors
-          fluxgui
-          indicator-notifications
+          mercurial
+          nemiver
+          openjdk-7-jdk
+          openjdk-7-jre
+          openshot
+          pkg-config
+          python-matplotlib
+          python-numpy
+          python-pip
+          python-scipy
           recent-notifications
+          texmacs
+          texmaker
+          tmux
           tracker-gui
+          ubuntu-tweak
+          vim
+          vim-gtk
           )
 
 #Stop if a command ends in an error
