@@ -19,8 +19,11 @@ alias df='df -Th'
 alias matlabnd='matlab -nodesktop -nosplash'
 alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
+
+# git
 alias groot='cd "$(git rev-parse --show-toplevel)"'
-alias gstat='git status'
+alias gst='git status'
+alias gba='git branch -a'
 
 # ssh
 alias eniac='ssh -X quchao@eniac.seas.upenn.edu'

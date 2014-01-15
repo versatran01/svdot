@@ -1,0 +1,14 @@
+[user]
+	name = Chao Qu
+	email = quchao@seas.upenn.edu
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	visual = !gitg

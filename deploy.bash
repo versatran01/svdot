@@ -1,6 +1,7 @@
 #!/bin/bash
-cp vimrc ~/.vimrc
-cp bashrc ~/.bashrc
-cp bash_aliases ~/.bash_aliases
-cp bash_functions ~/.bash_functions
-cp tmux.conf ~/.tmux.conf
+cp -i vimrc ~/.vimrc
+cp -i bashrc ~/.bashrc
+cp -i bash_aliases ~/.bash_aliases
+cp -i bash_functions ~/.bash_functions
+cp -i tmux.conf ~/.tmux.conf
+cp -i gitconfig ~/.gitconfig
