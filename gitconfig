@@ -20,7 +20,7 @@
 
 [color "branch"]
     current = green 
-    local = blue
+    local = cyan
     remote = red
 
 [color "diff"]

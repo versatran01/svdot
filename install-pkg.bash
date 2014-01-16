@@ -1,13 +1,17 @@
 #!/bin/bash
-PACKAGES=(autojump
+PACKAGES=(ack
+          autojump
           banshee
           bpython
+          byobu
           calibre
           cmake
           compiz
           compizconfig-settings-manager
           compiz-plugins
           copyq
+          cowsay
+          dstat
           filezilla
           fluxgui
           gimp
