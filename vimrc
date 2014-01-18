@@ -51,10 +51,18 @@ nmap <leader>bt :TagbarToggle<CR>
 Bundle 'vim-scripts/taglist.vim'
 nmap <leader>l : Tlist<CR>
 nmap <leader>lt : TlistToggle<CR>
+
 " Multiple cursors
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
 Bundle 'terryma/vim-multiple-cursors'
+
+" Bufexplorer
+Bundle 'vim-scripts/bufexplorer.zip'
+noremap <silent> <Left> :bp<CR>
+noremap <silent> <Right> :bn<CR>
+noremap <silent> <CR> :BufExplorer<CR>
+
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
 Bundle 'scrooloose/nerdcommenter'
@@ -176,7 +184,6 @@ au BufNewFile,BufRead *.sdf setf xml
 au BufNewFile,BufRead *.world setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
 
-
 " Move through wrapped lines
 nnoremap  <silent> j gj
 nnoremap  <silent> k gk
@@ -202,7 +209,11 @@ nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 set pastetoggle=<F2>
+" Clear search highlight
 nmap <silent> ,/ :nohlsearch<CR>
+
+" Fix pasete problem
+xnoremap p pgvy
 
 " Enable 256
 if $TERM == "xterm-256color"
