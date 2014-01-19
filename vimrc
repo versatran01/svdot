@@ -40,6 +40,7 @@ Bundle 'Lokaltog/vim-easymotion'
 
 " Expand region
 " Press + to expand the visual selection and _ to shrink it.
+" Use vi<quote> or vc<quote> to select
 Bundle 'terryma/vim-expand-region'
 
 " Tagbar
@@ -59,30 +60,45 @@ Bundle 'terryma/vim-multiple-cursors'
 
 " Bufexplorer
 Bundle 'vim-scripts/bufexplorer.zip'
-noremap <silent> <Left> :bp<CR>
-noremap <silent> <Right> :bn<CR>
-noremap <silent> <CR> :BufExplorer<CR>
+nnoremap <Esc><Left> :bp<CR>
+nnoremap <Esc><Right> :bn<CR>
+noremap <CR> :BufExplorer<CR>
+
+" Nerdcommenter
+" <leader>cc Comment out the current line or text selected in visual mode.
+" <leader>c  Toggles the comment state of the selected line(s)
+" <leader>ci Toggles the comment state of the selected line(s) individually.
+" <leader>cA Adds comment delimiters to the end of line and goes into insert mode between them.
+" <leader>cu Uncomments the selected line(s).
+Bundle 'scrooloose/nerdcommenter'
+
+" Align
+" :5,10Align =
+"     Align on '=' signs
+Bundle 'vim-scripts/Align'
+
+" vim-indent-guides
+" <leader>ig Toggles indent guides
+Bundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_guide_size = 1
+
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
-Bundle 'vim-scripts/Align'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'garbas/vim-snipmate'
 Bundle 'slim-template/vim-slim'
-Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-repeat'
+Bundle 'honza/vim-snippets'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'matze/vim-move'
 Bundle 'wincent/Command-T'
 
 syntax on
@@ -210,7 +226,7 @@ nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vim
 
 set pastetoggle=<F2>
 " Clear search highlight
-nmap <silent> ,/ :nohlsearch<CR>
+nmap ,/ :nohlsearch<CR>
 
 " Fix pasete problem
 xnoremap p pgvy

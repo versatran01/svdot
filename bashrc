@@ -52,7 +52,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -119,9 +119,6 @@ if [ -d /usr/lib/colorgcc/bin ]; then
   export PATH="/usr/lib/colorgcc/bin:$PATH"
 fi
 
-# customize prompt color
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[01;35m\]\w]\[\033[00m\]\$ '
-
 # Functions definitions.
 # You may want to put all your funtions into a separate file like
 # ~/.bash_functions, instead of adding them here directly.
@@ -130,8 +127,6 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\][\u@\h\[\033[00m\]:\[\033[
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
-# simple path shortener
-export PROMPT_DIRTRIM=4
 
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
@@ -146,7 +141,11 @@ export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
 
+# source inputrc
 export INPUTRC=~/.inputrc
+
+# simple path shortener
+export PROMPT_DIRTRIM=4
 
 # colorful PS1 on different computer
 case `hostname` in
@@ -162,6 +161,7 @@ case `hostname` in
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;43m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ ' ;;
 esac
 
+
 # Colored man page
 export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
 export LESS_TERMCAP_md=$'\E[01;38;5;32m' # begin bold
@@ -176,7 +176,7 @@ export TERM=xterm-256color
 #0 -- default
 #1 -- nanoplus20
 #2 -- trooper
-MODE=0
+MODE=1
 DELIM=" | "
 RED='\e[1;31m'
 GREEN='\e[1;32m'
