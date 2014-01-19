@@ -82,6 +82,8 @@ Bundle 'vim-scripts/Align'
 Bundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 
+Bundle 'bronson/vim-trailing-whitespace'
+
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
@@ -230,6 +232,10 @@ nmap ,/ :nohlsearch<CR>
 
 " Fix pasete problem
 xnoremap p pgvy
+
+" White spaces
+nmap <leader>tw /\s\+$<CR>
+nmap <leader>dtw :%s/\s\+$//<CR>
 
 " Enable 256
 if $TERM == "xterm-256color"
