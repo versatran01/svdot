@@ -19,7 +19,6 @@ PACKAGES=(ack
           git-review
           gitg
           guake
-          handbrake
           indicator-cpufreq
           indicator-multiload
           indicator-notifications
@@ -36,7 +35,6 @@ PACKAGES=(ack
           python-pip
           python-scipy
           recent-notifications
-          texmacs
           texmaker
           tmux
           tracker-gui
