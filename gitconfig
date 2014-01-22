@@ -12,19 +12,18 @@
 	st = status
 	last = log -1 HEAD
 	visual = !gitg
-# color {{{
 [color]
     branch = auto
     diff = auto
     status = auto
 
 [color "branch"]
-    current = green 
+    current = green
     local = cyan
     remote = red
 
 [color "diff"]
-    meta = yellow 
+    meta = yellow
     frag = magenta
     old = red
     new = green
@@ -33,5 +32,3 @@
     added = yellow
     changed = green
     untracked = cyan
-
-# }}}
