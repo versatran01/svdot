@@ -11,7 +11,7 @@
 	ci = commit
 	st = status
 	last = log -1 HEAD
-	visual = !gitg
+  visual = !gitg &
 [color]
     branch = auto
     diff = auto
