@@ -10,4 +10,4 @@ test:
 	evince $(FILE).pdf &
 
 clean:
-	rm -f *.aux *.log *.out *.pdf *.pdfsync *.synctex.gz *.blg *.bbl
+	rm -f *.aux *.log *.out *.pdf *.pdfsync *.synctex.gz *.blg *.bbl *.tex.bak
