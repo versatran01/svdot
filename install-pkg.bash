@@ -37,6 +37,7 @@ PACKAGES=(ack
           recent-notifications
           texmaker
           tmux
+          touchpad-indicator
           tracker-gui
           ubuntu-tweak
           vim
