@@ -1,13 +1,16 @@
-FILE=main
+NAME=main
 
-all: $(FILE).tex
+all: $(NAME).tex
+	rubber -d $<
+
+% : %.tex
 	rubber -d $<
 
 edit:
-	texmaker $(FILE).tex &
+	vim $(NAME).tex
 
 test:
-	evince $(FILE).pdf &
+	evince $(NAME).pdf &
 
 clean:
 	rm -f *.aux *.log *.out *.pdf *.pdfsync *.synctex.gz *.blg *.bbl *.tex.bak
