@@ -60,3 +60,4 @@ Session.vim
 *.synctex.gz
 *.blg
 *.bbl
+*.tex.bak
