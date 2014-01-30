@@ -9,6 +9,9 @@ all: $(NAME).tex
 edit:
 	vim $(NAME).tex
 
+texm:
+	texmaker $(NAME).tex &
+
 test:
 	evince $(NAME).pdf &
 
