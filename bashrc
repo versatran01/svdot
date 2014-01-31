@@ -161,14 +161,14 @@ case `hostname` in
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;43m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ ' ;;
 esac
 
-
-# Colored man page
-export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
-export LESS_TERMCAP_md=$'\E[01;38;5;32m' # begin bold
-export LESS_TERMCAP_me=$'\E[0m' # end mode
-export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
-export LESS_TERMCAP_so=$'\E[48;5;130m' # begin standout-mode - info box export LESS_TERMCAP_ue=$'\E[0m' # end underline
-export LESS_TERMCAP_us=$'\E[04;38;5;207m' # begin underline
+# Less Colors for Man Pages
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;32m'       # begin bold
+export LESS_TERMCAP_so=$'\E[01;44m'       # begin standout-mode - info box
+export LESS_TERMCAP_us=$'\E[01;33m'       # begin underline
 # 256 for terminal
 export TERM=xterm-256color
 
