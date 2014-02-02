@@ -9,109 +9,11 @@ let mapleader = ','
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
 
-" Nerdtree
-Bundle 'scrooloose/nerdtree'
-nmap <leader>d :NERDTree<CR>
-nmap <leader>dt :NERDTreeToggle<CR>
-nmap <leader>df :NERDTreeFind<CR>
-
-" Alternative
-":A   switches to the header file corresponding to the current file being edited (or vise versa)
-":AS  splits and switches
-":AV  vertical splits and switches
-":AT  new tab and switches
-":AN  cycles through matches
-":IH  switches to file under cursor
-":IHS splits and switches
-":IHV vertical splits and switches
-":IHT new tab and switches
-":IHN cycles through matches
-"<Leader>ih switches to file under cursor
-"<Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)
-"<Leader>ihn cycles through matches
-Bundle 'vim-scripts/a.vim'
-
-" CtrlP
-Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<C-T>'
-let g:ctrlp_cmd = 'CtrlP'
-
-" Airline
-Bundle 'bling/vim-airline'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-
-" Easymotion
-" <leader><leader>w,b,e to jump
-" <leader><leader>f{char} to search
-Bundle 'Lokaltog/vim-easymotion'
-
-" Expand region
-" Press + to expand the visual selection and _ to shrink it.
-" Use vi<quote> or vc<quote> to select
-Bundle 'terryma/vim-expand-region'
-
-" Tagbar
-Bundle 'majutsushi/tagbar'
-nmap <leader>b :Tagbar<CR>
-nmap <leader>bt :TagbarToggle<CR>
-
-" Taglist
-Bundle 'vim-scripts/taglist.vim'
-nmap <leader>l : Tlist<CR>
-nmap <leader>lt : TlistToggle<CR>
-
-" Multiple cursors
-" Ctrl-n to select, again to search more
-" Ctrl-p redo, Ctrl-x skip
-Bundle 'terryma/vim-multiple-cursors'
-
-" Bufexplorer
-Bundle 'vim-scripts/bufexplorer.zip'
-nnoremap <Esc><Left> :bp<CR>
-nnoremap <Esc><Right> :bn<CR>
-noremap <CR> :BufExplorer<CR>
-
-" Nerdcommenter
-" <leader>cc Comment out the current line or text selected in visual mode.
-" <leader>c  Toggles the comment state of the selected line(s)
-" <leader>ci Toggles the comment state of the selected line(s) individually.
-" <leader>cA Adds comment delimiters to the end of line and goes into insert mode between them.
-" <leader>cu Uncomments the selected line(s).
-Bundle 'scrooloose/nerdcommenter'
-
-" Align
-" :5,10Align =
-"     Align on '=' signs
-Bundle 'vim-scripts/Align'
-
-" vim-indent-guides
-" <leader>ig Toggles indent guides
-Bundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_guide_size = 1
-
-Bundle 'bronson/vim-trailing-whitespace'
-
-
-Bundle 'tpope/vim-fugitive'
-Bundle 'othree/xml.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-surround'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'tpope/vim-commentary'
-Bundle 'garbas/vim-snipmate'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-repeat'
-Bundle 'honza/vim-snippets'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'ervandew/supertab'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'wincent/Command-T'
+" Install Vundle bundles
+if filereadable(expand("~/.bundles"))
+   source ~/.bundles
+endif
 
 syntax on
 filetype plugin on

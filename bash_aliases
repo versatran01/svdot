@@ -21,6 +21,7 @@ alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
 
 # git
+alias g='git'
 alias groot='cd "$(git rev-parse --show-toplevel)"'
 alias gst='git status'
 alias gba='git branch -a'

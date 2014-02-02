@@ -6,3 +6,4 @@ cp -i bash_functions ~/.bash_functions
 cp -i tmux.conf ~/.tmux.conf
 cp -i gitconfig ~/.gitconfig
 cp -i gitignore ~/.gitignore
+cp -i bundles ~/.bundles
