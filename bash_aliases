@@ -19,6 +19,7 @@ alias df='df -Th'
 alias matlabnd='matlab -nodesktop -nosplash'
 alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
+alias dstat='dstat -cdlmnpsy'
 
 # git
 alias g='git'

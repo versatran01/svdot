@@ -31,18 +31,18 @@ function ii()
 }
 
 # ssh to nanoplus
-function nanoplus()
+function overo()
 {
   OK=1
   case "$1" in
-    "20")
+    "13")
       IP=77
       ;;
-    "21")
+    "14")
       IP=78
       ;;
     *)
-      echo "Not a valid nanoplus"
+      echo "Not a valid overo"
       return
       ;;
   esac
