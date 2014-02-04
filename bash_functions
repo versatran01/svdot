@@ -36,10 +36,13 @@ function overo()
   OK=1
   case "$1" in
     "13")
-      IP=77
+      IP=162
       ;;
     "14")
-      IP=78
+      IP=163
+      ;;
+    "15")
+      IP=164
       ;;
     *)
       echo "Not a valid overo"
