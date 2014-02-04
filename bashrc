@@ -141,8 +141,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
 
 # source inputrc
-export INPUTRC=~/.inputrc
-set -o vi
+if [ -f ~/.inputrc ]; then
+  export INPUTRC=~/.inputrc
+fi
 
 # simple path shortener
 export PROMPT_DIRTRIM=4
