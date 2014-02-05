@@ -141,26 +141,49 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
 alias java='java -ea -server'
 
 # source inputrc
-if [ -f ~/.inputrc ]; then
-  export INPUTRC=~/.inputrc
-fi
+export INPUTRC=~/.inputrc
+set -o vi
 
 # simple path shortener
 export PROMPT_DIRTRIM=4
 
 # colorful PS1 on different computer
+COLOR_NO='\e[0m'
 case `hostname` in
   'chao-mrsl' )
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;45m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\033[00;35m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ ' ;;
+    COLOR_USR='\033[01;42m'
+    COLOR_DIR='\033[01;32m'
+    COLOR_GIT='\033[00;32m'
+    ;;
   'chao-t430' )
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;46m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\[\033[00;36m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ ' ;;
+    COLOR_USR='\033[01;43m'
+    COLOR_DIR='\033[01;33m'
+    COLOR_GIT='\033[00;33m'
+    ;;
   'chao-e40' )
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;42m\]\u@\h\[\033[00m\]:\[\033[01;32m\]\w\[\033[00m\]\[\033[00;32m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ ' ;;
+    COLOR_USR='\033[01;44m'
+    COLOR_DIR='\033[01;34m'
+    COLOR_GIT='\033[00;34m'
+    ;;
   'kumargrp1' )
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;41m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\[\033[00;31m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ ' ;;
-  'biglab' )
-    export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;43m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\[\033[00;33m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ ' ;;
+    COLOR_USR='\033[01;45m'
+    COLOR_DIR='\033[01;35m'
+    COLOR_GIT='\033[00;35m'
+    ;;
+  'plus' )
+    COLOR_USR='\033[01;46m'
+    COLOR_DIR='\033[01;36m'
+    COLOR_GIT='\033[00;36m'
+    ;;
+  *)
+    COLOR_USR='\033[01;47m'
+    COLOR_DIR='\033[01;37m'
+    COLOR_GIT='\033[00;37m'
+    ;;
 esac
+
+export PS1="${debian_chroot:+($debian_chroot)}\[$COLOR_USR\]\u@\h\[$COLOR_NO\]:\[$COLOR_DIR\]\w\[$COLOR_NO\]\[$COLOR_GIT\]\$(__git_ps1 "[%s]")\[$COLOR_NO\]\$ "
+#export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;45m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\033[00;35m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_me=$'\E[0m'           # end mode
@@ -173,6 +196,7 @@ export LESS_TERMCAP_us=$'\E[01;33m'       # begin underline
 # 256 for terminal
 export TERM=xterm-256color
 
+#This needs to be improved
 #Mode switching
 #0 -- default
 #1 -- nanoplus20
