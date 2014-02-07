@@ -142,7 +142,6 @@ alias java='java -ea -server'
 
 # source inputrc
 export INPUTRC=~/.inputrc
-set -o vi
 
 # simple path shortener
 export PROMPT_DIRTRIM=4
