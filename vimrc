@@ -21,6 +21,7 @@ filetype indent on
 syntax enable
 colorscheme ron
 
+" Setting =============================================================
 " => General
 set autoread                " reload files when changed on disk
 set encoding=utf8           " Set utf-8 as standard encoding
@@ -113,7 +114,9 @@ au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead *.sdf setf xml
 au BufNewFile,BufRead *.world setf xml
 au BufNewFile,BufRead .bash_aliases setf sh
+au BufNewFile,BufRead .bundles setf vim
 
+" Mappings =============================================================
 " Move through wrapped lines
 nnoremap  <silent> j gj
 nnoremap  <silent> k gk
@@ -138,7 +141,10 @@ vnoremap <Esc><Up> :m '<-2<CR>gv=gv
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-set pastetoggle=<F2>
+" Toggle paste mode
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+
 " Clear search highlight
 nmap ,/ :nohlsearch<CR>
 
@@ -146,8 +152,27 @@ nmap ,/ :nohlsearch<CR>
 xnoremap p pgvy
 
 " White spaces
-nmap <leader>tw /\s\+$<CR>
 nmap <leader>dtw :%s/\s\+$//<CR>
+
+" format the entire file
+nnoremap <leader>fef :normal! gg=G``<CR>
+
+" upper/lower word
+nmap <leader>u mQviwU`Q
+nmap <leader>l mQviwu`Q
+
+" upper/lower first char of word
+nmap <leader>U mQgewvU`Q
+nmap <leader>L mQgewvu`Q
+
+" find merge conflict markers
+nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
+
+" Toggle hlsearch with <leader>hs
+nmap <leader>hs :set hlsearch! hlsearch?<CR>
+
+" Underline the current line with '='
+nmap <silent> <leader>ul :t.<CR>Vr=
 
 " Enable 256
 if $TERM == "xterm-256color"
