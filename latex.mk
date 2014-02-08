@@ -1,10 +1,11 @@
-NAME=main
+NAME=
+CC=pdflatex
 
 all: $(NAME).tex
-	rubber -d $<
+	$(CC) $<
 
 % : %.tex
-	rubber -d $<
+	$(CC) $<
 
 edit:
 	vim $(NAME).tex
