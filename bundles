@@ -59,8 +59,9 @@ Bundle 'terryma/vim-multiple-cursors'
 
 " Bufexplorer
 Bundle 'vim-scripts/bufexplorer.zip'
-nnoremap <Esc><Left> :bp<CR>
-nnoremap <Esc><Right> :bn<CR>
+nnoremap <Esc>p :bp<CR>
+nnoremap <Esc>n :bn<CR>
+nnoremap <Esc>d :bd<CR>
 noremap <CR> :BufExplorer<CR>
 
 " Nerdcommenter
