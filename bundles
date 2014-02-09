@@ -82,6 +82,12 @@ Bundle 'vim-scripts/Align'
 Bundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 
+" Omni C++ Completion
+Bundle 'vim-scripts/OmniCppComplete'
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
+" Trailing Whitespace
+" :FixWhiteSpace
 Bundle 'bronson/vim-trailing-whitespace'
 
 Bundle 'tpope/vim-fugitive'
