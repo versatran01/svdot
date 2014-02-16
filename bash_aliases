@@ -63,6 +63,8 @@ alias cd...='cd ../..'
 alias cd....='cd ../../..'
 alias cd.....='cd ../../../..'
 alias cd......='cd ../../../../..'
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
 
 #nanoplus
 alias nanoplus20='ssh root@192.168.129.77'
