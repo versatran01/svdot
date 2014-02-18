@@ -42,6 +42,9 @@ alias vbal='vim ~/.bash_aliases'
 alias vbfn='vim ~/.bash_functions'
 alias virc='vim ~/.inputrc'
 alias vtmc='vim ~/.tmux.conf'
+alias vbdl='vim ~/.bundles'
+alias vgcf='vim ~/.gitconfig'
+alias vgin='vim ~/.gitignore'
 
 # fasd
 alias a='fasd -a'        # any
@@ -66,12 +69,10 @@ alias cd......='cd ../../../../..'
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-#nanoplus
-alias nanoplus20='ssh root@192.168.129.77'
-alias nanoplus21='ssh root@192.168.129.78'
-alias uri_nanoplus='export ROS_MASTER_URI=http://192.168.129.77:11311;echo $ROS_MASTER_URI'
-alias uri_local='export ROS_MASTER_URI=http://localhost:11311;echo $ROS_MASTER_URI'
-alias ros_var='env | grep ROS_'
-alias ros_hydro='source /opt/ros/hydro/setup.bash'
-alias ros_groovy='source /opt/ros/groovy/setup.bash'
-alias ros_path="ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Dropbox/Research/ros"
+#ros
+alias rosl='roslaunch'
+alias rost='rostopic'
+alias rosm='rosmsg'
+alias rosr='rosrun'
+alias rosp='rospack'
+alias rosm='rosmake'

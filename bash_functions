@@ -52,3 +52,12 @@ function overo()
 
   ssh "root@192.168.129.$IP"
 }
+
+# cd to last modified directory
+cl()
+{
+  last_dir="$(ls -Frt | grep '/$' | tail -n1)"
+    if [ -d "$last_dir" ]; then
+      cd "$last_dir"
+        fi
+}
