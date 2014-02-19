@@ -113,7 +113,6 @@ endif
 au BufNewFile,BufRead *.launch setf xml
 au BufNewFile,BufRead *.sdf setf xml
 au BufNewFile,BufRead *.world setf xml
-au BufNewFile,BufRead .bash_aliases setf sh
 au BufNewFile,BufRead .bundles setf vim
 
 " Mappings =============================================================
@@ -136,7 +135,6 @@ inoremap <Esc><Down> <Esc>:m .+1<CR>==gi
 inoremap <Esc><Up> <Esc>:m .-2<CR>==gi
 vnoremap <Esc><Down> :m '>+1<CR>gv=gv
 vnoremap <Esc><Up> :m '<-2<CR>gv=gv
-
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e ~/.vimrc<CR>
 nmap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>

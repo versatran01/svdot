@@ -60,3 +60,19 @@ Session.vim
 *.blg
 *.bbl
 *.tex.bak
+*.pdf
+
+# Cmake
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+install_manifest.txt
+
+# Directories
+bin/
+build/
+
+# Vim
+.*.sw[a-z]
+*.un~
+Session.vim
