@@ -76,3 +76,7 @@ build/
 .*.sw[a-z]
 *.un~
 Session.vim
+
+# mex
+*.mexa64
+*.mexgln
