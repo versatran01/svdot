@@ -24,8 +24,7 @@ colorscheme ron
 " Setting =============================================================
 " => General
 set autoread                " reload files when changed on disk
-set encoding=utf8           " Set utf-8 as standard encoding
-set backspace=indent,eol,start
+set encoding=utf8           " Set utf-8 as standard encoding set backspace=indent,eol,start
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
 set history=1000
@@ -37,6 +36,8 @@ set icon
 set background=dark
 set cursorcolumn            " Highlight current column
 "highlight CursorColumn ctermbg=darkmagenta ctermfg=none
+set colorcolumn=76
+hi ColorColumn ctermbg=darkmagenta
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
@@ -54,9 +55,9 @@ set display+=lastline
 set autoindent
 set cindent                 " C-style indentation
 set smartindent             " Smart indent
-set expandtab               " Use spaces instead of tabs
 set shiftwidth=2
 set softtabstop=2
+set expandtab               " Use spaces instead of tabs
 set smarttab                " Be smart when using tabs
 set tabstop=2
 set textwidth=500           " Text wrapping
@@ -176,5 +177,3 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
-
-command Make execute "make -C build"

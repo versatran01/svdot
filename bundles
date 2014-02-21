@@ -24,7 +24,7 @@ Bundle 'vim-scripts/a.vim'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<C-P>'
+let g:ctrlp_map = '<C-T>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Airline
@@ -89,6 +89,10 @@ au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 " Trailing Whitespace
 " :FixWhiteSpace
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'Chiel92/vim-autoformat'
+noremap <F3> :Autoformat<CR><CR>
+let g:formatprg_cpp = "astyle"
+let g:formatprg_args_cpp = "--style=java --indent=spaces=2"
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
@@ -107,4 +111,4 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-sensible'
 Bundle 'uguu-org/vim-matrix-screensaver'
-Bundle 'vhdirk/vim-cmake'
+Bundle 'tomasr/molokai'
