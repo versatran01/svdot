@@ -1,5 +1,5 @@
 cmake_minimum_required( VERSION 2.8 )
-project( display_image )
+project( project_name )
 
 message( STATUS "Project: " ${PROJECT_NAME} )
 message( STATUS "Source: " ${PROJECT_SOURCE_DIR} )

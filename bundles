@@ -24,7 +24,7 @@ Bundle 'vim-scripts/a.vim'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<C-T>'
+let g:ctrlp_map = '<C-P>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " Airline
@@ -107,3 +107,4 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-sensible'
 Bundle 'uguu-org/vim-matrix-screensaver'
+Bundle 'vhdirk/vim-cmake'
