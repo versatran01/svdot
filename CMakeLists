@@ -2,8 +2,10 @@ cmake_minimum_required(VERSION 2.8)
 project( display_image )
 
 message( STATUS "Project: " ${PROJECT_NAME} )
-message( STATUS "Rource: " ${PROJECT_SOURCE_DIR} )
+message( STATUS "Source: " ${PROJECT_SOURCE_DIR} )
 message( STATUS "Binary: " ${PROJECT_BINARY_DIR} )
+
+#set( CMAKE_BUILD_TYPE "Release")
 
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
