@@ -176,3 +176,5 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
+
+command Make execute "make -C build"
