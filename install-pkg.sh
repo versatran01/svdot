@@ -1,5 +1,6 @@
 #!/bin/bash
 PACKAGES=(ack
+          astyle
           autojump
           banshee
           bpython
@@ -16,9 +17,10 @@ PACKAGES=(ack
           fluxgui
           gimp
           git
-          git-review
           gitg
+          git-review
           guake
+          htop
           indicator-cpufreq
           indicator-multiload
           indicator-notifications
