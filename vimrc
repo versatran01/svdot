@@ -36,7 +36,7 @@ set icon
 set background=dark
 set cursorcolumn            " Highlight current column
 "highlight CursorColumn ctermbg=darkmagenta ctermfg=none
-set colorcolumn=76
+set colorcolumn=70
 hi ColorColumn ctermbg=darkblue
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
@@ -177,3 +177,6 @@ nmap <silent> <leader>ul :t.<CR>Vr=
 if $TERM == "xterm-256color"
   set t_Co=256
 endif
+
+nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
+nnoremap <Leader>wf :match<CR>
