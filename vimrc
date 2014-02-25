@@ -28,6 +28,8 @@ set encoding=utf8           " Set utf-8 as standard encoding set backspace=inden
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
 set history=1000
+set undolevels=1000
+set title
 set hidden
 set ttyfast
 
@@ -36,7 +38,7 @@ set icon
 set background=dark
 set cursorcolumn            " Highlight current column
 "highlight CursorColumn ctermbg=darkmagenta ctermfg=none
-set colorcolumn=70
+set colorcolumn=75
 hi ColorColumn ctermbg=darkblue
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
@@ -102,6 +104,7 @@ set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*.mexa64,*.mexgln
 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4

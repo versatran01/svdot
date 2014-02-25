@@ -95,7 +95,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 let g:formatprg_cpp = "astyle"
-let g:formatprg_args_cpp = "--style=java --indent=spaces=2"
+let g:formatprg_args_cpp = "-A14 -s2 -xn -xc -xl -xk"
 
 " Surround
 " cs<1><2> to change 1 to 2
