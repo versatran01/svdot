@@ -12,7 +12,7 @@ call vundle#rc()
 
 " Install Vundle bundles
 if filereadable(expand("~/.bundles"))
-   source ~/.bundles
+  source ~/.bundles
 endif
 
 syntax on
@@ -181,5 +181,15 @@ if $TERM == "xterm-256color"
   set t_Co=256
 endif
 
+" Show/hide trailing white spaces
 nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
+
+" Only highlight line and column in current window
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set cul
+  autocmd WinEnter * set cuc
+  autocmd WinLeave * set nocul
+  autocmd WinLeave * set nocuc
+augroup END
