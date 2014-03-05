@@ -24,7 +24,8 @@ colorscheme ron
 " Setting =============================================================
 " => General
 set autoread                " reload files when changed on disk
-set encoding=utf8           " Set utf-8 as standard encoding set backspace=indent,eol,start
+set encoding=utf8           " Set utf-8 as standard encoding
+set backspace=indent,eol,start
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
 set history=1000
