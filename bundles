@@ -106,6 +106,40 @@ let g:formatprg_args_c = "-A14 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o"
 " yss<1>   to insert around entire line
 Bundle 'tpope/vim-surround'
 
+" Promptline
+Bundle 'edkolev/promptline.vim'
+let g:promptline_symbols = {
+    \ 'left'       : '',
+    \ 'left_alt'   : '',
+    \ 'dir_sep'    : '/',
+    \ 'truncation' : '...',
+    \ 'vcs_branch' : '',
+    \ 'space'      : ' '}
+let g:promptline_preset = {
+      \'a' : [ promptline#slices#host() ],
+      \'b' : [ promptline#slices#user() ],
+      \'c' : [ promptline#slices#cwd() ],
+      \'d' : [ promptline#slices#vcs_branch() ],
+      \'warn' : [ promptline#slices#last_exit_code() ]}
+
+" Tmuxline
+Bundle 'edkolev/tmuxline.vim'
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
+    \ 'space' : ' '}
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'    : '#W',
+      \'c'    : '#(whoami)',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W'],
+      \'y'    : '#(date)',
+      \'z'    : '#H'}
+
+Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
 Bundle 'scrooloose/syntastic'

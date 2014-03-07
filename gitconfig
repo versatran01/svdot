@@ -43,3 +43,5 @@
   untracked = red bold
 [diff]
   tool = vimdiff
+[credential]
+	helper = cache --timeout=3600

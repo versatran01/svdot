@@ -8,3 +8,5 @@ cp -i tmux.conf ~/.tmux.conf
 cp -i gitconfig ~/.gitconfig
 cp -i gitignore ~/.gitignore
 cp -i bundles ~/.bundles
+cp -i tmuxline ~/.tmuxline
+cp -i promptline.sh ~/.promptline.sh
