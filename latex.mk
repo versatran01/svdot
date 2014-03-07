@@ -1,22 +1,22 @@
-NAME=
-CC=pdflatex
+SRC=
+TEX=pdflatex
 
 all: pdf
 
-pdf: $(NAME).tex
-	$(CC) $<
+pdf: $(SRC).tex
+	$(TEX) $<
 
 % : %.tex
-	$(CC) $<
+	$(TEX) $<
 
 edit:
-	vim $(NAME).tex
+	vim $(SRC).tex
 
 texm:
-	texmaker $(NAME).tex &
+	texmaker $(SRC).tex &
 
 test: pdf
-	evince $(NAME).pdf &
+	evince $(SRC).pdf &
 
 clean:
-	rm -f $(NAME).pdf *.aux *.log *.out *.pdfsync *.synctex.gz *.blg *.bbl *.tex.bak
+	rm -f $(SRC).pdf *.aux *.log *.out *.pdfsync *.synctex.gz *.blg *.bbl *.tex.bak
