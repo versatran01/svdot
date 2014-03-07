@@ -40,7 +40,7 @@ set background=dark
 set cursorcolumn            " Highlight current column
 "highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set colorcolumn=75
-hi ColorColumn ctermbg=darkblue
+hi ColorColumn ctermbg=darkyellow
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
