@@ -77,6 +77,9 @@ build/
 *.un~
 Session.vim
 
-# mex
+# matlab
 *.mexa64
 *.mexgln
+*.mat
+*.m~
+
