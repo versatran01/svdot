@@ -140,10 +140,15 @@ let g:tmuxline_preset = {
       \'y'    : '#(date)',
       \'z'    : '#S'}
 
+" Syntastic
+Bundle 'scrooloose/syntastic'
+let g:syntastic_enable_matlab_checker = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_python_checkers = ['pylint']
+
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
-Bundle 'scrooloose/syntastic'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
