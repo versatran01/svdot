@@ -146,6 +146,12 @@ let g:syntastic_enable_matlab_checker = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_python_checkers = ['pylint']
 
+" NarrowRegion
+" :NR
+" :NW
+Bundle 'chrisbra/NrrwRgn'
+
+Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
@@ -159,7 +165,6 @@ Bundle 'honza/vim-snippets'
 Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
-Bundle 'chrisbra/NrrwRgn'
 Bundle 'tpope/vim-sensible'
 Bundle 'uguu-org/vim-matrix-screensaver'
 Bundle 'tomasr/molokai'
