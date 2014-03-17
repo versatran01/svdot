@@ -26,6 +26,7 @@ PACKAGES=(ack
           indicator-notifications
           indicator-sensors
           lm-sensors
+          meld
           mercurial
           nemiver
           openjdk-7-jdk
