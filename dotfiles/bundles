@@ -151,9 +151,6 @@ let g:syntastic_python_checkers = ['pylint']
 " :NW
 Bundle 'chrisbra/NrrwRgn'
 
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-fugitive'
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -162,11 +159,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-repeat'
 Bundle 'honza/vim-snippets'
-Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-sensible'
-Bundle 'uguu-org/vim-matrix-screensaver'
-Bundle 'tomasr/molokai'
-Bundle 'vim-scripts/Conque-Shell'
-Bundle "Shougo/unite.vim"
+Bundle 'Shougo/unite.vim'
