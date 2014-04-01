@@ -83,10 +83,6 @@ Bundle 'vim-scripts/Align'
 Bundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 
-" Omni C++ Completion
-Bundle 'vim-scripts/OmniCppComplete'
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-
 " Trailing Whitespace
 " :FixWhiteSpace
 Bundle 'bronson/vim-trailing-whitespace'
@@ -151,15 +147,6 @@ let g:syntastic_python_checkers = ['pylint']
 " :NW
 Bundle 'chrisbra/NrrwRgn'
 
+Bundle 'ervandew/supertab'
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-repeat'
-Bundle 'honza/vim-snippets'
-Bundle 'ervandew/supertab'
-Bundle 'tsaleh/vim-matchit'
-Bundle 'tpope/vim-sensible'
-Bundle 'Shougo/unite.vim'
