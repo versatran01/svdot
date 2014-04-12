@@ -147,6 +147,10 @@ let g:syntastic_python_checkers = ['pylint']
 " :NW
 Bundle 'chrisbra/NrrwRgn'
 
+" Gundo
+Bundle 'vim-scripts/Gundo'
+nnoremap <F5> :GundoToggle<CR>
+
 Bundle 'ervandew/supertab'
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
