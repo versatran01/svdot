@@ -4,14 +4,12 @@ PACKAGES=(ack
           autojump
           banshee
           bpython
-          byobu
           calibre
           cmake
           compiz
           compizconfig-settings-manager
           compiz-plugins
           copyq
-          cowsay
           dstat
           filezilla
           fluxgui
@@ -21,11 +19,8 @@ PACKAGES=(ack
           git-review
           guake
           htop
-          indicator-cpufreq
           indicator-multiload
           indicator-notifications
-          indicator-sensors
-          lm-sensors
           meld
           mercurial
           nemiver
@@ -40,8 +35,6 @@ PACKAGES=(ack
           recent-notifications
           texmaker
           tmux
-          touchpad-indicator
-          tracker-gui
           ubuntu-tweak
           vim
           vim-gtk
