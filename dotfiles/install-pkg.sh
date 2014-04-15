@@ -1,8 +1,7 @@
 #!/bin/bash
-PACKAGES=(ack
+PACKAGES=(ack-grep
           astyle
           autojump
-          banshee
           bpython
           calibre
           cmake
@@ -11,7 +10,6 @@ PACKAGES=(ack
           compiz-plugins
           copyq
           dstat
-          filezilla
           fluxgui
           gimp
           git
@@ -20,7 +18,6 @@ PACKAGES=(ack
           guake
           htop
           indicator-multiload
-          indicator-notifications
           meld
           mercurial
           nemiver

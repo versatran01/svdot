@@ -33,7 +33,6 @@ function ii()
 # ssh to nanoplus
 function overo()
 {
-  OK=1
   case "$1" in
     "13")
       IP=162
@@ -51,6 +50,35 @@ function overo()
   esac
 
   ssh "root@192.168.129.$IP"
+}
+
+# set ROS_MASTER_URI
+function rosuri()
+{
+  if [ $# -eq 0 ]; then
+    echo $ROS_MASTER_URI
+  elif [ "$1" == "local" ]; then
+    export ROS_MASTER_URI=http://localhost:11311
+  elif [ "$1" = "overo" ]; then
+    case "$2" in
+      "13")
+        IP=162
+        ;;
+      "14")
+        IP=163
+        ;;
+      "15")
+        IP=164
+        ;;
+      *)
+        echo "Not a valid overo"
+        return
+        ;;
+    esac
+    export ROS_MASTER_URI=http://192.168.129.$IP/11311
+    echo $ROS_MASTER_URI
+  fi
+
 }
 
 # cd to last modified directory
