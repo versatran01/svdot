@@ -65,41 +65,41 @@ export TERM=xterm-256color
 export INPUTRC=~/.inputrc
 
 # colorful PS1 on different computer
-COLOR_NO='\e[0m'
-case `hostname` in
-  'chao-mrsl' )
-    COLOR_USR='\033[01;42m'
-    COLOR_DIR='\033[01;32m'
-    COLOR_GIT='\033[00;32m'
-    ;;
-  'chao-t430' )
-    COLOR_USR='\033[01;43m'
-    COLOR_DIR='\033[01;33m'
-    COLOR_GIT='\033[00;33m'
-    ;;
-  'chao-e40' )
-    COLOR_USR='\033[01;44m'
-    COLOR_DIR='\033[01;34m'
-    COLOR_GIT='\033[00;34m'
-    ;;
-  'kumargrp1' )
-    COLOR_USR='\033[01;45m'
-    COLOR_DIR='\033[01;35m'
-    COLOR_GIT='\033[00;35m'
-    ;;
-  'plus' )
-    COLOR_USR='\033[01;46m'
-    COLOR_DIR='\033[01;36m'
-    COLOR_GIT='\033[00;36m'
-    ;;
-  *)
-    COLOR_USR='\033[01;47m'
-    COLOR_DIR='\033[01;37m'
-    COLOR_GIT='\033[00;37m'
-    ;;
-esac
+#COLOR_NO='\e[0m'
+#case `hostname` in
+  #'chao-mrsl' )
+    #COLOR_USR='\033[01;42m'
+    #COLOR_DIR='\033[01;32m'
+    #COLOR_GIT='\033[00;32m'
+    #;;
+  #'chao-t430' )
+    #COLOR_USR='\033[01;43m'
+    #COLOR_DIR='\033[01;33m'
+    #COLOR_GIT='\033[00;33m'
+    #;;
+  #'chao-e40' )
+    #COLOR_USR='\033[01;44m'
+    #COLOR_DIR='\033[01;34m'
+    #COLOR_GIT='\033[00;34m'
+    #;;
+  #'kumargrp1' )
+    #COLOR_USR='\033[01;45m'
+    #COLOR_DIR='\033[01;35m'
+    #COLOR_GIT='\033[00;35m'
+    #;;
+  #'plus' )
+    #COLOR_USR='\033[01;46m'
+    #COLOR_DIR='\033[01;36m'
+    #COLOR_GIT='\033[00;36m'
+    #;;
+  #*)
+    #COLOR_USR='\033[01;47m'
+    #COLOR_DIR='\033[01;37m'
+    #COLOR_GIT='\033[00;37m'
+    #;;
+#esac
 
-export PS1="${debian_chroot:+($debian_chroot)}\[$COLOR_USR\]\u@\h\[$COLOR_NO\]:\[$COLOR_DIR\]\w\[$COLOR_NO\]\[$COLOR_GIT\]\$(__git_ps1 "[%s]")\[$COLOR_NO\]\$ "
+#export PS1="${debian_chroot:+($debian_chroot)}\[$COLOR_USR\]\u@\h\[$COLOR_NO\]:\[$COLOR_DIR\]\w\[$COLOR_NO\]\[$COLOR_GIT\]\$(__git_ps1 "[%s]")\[$COLOR_NO\]\$ "
 #export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;45m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\033[00;35m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
 
 # Source airline-style promptline
@@ -119,34 +119,16 @@ export LESS_TERMCAP_md=$'\E[01;32m'       # begin bold
 export LESS_TERMCAP_so=$'\E[01;44m'       # begin standout-mode - info box
 export LESS_TERMCAP_us=$'\E[01;33m'       # begin underline
 
-#This needs to be improved
-#Mode switching
-#0 -- default
-#1 -- nanoplus20
-MODE=0
-DELIM=" | "
-RED='\e[1;31m'
-GREEN='\e[1;32m'
-NC='\e[0m'
-if [ $MODE == 0 ]; then
-  if [ -f /opt/ros/hydro/setup.bash ]; then
-    source /opt/ros/hydro/setup.bash
-  else
-    echo "cannot find ros_hydro"
-  fi
-  export ROS_MASTER_URI=http://localhost:11311
-  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
-  ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/CHARM
-  MODE_STRING="${GREEN}default${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
-  echo -e $MODE_STRING
-elif [ $MODE == 1 ]; then
-  if [ -f /opt/ros/groovy/setup.bash ]; then
-    source /opt/ros/groovy/setup.bash
-  else
-    echo "cannot find ros_groovy"
-  fi
-  export ROS_MASTER_URI=http://192.168.129.77:11311
-  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
-  MODE_STRING="${GREEN}nanoplus20${NC} ${RED}$ROS_DISTRO${NC} $DELIM ${RED}$ROS_MASTER_URI${NC} $DELIM ${RED}$ROS_PACKAGE_PATH${NC}"
-  echo -e $MODE_STRING
+# Some ros stuff
+if [ -f /opt/ros/hydro/setup.bash ]; then
+  source /opt/ros/hydro/setup.bash
+else
+  echo "cannot find ros_hydro"
 fi
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
+ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/test/ros
+
+# April toolkit
+export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
+alias java='java -ea -server'
