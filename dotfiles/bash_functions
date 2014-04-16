@@ -81,6 +81,20 @@ function rosuri()
 
 }
 
+function rospath()
+{
+  if [ $# -eq 0 ]; then
+    echo $ROS_PACKAGE_PATH
+  elif [ "$1" == "push" ]; then
+    if [ $# -eq 1 ]; then
+      export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
+    elif [ $# -eq 2 ]; then
+      export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$2
+    fi
+    echo $ROS_PACKAGE_PATH
+  fi
+}
+
 # cd to last modified directory
 cl()
 {
