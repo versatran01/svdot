@@ -120,3 +120,8 @@ Session.vim
 msg_gen/
 srv_gen/
 
+# ==========
+# Build Directories
+# ==========
+build/
+bin/
