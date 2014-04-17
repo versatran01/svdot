@@ -125,3 +125,15 @@ srv_gen/
 # ==========
 build/
 bin/
+lib/
+
+# ==========
+# Others
+# ==========
+*.project
+*.cproject
+
+# ==========
+# VCS
+# ==========
+.svn
