@@ -20,7 +20,6 @@ filetype plugin on
 filetype indent on
 syntax enable
 colorscheme ron
-
 " Setting =============================================================
 " => General
 set autoread                " reload files when changed on disk
@@ -36,9 +35,8 @@ set ttyfast
 
 " => Beautiful
 set icon
-set background=dark
+"set background=dark
 set cursorcolumn            " Highlight current column
-"highlight CursorColumn ctermbg=darkmagenta ctermfg=none
 set colorcolumn=80
 hi ColorColumn ctermbg=darkyellow
 set cursorline              " Highlight current and column
