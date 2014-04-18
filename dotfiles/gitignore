@@ -101,6 +101,7 @@ Session.vim
 *.blg
 *.bbl
 *.tex.bak
+*.pdf
 
 # ==========
 # Packages

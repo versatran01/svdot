@@ -151,12 +151,14 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'vim-scripts/Gundo'
 nnoremap <F5> :GundoToggle<CR>
 
-Bundle 'ervandew/supertab'
+" YouCompleteMe
+Bundle 'Valloric/YouCompleteMe'
+let g:ycm_complete_in_comments = 1
+
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'sgeb/vim-matlab'
-Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'mhinz/vim-signify'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
+Bundle 'octol/vim-cpp-enhanced-highlight'

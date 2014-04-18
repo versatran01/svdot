@@ -186,3 +186,6 @@ augroup BgHighlight
   autocmd WinLeave * set nocul
   autocmd WinLeave * set nocuc
 augroup END
+
+" Makefile
+map <F9> :make<CR>
