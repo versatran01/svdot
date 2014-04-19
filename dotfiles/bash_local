@@ -125,8 +125,7 @@ if [ -f /opt/ros/hydro/setup.bash ]; then
 else
   echo "cannot find ros_hydro"
 fi
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao:/home/chao/Dropbox/Research/ros
-ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/test/ros
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao
 
 # April toolkit
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./

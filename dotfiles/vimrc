@@ -114,9 +114,6 @@ if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
-au BufNewFile,BufRead *.launch setf xml
-au BufNewFile,BufRead *.sdf setf xml
-au BufNewFile,BufRead *.world setf xml
 au BufNewFile,BufRead .bundles setf vim
 
 " Mappings =============================================================

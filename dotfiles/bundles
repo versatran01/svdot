@@ -24,14 +24,14 @@ Bundle 'vim-scripts/a.vim'
 
 " CtrlP
 Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<C-T>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map='<C-T>'
+let g:ctrlp_cmd='CtrlP'
 
 " Airline
 Bundle 'bling/vim-airline'
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline#extensions#tabline#enabled=1
 
 " Easymotion
 " <leader><leader>w,b,e to jump
@@ -81,7 +81,7 @@ Bundle 'vim-scripts/Align'
 " vim-indent-guides
 " <leader>ig Toggles indent guides
 Bundle 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_guide_size = 1
+let g:indent_guides_guide_size=1
 
 " Trailing Whitespace
 " :FixWhiteSpace
@@ -90,10 +90,10 @@ Bundle 'bronson/vim-trailing-whitespace'
 " Autoformat
 Bundle 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
-let g:formatprg_cpp = "astyle"
-let g:formatprg_args_cpp = "-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
-let g:formatprg_c = "astyle"
-let g:formatprg_args_c = "-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
+let g:formatprg_cpp="astyle"
+let g:formatprg_args_cpp="-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
+let g:formatprg_c="astyle"
+let g:formatprg_args_c="-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
 
 " Surround
 " cs<1><2> to change 1 to 2
@@ -104,14 +104,14 @@ Bundle 'tpope/vim-surround'
 
 " Promptline
 Bundle 'edkolev/promptline.vim'
-let g:promptline_symbols = {
+let g:promptline_symbols={
     \ 'left'       : '',
     \ 'left_alt'   : '',
     \ 'dir_sep'    : '/',
     \ 'truncation' : '...',
     \ 'vcs_branch' : '',
     \ 'space'      : ' '}
-let g:promptline_preset = {
+let g:promptline_preset={
       \'a' : [ promptline#slices#host() ],
       \'b' : [ promptline#slices#user() ],
       \'c' : [ promptline#slices#cwd({ 'dir_limit': 4 }) ],
@@ -120,13 +120,13 @@ let g:promptline_preset = {
 
 " Tmuxline
 Bundle 'edkolev/tmuxline.vim'
-let g:tmuxline_separators = {
+let g:tmuxline_separators={
     \ 'left' : '',
     \ 'left_alt': '',
     \ 'right' : '',
     \ 'right_alt' : '',
     \ 'space' : ' '}
-let g:tmuxline_preset = {
+let g:tmuxline_preset={
       \'a'    : '#H',
       \'b'    : '#(whoami)',
       \'c'    : '#(host `hostname` | cut -d " " -f 4)',
@@ -138,9 +138,8 @@ let g:tmuxline_preset = {
 
 " Syntastic
 Bundle 'scrooloose/syntastic'
-let g:syntastic_enable_matlab_checker = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_python_checkers=['pylint']
 
 " NarrowRegion
 " :NR
@@ -151,9 +150,50 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'vim-scripts/Gundo'
 nnoremap <F5> :GundoToggle<CR>
 
-" YouCompleteMe
-Bundle 'Valloric/YouCompleteMe'
-let g:ycm_complete_in_comments = 1
+" Neocomplete
+Bundle 'Shougo/neocomplete.vim'
+" Disable AutoComplPop.
+let g:acp_enableAtStartup=0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup=1
+" Use smartcase.
+let g:neocomplete#enable_smart_case=1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length=4
+let g:neocomplete#lock_buffer_name_pattern='\*ku\*'
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns={}
+endif
+let g:neocomplete#keyword_patterns['default']='\h\w*'
+" Plugin key-mappings.
+inoremap <expr><C-g> neocomplete#undo_completion()
+inoremap <expr><C-l> neocomplete#complete_common_string()
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+  " For no inserting <CR> key.
+  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+let g:neocomplete#max_list=10
+let g:neocomplete#max_keyword_width=50
+let g:neocomplete#auto_completion_start_length=3
+let g:neocomplete#manual_completion_start_length=1
 
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -162,3 +202,4 @@ Bundle 'mhinz/vim-signify'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
 Bundle 'octol/vim-cpp-enhanced-highlight'
+Bundle 'taketwo/vim-ros'
