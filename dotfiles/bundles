@@ -88,12 +88,26 @@ let g:indent_guides_guide_size=1
 Bundle 'bronson/vim-trailing-whitespace'
 
 " Autoformat
+" A2 - java style
+" s2 - indent space 2
+" xn - attach namespace
+" xc - attach classes
+" xl - attach inline
+" xk - attach extern
+" Y  - indent col1 comment
+" p  - pad operator
+" H  - pad header
+" U  - unpad paren
+" k3 - align pointer name
+" W3 - align reference name
+" O  - keep one line blocks
+" o  - keep one line statements
 Bundle 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 let g:formatprg_cpp="astyle"
-let g:formatprg_args_cpp="-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
+let g:formatprg_args_cpp="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
 let g:formatprg_c="astyle"
-let g:formatprg_args_c="-A2 -s2 -xn -xc -xl -xk -U -H -k3 -W3 -O -o -p"
+let g:formatprg_args_c="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
 
 " Surround
 " cs<1><2> to change 1 to 2

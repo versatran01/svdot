@@ -133,6 +133,7 @@ lib/
 # ==========
 *.project
 *.cproject
+*.pydevproject
 
 # ==========
 # VCS

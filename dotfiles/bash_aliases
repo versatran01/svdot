@@ -21,7 +21,6 @@ alias matlabnd='matlab -nodesktop -nosplash'
 alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
 alias dstat='dstat -cdlmnpsy'
-alias qc='qtcreator &'
 
 # git
 alias g='git'
@@ -33,21 +32,10 @@ alias gba='git branch -a'
 alias eniac='ssh -X quchao@eniac.seas.upenn.edu'
 alias meam620='ssh -X meam620@eniac.seas.upenn.edu'
 alias biglab='ssh -X quchao@biglab.seas.upenn.edu'
-alias mrsl='ssh -X chao@192.168.129.221'
 alias rdesk='rdesktop vlab-rdp.seas.upenn.edu'
 
-# bash, vim
+# source bashrc
 alias sbrc='source ~/.bashrc'
-alias vbrc='vim ~/.bashrc'
-alias vvrc='vim ~/.vimrc'
-alias vbal='vim ~/.bash_aliases'
-alias vbfn='vim ~/.bash_functions'
-alias virc='vim ~/.inputrc'
-alias vtmc='vim ~/.tmux.conf'
-alias vbdl='vim ~/.bundles'
-alias vgcf='vim ~/.gitconfig'
-alias vgin='vim ~/.gitignore'
-alias vblc='vim ~/.bash_local'
 
 # fasd
 alias a='fasd -a'        # any
@@ -83,3 +71,4 @@ alias rosr='rosrun'
 alias rosp='rospack'
 alias rosm='rosmake'
 alias rosenv='env | grep ROS'
+alias catmake='catkin_make'
