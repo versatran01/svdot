@@ -108,6 +108,7 @@ set wildignore+=*.mexa64,*.mexgln
 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd BufRead *bash_* setlocal filetype=sh
 
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
