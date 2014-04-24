@@ -8,7 +8,6 @@ PACKAGES=(ack-grep
           compiz
           compizconfig-settings-manager
           compiz-plugins
-          copyq
           dstat
           fluxgui
           gimp
@@ -30,7 +29,6 @@ PACKAGES=(ack-grep
           python-numpy
           python-pip
           python-scipy
-          recent-notifications
           texmaker
           tmux
           ubuntu-tweak
@@ -54,20 +52,9 @@ apt-get -y upgrade --force-yes
 #Add ppa
 #ubuntu-tweak
 add-apt-repository -y ppa:tualatrix/ppa
-#copyq
-add-apt-repository -y ppa:samrog131/ppa
-#notification
-add-apt-repository -y ppa:jconti/recent-notifications
-#sensor
-add-apt-repository -y ppa:noobslab/indicators
-#brightness
-add-apt-repository -y ppa:indicator-brightness/ppa
 #flux
 add-apt-repository -y ppa:noobslab/indicators
 apt-get update --force-yes
 
 #Intall packages
 apt-get -y --force-yes install ${PACKAGES[@]}
-
-#git setup
-git config --global color.ui true
