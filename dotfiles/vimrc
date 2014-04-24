@@ -107,7 +107,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*.mexa64,*.mexgln
 
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
-autocmd FileType matlab setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType matlab setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufRead *bash_* setlocal filetype=sh
 
 set mouse=a

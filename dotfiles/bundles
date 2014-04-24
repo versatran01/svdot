@@ -108,6 +108,8 @@ let g:formatprg_cpp="astyle"
 let g:formatprg_args_cpp="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
 let g:formatprg_c="astyle"
 let g:formatprg_args_c="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
+let g:formatprg_java="astyle"
+let g:formatprg_args_java="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
 
 " Surround
 " cs<1><2> to change 1 to 2
@@ -154,6 +156,7 @@ let g:tmuxline_preset={
 Bundle 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_checkers=['pylint']
+let g:syntastic_enable_matlab_checker = 1
 
 " NarrowRegion
 " :NR
@@ -209,9 +212,13 @@ let g:neocomplete#max_keyword_width=50
 let g:neocomplete#auto_completion_start_length=3
 let g:neocomplete#manual_completion_start_length=1
 
+" vim-matlab
+Bundle 'sgeb/vim-matlab'
+autocmd BufEnter *.m compiler mlint
+
+" Other bundles
 Bundle 'othree/xml.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'sgeb/vim-matlab'
 Bundle 'mhinz/vim-signify'
 Bundle 'xolox/vim-easytags'
 Bundle 'xolox/vim-misc'
