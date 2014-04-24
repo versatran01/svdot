@@ -81,10 +81,10 @@ export LESS_TERMCAP_us=$'\E[01;33m'       # begin underline
 # Some ros stuff
 if [ -f /opt/ros/hydro/setup.bash ]; then
   source /opt/ros/hydro/setup.bash
+  export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao
 else
   echo "cannot find ros_hydro"
 fi
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao
 
 # April toolkit
 export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
