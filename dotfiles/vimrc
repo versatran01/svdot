@@ -1,16 +1,11 @@
-execute pathogen#infect('~/.vim/bundle/{}')
-"set runtimepath^=~/.vim/bundle/ctrlp.vim
 set nocompatible
 filetype off
 
 " Key mapping
 let mapleader = ','
 
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" Install Vundle bundles
+" Load ~/.bundles
 if filereadable(expand("~/.bundles"))
   source ~/.bundles
 endif

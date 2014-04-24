@@ -1,7 +1,10 @@
-Bundle 'gmarik/vundle'
+" Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
 " Nerdtree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 nmap <leader>d :NERDTree<CR>
 nmap <leader>dt :NERDTreeToggle<CR>
 nmap <leader>df :NERDTreeFind<CR>
@@ -20,15 +23,15 @@ nmap <leader>df :NERDTreeFind<CR>
 "<Leader>ih switches to file under cursor
 "<Leader>is switches to the alternate file of file under cursor (e.g. on  <foo.h> switches to foo.cpp)
 "<Leader>ihn cycles through matches
-Bundle 'vim-scripts/a.vim'
+Plugin 'vim-scripts/a.vim'
 
 " CtrlP
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map='<C-T>'
 let g:ctrlp_cmd='CtrlP'
 
 " Airline
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled=1
@@ -36,30 +39,30 @@ let g:airline#extensions#tabline#enabled=1
 " Easymotion
 " <leader><leader>w,b,e to jump
 " <leader><leader>f{char} to search
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 " Expand region
 " Press + to expand the visual selection and _ to shrink it.
 " Use vi<quote> or vc<quote> to select
-Bundle 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
 
 " Tagbar
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 nmap <leader>b :Tagbar<CR>
 nmap <leader>bt :TagbarToggle<CR>
 
 " Taglist
-Bundle 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/taglist.vim'
 nmap <leader>l : Tlist<CR>
 nmap <leader>lt : TlistToggle<CR>
 
 " Multiple cursors
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Bufexplorer
-Bundle 'vim-scripts/bufexplorer.zip'
+Plugin 'vim-scripts/bufexplorer.zip'
 nnoremap <Esc>p :bp<CR>
 nnoremap <Esc>n :bn<CR>
 nnoremap <Esc>d :bd<CR>
@@ -71,21 +74,21 @@ noremap <CR> :BufExplorer<CR>
 " <leader>ci Toggles the comment state of the selected line(s) individually.
 " <leader>cA Adds comment delimiters to the end of line and goes into insert mode between them.
 " <leader>cu Uncomments the selected line(s).
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 
 " Align
 " :5,10Align =
 "     Align on '=' signs
-Bundle 'vim-scripts/Align'
+Plugin 'vim-scripts/Align'
 
 " vim-indent-guides
 " <leader>ig Toggles indent guides
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size=1
 
 " Trailing Whitespace
 " :FixWhiteSpace
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " Autoformat
 " A2 - java style
@@ -102,7 +105,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 " W3 - align reference name
 " O  - keep one line blocks
 " o  - keep one line statements
-Bundle 'Chiel92/vim-autoformat'
+Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 let g:formatprg_cpp="astyle"
 let g:formatprg_args_cpp="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
@@ -116,10 +119,10 @@ let g:formatprg_args_java="-A2 -s2 -xn -xc -xl -xk -Y -U -H -k3 -W3 -O -o -p"
 " ds<1>    to delete 1
 " ysiw<1>  to insert around current word
 " yss<1>   to insert around entire line
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " Promptline
-Bundle 'edkolev/promptline.vim'
+Plugin 'edkolev/promptline.vim'
 let g:promptline_symbols={
     \ 'left'       : '',
     \ 'left_alt'   : '',
@@ -127,15 +130,9 @@ let g:promptline_symbols={
     \ 'truncation' : '...',
     \ 'vcs_branch' : '',
     \ 'space'      : ' '}
-let g:promptline_preset={
-      \'a' : [ promptline#slices#host() ],
-      \'b' : [ promptline#slices#user() ],
-      \'c' : [ promptline#slices#cwd({ 'dir_limit': 4 }) ],
-      \'y' : [ promptline#slices#vcs_branch() ],
-      \'warn' : [ promptline#slices#last_exit_code(), promptline#slices#jobs() ]}
 
 " Tmuxline
-Bundle 'edkolev/tmuxline.vim'
+Plugin 'edkolev/tmuxline.vim'
 let g:tmuxline_separators={
     \ 'left' : '',
     \ 'left_alt': '',
@@ -153,7 +150,7 @@ let g:tmuxline_preset={
       \'z'    : '#S'}
 
 " Syntastic
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_enable_matlab_checker = 1
@@ -161,14 +158,14 @@ let g:syntastic_enable_matlab_checker = 1
 " NarrowRegion
 " :NR
 " :NW
-Bundle 'chrisbra/NrrwRgn'
+Plugin 'chrisbra/NrrwRgn'
 
 " Gundo
-Bundle 'vim-scripts/Gundo'
+Plugin 'vim-scripts/Gundo'
 nnoremap <F5> :GundoToggle<CR>
 
 " Neocomplete
-Bundle 'Shougo/neocomplete.vim'
+Plugin 'Shougo/neocomplete.vim'
 " Disable AutoComplPop.
 let g:acp_enableAtStartup=0
 " Use neocomplete.
@@ -213,14 +210,16 @@ let g:neocomplete#auto_completion_start_length=3
 let g:neocomplete#manual_completion_start_length=1
 
 " vim-matlab
-Bundle 'sgeb/vim-matlab'
+Plugin 'sgeb/vim-matlab'
 autocmd BufEnter *.m compiler mlint
 
 " Other bundles
-Bundle 'othree/xml.vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'mhinz/vim-signify'
-Bundle 'xolox/vim-easytags'
-Bundle 'xolox/vim-misc'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'taketwo/vim-ros'
+Plugin 'othree/xml.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'mhinz/vim-signify'
+Plugin 'xolox/vim-easytags'
+Plugin 'xolox/vim-misc'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'taketwo/vim-ros'
+
+call vundle#end()
