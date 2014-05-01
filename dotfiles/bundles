@@ -221,5 +221,6 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'taketwo/vim-ros'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
 
 call vundle#end()
