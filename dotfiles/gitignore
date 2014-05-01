@@ -54,6 +54,10 @@
 # Java
 # ==========
 *.class
+*.pkg
+*.pkh
+*.bluej
+doc
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -89,6 +93,8 @@ install_manifest.txt
 .*.sw[a-z]
 *.un~
 Session.vim
+*.taghl
+tags
 
 # ==========
 # Latex
