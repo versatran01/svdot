@@ -93,6 +93,8 @@ install_manifest.txt
 .*.sw[a-z]
 *.un~
 Session.vim
+*.taghl
+tags
 
 # ==========
 # Latex
@@ -143,3 +145,31 @@ lib/
 # VCS
 # ==========
 .svn
+
+# ==========
+# Java IDE
+# =========
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# BlueJ
+**/doc
+*.class
+*.pkh
+*.ctxt
+*.bluej
+.DS_Store

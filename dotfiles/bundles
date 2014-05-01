@@ -29,6 +29,11 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map='<C-T>'
 let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " Airline
 Plugin 'bling/vim-airline'
@@ -219,7 +224,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mhinz/vim-signify'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
-Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'taketwo/vim-ros'
+Plugin 'vim-scripts/TagHighlight'
 
 call vundle#end()
