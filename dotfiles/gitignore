@@ -89,6 +89,8 @@ install_manifest.txt
 .*.sw[a-z]
 *.un~
 Session.vim
+*.taghl
+tags
 
 # ==========
 # Latex
