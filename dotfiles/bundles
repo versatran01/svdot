@@ -226,6 +226,5 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'vim-scripts/TagHighlight'
 
 call vundle#end()
