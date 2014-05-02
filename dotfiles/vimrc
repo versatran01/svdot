@@ -14,7 +14,7 @@ syntax on
 filetype plugin on
 filetype indent on
 syntax enable
-colorscheme ron
+colorscheme molokai
 
 " Setting =============================================================
 " => General
@@ -34,6 +34,8 @@ set icon
 "set background=dark
 set cursorcolumn            " Highlight current column
 set colorcolumn=80
+hi Normal ctermbg=none
+hi LineNr ctermbg=none
 hi ColorColumn ctermbg=darkyellow
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
