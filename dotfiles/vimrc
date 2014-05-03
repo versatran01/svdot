@@ -37,6 +37,9 @@ set colorcolumn=80
 hi Normal ctermbg=none
 hi LineNr ctermbg=none
 hi ColorColumn ctermbg=darkyellow
+hi Comment ctermfg=darkcyan
+hi Visual ctermbg=darkgray
+
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
