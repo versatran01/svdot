@@ -11,9 +11,7 @@ export GREP_OPTIONS='--color=auto'
 export HISTCONTROL="ignoredups"
 export HISTIGNORE="&:ls:[bf]g:exit"
 
-# More shopt
-# Autocorrect fudged paths in cd calls
-shopt -s cdspell
+# More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
 # Update the hash table properly
 shopt -s checkhash
 # Update columns and rows if window size changes
@@ -79,8 +77,8 @@ export LESS_TERMCAP_so=$'\E[01;44m'       # begin standout-mode - info box
 export LESS_TERMCAP_us=$'\E[01;33m'       # begin underline
 
 # Some ros stuff
-if [ -f /opt/ros/hydro/setup.bash ]; then
-  source /opt/ros/hydro/setup.bash
+if [ -f /opt/ros/indigo/setup.bash ]; then
+  source /opt/ros/indigo/setup.bash
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao
 else
   echo "cannot find ros_hydro"

@@ -201,6 +201,7 @@ endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Enable omni completion.
@@ -231,8 +232,6 @@ Plugin 'ervandew/supertab'
 Plugin 'oblitum/rainbow'
 let g:rainbow_active=1
 let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
-Plugin 'plasticboy/vim-markdown'
-let g:vim_markdown_folding_disabled=1
 " Colorscheme
 Plugin 'tomasr/molokai'
 let g:molokai_original=1
