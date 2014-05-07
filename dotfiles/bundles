@@ -229,13 +229,11 @@ Plugin 'xolox/vim-misc'
 Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'oblitum/rainbow'
+Plugin 'ervandew/supertab'
 let g:rainbow_active=1
 let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
 " Colorscheme
 Plugin 'tomasr/molokai'
 let g:molokai_original=1
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'chriskempson/base16-vim'
-let base16colorspace=256
 
 call vundle#end()
