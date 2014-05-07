@@ -227,6 +227,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'ervandew/supertab'
 Plugin 'oblitum/rainbow'
 let g:rainbow_active=1
 let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
