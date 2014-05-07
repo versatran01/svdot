@@ -33,13 +33,12 @@ set ttyfast
 set icon
 "set background=dark
 set cursorcolumn            " Highlight current column
-set colorcolumn=80
+set colorcolumn=80          " Line wrapping indicator at 80
 hi Normal ctermbg=none
 hi LineNr ctermbg=none
 hi ColorColumn ctermbg=darkyellow
-hi Comment ctermfg=darkcyan
+hi Comment ctermfg=magenta
 hi Visual ctermbg=darkgray
-
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
@@ -106,16 +105,16 @@ set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*.mexa64,*.mexgln
 
+" => Some autocmd to suite different files
 autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType matlab setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd BufRead *bash_* setlocal filetype=sh
+autocmd BufNewFile,BufRead .bundles setf vim
 
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
   set ttymouse=xterm2
 endif
-
-au BufNewFile,BufRead .bundles setf vim
 
 " Mappings =============================================================
 " Move through wrapped lines
@@ -164,8 +163,9 @@ nmap <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 " Toggle hlsearch with <leader>hs
 nmap <leader>hs :set hlsearch! hlsearch?<CR>
 
-" Underline the current line with '='
-nmap <silent> <leader>ul :t.<CR>Vr=
+" Underline the current line with '=' and '-'
+nmap <silent> <leader>h1 :t.<CR>Vr=
+nmap <silent> <leader>h2 :t.<CR>Vr-
 
 " Enable 256
 if $TERM == "xterm-256color"

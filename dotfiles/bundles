@@ -211,17 +211,14 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 let g:neocomplete#max_list=10
-let g:neocomplete#max_keyword_width=50
-let g:neocomplete#auto_completion_start_length=4
+let g:neocomplete#max_keyword_width=48
+let g:neocomplete#auto_completion_start_length=3
 let g:neocomplete#manual_completion_start_length=1
+let g:neocomplete#enable_fuzzy_completion=0
 
 " vim-matlab
 Plugin 'sgeb/vim-matlab'
 autocmd BufEnter *.m compiler mlint
-
-" Colorscheme
-Plugin 'tomasr/molokai'
-let g:molokai_original=1
 
 " Other bundles
 Plugin 'othree/xml.vim'
@@ -233,6 +230,12 @@ Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'oblitum/rainbow'
 let g:rainbow_active=1
-let g:rainbow_ctermfgs=['lightgreen', 'yellow', 'magenta']
+let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
+" Colorscheme
+Plugin 'tomasr/molokai'
+let g:molokai_original=1
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'chriskempson/base16-vim'
+let base16colorspace=256
 
 call vundle#end()
