@@ -219,6 +219,10 @@ let g:neocomplete#manual_completion_start_length=1
 Plugin 'sgeb/vim-matlab'
 autocmd BufEnter *.m compiler mlint
 
+" Colorscheme
+Plugin 'tomasr/molokai'
+let g:molokai_original=1
+
 " Other bundles
 Plugin 'othree/xml.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -229,12 +233,6 @@ Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'oblitum/rainbow'
 let g:rainbow_active=1
-let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
-" Colorscheme
-Plugin 'tomasr/molokai'
-let g:molokai_original=1
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'chriskempson/base16-vim'
-let base16colorspace=256
+let g:rainbow_ctermfgs=['lightgreen', 'yellow', 'magenta']
 
 call vundle#end()
