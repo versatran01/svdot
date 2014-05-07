@@ -228,7 +228,6 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'ervandew/supertab'
 Plugin 'oblitum/rainbow'
 Plugin 'ervandew/supertab'
 let g:rainbow_active=1
