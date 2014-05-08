@@ -11,9 +11,7 @@ export GREP_OPTIONS='--color=auto'
 export HISTCONTROL="ignoredups"
 export HISTIGNORE="&:ls:[bf]g:exit"
 
-# More shopt
-# Autocorrect fudged paths in cd calls
-shopt -s cdspell
+# More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
 # Update the hash table properly
 shopt -s checkhash
 # Update columns and rows if window size changes
