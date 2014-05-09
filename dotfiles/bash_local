@@ -81,7 +81,7 @@ if [ -f /opt/ros/indigo/setup.bash ]; then
   source /opt/ros/indigo/setup.bash
   export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/chao/Workspace/repo/ros_chao
 else
-  echo "cannot find ros_hydro"
+  echo "cannot find ros_indigo"
 fi
 
 # April toolkit

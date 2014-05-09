@@ -1,6 +1,5 @@
 #!/bin/bash
 PACKAGES=(ack-grep
-          astyle
           autojump
           bpython
           calibre
@@ -20,8 +19,6 @@ PACKAGES=(ack-grep
           meld
           mercurial
           nemiver
-          openjdk-7-jdk
-          openjdk-7-jre
           openshot
           pep8
           pkg-config
