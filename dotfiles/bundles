@@ -220,7 +220,15 @@ let g:neocomplete#enable_fuzzy_completion=0
 Plugin 'sgeb/vim-matlab'
 autocmd BufEnter *.m compiler mlint
 
+" rainbow
+Plugin 'oblitum/rainbow'
+let g:rainbow_active=1
+let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
+
 " Other bundles
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_no_default_key_mappings=1
 Plugin 'othree/xml.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mhinz/vim-signify'
@@ -228,10 +236,8 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'taketwo/vim-ros'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
-Plugin 'oblitum/rainbow'
 Plugin 'ervandew/supertab'
-let g:rainbow_active=1
-let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
+
 " Colorscheme
 Plugin 'tomasr/molokai'
 let g:molokai_original=1
