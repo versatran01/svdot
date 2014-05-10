@@ -1,18 +1,23 @@
 #!/bin/bash
 PACKAGES=(ack-grep
+	        clang
+	        valgrind
+          astyle
           autojump
           bpython
           calibre
           cmake
           compiz
-          compizconfig-settings-manager
           compiz-plugins
+          compizconfig-settings-manager
           dstat
+          exuberant-ctags
           fluxgui
+          geany
           gimp
           git
-          gitg
           git-review
+          gitg
           guake
           htop
           indicator-multiload
@@ -20,17 +25,21 @@ PACKAGES=(ack-grep
           mercurial
           nemiver
           openshot
+          oracle-java7-installer
           pep8
           pkg-config
           python-matplotlib
           python-numpy
           python-pip
           python-scipy
+          retext
+          synaptic
           texmaker
           tmux
           ubuntu-tweak
           vim
           vim-gtk
+          vlc
           )
 
 #Stop if a command ends in an error
@@ -47,6 +56,8 @@ apt-get update --force-yes
 apt-get -y upgrade --force-yes
 
 #Add ppa
+#oracle java
+add-apt-repository ppa:webupd8team/java
 #ubuntu-tweak
 add-apt-repository -y ppa:tualatrix/ppa
 #flux
