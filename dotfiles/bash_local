@@ -84,11 +84,6 @@ else
   echo "cannot find ros_indigo"
 fi
 
-# April toolkit
-export CLASSPATH=$CLASSPATH:/usr/share/java/gluegen-rt.jar:/usr/local/share/java/lcm.jar:$HOME/Applications/april/java/april.jar:./
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/Applications/april/lib
-alias java='java -ea -server'
-
 # colorful PS1 on different computer
 #COLOR_NO='\e[0m'
 #case `hostname` in
