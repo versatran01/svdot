@@ -222,7 +222,7 @@ autocmd BufEnter *.m compiler mlint
 
 " rainbow
 Plugin 'oblitum/rainbow'
-let g:rainbow_active=1
+au FileType c,cpp,objc,objcpp,h call rainbow#load()
 let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
 
 " Other bundles
@@ -235,7 +235,7 @@ Plugin 'mhinz/vim-signify'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'ervandew/supertab'
-"Plugin 'taketwo/vim-ros'
+Plugin 'taketwo/vim-ros'
 
 " Colorscheme
 Plugin 'tomasr/molokai'
