@@ -10,6 +10,7 @@ PACKAGES=(ack-grep
           compiz
           compiz-plugins
           compizconfig-settings-manager
+          curl
           dstat
           exuberant-ctags
           fluxgui
