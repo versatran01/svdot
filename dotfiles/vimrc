@@ -56,11 +56,11 @@ set display+=lastline
 set autoindent
 set cindent                 " C-style indentation
 set smartindent             " Smart indent
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab               " Use spaces instead of tabs
 set smarttab                " Be smart when using tabs
-set tabstop=2
+set tabstop=4
 set textwidth=500           " Text wrapping
 set wrap
 set showbreak=↪\ \          " string to put before wrapped screen lines
