@@ -114,9 +114,9 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 let g:formatprg_cpp="astyle"
-let g:formatprg_args_cpp="-A2 -s2 -Y -U -H -k3 -W3 -O -o -p"
+let g:formatprg_args_cpp="-A4 -s2 -Y -U -H -k3 -W3 -O -o -p"
 let g:formatprg_c="astyle"
-let g:formatprg_args_c="-A2 -s2 -Y -U -H -k3 -W3 -O -o -p"
+let g:formatprg_args_c="-A3 -s4 -Y -U -H -k3 -W3 -O -o -p"
 let g:formatprg_java="astyle"
 let g:formatprg_args_java="-A2 -s2 -Y -U -H -k3 -W3 -O -o -p"
 
@@ -224,6 +224,7 @@ autocmd BufEnter *.m compiler mlint
 Plugin 'oblitum/rainbow'
 "au FileType c,cpp,objc,objcpp,h,py call rainbow#load()
 let g:rainbow_active = 1
+"au FileType c,cpp,objc,objcpp,h call rainbow#load()
 let g:rainbow_ctermfgs = ['lightgreen', 'yellow', 'magenta']
 
 " python-syntax
@@ -238,7 +239,6 @@ let g:python_highlight_string_formatting=1
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_no_default_key_mappings=1
-
 Plugin 'othree/xml.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'mhinz/vim-signify'

@@ -23,6 +23,7 @@ alias sup='sudo apt-get update'
 alias sug='sudo apt-get upgrade'
 alias dstat='dstat -cdlmnpsy'
 alias vg='valgrind'
+alias py='python'
 
 # git
 alias g='git'

@@ -97,6 +97,11 @@ Session.vim
 tags
 
 # ==========
+# Python
+# ==========
+*.pyc
+
+# ==========
 # Latex
 # ==========
 *.aux
