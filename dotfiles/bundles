@@ -246,6 +246,8 @@ Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'ervandew/supertab'
 Plugin 'taketwo/vim-ros'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/pydoc.vim'
 
 " Colorscheme
 Plugin 'tomasr/molokai'
