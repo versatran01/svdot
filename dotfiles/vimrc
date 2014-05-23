@@ -56,11 +56,11 @@ set display+=lastline
 set autoindent
 set cindent                 " C-style indentation
 set smartindent             " Smart indent
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=4            " >> indents 4 columns; << unindents 4 columns
+set softtabstop=4           " Insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set expandtab               " Use spaces instead of tabs
 set smarttab                " Be smart when using tabs
-set tabstop=4
+set tabstop=4               " An hard Tab displays as 4 columns
 set textwidth=500           " Text wrapping
 set wrap
 set showbreak=↪\ \          " string to put before wrapped screen lines
@@ -107,7 +107,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set wildignore+=*.mexa64,*.mexgln
 
 " => Some autocmd to suite different files
-autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd BufRead *bash_* setlocal filetype=sh
 autocmd BufNewFile,BufRead .bundles setf vim
 autocmd BufNewFile,BufRead *.launch setf xml
