@@ -1,63 +1,76 @@
+#!bin/bash
 # ssh to nanoplus
 function overo()
 {
-  case "$1" in
-    "13")
-      IP=162
-      ;;
-    "14")
-      IP=163
-      ;;
-    "15")
-      IP=164
-      ;;
-    *)
-      echo "Not a valid overo"
-      return
-      ;;
-  esac
+    case "$1" in
+        "13")
+            IP=162
+            ;;
+        "14")
+            IP=163
+            ;;
+        "15")
+            IP=164
+            ;;
+        *)
+            echo "Not a valid overo"
+            return
+            ;;
+    esac
 
-  ssh "root@192.168.129.$IP"
+    ssh "root@192.168.129.$IP"
 }
 
 # set ROS_MASTER_URI
-function rosuri()
+function rosmu()
 {
-  if [ $# -eq 0 ]; then
-    echo $ROS_MASTER_URI
-  elif [ "$1" == "local" ]; then
-    export ROS_MASTER_URI=http://localhost:11311
-  elif [ "$1" = "overo" ]; then
-    case "$2" in
-      "13")
-        IP=162
-        ;;
-      "14")
-        IP=163
-        ;;
-      "15")
-        IP=164
-        ;;
-      *)
-        echo "Not a valid overo"
-        return
-        ;;
-    esac
-    export ROS_MASTER_URI=http://192.168.129.$IP/11311
-    echo $ROS_MASTER_URI
-  fi
+    if [ $# -eq 0 ]; then
+        echo $ROS_MASTER_URI
+    elif [ "$1" == "local" ]; then
+        export ROS_MASTER_URI=http://localhost:11311
+    elif [ "$1" = "overo" ]; then
+        case "$2" in
+            "13")
+                IP=162
+                ;;
+            "14")
+                IP=163
+                ;;
+            "15")
+                IP=164
+                ;;
+            *)
+                echo "Not a valid overo"
+                return
+                ;;
+        esac
+        export ROS_MASTER_URI=http://192.168.129.$IP/11311
+        echo $ROS_MASTER_URI
+    fi
 }
 
-function rospath()
+# set ROS_PACKAGE_PATH
+function rospp()
 {
-  if [ $# -eq 0 ]; then
-    echo $ROS_PACKAGE_PATH
-  elif [ "$1" == "push" ]; then
-    if [ $# -eq 1 ]; then
-      export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
-    elif [ $# -eq 2 ]; then
-      export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$2
+    if [ $# -eq 0 ]; then
+        split $ROS_PACKAGE_PATH
+    elif [ "$1" == "push" ]; then
+        if [ $# -eq 1 ]; then
+            export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
+        elif [ $# -eq 2 ]; then
+            export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$2
+        fi
+        split $ROS_PACKAGE_PATH
     fi
-    echo $ROS_PACKAGE_PATH
-  fi
+}
+
+function split()
+{
+    strlist=${1//:/ }  # this will replace all : with a space
+    echo -e "$bldylw-- ROS_PACKAGE_PATH$txtrst"
+    i=0
+    for str in $strlist ; do
+        ((i++))
+        echo -e "$bldgrn$i: ${str}$txtrst"
+    done
 }
