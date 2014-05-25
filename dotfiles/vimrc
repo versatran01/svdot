@@ -4,7 +4,6 @@ filetype off
 " Key mapping
 let mapleader = ','
 
-
 " Load ~/.bundles
 if filereadable(expand("~/.bundles"))
   source ~/.bundles
@@ -14,7 +13,6 @@ syntax on
 filetype plugin on
 filetype indent on
 syntax enable
-colorscheme molokai
 
 " Setting =============================================================
 " => General
