@@ -56,6 +56,7 @@ if [ -z $ROSPP_DEFAULT ]; then
 fi
 export ROSPP_STACK=${ROSPP_STACK:-$ROS_PACKAGE_PATH}
 ROS_PACKAGE_PATH=$ROSPP_STACK
+
 # main function of rospp
 function rospp()
 {
@@ -83,7 +84,7 @@ function rospp()
     cmd=$1
     case $cmd in
         reset )
-            if [ "$2" = "-h" ]; then
+            if [ "$2" == "-h" ]; then
                 echo -e "rospp reset set ROS_PACKAGE_PATH to its default value"
                 echo -e "usage: rospp reset"
             else
@@ -93,7 +94,7 @@ function rospp()
             fi
             ;;
         push )
-            if [ "$2" = "-h" ]; then
+            if [ "$2" == "-h" ]; then
                 echo -e "usage: rospp push [dir]"
             else
                 rospp_push "$2"
@@ -101,7 +102,7 @@ function rospp()
             fi
             ;;
         pop )
-            if [ "$2" = "-h" ]; then
+            if [ "$2" == "-h" ]; then
                 echo -e "usage: rospp pop"
             else
                 rospp_pop
@@ -109,7 +110,7 @@ function rospp()
             fi
             ;;
         disp )
-            if [ "$2" = "-h" ]; then
+            if [ "$2" == "-h" ]; then
                 echo -e "usage: rospp disp"
             else
                 rospp_disp
@@ -164,7 +165,7 @@ function rospp_push()
 function rospp_pop()
 {
     local stack=:$ROSPP_STACK
-    if [ ! $stack = ":" ]; then
+    if [ ! $stack == ":" ]; then
         # remove the last path in stack
         ROSPP_STACK=${stack%:*}
         # remove the trailing colon
@@ -183,8 +184,8 @@ function rospp_split()
     pathlist=$1:
     i=0
     while [ $pathlist ]; do
-        if [ ! $pathlist = ":" ]; then
-            echo -e "$bldgrn$((++i)): ${pathlist%%:*}$txtrst"
+        if [ ! $pathlist == ":" ]; then
+            echo -e "$txtgrn$((++i)): ${pathlist%%:*}$txtrst"
         fi
         pathlist=${pathlist#*:}
     done

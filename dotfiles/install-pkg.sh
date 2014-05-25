@@ -1,15 +1,14 @@
 #!/bin/bash
 PACKAGES=(ack-grep
-	        clang
-	        valgrind
           astyle
           autojump
           bpython
           calibre
+	      clang
           cmake
           compiz
-          compiz-plugins
           compizconfig-settings-manager
+          compiz-plugins
           curl
           dstat
           exuberant-ctags
@@ -17,8 +16,8 @@ PACKAGES=(ack-grep
           geany
           gimp
           git
-          git-review
           gitg
+          git-review
           guake
           htop
           indicator-multiload
@@ -38,6 +37,7 @@ PACKAGES=(ack-grep
           texmaker
           tmux
           ubuntu-tweak
+	      valgrind
           vim
           vim-gtk
           vlc
