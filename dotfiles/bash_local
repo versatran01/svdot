@@ -30,15 +30,6 @@ shopt -s progcomp
 # Warn me if I try to shift when there's nothing there
 shopt -s shift_verbose
 
-# Functions definitions.
-# You may want to put all your funtions into a separate file like
-# ~/.bash_functions, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
-
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
   source /usr/share/autojump/autojump.sh
@@ -73,6 +64,15 @@ if [ -f /opt/ros/indigo/setup.bash ]; then
   source /opt/ros/indigo/setup.bash
 else
   echo "cannot find ros_indigo"
+fi
+
+# Functions definitions.
+# You may want to put all your funtions into a separate file like
+# ~/.bash_functions, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
 fi
 
 # Colors
