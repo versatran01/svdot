@@ -8,8 +8,7 @@ function overo()
             ;;
         "14")
             IP=163
-            ;;
-        "15")
+            ;; "15")
             IP=164
             ;;
         *)
@@ -55,15 +54,16 @@ export ROSPP_STACK=${ROSPP_STACK:=$ROS_PACKAGE_PATH}
 ROS_PACKAGE_PATH=$ROSPP_STACK
 function rospp()
 {
-    # no argument
+    # print current path if no inputs
+    cmd=$1;
     if [ $# -eq 0 ]; then
         echo -e "$bldylw-- ROS_PACKAGE_PATH$txtrst";
         splitstr $ROS_PACKAGE_PATH;
         return 0;
     fi;
 
-    # help
-    if [ $1 = "--help" ] || [ $1 = "-h" ]; then
+    # display help if input option is --help or -h
+    if [ $# -eq 1 ] && [ \( "$1" = "--help" \) -o \( "$1" = "-h" \) ]; then
         echo -e "usage: rospp [--help|-h] <command> [<args>]\n";
         echo -e "The most commonly used rospp commands are:";
         echo -e "    push \tPush current directory to ROS_PACKAGE_PATH";
