@@ -12,7 +12,7 @@ set visible-stats on
 set match-hidden-files off
 
 # Useful stuff for UTF-8
-set meta-flag on
-set input-meta on
-set output-meta on
-set convert-meta off
+#set meta-flag on
+#set input-meta on
+#set output-meta on
+#set convert-meta off

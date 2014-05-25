@@ -49,25 +49,46 @@ function rosmu()
     fi
 }
 
-# set ROS_PACKAGE_PATH
+# rospp manages ROS_PACKAGE_PATH
+# Initialize a stack
+export ROSPP_STACK=${ROSPP_STACK:=$ROS_PACKAGE_PATH}
+ROS_PACKAGE_PATH=$ROSPP_STACK
 function rospp()
 {
+    # no argument
     if [ $# -eq 0 ]; then
-        split $ROS_PACKAGE_PATH
-    elif [ "$1" == "push" ]; then
+        echo -e "$bldylw-- ROS_PACKAGE_PATH$txtrst";
+        splitstr $ROS_PACKAGE_PATH;
+        return 0;
+    fi;
+
+    # help
+    if [ $1 = "--help" ] || [ $1 = "-h" ]; then
+        echo -e "usage: rospp [--help|-h] <command> [<args>]\n";
+        echo -e "The most commonly used rospp commands are:";
+        echo -e "    push \tPush current directory to ROS_PACKAGE_PATH";
+        echo -e "    pop  \tPop top directory from ROS_PACKAGE_PATH";
+        echo -e "    reset\tReset ROS_PACKAGE_PATH";
+        echo -e "    add  \tAdd directory to ROS_PACKAGE_PATH";
+        echo -e "    rm   \tRemove path from ROS_PACKAGE_PATH";
+        echo -e "    disp \tDisplay all ROS_PACKAGE_PATH";
+        return 0;
+    fi;
+
+    if [ $1 == "push" ]; then
         if [ $# -eq 1 ]; then
             export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
         elif [ $# -eq 2 ]; then
             export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$2
         fi
-        split $ROS_PACKAGE_PATH
+        splitstr $ROS_PACKAGE_PATH
     fi
 }
 
-function split()
+# split string with : as delimeter
+function splitstr()
 {
     strlist=${1//:/ }  # this will replace all : with a space
-    echo -e "$bldylw-- ROS_PACKAGE_PATH$txtrst"
     i=0
     for str in $strlist ; do
         ((i++))
