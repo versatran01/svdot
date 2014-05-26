@@ -29,7 +29,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_map='<C-T>'
 let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_custom_ignore = {
+let g:ctrlp_custom_ignore={
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
@@ -154,7 +154,7 @@ let g:tmuxline_preset={
 Plugin 'scrooloose/syntastic'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_checkers=['pylint']
-let g:syntastic_enable_matlab_checker = 1
+let g:syntastic_enable_matlab_checker=1
 
 " NarrowRegion
 " :NR
@@ -217,8 +217,8 @@ autocmd BufEnter *.m compiler mlint
 
 " rainbow
 Bundle 'luochen1990/rainbow'
-let g:rainbow_active = 1
-let g:rainbow_conf = {
+let g:rainbow_active=1
+let g:rainbow_conf={
 \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 \   'ctermfgs': ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta'],
 \   'operators': '_,_',
