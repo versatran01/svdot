@@ -29,6 +29,37 @@ function rosmu()
         esac
         return 0
     fi
+
+    cmd=$1
+    local rx='([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
+    case $cmd in
+        set )
+            if [ "$2 " == "-h" ]; then
+                echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
+                echo -e "usage: rosmu set 192.168.129.1"
+            elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
+                # validating IP address using regexp
+                echo -e "rosmu: set: invalid IP address"
+                echo -e "usage: rosmu set 192.168.129.1"
+            else
+                export ROS_MASTER_URI="http://$2:11311"
+                rosmu_disp
+            fi
+            ;;
+        reset )
+            if [ "$2 " == "-h" ]; then
+                echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
+                echo -e "usage: rosmu set 192.168.129.1"
+            else
+                export ROS_MASTER_URI="http://localhost:11311"
+                rosmu_disp
+            fi
+            ;;
+        * )
+            echo "rosmu: $1: invalid command"
+            rosmu_help
+            ;;
+    esac
 }
 
 function rosmu_disp()
@@ -43,7 +74,10 @@ function rosmu_help()
     echo -e "rosmu is a command-line tool for managing ROS_MASTER_URI"
     echo -e "usage: rosmu [--help|-h] <command> [<args>]\n"
     echo -e "The most commonly used rosmu commands are:"
-    echo -e "    push \tPush directory to ROS_PACKAGE_PATH and cd to it"
+    echo -e "    set   \tSet ROS_MASTER_URI to the given IP address"
+    echo -e "    reset \tReset ROS_MASTER_URI to localhost"
+    echo -e "\nType rosmu <command> -h for more detailed usage, e.g. 'ros set -h'\n"
+    return 0
 }
 # rospp manages ROS_PACKAGE_PATH
 # Initialize variables
