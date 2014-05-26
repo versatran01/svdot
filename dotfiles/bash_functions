@@ -34,7 +34,7 @@ function rosmu()
     local rx='([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
     case $cmd in
         set )
-            if [ "$2 " == "-h" ]; then
+            if [ "$2" == "-h" ]; then
                 echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
                 echo -e "usage: rosmu set 192.168.129.1"
             elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
@@ -47,9 +47,9 @@ function rosmu()
             fi
             ;;
         reset )
-            if [ "$2 " == "-h" ]; then
-                echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
-                echo -e "usage: rosmu set 192.168.129.1"
+            if [ "$2" == "-h" ]; then
+                echo -e "rosmu reset reset ROS_MASTER_URI to local host"
+                echo -e "usage: rosmu reset"
             else
                 export ROS_MASTER_URI="http://localhost:11311"
                 rosmu_disp
