@@ -1,54 +1,50 @@
 #!bin/bash
-# ssh to nanoplus
-function overo()
-{
-    case "$1" in
-        "13")
-            IP=162
-            ;;
-        "14")
-            IP=163
-            ;;
-        "15")
-            IP=164
-            ;;
-        *)
-            echo "Not a valid overo"
-            return
-            ;;
-    esac
-
-    ssh "root@192.168.129.$IP"
-}
+######################################################################
+# This file is a collection of useful functions
+# Here is a list of them
+# overo
+# rosmu
+# rospp
+######################################################################
 
 # set ROS_MASTER_URI
 function rosmu()
 {
+    # print current master uri if no inputs
     if [ $# -eq 0 ]; then
-        echo $ROS_MASTER_URI
-    elif [ "$1" == "local" ]; then
-        export ROS_MASTER_URI=http://localhost:11311
-    elif [ "$1" = "overo" ]; then
-        case "$2" in
-            "13")
-                IP=162
+        rosmu_disp
+        return 0
+    fi
+
+    # check command-lin options
+    if [ -n "$(echo $1 | grep '^-')" ]; then
+        case $1 in
+            --help | -h )
+                rosmu_help
                 ;;
-            "14")
-                IP=163
-                ;;
-            "15")
-                IP=164
-                ;;
-            *)
-                echo "Not a valid overo"
-                return
+            * )
+                echo "rosmu: $1: invalid option"
+                rosmu_help
                 ;;
         esac
-        export ROS_MASTER_URI=http://192.168.129.$IP/11311
-        echo $ROS_MASTER_URI
+        return 0
     fi
 }
 
+function rosmu_disp()
+{
+    echo -e "${bldylw}ROS_MASTER_URI$txtrst"
+    echo -e "${bldgrn}$ROS_MASTER_URI$txtrst"
+    return 0
+}
+
+function rosmu_help()
+{
+    echo -e "rosmu is a command-line tool for managing ROS_MASTER_URI"
+    echo -e "usage: rosmu [--help|-h] <command> [<args>]\n"
+    echo -e "The most commonly used rosmu commands are:"
+    echo -e "    push \tPush directory to ROS_PACKAGE_PATH and cd to it"
+}
 # rospp manages ROS_PACKAGE_PATH
 # Initialize variables
 if [ -z $ROSPP_DEFAULT ]; then
@@ -127,7 +123,7 @@ function rospp()
 # display ROS_PACKAGE_PATH
 function rospp_disp()
 {
-    echo -e "$bldylw-- ROS_PACKAGE_PATH$txtrst"
+    echo -e "${bldylw}ROS_PACKAGE_PATH$txtrst"
     rospp_split $ROS_PACKAGE_PATH
     return 0
 }
@@ -135,7 +131,7 @@ function rospp_disp()
 # print help contents for rospp
 function rospp_help()
 {
-    echo -e "rospp is a command-line tool for printing information about ROS_PACKAGE_PATH"
+    echo -e "rospp is a command-line tool for managing ROS_PACKAGE_PATH"
     echo -e "usage: rospp [--help|-h] <command> [<args>]\n"
     echo -e "The most commonly used rospp commands are:"
     echo -e "    push \tPush directory to ROS_PACKAGE_PATH and cd to it"
@@ -164,11 +160,12 @@ function rospp_push()
 # rospp pop
 function rospp_pop()
 {
+    # append : to the beginning stack
     local stack=:$ROSPP_STACK
     if [ ! $stack == ":" ]; then
         # remove the last path in stack
         ROSPP_STACK=${stack%:*}
-        # remove the trailing colon
+        # remove the beginning colon
         ROSPP_STACK=${ROSPP_STACK#:}
         ROS_PACKAGE_PATH=$ROSPP_STACK
     else
@@ -185,8 +182,9 @@ function rospp_split()
     i=0
     while [ $pathlist ]; do
         if [ ! $pathlist == ":" ]; then
-            echo -e "$txtgrn$((++i)): ${pathlist%%:*}$txtrst"
+            echo -e "$bldgrn$((++i)): ${pathlist%%:*}$txtrst"
         fi
+        # remove the first path
         pathlist=${pathlist#*:}
     done
     return 0
