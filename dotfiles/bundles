@@ -250,6 +250,9 @@ let g:python_highlight_string_formatting=1
 " vim-flake8
 Plugin 'nvie/vim-flake8'
 
+" clang-format
+Plugin 'rhysd/vim-clang-format'
+let g:clang_format#command='clang-format-3.5'
 " Other bundles
 Plugin 'othree/xml.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
