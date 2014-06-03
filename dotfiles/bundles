@@ -109,7 +109,7 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR><CR>
 let g:formatprg_cpp="astyle"
-let g:formatprg_args_cpp="-A4 -Y -C -U -H -k3 -W3 -O -o -p"
+let g:formatprg_args_cpp="-A4 -s2 -Y -C -U -H -k3 -W3 -O -o -p"
 let g:formatprg_c="astyle"
 let g:formatprg_args_c="-A3 -Y -U -H -k3 -W3 -O -o -p"
 let g:formatprg_java="astyle"
@@ -207,7 +207,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 let g:neocomplete#max_list=10
 let g:neocomplete#max_keyword_width=48
-let g:neocomplete#auto_completion_start_length=3
+let g:neocomplete#auto_completion_start_length=2
 let g:neocomplete#manual_completion_start_length=1
 let g:neocomplete#enable_fuzzy_completion=0
 
