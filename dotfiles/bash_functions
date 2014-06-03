@@ -5,6 +5,7 @@
 # overo
 # rosmu
 # rospp
+# remake
 ######################################################################
 
 # set ROS_MASTER_URI
@@ -224,3 +225,8 @@ function rospp_split()
     return 0
 }
 
+# rerun make in build folder
+function remake()
+{
+    make -C ./build
+}
