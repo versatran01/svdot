@@ -256,7 +256,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
 
 " Colorscheme
 Plugin 'tomasr/molokai'
