@@ -213,7 +213,6 @@ let g:neocomplete#enable_fuzzy_completion=0
 
 " vim-matlab
 Plugin 'sgeb/vim-matlab'
-autocmd BufEnter *.m compiler mlint
 
 " rainbow
 Bundle 'luochen1990/rainbow'
@@ -250,9 +249,6 @@ let g:python_highlight_string_formatting=1
 " vim-flake8
 Plugin 'nvie/vim-flake8'
 
-" clang-format
-Plugin 'rhysd/vim-clang-format'
-let g:clang_format#command='clang-format-3.5'
 " Other bundles
 Plugin 'othree/xml.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -260,7 +256,6 @@ Plugin 'mhinz/vim-signify'
 Plugin 'xolox/vim-easytags'
 Plugin 'xolox/vim-misc'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
 
 " Colorscheme
 Plugin 'tomasr/molokai'
