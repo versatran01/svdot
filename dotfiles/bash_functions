@@ -228,5 +228,5 @@ function rospp_split()
 # rerun make in build folder
 function remake()
 {
-    make -C ./build
+    make -C ./build $@
 }
