@@ -4,7 +4,7 @@ PACKAGES=(ack-grep
           autojump
           bpython
           calibre
-	      clang
+          clang
           cmake
           compiz
           compizconfig-settings-manager
@@ -33,11 +33,12 @@ PACKAGES=(ack-grep
           python-pip
           python-scipy
           retext
+          sublime-text-installer
           synaptic
           texmaker
           tmux
           ubuntu-tweak
-	      valgrind
+          valgrind
           vim
           vim-gtk
           vlc
@@ -63,6 +64,8 @@ add-apt-repository ppa:webupd8team/java
 add-apt-repository -y ppa:tualatrix/ppa
 #flux
 add-apt-repository -y ppa:noobslab/indicators
+#sublime-text-3
+add-apt-repository ppa:webupd8team/sublime-text-3
 apt-get update --force-yes
 
 #Intall packages
