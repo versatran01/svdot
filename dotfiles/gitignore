@@ -182,3 +182,11 @@ target/
 *.ctxt
 *.bluej
 .DS_Store
+
+# =========
+# Gcov
+# =========
+*.gcov
+*.gcda
+*.gcno
+*.cov
