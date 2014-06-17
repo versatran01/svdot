@@ -157,7 +157,7 @@ lib/
 
 # ==========
 # Java IDE
-# =========
+# ==========
 # Eclipse
 .classpath
 .project
@@ -183,10 +183,16 @@ target/
 *.bluej
 .DS_Store
 
-# =========
+# ==========
 # Gcov
-# =========
+# ==========
 *.gcov
 *.gcda
 *.gcno
 *.cov
+
+# ==========
+# Ctags
+# ==========
+.tags*
+

@@ -272,5 +272,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tomasr/molokai'
 let g:molokai_original=1
 
+Plugin 'chriskempson/base16-vim'
+
 call vundle#end()
 colorscheme molokai
