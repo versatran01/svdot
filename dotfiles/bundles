@@ -250,15 +250,9 @@ let g:rainbow_conf={
 
 " vim-clang-format
 Plugin 'rhysd/vim-clang-format'
-"let g:clang_format#style_options = {
-            "\ "AccessModifierOffset" : -4,
-            "\ "AllowShortIfStatementsOnASingleLine" : "true",
-            "\ "AlwaysBreakTemplateDeclarations" : "true",
-            "\ "Standard" : "C++11",
-            "\ "BreakBeforeBraces" : "Stroustrup"}
 " map to <Leader>cf in C++ code
- autocmd FileType c,cpp,objc,h nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
- autocmd FileType c,cpp,objc,h vnoremap <buffer><Leader>cf :ClangFormat<CR>
+ autocmd FileType c,cc,cpp,h,hpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+ autocmd FileType c,cc,cpp,h,hpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
 " Other bundles
 Plugin 'othree/xml.vim'
@@ -271,8 +265,6 @@ Plugin 'ervandew/supertab'
 " Colorscheme
 Plugin 'tomasr/molokai'
 let g:molokai_original=1
-
-Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 colorscheme molokai
