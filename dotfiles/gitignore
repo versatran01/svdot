@@ -196,3 +196,13 @@ target/
 # ==========
 .tags*
 
+# ==========
+# QtCreator
+# ==========
+*.txt.user
+*.files
+*.includes
+*.creator.user
+*.creator
+*.config
+*.files
