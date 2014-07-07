@@ -32,11 +32,6 @@ set icon
 "set background=dark
 set cursorcolumn            " Highlight current column
 set colorcolumn=80          " Line wrapping indicator at 80
-hi Normal ctermbg=none
-hi LineNr ctermbg=none
-hi ColorColumn ctermbg=darkyellow
-hi Comment ctermfg=magenta
-hi Visual ctermbg=darkgray
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position
@@ -187,4 +182,10 @@ augroup END
 
 " Makefile
 map <F9> :make<CR>
+
+hi Normal ctermbg=none
+hi LineNr ctermbg=none
+hi ColorColumn ctermbg=darkyellow
+hi Comment ctermfg=magenta
+hi Visual ctermbg=darkgray
 
