@@ -2,7 +2,7 @@
 ######################################################################
 # This file is a collection of useful functions
 # Here is a list of them
-# overo
+# rosip
 # rosmu
 # rospp
 # remake
@@ -88,10 +88,11 @@ function rosip()
             ;;
     esac
 }
+
 function rosip_disp()
 {
-    echo -e "${bldylw}ROS_IP$txtrst"
-    echo -e "${bldgrn}$ROS_IP$txtrst"
+    echo -e "${bldylw}ROS_IP${txtrst}"
+    echo -e "${bldgrn}$ROS_IP${txtrst}"
     return 0
 }
 
@@ -163,8 +164,8 @@ function rosmu()
 
 function rosmu_disp()
 {
-    echo -e "${bldylw}ROS_MASTER_URI$txtrst"
-    echo -e "${bldgrn}$ROS_MASTER_URI$txtrst"
+    echo -e "${bldylw}ROS_MASTER_URI${txtrst}"
+    echo -e "${bldgrn}$ROS_MASTER_URI${txtrst}"
     return 0
 }
 
