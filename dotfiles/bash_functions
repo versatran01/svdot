@@ -8,6 +8,104 @@
 # remake
 ######################################################################
 
+function ethif()
+{
+    local val=$(ifconfig | grep eth | cut -d: -f2| awk '{print $1}')
+    echo "$val"
+}
+
+function wlanif()
+{
+    local val=$(ifconfig | grep wlan | cut -d: -f2| awk '{print $1}')
+    echo "$val"
+}
+
+function ethip()
+{
+    local eth=$(ethif)
+    local myip=$(ifconfig ${eth} | grep 'inet addr:' | cut -d: -f3 | awk '{print $1}')
+    echo "$myip"
+}
+
+function wlanip()
+{
+    local wlan=$(wlanif)
+    local myip=$(ifconfig ${wlan} | grep 'inet addr:' | cut -d: -f3 | awk '{print $1}')
+    echo "$myip"
+}
+
+# set ROS_IP
+function rosip()
+{
+    # print current ip if no inputs
+    if [ $# -eq 0 ]; then
+        rosip_disp
+        return 0
+    fi
+
+    # check command-line options
+    if [ -n "$(echo $1 | grep '^-')" ]; then
+        case $1 in
+            --help | -h )
+                rosip_help
+                ;;
+            * )
+                echo "rosip: $1: invalid option"
+                rosip_help
+                ;;
+        esac
+        return 0
+    fi
+
+    cmd=$1
+    local rx='([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
+    case $cmd in
+        set )
+            if [ "$2" == "-h" ]; then
+                echo -e "rosip set set ROS_IP to the given IP address"
+                echo -e "usage: rosip set 192.168.129.1"
+            elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
+                # validating IP address using regexp
+                echo -e "rosip: set: invalid IP address"
+                echo -e "usage: rosip set 192.168.129.1"
+            else
+                export ROS_IP="$2"
+                rosip_disp
+            fi
+            ;;
+        reset )
+            if [ "$2" == "-h" ]; then
+                echo -e "rosip reset reset ROS_IP to empty"
+                echo -e "usage: rosmu reset"
+            else
+                export ROS_IP=
+                rosip_disp
+            fi
+            ;;
+        * )
+            echo "rosip: $1: invalid command"
+            rosip_help
+            ;;
+    esac
+}
+function rosip_disp()
+{
+    echo -e "${bldylw}ROS_IP$txtrst"
+    echo -e "${bldgrn}$ROS_IP$txtrst"
+    return 0
+}
+
+function rosip_help()
+{
+    echo -e "rosip is a command-line tool for managing ROS_MASTER_URI"
+    echo -e "usage: rosip [--help|-h] <command> [<args>]\n"
+    echo -e "The most commonly used rosip commands are:"
+    echo -e "    set   \tSet ROS_IP to the given IP address"
+    echo -e "    reset \tReset ROS_IP to empty"
+    echo -e "\nType rosip <command> -h for more detailed usage, e.g. 'rosip set -h'\n"
+    return 0
+}
+
 # set ROS_MASTER_URI
 function rosmu()
 {
@@ -17,7 +115,7 @@ function rosmu()
         return 0
     fi
 
-    # check command-lin options
+    # check command-line options
     if [ -n "$(echo $1 | grep '^-')" ]; then
         case $1 in
             --help | -h )
@@ -77,7 +175,7 @@ function rosmu_help()
     echo -e "The most commonly used rosmu commands are:"
     echo -e "    set   \tSet ROS_MASTER_URI to the given IP address"
     echo -e "    reset \tReset ROS_MASTER_URI to localhost"
-    echo -e "\nType rosmu <command> -h for more detailed usage, e.g. 'ros set -h'\n"
+    echo -e "\nType rosmu <command> -h for more detailed usage, e.g. 'rosmu set -h'\n"
     return 0
 }
 # rospp manages ROS_PACKAGE_PATH

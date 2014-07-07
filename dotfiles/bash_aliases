@@ -40,6 +40,7 @@ alias rdesk='rdesktop vlab-rdp.seas.upenn.edu'
 
 # source bashrc
 alias sbrc='source ~/.bashrc'
+alias scat='source devel/setup.bash'
 
 # fasd
 alias a='fasd -a'        # any
