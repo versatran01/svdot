@@ -135,6 +135,7 @@ tags
 # ==========
 msg_gen/
 srv_gen/
+*.bag
 
 # ==========
 # Build Directories
@@ -206,3 +207,4 @@ target/
 *.creator
 *.config
 *.files
+
