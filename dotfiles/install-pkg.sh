@@ -36,6 +36,7 @@ PACKAGES=(ack-grep
           sublime-text-installer
           synaptic
           texmaker
+          tig
           tmux
           ubuntu-tweak
           valgrind
