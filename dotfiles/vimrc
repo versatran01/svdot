@@ -162,11 +162,6 @@ nmap <leader>hs :set hlsearch! hlsearch?<CR>
 nmap <silent> <leader>h1 :t.<CR>Vr=
 nmap <silent> <leader>h2 :t.<CR>Vr-
 
-" Enable 256
-if $TERM == "xterm-256color"
-  set t_Co=256
-endif
-
 " Show/hide trailing white spaces
 nnoremap <Leader>wn :match ExtraWhitespace /^\s* \s*\<Bar>\s\+$/<CR>
 nnoremap <Leader>wf :match<CR>
@@ -183,6 +178,12 @@ augroup END
 " Makefile
 map <F9> :make<CR>
 
+" Enable 256
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
+
+" cterm setting
 hi Normal ctermbg=none
 hi LineNr ctermbg=none
 hi ColorColumn ctermbg=darkyellow

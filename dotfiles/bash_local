@@ -4,8 +4,8 @@ HISTFILESIZE=100000
 
 export GREP_OPTIONS='--color=auto'
 
-# improve history
-export HISTIGNORE="&:ls:cd:[bf]g:exit"
+# improve history, ignore meaningless command
+export HISTIGNORE="&:ls:cd:[bf]g:exit:j*:?:??:???"
 export HISTTIMEFORMAT="%y/%m/%d %T"
 
 # More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
