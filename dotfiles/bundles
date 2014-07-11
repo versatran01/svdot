@@ -22,6 +22,37 @@ NeoBundle 'flazz/vim-colorschemes'
 " Neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
 
+" Rainbow
+NeoBundle 'luochen1990/rainbow'
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['lightgreen', 'yellow', 'lightcyan', 'blue'],
+    \   'operators': '_,_',
+    \   'parentheses': [['(',')'], ['\[','\]'], ['{','}']],
+    \   'separately': {
+    \       '*': {},
+    \       'lisp': {
+    \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+    \           'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan', 'darkred', 'darkgreen'],
+    \       },
+    \       'vim': {
+    \           'parentheses': [['fu\w* \s*.*)','endfu\w*'], ['for','endfor'], ['while', 'endwhile'], ['if','_elseif\|else_','endif'], ['(',')'], ['\[','\]'], ['{','}']],
+    \       },
+    \       'tex': {
+    \           'parentheses': [['(',')'], ['\[','\]'], ['\\begin{.*}','\\end{.*}']],
+    \       },
+    \       'xml': {},
+    \       'css': 0,
+    \       'stylus': 0,
+    \   }
+    \}
+
+" vim-clang-format
+NeoBundle 'rhysd/vim-clang-format'
+autocmd FileType c,cc,cpp,h,hpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cc,cpp,h,hpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
 " Nerdtree
 NeoBundle 'scrooloose/nerdtree'
 nmap <leader>d :NERDTree<CR>
@@ -91,7 +122,6 @@ NeoBundleCheck
 " Use vi<quote> or vc<quote> to select
 "Plugin 'terryma/vim-expand-region'
 
-
 " Multiple cursors
 " Ctrl-n to select, again to search more
 " Ctrl-p redo, Ctrl-x skip
@@ -106,7 +136,6 @@ NeoBundleCheck
 " <leader>ig Toggles indent guides
 "Plugin 'nathanaelkane/vim-indent-guides'
 "let g:indent_guides_guide_size=1
-
 
 " Surround
 " cs<1><2> to change 1 to 2
@@ -167,33 +196,6 @@ NeoBundleCheck
 "let g:neocomplete#enable_fuzzy_completion=0
 
 " rainbow
-"Bundle 'luochen1990/rainbow'
-"let g:rainbow_active=1
-"let g:rainbow_conf={
-"\   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-"\   'ctermfgs': ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta'],
-"\   'operators': '_,_',
-"\   'parentheses': [['(',')'], ['\[','\]'], ['{','}']],
-"\   'separately': {
-"\       '*': {},
-"\       'lisp': {
-"\           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-"\           'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan', 'darkred', 'darkgreen'],
-"\       },
-"\       'html': {
-"\           'parentheses': [['(',')'], ['\[','\]'], ['{','}'], ['<\a[^>]*[^/]>\|<\a>','</[^>]*>']],
-"\       },
-"\       'tex': {
-"\           'operators': '',
-"\           'parentheses': [['(',')'], ['\[','\]']],
-"\       },
-"\   }
-"\}
 
-" vim-clang-format
-"Plugin 'rhysd/vim-clang-format'
-" map to <Leader>cf in C++ code
- "autocmd FileType c,cc,cpp,h,hpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
- "autocmd FileType c,cc,cpp,h,hpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
 colorscheme molokai
