@@ -184,9 +184,9 @@ if $TERM == "xterm-256color"
 endif
 
 " cterm setting
-hi Normal ctermbg=none
-hi LineNr ctermbg=none
 hi ColorColumn ctermbg=darkyellow
 hi Comment ctermfg=magenta
 hi Visual ctermbg=darkgray
+hi Normal ctermbg=none
+hi LineNr ctermbg=none
 
