@@ -109,6 +109,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " Expand region
 NeoBundle 'terryma/vim-expand-region'
 
+" Multiple cursors
+NeoBundle 'terryma/vim-multiple-cursors'
+
 " Required:
 call neobundle#end()
 
@@ -121,10 +124,6 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 
-" Multiple cursors
-" Ctrl-n to select, again to search more
-" Ctrl-p redo, Ctrl-x skip
-"Plugin 'terryma/vim-multiple-cursors'
 
 " Align
 " :5,10Align =
