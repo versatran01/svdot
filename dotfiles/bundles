@@ -17,7 +17,25 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'flazz/vim-colorschemes'
+"NeoBundle 'flazz/vim-colorschemes'
+
+" Tmuxline
+NeoBundle 'edkolev/tmuxline.vim'
+let g:tmuxline_separators={
+    \ 'left' : '',
+    \ 'left_alt': '',
+    \ 'right' : '',
+    \ 'right_alt' : '',
+    \ 'space' : ' '}
+let g:tmuxline_preset={
+      \'a'    : '#H',
+      \'b'    : '#(whoami)',
+      \'c'    : '#(host `hostname` | cut -d " " -f 4)',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W'],
+      \'x'    : '#W',
+      \'y'    : '#(date)',
+      \'z'    : '#S'}
 
 " Neocomplete
 NeoBundle 'Shougo/neocomplete.vim'
@@ -152,23 +170,6 @@ NeoBundleCheck
     "\ 'vcs_branch' : '',
     "\ 'space'      : ' '}
 
-" Tmuxline
-"Plugin 'edkolev/tmuxline.vim'
-"let g:tmuxline_separators={
-    "\ 'left' : '',
-    "\ 'left_alt': '',
-    "\ 'right' : '',
-    "\ 'right_alt' : '',
-    "\ 'space' : ' '}
-"let g:tmuxline_preset={
-      "\'a'    : '#H',
-      "\'b'    : '#(whoami)',
-      "\'c'    : '#(host `hostname` | cut -d " " -f 4)',
-      "\'win'  : ['#I', '#W'],
-      "\'cwin' : ['#I', '#W'],
-      "\'x'    : '#W',
-      "\'y'    : '#(date)',
-      "\'z'    : '#S'}
 
 " Syntastic
 "Plugin 'scrooloose/syntastic'
