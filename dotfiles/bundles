@@ -19,6 +19,16 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
 
+" Promptline
+Plugin 'edkolev/promptline.vim'
+let g:promptline_symbols={
+    \ 'left'       : '',
+    \ 'left_alt'   : '',
+    \ 'dir_sep'    : '/',
+    \ 'truncation' : '...',
+    \ 'vcs_branch' : '',
+    \ 'space'      : ' '}
+
 " Tmuxline
 NeoBundle 'edkolev/tmuxline.vim'
 let g:tmuxline_separators={
@@ -196,15 +206,6 @@ NeoBundleCheck
 " yss<1>   to insert around entire line
 "Plugin 'tpope/vim-surround'
 
-" Promptline
-"Plugin 'edkolev/promptline.vim'
-"let g:promptline_symbols={
-    "\ 'left'       : '',
-    "\ 'left_alt'   : '',
-    "\ 'dir_sep'    : '/',
-    "\ 'truncation' : '...',
-    "\ 'vcs_branch' : '',
-    "\ 'space'      : ' '}
 
 
 " Syntastic

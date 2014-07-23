@@ -76,9 +76,9 @@ function rosip()
         reset )
             if [ "$2" == "-h" ]; then
                 echo -e "rosip reset reset ROS_IP to empty"
-                echo -e "usage: rosmu reset"
+                echo -e "usage: rosip reset"
             else
-                export ROS_IP=
+                export ROS_IP=localhost
                 rosip_disp
             fi
             ;;
