@@ -20,7 +20,7 @@ NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
 
 " Promptline
-Plugin 'edkolev/promptline.vim'
+NeoBundle 'edkolev/promptline.vim'
 let g:promptline_symbols={
     \ 'left'       : '',
     \ 'left_alt'   : '',
