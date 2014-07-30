@@ -26,6 +26,8 @@ alias dstat='dstat -cdlmnpsy'
 alias vg='valgrind'
 alias py='python'
 alias qt='qtcreator &'
+alias acl='sudo apt-get autoclean'
+alias arm='sudo apt-get autoremove'
 
 # git
 alias g='git'
@@ -82,3 +84,8 @@ alias rosenv='env | grep ROS'
 alias cmk='catkin_make'
 alias rmk='remake'
 alias mk='make'
+
+#ssh
+alias atria='ssh galt@192.168.129.103'
+alias antares='ssh antares@192.168.129.104'
+alias xu-galt='ssh odroid@192.168.129.120'

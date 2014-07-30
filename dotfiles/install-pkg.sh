@@ -1,6 +1,5 @@
 #!/bin/bash
 PACKAGES=(ack-grep
-          astyle
           autojump
           bpython
           calibre
