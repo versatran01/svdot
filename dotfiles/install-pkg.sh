@@ -37,7 +37,6 @@ PACKAGES=(ack-grep
           texmaker
           tig
           tmux
-          ubuntu-tweak
           valgrind
           vim
           vim-gtk
@@ -60,10 +59,6 @@ apt-get -y upgrade --force-yes
 #Add ppa
 #oracle java
 add-apt-repository ppa:webupd8team/java
-#ubuntu-tweak
-add-apt-repository -y ppa:tualatrix/ppa
-#flux
-add-apt-repository -y ppa:noobslab/indicators
 #sublime-text-3
 add-apt-repository ppa:webupd8team/sublime-text-3
 apt-get update --force-yes
