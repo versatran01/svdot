@@ -19,6 +19,9 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
 
+NeoBundle 'tell-k/vim-autopep8'
+NeoBundle 'fs111/pydoc.vim'
+
 " Promptline
 NeoBundle 'edkolev/promptline.vim'
 let g:promptline_symbols={
