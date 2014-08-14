@@ -60,11 +60,11 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
 # Some ros stuff
-ROS_DISTRO=indigo
+ROS_DISTRO="indigo"
 if [ -f /opt/ros/$ROS_DISTRO/setup.bash ]; then
   source /opt/ros/$ROS_DISTRO/setup.bash
 else
-  echo "cannot find ros_$DISTRO"
+  echo "cannot find ros_$ROS_DISTRO"
 fi
 
 # Functions definitions.
