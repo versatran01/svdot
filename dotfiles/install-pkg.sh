@@ -11,8 +11,6 @@ PACKAGES=(ack-grep
           curl
           dstat
           exuberant-ctags
-          fluxgui
-          geany
           gimp
           git
           gitg
@@ -23,7 +21,6 @@ PACKAGES=(ack-grep
           meld
           mercurial
           nemiver
-          openshot
           oracle-java7-installer
           pep8
           pkg-config
