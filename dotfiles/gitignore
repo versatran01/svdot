@@ -207,4 +207,5 @@ target/
 *.creator
 *.config
 *.files
+*.creator.user.*
 

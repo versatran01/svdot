@@ -26,6 +26,7 @@ alias dstat='dstat -cdlmnpsy'
 alias vg='valgrind'
 alias py='python'
 alias qt='qtcreator &'
+alias ec='bash -i -c "eclipse"'
 alias acl='sudo apt-get autoclean'
 alias arm='sudo apt-get autoremove'
 
@@ -73,6 +74,7 @@ alias -- -="cd -"
 
 #ros
 alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure &'
+alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor &'
 alias rqtiv='rqt_image_view &'
 alias rosl='roslaunch'
 alias rost='rostopic'
