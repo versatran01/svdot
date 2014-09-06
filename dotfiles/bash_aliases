@@ -73,9 +73,9 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 #ros
-alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure &'
-alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor &'
-alias rqtiv='rqt_image_view &'
+alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure'
+alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
+alias rqtiv='rqt_image_view'
 alias rosl='roslaunch'
 alias rost='rostopic'
 alias rosm='rosmsg'
