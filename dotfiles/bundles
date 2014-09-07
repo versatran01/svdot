@@ -176,6 +176,9 @@ NeoBundle 'terryma/vim-expand-region'
 " Multiple cursors
 NeoBundle 'terryma/vim-multiple-cursors'
 
+" Cpp enhanced highlight
+NeoBundle 'octol/vim-cpp-enhanced-highlight'
+
 " Required:
 call neobundle#end()
 
