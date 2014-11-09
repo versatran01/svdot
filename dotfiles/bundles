@@ -179,6 +179,9 @@ NeoBundle 'terryma/vim-multiple-cursors'
 " Cpp enhanced highlight
 NeoBundle 'octol/vim-cpp-enhanced-highlight'
 
+" Easy align
+NeoBundle 'junegunn/vim-easy-align'
+
 " Required:
 call neobundle#end()
 
