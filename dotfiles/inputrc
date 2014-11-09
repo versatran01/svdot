@@ -4,15 +4,21 @@ $include /etc/inputrc
 
 # Completion Options
 set page-completions on
-set completion-ignore-case on
-set completion-query-items 350
-set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set visible-stats on
-set match-hidden-files off
+
+# Filename completion/expansion
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# If there are more than x possible completions, aks
+set completion-query-items 200
+
+# Match all files
+set match-hidden-files on
 
 # Useful stuff for UTF-8
-#set meta-flag on
-#set input-meta on
-#set output-meta on
-#set convert-meta off
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
