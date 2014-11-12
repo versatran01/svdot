@@ -1,6 +1,6 @@
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=100000
-HISTFILESIZE=100000
+HISTSIZE=200000
+HISTFILESIZE=200000
 
 export GREP_OPTIONS='--color=auto'
 
