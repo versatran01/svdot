@@ -85,6 +85,7 @@ alias rosm='rosmake'
 alias rosenv='env | grep ROS'
 alias rmdb='rm -rf build devel'
 alias cmk='catkin_make'
+alias rmdb='rm -rf build devel'
 alias rmk='remake'
 alias mk='make'
 
