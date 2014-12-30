@@ -31,7 +31,7 @@ set ttyfast
 set icon
 "set background=dark
 set cursorcolumn            " Highlight current column
-set colorcolumn=80          " Line wrapping indicator at 80
+set colorcolumn=+1          " Line wrapping indicator at 80
 set cursorline              " Highlight current and column
 set number                  " Display line numbers
 set ruler                   " Show current position

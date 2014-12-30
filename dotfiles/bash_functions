@@ -3,6 +3,37 @@
 # This file is a collection of useful functions
 ######################################################################
 
+# share internet
+function sharenet()
+{
+    if [ $# -eq 0 ]; then
+        echo "usage: sharenet <on/off>"
+        return 0
+    fi
+
+    local if_from=wlan0
+    local if_to=eth0
+    # check command-line commands
+    cmd=$1
+    case $cmd in
+        on )
+            sudo su -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+            echo "Enable sharing internet from $if_from to $if_to"
+            sudo /sbin/iptables -A FORWARD -i $if_to -o $if_from -j ACCEPT
+            sudo /sbin/iptables -A FORWARD -i $if_from -o $if_to -m state --state RELATED,ESTABLISHED -j ACCEPT
+            sudo /sbin/iptables -t nat -A POSTROUTING -o $if_from -j MASQUERADE
+            ;;
+        off )
+            sudo su -c "echo 0 > /proc/sys/net/ipv4/ip_forward"
+            echo "Disable sharing internet from $if_from to $if_to"
+            ;;
+        * )
+            echo "sharenet: $1: invalid command"
+            echo "usage: sharenet <on/off>"
+            ;;
+    esac
+}
+
 # Get my ip address
 function myip()
 {
@@ -25,7 +56,7 @@ function ii()   # get current host related info
 }
 
 # finds directory sizes and lists them for the current directory
-dirsize ()
+function dirsize()
 {
     du -shx * .[a-zA-Z0-9_]* 2> /dev/null | \
     egrep '^ *[0-9.]*[MG]' | sort -n > /tmp/list
@@ -35,7 +66,8 @@ dirsize ()
 }
 
 # Easy extact
-extract () {
+function extract()
+{
   if [ -f $1 ] ; then
       case $1 in
           *.tar.bz2)   tar xvjf $1    ;;
@@ -62,7 +94,8 @@ extract () {
 }
 
 # easy compress - archive wrapper
-compress () {
+function compress()
+{
     if [ -n "$1" ] ; then
         FILE=$1
         case $FILE in
