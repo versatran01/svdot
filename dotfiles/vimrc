@@ -6,7 +6,7 @@ let mapleader = ','
 
 " Load ~/.bundles
 if filereadable(expand("~/.bundles"))
-  source ~/.bundles
+    source ~/.bundles
 endif
 
 syntax on
@@ -108,7 +108,7 @@ autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 
 set mouse=a
 if exists('$TMUX')  " Support resizing in tmux
-  set ttymouse=xterm2
+    set ttymouse=xterm2
 endif
 
 " Mappings =============================================================
@@ -168,11 +168,11 @@ nnoremap <Leader>wf :match<CR>
 
 " Only highlight line and column in current window
 augroup BgHighlight
-  autocmd!
-  autocmd WinEnter * set cul
-  autocmd WinEnter * set cuc
-  autocmd WinLeave * set nocul
-  autocmd WinLeave * set nocuc
+    autocmd!
+    autocmd WinEnter * set cul
+    autocmd WinEnter * set cuc
+    autocmd WinLeave * set nocul
+    autocmd WinLeave * set nocuc
 augroup END
 
 " Makefile
@@ -180,7 +180,7 @@ map <F9> :make<CR>
 
 " Enable 256
 if $TERM == "xterm-256color"
-  set t_Co=256
+    set t_Co=256
 endif
 
 " cterm setting
