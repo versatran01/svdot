@@ -104,6 +104,7 @@ autocmd BufRead *bash_* setlocal filetype=sh
 autocmd BufNewFile,BufRead .bundles setf vim
 autocmd BufNewFile,BufRead *.launch setf xml
 autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType xml setlocal expandtab shiftwidth=2 softtabstop=2
 
 
 set mouse=a
