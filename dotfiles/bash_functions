@@ -4,6 +4,11 @@
 ######################################################################
 
 # share internet
+function basedir()
+{
+    basename $(pwd)
+}
+
 function sharenet()
 {
     if [ $# -eq 0 ]; then
