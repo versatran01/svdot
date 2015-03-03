@@ -18,7 +18,9 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
-"
+NeoBundle 'vim-scripts/MatlabFilesEdition'
+
+
 " Python-mode
 NeoBundle 'klen/python-mode'
 " Python-mode
@@ -210,6 +212,11 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled=1
 
+" vim-indent-guides
+ "<leader>ig Toggles indent guides
+NeoBundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_guide_size=1
+
 " Trailing Whitespace
 NeoBundle 'bronson/vim-trailing-whitespace'
 
@@ -237,16 +244,11 @@ NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
 
-
 " Align
 " :5,10Align =
 "     Align on '=' signs
 "Plugin 'vim-scripts/Align'
 
-" vim-indent-guides
-" <leader>ig Toggles indent guides
-"Plugin 'nathanaelkane/vim-indent-guides'
-"let g:indent_guides_guide_size=1
 
 " Surround
 " cs<1><2> to change 1 to 2
@@ -273,9 +275,5 @@ NeoBundleCheck
 " Gundo
 "Plugin 'vim-scripts/Gundo'
 "nnoremap <F5> :GundoToggle<CR>
-
-
-" rainbow
-
 
 colorscheme molokai
