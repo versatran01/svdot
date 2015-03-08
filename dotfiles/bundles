@@ -20,6 +20,7 @@ NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/MatlabFilesEdition'
 
+NeoBundle 'wlangstroth/vim-racket'
 
 " Python-mode
 NeoBundle 'klen/python-mode'
