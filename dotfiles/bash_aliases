@@ -29,6 +29,11 @@ alias qt='qtcreator &'
 alias ec='bash -i -c "eclipse"'
 alias acl='sudo apt-get autoclean'
 alias arm='sudo apt-get autoremove'
+alias sud='sudo apt-get dist-upgrade'
+alias rg='ranger'
+alias tg='tig'
+alias gg='gitg &'
+alias ff='firefox &'
 
 # git
 alias g='git'
