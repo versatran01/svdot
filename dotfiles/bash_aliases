@@ -34,6 +34,12 @@ alias rg='ranger'
 alias tg='tig'
 alias gg='gitg &'
 alias ff='firefox &'
+alias ip3='ipython3'
+alias ip3qt='ipython3 qtconsole'
+alias ip3nb='ipython3 notebook'
+alias ip='ipython'
+alias ipqt='ipython qtconsole'
+alias ipnb='ipython notebook'
 
 # git
 alias g='git'
