@@ -40,6 +40,7 @@ alias ip3nb='ipython3 notebook'
 alias ip='ipython'
 alias ipqt='ipython qtconsole'
 alias ipnb='ipython notebook'
+alias rkt='racket'
 
 # git
 alias g='git'
