@@ -48,6 +48,8 @@ alias g='git'
 alias groot='cd "$(git rev-parse --show-toplevel)"'
 alias gst='git status'
 alias gba='git branch -a'
+alias gdf='git diff'
+alias gdfh='git diff HEAD'
 
 # ssh
 alias eniac='ssh -X quchao@eniac.seas.upenn.edu'
