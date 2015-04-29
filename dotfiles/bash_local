@@ -67,6 +67,8 @@ else
   echo "cannot find ros_$ROS_DISTRO"
 fi
 
+export ROSWS_HOME_DIR=/home/chao/Workspace/ws
+
 # Functions definitions.
 # You may want to put all your funtions into a separate file like
 # ~/.bash_functions, instead of adding them here directly.
