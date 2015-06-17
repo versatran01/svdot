@@ -15,8 +15,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'vim-scripts/MatlabFilesEdition'
 
 NeoBundle 'wlangstroth/vim-racket'
 
