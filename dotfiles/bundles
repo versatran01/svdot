@@ -14,8 +14,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-scripts/MatlabFilesEdition'
@@ -94,7 +92,7 @@ let g:tmuxline_preset={
       \'z'    : '#S'}
 
 " Neocomplete
-NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'Shougo/neocomplete.vim'
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
