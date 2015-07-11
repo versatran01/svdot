@@ -42,6 +42,8 @@ alias ipqt='ipython qtconsole'
 alias ipnb='ipython notebook'
 alias mdl='mendeleydesktop &'
 alias rkt='racket'
+alias pc='charm &'
+alias cl='clion &'
 
 # git
 alias g='git'
@@ -110,3 +112,7 @@ alias mk='make'
 alias atria='ssh galt@192.168.129.103'
 alias antares='ssh antares@192.168.129.104'
 alias xu-galt='ssh odroid@192.168.129.120'
+
+#fuck
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+alias FUCK='fuck'
