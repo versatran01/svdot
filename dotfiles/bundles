@@ -63,6 +63,9 @@ let g:pymode_folding = 0
 
 " Promptline
 NeoBundle 'edkolev/promptline.vim'
+let g:promptline_preset = {
+      \'a'    : [ '\h', '\u', '\j' ],
+      \'c'    : [ '\w' ]}
 let g:promptline_symbols={
     \ 'left'       : '',
     \ 'left_alt'   : '',

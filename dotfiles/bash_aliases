@@ -42,8 +42,8 @@ alias ipqt='ipython qtconsole'
 alias ipnb='ipython notebook'
 alias mdl='mendeleydesktop &'
 alias rkt='racket'
-alias pc='charm &'
-alias cl='clion &'
+alias pc='/opt/pycharm/bin/pycharm.sh &'
+alias cl='/opt/clion/bin/clion.sh &'
 
 # git
 alias g='git'
