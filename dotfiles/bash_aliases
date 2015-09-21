@@ -43,6 +43,8 @@ alias mdl='mendeleydesktop &'
 alias rkt='racket'
 alias pc='/opt/pycharm/bin/pycharm.sh &'
 alias cl='/opt/clion/bin/clion.sh &'
+alias nt='nosetests --with-coverage --cover-package'
+alias sp='spyder &'
 
 # git
 alias g='git'
