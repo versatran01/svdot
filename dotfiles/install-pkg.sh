@@ -1,13 +1,9 @@
 #!/bin/bash
-PACKAGES=(ack-grep
+PACKAGES=(
           autojump
-          bpython
           calibre
           clang
           cmake
-          compiz
-          compizconfig-settings-manager
-          compiz-plugins
           curl
           dstat
           exuberant-ctags
@@ -21,14 +17,8 @@ PACKAGES=(ack-grep
           meld
           mercurial
           nemiver
-          oracle-java7-installer
-          pep8
+          oracle-java8-installer
           pkg-config
-          python-matplotlib
-          python-numpy
-          python-pip
-          python-scipy
-          retext
           sublime-text-installer
           synaptic
           texmaker
