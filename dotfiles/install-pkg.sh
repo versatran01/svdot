@@ -48,6 +48,9 @@ apt-get -y upgrade --force-yes
 add-apt-repository ppa:webupd8team/java
 #sublime-text-3
 add-apt-repository ppa:webupd8team/sublime-text-3
+apt-add-repository ppa:numix/ppa
+add-apt-repository ppa:noobslab/themes
+
 apt-get update --force-yes
 
 #Intall packages
