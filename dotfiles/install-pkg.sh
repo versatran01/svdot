@@ -15,13 +15,9 @@ PACKAGES=(
           htop
           indicator-multiload
           meld
-          mercurial
           nemiver
           oracle-java8-installer
-          pkg-config
           sublime-text-installer
-          synaptic
-          texmaker
           tig
           tmux
           valgrind
