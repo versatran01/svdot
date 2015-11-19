@@ -110,10 +110,3 @@ bakpur='\e[45m'   # Purple
 bakcyn='\e[46m'   # Cyan
 bakwht='\e[47m'   # White
 txtrst='\e[0m'    # Text Reset
-
-# GCC colors for gcc 4.9.1
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-export GALT_BAGFILES='/media/chao/Seagate/bag'
-
-#export PS1="${debian_chroot:+($debian_chroot)}\[$COLOR_USR\]\u@\h\[$COLOR_NO\]:\[$COLOR_DIR\]\w\[$COLOR_NO\]\[$COLOR_GIT\]\$(__git_ps1 "[%s]")\[$COLOR_NO\]\$ "
-#export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;45m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\033[00;35m\]$(__git_ps1 "[%s]")\[\033[00m\]\$ '
