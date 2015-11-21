@@ -2,8 +2,6 @@
 HISTSIZE=200000
 HISTFILESIZE=200000
 
-export GREP_OPTIONS='--color=auto'
-
 # improve history, ignore meaningless command
 export HISTIGNORE="&:ls:cd:[bf]g:exit:j*:?:??:???:????"
 export HISTTIMEFORMAT="%y/%m/%d %T"
