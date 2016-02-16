@@ -22,6 +22,7 @@ alias acl='sudo apt-get autoclean'
 alias arm='sudo apt-get autoremove'
 alias pc='/opt/pycharm/bin/pycharm.sh &'
 alias cl='/opt/clion/bin/clion.sh &'
+alias ij='/opt/idea/bin/idea.sh &'
 alias sp='spyder &'
 
 # git

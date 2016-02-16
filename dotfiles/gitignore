@@ -210,4 +210,5 @@ target/
 *.config
 *.files
 *.creator.user.*
+.spyderworkspace
 
