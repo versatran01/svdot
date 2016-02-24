@@ -24,6 +24,7 @@ alias pc='/opt/pycharm/bin/pycharm.sh &'
 alias cl='/opt/clion/bin/clion.sh &'
 alias ij='/opt/idea/bin/idea.sh &'
 alias sp='spyder &'
+alias qg='/opt/qgroundcontrol/qgroundcontrol-start.sh'
 
 # git
 alias g='git'

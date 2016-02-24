@@ -56,12 +56,12 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
 # Some ros stuff
-#ROS_DISTRO="jade"
-#if [ -f /opt/ros/$ROS_DISTRO/setup.bash ]; then
-  #source /opt/ros/$ROS_DISTRO/setup.bash
-#else
-  #echo "cannot find ros_$ROS_DISTRO"
-#fi
+ROS_DISTRO="jade"
+if [ -f /opt/ros/$ROS_DISTRO/setup.bash ]; then
+  source /opt/ros/$ROS_DISTRO/setup.bash
+else
+  echo "cannot find ros_$ROS_DISTRO"
+fi
 
 export ROSWS_HOME_DIR=/home/chao/Workspace/ws
 
