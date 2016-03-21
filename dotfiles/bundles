@@ -63,9 +63,12 @@ let g:pymode_folding = 0
 
 " Promptline
 NeoBundle 'edkolev/promptline.vim'
-let g:promptline_preset = {
-      \'a'    : [ '\h', '\u', '\j' ],
-      \'c'    : [ '\w' ]}
+"let g:promptline_theme = 'airline'
+"let g:promptline_preset = {
+      "\'a'    : [ '\h' ],
+      "\'b'    : [ '\u' ],
+      "\'c'    : [ '\w' ],
+      "\'x'    : [ promptline#slices#vcs_branch() ]}
 let g:promptline_symbols={
     \ 'left'       : '',
     \ 'left_alt'   : '',
@@ -206,7 +209,6 @@ NeoBundle 'ervandew/supertab'
 
 " Airline
 NeoBundle 'bling/vim-airline'
-let g:airline_theme='badwolf'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled=1
