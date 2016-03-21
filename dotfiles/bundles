@@ -1,6 +1,6 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible
 
   " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -137,28 +137,6 @@ let g:neocomplete#enable_fuzzy_completion=0
 " Rainbow
 NeoBundle 'luochen1990/rainbow'
 let g:rainbow_active = 1
-let g:rainbow_conf = {
-    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-    \   'ctermfgs': ['lightgreen', 'yellow', 'lightcyan', 'blue'],
-    \   'operators': '_,_',
-    \   'parentheses': [['(',')'], ['\[','\]'], ['{','}']],
-    \   'separately': {
-    \       '*': {},
-    \       'lisp': {
-    \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
-    \           'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan', 'darkred', 'darkgreen'],
-    \       },
-    \       'vim': {
-    \           'parentheses': [['fu\w* \s*.*)','endfu\w*'], ['for','endfor'], ['while', 'endwhile'], ['if','_elseif\|else_','endif'], ['(',')'], ['\[','\]'], ['{','}']],
-    \       },
-    \       'tex': {
-    \           'parentheses': [['(',')'], ['\[','\]'], ['\\begin{.*}','\\end{.*}']],
-    \       },
-    \       'xml': {},
-    \       'css': 0,
-    \       'stylus': 0,
-    \   }
-    \}
 
 " vim-clang-format
 NeoBundle 'rhysd/vim-clang-format'
@@ -243,38 +221,5 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
-
-
-" Align
-" :5,10Align =
-"     Align on '=' signs
-"Plugin 'vim-scripts/Align'
-
-
-" Surround
-" cs<1><2> to change 1 to 2
-" ds<1>    to delete 1
-" ysiw<1>  to insert around current word
-" yss<1>   to insert around entire line
-"Plugin 'tpope/vim-surround'
-
-
-
-" Syntastic
-"Plugin 'scrooloose/syntastic'
-"let g:syntastic_python_checkers=['pylint']
-"let g:syntastic_check_on_wq=0
-"let g:syntastic_mode_map={'mode': 'passive',
-            "\ 'active_filetypes': [],
-            "\ 'passive_filetypes': []}
-
-" NarrowRegion
-" :NR
-" :NW
-"Plugin 'chrisbra/NrrwRgn'
-
-" Gundo
-"Plugin 'vim-scripts/Gundo'
-"nnoremap <F5> :GundoToggle<CR>
 
 colorscheme molokai

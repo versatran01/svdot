@@ -12,9 +12,9 @@
     co = checkout
     br = branch
     bra = branch -a
-    ci = commit
+    cm = commit
     st = status
-    di = diff
+    df = diff
     pl = pull
     ps = push
     sh = stash
