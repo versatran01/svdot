@@ -1,9 +1,9 @@
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
-  set nocompatible
+    set nocompatible
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+    " Required:
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
@@ -64,36 +64,31 @@ let g:pymode_folding = 0
 " Promptline
 NeoBundle 'edkolev/promptline.vim'
 "let g:promptline_theme = 'airline'
-"let g:promptline_preset = {
-      "\'a'    : [ '\h' ],
-      "\'b'    : [ '\u' ],
-      "\'c'    : [ '\w' ],
-      "\'x'    : [ promptline#slices#vcs_branch() ]}
 let g:promptline_symbols={
-    \ 'left'       : '',
-    \ 'left_alt'   : '',
-    \ 'dir_sep'    : '/',
-    \ 'truncation' : '...',
-    \ 'vcs_branch' : '',
-    \ 'space'      : ' '}
+            \ 'left'       : '',
+            \ 'left_alt'   : '',
+            \ 'dir_sep'    : '/',
+            \ 'truncation' : '...',
+            \ 'vcs_branch' : '',
+            \ 'space'      : ' '}
 
 " Tmuxline
 NeoBundle 'edkolev/tmuxline.vim'
 let g:tmuxline_separators={
-    \ 'left' : '',
-    \ 'left_alt': '',
-    \ 'right' : '',
-    \ 'right_alt' : '',
-    \ 'space' : ' '}
+            \ 'left' : '',
+            \ 'left_alt': '',
+            \ 'right' : '',
+            \ 'right_alt' : '',
+            \ 'space' : ' '}
 let g:tmuxline_preset={
-      \'a'    : '#H',
-      \'b'    : '#(whoami)',
-      \'c'    : '#(host `hostname` | cut -d " " -f 4)',
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W'],
-      \'x'    : '#W',
-      \'y'    : '#(date)',
-      \'z'    : '#S'}
+            \'a'    : '#H',
+            \'b'    : '#(whoami)',
+            \'c'    : '#(host `hostname` | cut -d " " -f 4)',
+            \'win'  : ['#I', '#W'],
+            \'cwin' : ['#I', '#W'],
+            \'x'    : '#W',
+            \'y'    : '#(date)',
+            \'z'    : '#S'}
 
 " Neocomplete
 " NeoBundle 'Shougo/neocomplete.vim'
@@ -106,9 +101,9 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'}
+            \ 'default' : '',
+            \ 'vimshell' : $HOME.'/.vimshell_hist',
+            \ 'scheme' : $HOME.'/.gosh_completions'}
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
@@ -125,7 +120,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
+    let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#max_list=10
 let g:neocomplete#max_keyword_width=48
@@ -154,9 +149,9 @@ NeoBundle 'kien/ctrlp.vim'
 let g:ctrlp_map='<C-T>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_custom_ignore={
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ }
 
 " Tagbar
 NeoBundle 'majutsushi/tagbar'
@@ -192,7 +187,7 @@ let g:airline_right_sep=''
 let g:airline#extensions#tabline#enabled=1
 
 " vim-indent-guides
- "<leader>ig Toggles indent guides
+"<leader>ig Toggles indent guides
 NeoBundle 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size=1
 
@@ -222,4 +217,10 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
+let g:promptline_preset = {
+            \'a'    : [ '\h' ],
+            \'b'    : [ '\u' ],
+            \'c'    : [ promptline#slices#cwd() ],
+            \'warn' : [ promptline#slices#last_exit_code() ],
+            \'y'    : [ promptline#slices#vcs_branch() ]}
 colorscheme molokai
