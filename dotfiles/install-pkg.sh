@@ -2,7 +2,6 @@
 PACKAGES=(
           autojump
           calibre
-          clang
           cmake
           curl
           dstat
@@ -17,7 +16,6 @@ PACKAGES=(
           meld
           nemiver
           oracle-java8-installer
-          sublime-text-installer
           tig
           tmux
           valgrind
@@ -43,7 +41,6 @@ apt-get -y upgrade --force-yes
 #oracle java
 add-apt-repository ppa:webupd8team/java
 #sublime-text-3
-add-apt-repository ppa:webupd8team/sublime-text-3
 apt-add-repository ppa:numix/ppa
 add-apt-repository ppa:noobslab/themes
 
