@@ -15,5 +15,5 @@ promptline.sh
 for file in "${FILES[@]}"
 do
     echo Linking "$file" to $HOME
-    ln -s $(pwd)/$file ~/.$file
+    ln -sf $(pwd)/$file ~/.$file
 done
