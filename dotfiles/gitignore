@@ -214,4 +214,7 @@ target/
 .spyderproject
 .spyderworkspace
 
+.vscode
+
 *~
+
