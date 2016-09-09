@@ -106,6 +106,7 @@ set wildignore+=*.mexa64,*.mexgln
 " => Some autocmd to suite different files
 autocmd BufRead *bash_* setlocal filetype=sh
 autocmd BufNewFile,BufRead .bundles setf vim
+autocmd BufNewFile,BufRead *.rosinstall setf yaml
 autocmd BufNewFile,BufRead *.launch setf xml
 autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 softtabstop=2

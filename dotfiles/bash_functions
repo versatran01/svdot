@@ -16,8 +16,8 @@ function sharenet()
         return 0
     fi
 
-    local if_from=wlan0
-    local if_to=eth0
+    local if_from=wlp3s0
+    local if_to=enp0s25
     # check command-line commands
     cmd=$1
     case $cmd in
@@ -42,8 +42,8 @@ function sharenet()
 # Get my ip address
 function myip()
 {
-  local myip=`w3m -dump http://checkip.dyndns.org:8245/`
-  echo "${myip}"
+    local myip=`w3m -dump http://checkip.dyndns.org:8245/`
+    echo "${myip}"
 }
 
 function ii()   # get current host related info
@@ -118,13 +118,13 @@ function compress()
 
 function ethif()
 {
-    local val=$(ifconfig | grep eth | cut -d: -f2| awk '{print $1}')
+    local val=$(ifconfig | grep enp | cut -d: -f2 | head -1 | awk '{print $1}')
     echo "$val"
 }
 
 function wlanif()
 {
-    local val=$(ifconfig | grep wlan | cut -d: -f2| awk '{print $1}')
+    local val=$(ifconfig | grep wlp | cut -d: -f2| head -1 | awk '{print $1}')
     echo "$val"
 }
 
