@@ -17,7 +17,7 @@ syntax enable
 " Setting =============================================================
 " => General
 set autoread                " reload files when changed on disk
-set encoding=utf8           " Set utf-8 as standard encoding
+set encoding=utf-8           " Set utf-8 as standard encoding
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
@@ -80,6 +80,10 @@ set foldnestmax=3           " deepest fold is 3 levels
 set foldlevel=99
 set nofoldenable            " dont fold by default
 
+" => Python
+set splitbelow
+set splitright
+
 " => Other
 set magic                   " For regular expressions turn magic on
 set mat=2                   " How many tenths of a second to blink when matching brackets
@@ -105,6 +109,11 @@ autocmd BufNewFile,BufRead .bundles setf vim
 autocmd BufNewFile,BufRead *.launch setf xml
 autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
 
 
 set mouse=a
@@ -176,8 +185,8 @@ augroup BgHighlight
     autocmd WinLeave * set nocuc
 augroup END
 
-" Makefile
-map <F9> :make<CR>
+" Enable folding with the spacebar
+nnoremap <space> za
 
 " Enable 256
 if $TERM == "xterm-256color"
