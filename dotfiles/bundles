@@ -12,7 +12,7 @@ call dein#add('Shougo/dein.vim')
 " All python stuff
 call dein#add('tmhedberg/SimpylFold')
 call dein#add('vim-scripts/indentpython.vim')
-call dein#add('scrooloose/syntastic')
+"call dein#add('scrooloose/syntastic')
 call dein#add('davidhalter/jedi-vim')
 
 call dein#add('tpope/vim-fugitive')
