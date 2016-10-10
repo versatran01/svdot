@@ -8,6 +8,7 @@ alias lf='ls -F'
 alias lm='ls -al | more'
 alias eecho='echo -e'
 alias tmux='tmux -2'
+alias matlab='matlab -nodesktop'
 
 # programs
 alias xo='xdg-open'
