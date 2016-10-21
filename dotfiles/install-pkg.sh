@@ -39,10 +39,10 @@ apt-get -y upgrade --force-yes
 
 #Add ppa
 #oracle java
-add-apt-repository ppa:webupd8team/java
-#sublime-text-3
+apt-add-repository ppa:webupd8team/java
 apt-add-repository ppa:numix/ppa
-add-apt-repository ppa:noobslab/themes
+apt-add-repository ppa:noobslab/themes
+apt-add-repository ppa:git-core/ppa
 
 apt-get update --force-yes
 
