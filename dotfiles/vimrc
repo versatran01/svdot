@@ -16,8 +16,8 @@ syntax enable
 
 " Setting =============================================================
 " => General
-set autoread                " reload files when changed on disk
-set encoding=utf-8           " Set utf-8 as standard encoding
+set autoread                    " reload files when changed on disk
+set encoding=utf-8              " Set utf-8 as standard encoding
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set fileformats=unix,dos,mac
@@ -110,11 +110,8 @@ autocmd BufNewFile,BufRead *.rosinstall setf yaml
 autocmd BufNewFile,BufRead *.launch setf xml
 autocmd FileType cpp setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType xml setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+autocmd FileType py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80
+autocmd BufNewFile,BufRead *.js, *.html, *.css set tabstop=2 softtabstop=2 shiftwidth=2
 
 
 set mouse=a
