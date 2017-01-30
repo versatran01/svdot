@@ -8,14 +8,55 @@ set runtimepath^=/home/chao/.vim/bundle/repos/github.com/Shougo/dein.vim
 call dein#begin(expand('/home/chao/.vim/bundle'))
 call dein#add('Shougo/dein.vim')
 
+
 " My Bundles here:
+call dein#add('scrooloose/nerdtree')
+nmap <leader>d :NERDTree<CR>
+nmap <leader>dt :NERDTreeToggle<CR>
+nmap <leader>df :NERDTreeFind<CR>
+
+call dein#add('Xuyuanp/nerdtree-git-plugin')
+
+call dein#add('tpope/vim-fugitive')
+
+call dein#add('tpope/vim-surround')
+
+call dein#add('vim-syntastic/syntastic')
+set statusline+=%#warningmsg#
+set statusline+=${SyntasticsStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+call dein#add('kien/ctrlp.vim')
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlP'
+let g:ctrlp_working_path_mode='ra'
+let g:ctrlp_custom_ignore={
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ }
+
+call dein#add('majutsushi/tagbar')
+nmap <leader>b :Tagbar<CR>
+nmap <leader>bt :TagbarToggle<CR>
+
+call dein#add('scrooloose/nerdcommenter')
+let g:NERDSpaceDelims=1
+let g:NERDCompactSexyComs=1
+let g:NERDTrimTrailingWhitespace=1
+
+call dein#add('airblade/vim-gitgutter')
+
+call dein#add('ervandew/supertab')
+
 " All python stuff
 call dein#add('tmhedberg/SimpylFold')
 call dein#add('vim-scripts/indentpython.vim')
-"call dein#add('scrooloose/syntastic')
 call dein#add('davidhalter/jedi-vim')
 
-call dein#add('tpope/vim-fugitive')
 
 call dein#add('wlangstroth/vim-racket')
 call dein#add('Shougo/neocomplete.vim')
@@ -97,23 +138,6 @@ call dein#add('rhysd/vim-clang-format')
 autocmd FileType c,cc,cpp,h,hpp nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cc,cpp,h,hpp vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
-call dein#add('scrooloose/nerdtree')
-nmap <leader>d :NERDTree<CR>
-nmap <leader>dt :NERDTreeToggle<CR>
-nmap <leader>df :NERDTreeFind<CR>
-
-call dein#add('kien/ctrlp.vim')
-let g:ctrlp_map='<C-T>'
-let g:ctrlp_cmd='CtrlP'
-let g:ctrlp_custom_ignore={
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-            \ 'file': '\v\.(exe|so|dll)$',
-            \ }
-
-call dein#add('majutsushi/tagbar')
-nmap <leader>b :Tagbar<CR>
-nmap <leader>bt :TagbarToggle<CR>
-
 call dein#add('Lokaltog/vim-easymotion')
 
 call dein#add('vim-scripts/bufexplorer.zip')
@@ -122,15 +146,9 @@ nnoremap <Esc>n :bn<CR>
 nnoremap <Esc>d :bd<CR>
 noremap <CR> :BufExplorer<CR>
 
-call dein#add('scrooloose/nerdcommenter')
-
-call dein#add('tomasr/molokai')
-let g:molokai_original=1
-
 call dein#add('othree/xml.vim')
 call dein#add('mhinz/vim-signify')
 call dein#add('xolox/vim-misc')
-call dein#add('ervandew/supertab')
 
 call dein#add('bling/vim-airline')
 let g:airline_left_sep=''
@@ -163,4 +181,5 @@ let g:promptline_preset = {
             \'c'    : [ promptline#slices#cwd() ],
             \'warn' : [ promptline#slices#last_exit_code() ],
             \'y'    : [ promptline#slices#vcs_branch() ]}
+
 colorscheme Tomorrow-Night
