@@ -21,14 +21,14 @@ call dein#add('tpope/vim-fugitive')
 
 call dein#add('tpope/vim-surround')
 
-call dein#add('vim-syntastic/syntastic')
-set statusline+=%#warningmsg#
-set statusline+=${SyntasticsStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" call dein#add('vim-syntastic/syntastic')
+" set statusline+=%#warningmsg#
+" set statusline+=${SyntasticsStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 call dein#add('kien/ctrlp.vim')
 let g:ctrlp_map='<c-p>'
