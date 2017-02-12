@@ -2,10 +2,10 @@ if &compatible
     set nocompatible
 endif
 
-set runtimepath^=/home/chao/.vim/bundle/repos/github.com/Shougo/dein.vim
+set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin(expand('/home/chao/.vim/bundle'))
+call dein#begin(expand('~/.vim/bundle'))
 call dein#add('Shougo/dein.vim')
 
 
