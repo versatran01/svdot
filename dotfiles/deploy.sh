@@ -2,8 +2,6 @@
 FILES=(bash_local
 bash_aliases
 bash_functions
-vimrc
-bundles
 tmuxline
 tmux.conf
 gitconfig
