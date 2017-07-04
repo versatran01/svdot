@@ -37,5 +37,5 @@ let g:clang2_placeholder_next = ''
 let g:clang2_placeholder_prev = ''
 
 let g:spacevim_statusline_separator = 'nil'
-
+set pastetoggle=<F4>
 
