@@ -8,7 +8,6 @@ gitconfig
 gitignore
 inputrc
 promptline.sh
-ycm_extra_conf.py
 )
 
 
