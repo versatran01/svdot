@@ -220,3 +220,4 @@ target/
 .spyproject/
 
 doc/
+.cache/
