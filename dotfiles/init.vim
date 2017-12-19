@@ -39,4 +39,6 @@ let g:clang2_placeholder_prev = ''
 let g:spacevim_statusline_separator = 'nil'
 set pastetoggle=<F4>
 let g:spacevim_lint_on_save = 0
-
+let g:spacevim_disabled_plugins = [
+    \ ['vim-hug-neovim-rpc'],
+    \ ]
