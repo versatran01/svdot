@@ -1,27 +1,19 @@
 #!/bin/bash
 PACKAGES=(
           autojump
-          calibre
           cmake
           curl
           dstat
-          exuberant-ctags
-          gimp
           git
           gitg
-          git-review
           guake
           htop
           indicator-multiload
           meld
-          nemiver
           oracle-java8-installer
           tig
           tmux
-          valgrind
           vim
-          vim-gtk
-          vlc
           )
 
 #Stop if a command ends in an error
@@ -42,7 +34,6 @@ apt-get -y upgrade --force-yes
 apt-add-repository ppa:webupd8team/java
 apt-add-repository ppa:numix/ppa
 apt-add-repository ppa:noobslab/themes
-apt-add-repository ppa:git-core/ppa
 
 apt-get update --force-yes
 
