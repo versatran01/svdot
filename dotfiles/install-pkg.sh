@@ -33,7 +33,7 @@ apt-get -y upgrade --force-yes
 #oracle java
 apt-add-repository ppa:webupd8team/java
 apt-add-repository ppa:numix/ppa
-apt-add-repository ppa:noobslab/themes
+apt-add-repository ppa:noobslab/apps
 
 apt-get update --force-yes
 
