@@ -1,10 +1,16 @@
-# qcfiles
+install vim plugins
 
+```
+sh ./installer.sh ~/.vim/bundle
+```
 
+update vim plugins in vim
+```
+:call dein#update()
+```
 
-## INTRODUCTION
+deploy dotfiles
 
-
-dotfiles for my linux  
-inspired by Kartik Mohta  
-vimrc by Menglong Zhu  
+```
+sh ./deploy.sh
+```
