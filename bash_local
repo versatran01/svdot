@@ -56,7 +56,7 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
 # Some ros stuff
-ROS_DISTRO="kinetic"
+ROS_DISTRO="melodic"
 if [ -f /opt/ros/$ROS_DISTRO/setup.bash ]; then
   source /opt/ros/$ROS_DISTRO/setup.bash
 else
