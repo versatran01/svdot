@@ -221,3 +221,4 @@ target/
 
 doc/
 .cache/
+.pytest_cache/

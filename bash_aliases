@@ -24,7 +24,7 @@ alias arm='sudo apt autoremove'
 alias kd='/opt/kde &'
 alias matlab='matlab -nodesktop -nosplash'
 alias sp='spyder &'
-alias gtop='watch --color -n1.0 gpustat'
+alias gtop='watch --color -n1.0 gpustat --color'
 alias spd='spyder --new-instance &'
 
 # git
