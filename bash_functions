@@ -16,8 +16,8 @@ function sharenet()
         return 0
     fi
 
-    local if_from=wlp3s0
-    local if_to=enp0s25
+    local if_from=wlp2s0
+    local if_to=enx28f10e4f563b
     # check command-line commands
     cmd=$1
     case $cmd in

@@ -5,6 +5,7 @@ HISTFILESIZE=200000
 # improve history, ignore meaningless command
 export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:???:rm*"
 export HISTTIMEFORMAT="%y/%m/%d %T"
+export HISTCONTROL=ignoreboth:erasedups
 
 # More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
 # Update the hash table properly
@@ -56,7 +57,7 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
 # Some ros stuff
-#ROS_DISTRO="melodic"
+ROS_DISTRO="lunar"
 #if [ -f /opt/ros/$ROS_DISTRO/setup.bash ]; then
 #  source /opt/ros/$ROS_DISTRO/setup.bash
 #else
