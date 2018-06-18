@@ -26,6 +26,7 @@ alias matlab='matlab -nodesktop -nosplash'
 alias sp='spyder &'
 alias gtop='watch --color -n1.0 gpustat --color'
 alias spd='spyder --new-instance &'
+alias rg='ranger'
 
 # git
 alias g='git'
