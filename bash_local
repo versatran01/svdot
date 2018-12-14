@@ -1,7 +1,3 @@
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=200000
-HISTFILESIZE=200000
-
 # improve history, ignore meaningless command
 export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:???:rm*"
 export HISTTIMEFORMAT="%y/%m/%d %T"
