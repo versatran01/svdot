@@ -3,6 +3,18 @@
     <remote name="bitbucket" fetch="https://bitbucket.org"/>
 
     <default revision="master" remote="github" sync-j="4"/>
+    <project name="fmtlib/fmt" path="fmt"/>
+
     <project name="gtborg/gtsam" revision="develop" remote="bitbucket" path="gtsam"/>
     <project name="strasdat/sophus" path="sohpus"/>
+    <project name="ceres-solver/ceres-solver" path="ceres"/>
+    <project name="rmsalinas/fbow" path="fbow"/>
+    <project name="stevenlovegrove/pangolin" path="pangolin"/>
+    <project name="laurentkneip/opengv" path="opengv"/>
+    <project name="RainerKuemmerle/g2o" path="g2o"/>
+
+    <project name="google/benchmark" path="gbench"/>
+    <project name="google/googletest" path="gtest"/>
+    <project name="google/glog" path="glog"/>
+    <project name="google/gflags" path="gflags"/>
 </manifest>
