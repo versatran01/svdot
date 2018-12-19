@@ -1,0 +1,8 @@
+<manifest>
+    <remote name="github" fetch="https://github.com"/>
+    <remote name="bitbucket" fetch="https://bitbucket.org"/>
+
+    <default revision="master" remote="github" sync-j="4"/>
+    <project name="gtborg/gtsam" revision="develop" remote="bitbucket" path="gtsam"/>
+    <project name="strasdat/sophus" path="sohpus"/>
+</manifest>
