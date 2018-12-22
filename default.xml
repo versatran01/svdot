@@ -6,12 +6,15 @@
     <project name="fmtlib/fmt" path="fmt"/>
 
     <project name="gtborg/gtsam" revision="develop" remote="bitbucket" path="gtsam"/>
-    <project name="strasdat/sophus" path="sohpus"/>
     <project name="ceres-solver/ceres-solver" path="ceres"/>
+    <project name="RainerKuemmerle/g2o" path="g2o"/>
+
+    <project name="anybotics/kindr" path="kindr"/>
+    <project name="strasdat/sophus" path="sohpus"/>
+    <project name="laurentkneip/opengv" path="opengv"/>
+
     <project name="rmsalinas/fbow" path="fbow"/>
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
-    <project name="laurentkneip/opengv" path="opengv"/>
-    <project name="RainerKuemmerle/g2o" path="g2o"/>
 
     <project name="google/benchmark" path="gbench"/>
     <project name="google/googletest" path="gtest"/>
