@@ -52,6 +52,7 @@ alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cb='catkin build'
 alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release'
+alias cbrv='catkin build -v --cmake-args -DCMAKE_C_FLAGS="-Wall" -DCMAKE_BUILD_TYPE=Release'
 
 # python 
 alias ppwd='export PYTHONPATH=`pwd`'
