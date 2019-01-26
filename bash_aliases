@@ -25,6 +25,7 @@ alias matlabnn='matlab -nodesktop -nosplash'
 alias gtop='watch --color -n1.0 gpustat --color'
 alias spd='spyder --new-instance &'
 alias rg='ranger'
+alias ft='fzf-tmux'
 
 # git
 alias g='git'
@@ -52,6 +53,7 @@ alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cb='catkin build'
 alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release'
+alias cbd='catkin build -DCMAKE_BUILD_TYPE=Debug'
 alias cbrv='catkin build -v --cmake-args -DCMAKE_C_FLAGS="-Wall" -DCMAKE_BUILD_TYPE=Release'
 
 # python 
