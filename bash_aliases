@@ -52,7 +52,9 @@ alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cb='catkin build'
 alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release'
+alias cbd='catkin build -DCMAKE_BUILD_TYPE=Debug'
 alias cbrv='catkin build -v --cmake-args -DCMAKE_C_FLAGS="-Wall" -DCMAKE_BUILD_TYPE=Release'
+alias sros='source /opt/ros/melodic/setup.bash'
 
 # python 
 alias ppwd='export PYTHONPATH=`pwd`'
