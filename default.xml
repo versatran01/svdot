@@ -20,4 +20,11 @@
     <project name="google/googletest" path="gtest"/>
     <project name="google/glog" path="glog"/>
     <project name="gflags/gflags" path="gflags"/>
+
+    <project name="nlohmann/json" path="json"/>
+    <project name="QuantStack/xtensor" path="xtensor"/>
+    <project name="QuantStack/xtl" path="xtl"/>
+    <project name="QuantStack/xsimd" path="xsimd"/>
+
+
 </manifest>
