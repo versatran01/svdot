@@ -3,31 +3,36 @@
     <remote name="bitbucket" fetch="https://bitbucket.org"/>
 
     <default revision="master" remote="github" sync-j="4"/>
-    <project name="fmtlib/fmt" path="fmt"/>
 
+    <!-- logging testing -->
+    <project name="catchorg/Catch2" path="catch"/>
+    <project name="gabime/spdlog" path="spdlog"/>
+    <project name="fmtlib/fmt" path="fmt"/>
+    <project name="onqtam/doctest" path="doctest"/>
+
+    <!-- nlls -->
     <project name="gtborg/gtsam" revision="develop" remote="bitbucket" path="gtsam"/>
     <project name="ceres-solver/ceres-solver" path="ceres"/>
     <project name="RainerKuemmerle/g2o" path="g2o"/>
 
+    <!-- geometry -->
     <project name="anybotics/kindr" path="kindr"/>
+    <project name="artivis/manfi" path="manif"/>
     <project name="strasdat/sophus" path="sohpus"/>
     <project name="laurentkneip/opengv" path="opengv"/>
 
     <project name="rmsalinas/fbow" path="fbow"/>
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
 
+    <!-- google -->
     <project name="google/benchmark" path="gbench"/>
     <project name="google/googletest" path="gtest"/>
     <project name="google/glog" path="glog"/>
     <project name="gflags/gflags" path="gflags"/>
 
+    <!-- xtensor -->
     <project name="nlohmann/json" path="json"/>
     <project name="QuantStack/xtensor" path="xtensor"/>
     <project name="QuantStack/xtl" path="xtl"/>
     <project name="QuantStack/xsimd" path="xsimd"/>
-
-    <project name="catchorg/Catch2" path="catch"/>
-    <project name="gabime/spdlog" path="spdlog"/>
-
-
 </manifest>
