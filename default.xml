@@ -26,5 +26,8 @@
     <project name="QuantStack/xtl" path="xtl"/>
     <project name="QuantStack/xsimd" path="xsimd"/>
 
+    <project name="catchorg/Catch2" path="catch"/>
+    <project name="gabime/spdlog" path="spdlog"/>
+
 
 </manifest>
