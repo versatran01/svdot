@@ -22,9 +22,6 @@
     <project name="strasdat/sophus" path="sohpus"/>
     <project name="laurentkneip/opengv" path="opengv"/>
 
-    <project name="rmsalinas/fbow" path="fbow"/>
-    <project name="stevenlovegrove/pangolin" path="pangolin"/>
-
     <!-- google -->
     <project name="google/benchmark" path="gbench"/>
     <project name="google/googletest" path="gtest"/>
@@ -36,4 +33,10 @@
     <project name="QuantStack/xtensor" path="xtensor"/>
     <project name="QuantStack/xtl" path="xtl"/>
     <project name="QuantStack/xsimd" path="xsimd"/>
+
+    <!-- other -->
+    <project name="rmsalinas/fbow" path="fbow"/>
+    <project name="autodiff/autodiff" path="autodiff"/>
+    <project name="kmhofmann/selene" path="selene"/>
+    <project name="stevenlovegrove/pangolin" path="pangolin"/>
 </manifest>
