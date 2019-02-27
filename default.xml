@@ -6,7 +6,6 @@
 
     <!-- logging testing -->
     <project name="catchorg/Catch2" path="catch"/>
-    <project name="catchorg/Clara" path="clara"/>
     <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
     <project name="fmtlib/fmt" path="fmt"/>
     <project name="onqtam/doctest" path="doctest"/>
@@ -37,6 +36,5 @@
     <!-- other -->
     <project name="rmsalinas/fbow" path="fbow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <project name="kmhofmann/selene" path="selene"/>
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
 </manifest>
