@@ -27,6 +27,7 @@ alias gtop='watch --color -n1.0 gpustat --color'
 alias spd='spyder --new-instance &'
 alias rg='ranger'
 alias ft='fzf-tmux'
+alias za='zathura'
 
 # git
 alias g='git'
