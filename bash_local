@@ -1,5 +1,5 @@
 # improve history, ignore meaningless command
-export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:???:rm*"
+export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:??:rm*"
 export HISTTIMEFORMAT="%y/%m/%d %T"
 export HISTCONTROL=ignoreboth:erasedups
 
