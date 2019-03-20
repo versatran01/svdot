@@ -22,3 +22,6 @@ set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
+
+set colored-stats on
+set colored-completion-prefix on
