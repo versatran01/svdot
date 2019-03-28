@@ -54,9 +54,9 @@ alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cb='catkin build'
-alias cbr='catkin build -DCMAKE_BUILD_TYPE=RELEASE'
-alias cbd='catkin build -DCMAKE_BUILD_TYPE=RELWITHDEBINFO'
-alias cbrv='catkin build -v --cmake-args -DCMAKE_C_FLAGS="-Wall" -DCMAKE_BUILD_TYPE=Release'
+alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
+alias cbd='catkin build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
+alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias sros='source /opt/ros/melodic/setup.bash'
 
 # python 
