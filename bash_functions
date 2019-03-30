@@ -316,3 +316,18 @@ cj() {
 }
 
 complete -F _roscomplete_rosws_switch cj
+
+function catkin_run_coverage()
+{
+  if [ $# -eq 0 ]; then
+      echo -e "catkin_run_coverage requires at least a package"
+      return 0
+  fi
+
+  catkin run_tests
+  for var in "$@"
+  do
+      catkin run_tests --no-deps $var -DCMAKE_BUILD_TYPE=Coverage --make-args "run_coverage_$var"
+      xdg-open "build/$var/coverage/index.html"
+  done
+}
