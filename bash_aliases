@@ -36,6 +36,7 @@ alias gst='git status'
 alias gba='git branch -a'
 alias gdf='git diff'
 alias gdh='git diff HEAD'
+alias grt='cd $(git rev-parse --show-cdup)'
 
 # source bashrc
 alias sbrc='source ~/.bashrc'
@@ -61,4 +62,5 @@ alias sros='source /opt/ros/melodic/setup.bash'
 
 # python 
 alias ppwd='export PYTHONPATH=`pwd`'
+
 

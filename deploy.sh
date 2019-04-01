@@ -8,7 +8,6 @@ gitconfig
 gitignore
 inputrc
 promptline.sh
-condarc
 )
 
 
