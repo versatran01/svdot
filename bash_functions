@@ -330,4 +330,5 @@ function catkin_run_coverage()
       catkin run_tests --no-deps $var -DCMAKE_BUILD_TYPE=Coverage --make-args "run_coverage_$var"
       xdg-open "build/$var/coverage/index.html"
   done
+  gcovr -r .
 }
