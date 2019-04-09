@@ -305,9 +305,7 @@ _roscomplete_rosws_switch() {
 # catkin_jump
 cj() {
     source $ROS_ROOT/../../setup.bash
-    if [ -e $ROSWS_HOME_DIR/$1/setup.bash ]; then
-        source $ROSWS_HOME_DIR/$1/setup.bash
-    elif [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
+    if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
         source $ROSWS_HOME_DIR/$1/devel/setup.bash
     fi
     # HACK prepend stuff that should go even before this in path
@@ -330,4 +328,5 @@ function catkin_run_coverage()
       catkin run_tests --no-deps $var -DCMAKE_BUILD_TYPE=Coverage --make-args "run_coverage_$var"
       xdg-open "build/$var/coverage/index.html"
   done
+  gcovr -r .
 }
