@@ -1,5 +1,6 @@
 #!/bin/bash
 PACKAGES=(
+          aira2
           autojump
           cmake
           curl
@@ -8,12 +9,15 @@ PACKAGES=(
           gitg
           guake
           htop
-          indicator-multiload
           meld
-          oracle-java8-installer
           tig
           tmux
           vim
+          silversearcher-ag
+          nnn
+          gimp
+          vlc
+          ubuntu-restricted-extras
           )
 
 #Stop if a command ends in an error
@@ -29,13 +33,9 @@ echo "Making sure all system software is up to date."
 apt-get update --force-yes
 apt-get -y upgrade --force-yes
 
-#Add ppa
-#oracle java
-apt-add-repository ppa:webupd8team/java
-apt-add-repository ppa:numix/ppa
-apt-add-repository ppa:noobslab/apps
-
-apt-get update --force-yes
-
 #Intall packages
 apt-get -y --force-yes install ${PACKAGES[@]}
+
+sudo snap install communitytheme
+sudo snap install mathpix-snipping-tool
+sudo snap install lnav
