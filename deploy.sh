@@ -8,6 +8,7 @@ gitconfig
 gitignore
 inputrc
 promptline.sh
+z.sh
 )
 
 

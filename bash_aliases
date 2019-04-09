@@ -12,7 +12,7 @@ alias tmux='tmux -2'
 # programs
 alias xo='xdg-open'
 alias xoo='xdg-open .'
-alias df='df -Th | grep -v loop'
+alias df='pydf'
 alias sup='sudo apt update'
 alias sug='sudo apt upgrade'
 alias sud='sudo apt dist-upgrade'
