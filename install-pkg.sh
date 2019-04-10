@@ -1,6 +1,6 @@
 #!/bin/bash
 PACKAGES=(
-          aira2
+          aria2
           autojump
           cmake
           curl
