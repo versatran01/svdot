@@ -24,7 +24,7 @@ alias kdv='/usr/local/bin/kdev &'
 alias acl='sudo apt autoclean'
 alias arm='sudo apt autoremove'
 alias matlabnn='matlab -nodesktop -nosplash'
-alias gtop='watch --color -n1.0 gpustat --color'
+alias gtop='watch --color -n1.0 -t gpustat --color'
 alias spd='spyder --new-instance &'
 alias rg='ranger'
 alias ft='fzf-tmux'
@@ -60,6 +60,7 @@ alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wex
 alias cbd='catkin build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias sros='source /opt/ros/melodic/setup.bash'
+alias scon='export PATH="/home/chao/miniconda3/bin:$PATH"'
 
 # python 
 alias ppwd='export PYTHONPATH=`pwd`'
