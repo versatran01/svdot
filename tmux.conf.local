@@ -42,7 +42,7 @@ tmux_conf_new_session_prompt=false
 # RGB 24-bit colour support (tmux >= 2.2), possible values are:
 #  - true
 #  - false (default)
-tmux_conf_theme_24b_colour=false
+tmux_conf_theme_24b_colour=true
 
 # window style
 tmux_conf_theme_window_fg='default'
@@ -266,7 +266,7 @@ tmux_conf_theme_clock_style='24'
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=false
+tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
@@ -298,3 +298,4 @@ bind -n M-h select-pane -L
 bind -n M-j select-pane -D
 bind -n M-k select-pane -U
 bind -n M-l select-pane -R
+set -g status-justify centre
