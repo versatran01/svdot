@@ -45,9 +45,23 @@ export TERM=xterm-256color
 export INPUTRC=~/.inputrc
 
 # Source airline-style promptline
-if [ -f ~/.promptline.sh ]; then
-  source ~/.promptline.sh
+# if [ -f ~/.promptline.sh ]; then
+  # source ~/.promptline.sh
+# fi
+# if [ -f `which powerline-daemon` ]; then
+  # powerline-daemon -q
+  # POWERLINE_BASH_CONTINUATION=1
+  # POWERLINE_BASH_SELECT=1
+  # . /usr/local/lib/python3.6/dist-packages/powerline/bindings/bash/powerline.sh
+# fi
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
+
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -69,4 +83,3 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-. ~/.z.sh
