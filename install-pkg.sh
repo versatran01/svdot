@@ -18,7 +18,24 @@ PACKAGES=(
           gimp
           vlc
           ubuntu-restricted-extras
+          tldr
+          pydf
+          cloc
+          kazam
+          copyq
+          variety
           )
+
+SNAPS=(
+    lnav
+    mathpix-snipping-tool
+    communitytheme
+  )
+
+# others
+# kdenlive
+# obs-studio
+
 
 #Stop if a command ends in an error
 set -e

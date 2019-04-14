@@ -9,8 +9,6 @@ gitignore
 inputrc
 )
 
-
-
 for file in "${FILES[@]}"
 do
     echo Linking "$file" to $HOME
@@ -21,9 +19,6 @@ DIRS=(
 powerline-shell
 )
 
-DIRS=(
-powerline-shell
-)
 for dir in "${DIRS[@]}"
 do
     echo Linking "$dir" to $HOME/.config
