@@ -18,6 +18,6 @@
     "colorize": true
   },
   "vcs": {
-    "show_symbol": true
+    "show_symbol": false
   }
 }
