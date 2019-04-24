@@ -60,7 +60,7 @@ alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wex
 alias cbd='catkin build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias sros='source /opt/ros/melodic/setup.bash'
-alias scon='export PATH="/home/chao/miniconda3/bin:$PATH"'
+# alias scon='export PATH="/home/chao/miniconda3/bin:$PATH"'
 
 # python 
 alias ppwd='export PYTHONPATH=`pwd`'
