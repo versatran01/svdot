@@ -63,6 +63,6 @@ alias sros='source /opt/ros/melodic/setup.bash'
 # alias scon='export PATH="/home/chao/miniconda3/bin:$PATH"'
 
 # python 
-alias ppwd='export PYTHONPATH=`pwd`'
+alias ppwd='export PYTHONPATH=`pwd`:$PYTHONPATH'
 
 
