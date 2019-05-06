@@ -304,13 +304,24 @@ _roscomplete_rosws_switch() {
 
 # catkin_jump
 cj() {
-  source $ROS_ROOT/../../setup.bash
+  if [ -z "$ROS_ROOT" ]; then
+    source /opt/ros/melodic/setup.bash
+  else
+    source $ROS_ROOT/../../setup.bash
+  fi
+
+  
   if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
     source $ROSWS_HOME_DIR/$1/devel/setup.bash
+    echo "source $ROSWS_HOME_DIR/$1/devel/setup.bash"
+    # HACK prepend stuff that should go even before this in path
+    export VIRTUAL_ENV="$1"
+    export PATH=$ROS_PATH_OVERLAY:$PATH
+    cd $ROSWS_HOME_DIR/$1
+  else
+    echo "$1 does not exist in $ROSWS_HOME_DIR"
   fi
-  # HACK prepend stuff that should go even before this in path
-  export PATH=$ROS_PATH_OVERLAY:$PATH
-  cd $ROSWS_HOME_DIR/$1
+
 }
 
 complete -F _roscomplete_rosws_switch cj

@@ -44,16 +44,7 @@ export TERM=xterm-256color
 # source inputrc
 export INPUTRC=~/.inputrc
 
-# Source airline-style promptline
-# if [ -f ~/.promptline.sh ]; then
-  # source ~/.promptline.sh
-# fi
-# if [ -f `which powerline-daemon` ]; then
-  # powerline-daemon -q
-  # POWERLINE_BASH_CONTINUATION=1
-  # POWERLINE_BASH_SELECT=1
-  # . /usr/local/lib/python3.6/dist-packages/powerline/bindings/bash/powerline.sh
-# fi
+# powerline-shell
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
@@ -72,7 +63,7 @@ export LESS_TERMCAP_me=$'\E[0m'           # end mode
 export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
-export ROSWS_HOME_DIR=/home/chao/Workspace/ws
+export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
 
 # Functions definitions.
 # You may want to put all your funtions into a separate file like
