@@ -342,6 +342,11 @@ function catkin_run_coverage()
   gcovr -r .
 }
 
+function sros()  {
+  source /opt/ros/melodic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
 function scon() 
 {
   __conda_setup="$('/home/chao/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
