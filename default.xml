@@ -17,7 +17,7 @@
 
     <!-- geometry -->
     <project name="anybotics/kindr" path="kindr"/>
-    <project name="artivis/manif" path="manif" revision="develop"/>
+    <project name="artivis/manif" path="manif" revision="devel"/>
     <project name="strasdat/sophus" path="sophus"/>
     <project name="laurentkneip/opengv" path="opengv"/>
 
