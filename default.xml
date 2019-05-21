@@ -11,7 +11,7 @@
     <project name="onqtam/doctest" path="doctest"/>
 
     <!-- nlls -->
-    <project name="gtborg/gtsam" revision="develop" remote="bitbucket" path="gtsam"/>
+    <project name="borglab/gtsam" revision="develop" path="gtsam"/>
     <project name="ceres-solver/ceres-solver" path="ceres"/>
     <project name="RainerKuemmerle/g2o" path="g2o"/>
 
