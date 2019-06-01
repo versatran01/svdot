@@ -302,16 +302,15 @@ _roscomplete_rosws_switch() {
   return 0
 }
 
+function sros()  {
+  source /opt/ros/melodic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
 # catkin_jump
 cj() {
-  if [ -z "$ROS_ROOT" ]; then
-    source /opt/ros/melodic/setup.bash
-  else
-    source $ROS_ROOT/../../setup.bash
-  fi
-
-  
   if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
+    sros  
     source $ROSWS_HOME_DIR/$1/devel/setup.bash
     echo "source $ROSWS_HOME_DIR/$1/devel/setup.bash"
     # HACK prepend stuff that should go even before this in path
@@ -342,10 +341,6 @@ function catkin_run_coverage()
   gcovr -r .
 }
 
-function sros()  {
-  source /opt/ros/melodic/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
-}
 
 function scon() 
 {
