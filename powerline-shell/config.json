@@ -6,8 +6,8 @@
     {
       "type": "env",
       "var": "CUDA_VISIBLE_DEVICES",
-      "fg_color": 22,
-      "bg_color": 66
+      "fg_color": 15,
+      "bg_color": 93
     },
     "ssh",
     "cwd",
