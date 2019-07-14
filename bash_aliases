@@ -10,9 +10,11 @@ alias lm='ls -al | more'
 alias eecho='echo -e'
 alias tmux='tmux -2'
 alias t='tree'
+alias ts='tsp'
 
 # programs
 alias xo='xdg-open'
+alias za='zathura'
 alias df='pydf'
 alias sup='sudo apt update'
 alias sug='sudo apt upgrade'
@@ -62,5 +64,4 @@ alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_
 
 # python 
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
-
 

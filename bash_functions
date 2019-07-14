@@ -342,7 +342,8 @@ function catkin_run_coverage()
 }
 
 
-function scon() 
+# source conda
+function scon()
 {
   __conda_setup="$('/home/chao/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
   if [ $? -eq 0 ]; then
@@ -355,5 +356,12 @@ function scon()
     fi
   fi
   unset __conda_setup
+}
+
+# set gpu id
+function gpu()
+{
+  export CUDA_VISIBLE_DEVICES="$1"  
+  export TS_SOCKET="/tmp/cuda$1"
 }
 

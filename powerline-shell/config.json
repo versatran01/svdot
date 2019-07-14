@@ -3,6 +3,12 @@
     "username",
     "hostname",
     "virtual_env",
+    {
+      "type": "env",
+      "var": "CUDA_VISIBLE_DEVICES",
+      "fg_color": 22,
+      "bg_color": 66
+    },
     "ssh",
     "cwd",
     "git",
