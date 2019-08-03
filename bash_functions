@@ -365,3 +365,7 @@ function gpu()
   export TS_SOCKET="/tmp/cuda$1"
 }
 
+fl() {
+  ll | awk '{print $9}' | fzf
+}
+
