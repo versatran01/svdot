@@ -215,3 +215,6 @@ target/
 doc/
 .cache/
 .pytest_cache/
+
+*.creator.user.*
+*.creator.user
