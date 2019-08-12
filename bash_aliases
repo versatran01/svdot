@@ -53,6 +53,7 @@ alias cd.....='cd ../../../..'
 alias cd......='cd ../../../../..'
 
 #ros
+alias ck='catkin'
 alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure'
 alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rqt_image_view'
