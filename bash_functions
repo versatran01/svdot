@@ -302,6 +302,12 @@ _roscomplete_rosws_switch() {
   return 0
 }
 
+function sroot()
+{
+  source ~/Workspace/vendor/root/bin/thisroot.sh
+  export VIRTUAL_ENV=root
+}
+
 function sros()  {
   source /opt/ros/melodic/setup.bash
   export VIRTUAL_ENV=$ROS_DISTRO
@@ -357,6 +363,7 @@ function scon()
   fi
   unset __conda_setup
 }
+
 
 # set gpu id
 function gpu()
