@@ -216,3 +216,10 @@ doc/
 .cache/
 .pytest_cache/
 *.creator.user*
+
+*.cflags
+*.config
+*.creator
+*.cxxflags
+*.files
+*.includes
