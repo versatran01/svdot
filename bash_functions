@@ -372,7 +372,23 @@ function gpu()
   export TS_SOCKET="/tmp/cuda$1"
 }
 
-fl() {
+function fl() {
   ll | awk '{print $9}' | fzf
+}
+
+function upal_gcc() {
+  if [ $# -eq 0 ]; then
+    echo -e "need version number"
+    return 0
+  fi
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$1 100 --slave /usr/bin/g++ g++ /usr/bin/g++-$1
+}
+
+function upal_clang() {
+  if [ $# -eq 0 ]; then
+    echo -e "need version number"
+    return 0
+  fi
+  sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1
 }
 
