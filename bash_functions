@@ -372,9 +372,6 @@ function gpu()
   export TS_SOCKET="/tmp/cuda$1"
 }
 
-function fl() {
-  ll | awk '{print $9}' | fzf
-}
 
 function upal_gcc() {
   if [ $# -eq 0 ]; then
@@ -392,3 +389,18 @@ function upal_clang() {
   sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1
 }
 
+j() {
+    if [[ "$#" -ne 0 ]]; then
+        cd $(autojump $@)
+        return
+    fi
+    cd "$(autojump -s | sort -k1gr | awk '$1 ~ /[0-9]:/ && $2 ~ /^\// { for (i=2; i<=NF; i++) { print $(i) } }' |  fzf --height 40% --reverse --inline-info)"
+}
+
+fman() {
+    man -k . | fzf --prompt='Man> ' | awk '{print $1}' | xargs -r man
+}
+
+function fl() {
+  ll | awk '{print $9}' | fzf
+}
