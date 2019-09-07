@@ -1,6 +1,5 @@
 <manifest>
     <remote name="github" fetch="https://github.com"/>
-    <remote name="bitbucket" fetch="https://bitbucket.org"/>
 
     <default revision="master" remote="github" sync-j="4"/>
 
@@ -9,6 +8,7 @@
     <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
     <project name="fmtlib/fmt" path="fmt"/>
     <project name="onqtam/doctest" path="doctest"/>
+    <project name="nlohmann/json" path="json"/>
 
     <!-- nlls -->
     <project name="borglab/gtsam" revision="develop" path="gtsam"/>
@@ -28,15 +28,14 @@
     <project name="gflags/gflags" path="gflags"/>
 
     <!-- xtensor -->
-    <project name="nlohmann/json" path="json"/>
     <project name="QuantStack/xtensor" path="xtensor"/>
     <project name="QuantStack/xtl" path="xtl"/>
     <project name="QuantStack/xsimd" path="xsimd"/>
 
     <!-- other -->
-    <project name="rmsalinas/fbow" path="fbow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
     <project name="kmhofmann/selene" path="selene"/>
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="jbeder/yaml-cpp" path="yaml-cpp"/>
+    <project name="pybind/pybind11" path="pybind11"/>
 </manifest>
