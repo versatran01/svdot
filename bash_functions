@@ -404,3 +404,14 @@ fman() {
 function fl() {
   ll | awk '{print $9}' | fzf
 }
+
+function fp() {
+  # Try bat, highlight, coderay, rougify in turn, then fall back to cat
+  fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                 echo {} is a binary file ||
+                 (bat --style=numbers --color=always {} ||
+                  highlight -O ansi -l {} ||
+                  coderay {} ||
+                  rougify {} ||
+                  cat {}) 2> /dev/null | head -500'
+}
