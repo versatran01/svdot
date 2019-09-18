@@ -65,4 +65,7 @@ alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_
 
 # python 
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
+alias rrviz='sros && rviz'
+alias rcore='sros && roscore'
+                                      
 
