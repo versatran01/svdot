@@ -15,6 +15,7 @@ PACKAGES=(
           vim
           silversearcher-ag
           nnn
+	  neofetch
           gimp
           vlc
           ubuntu-restricted-extras
@@ -24,12 +25,16 @@ PACKAGES=(
           kazam
           copyq
           variety
+	  python3-pip
+	  ranger
+	  filezilla
           )
 
 SNAPS=(
     lnav
     mathpix-snipping-tool
     communitytheme
+    obs-studio
   )
 
 # others
@@ -52,7 +57,21 @@ apt-get -y upgrade --force-yes
 
 #Intall packages
 apt-get -y --force-yes install ${PACKAGES[@]}
+snap install ${SNAPS[@]}
 
-sudo snap install communitytheme
-sudo snap install mathpix-snipping-tool
-sudo snap install lnav
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+# fzf-extras
+git clone https://github.com/atweiden/fzf-extras ~/.fzf-extras
+cat >> ~/.bashrc <<'EOF'
+[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] \
+  && source "$HOME/.fzf-extras/fzf-extras.sh"
+EOF
+
+# tmux
+git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
+
+# powerline
+sudo pip3 install -U powerline-shell
