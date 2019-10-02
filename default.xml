@@ -34,6 +34,7 @@
 
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>
+    <project name="jlblancoc/nanoflann" path="nanoflann"/>
     <project name="kmhofmann/selene" path="selene"/>
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="jbeder/yaml-cpp" path="yaml-cpp"/>
