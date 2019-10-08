@@ -1,41 +1,41 @@
 #!/bin/bash
 PACKAGES=(
-          aria2
-          autojump
-          cmake
-          curl
-          dstat
-          git
-          gitg
-          guake
-          htop
-          meld
-          tig
-          tmux
-          vim
-          silversearcher-ag
-          nnn
-	  neofetch
-          gimp
-          vlc
-          ubuntu-restricted-extras
-          tldr
-          pydf
-          cloc
-          kazam
-          copyq
-          variety
-	  python3-pip
-	  ranger
-	  filezilla
-          )
+aria2
+autojump
+cmake
+curl
+dstat
+git
+gitg
+guake
+htop
+meld
+tig
+tmux
+vim
+silversearcher-ag
+nnn
+neofetch
+gimp
+vlc
+ubuntu-restricted-extras
+tldr
+pydf
+cloc
+kazam
+copyq
+variety
+python3-pip
+ranger
+filezilla
+)
 
 SNAPS=(
-    lnav
-    mathpix-snipping-tool
-    communitytheme
-    obs-studio
-  )
+lnav
+mathpix-snipping-tool
+communitytheme
+obs-studio
+)
 
 # others
 # kdenlive
