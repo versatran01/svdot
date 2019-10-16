@@ -31,6 +31,7 @@
     <project name="QuantStack/xtensor" path="xtensor"/>
     <project name="QuantStack/xtl" path="xtl"/>
     <project name="QuantStack/xsimd" path="xsimd"/>
+    <project name="QuantStack/xframe" path="xframe"/>
 
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>
