@@ -223,3 +223,4 @@ doc/
 *.cxxflags
 *.files
 *.includes
+*.srctrl*
