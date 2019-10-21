@@ -13,6 +13,7 @@ alias t='tree'
 alias ts='tsp'
 
 # programs
+alias xc='xclip -se c'
 alias xo='xdg-open'
 alias za='zathura'
 alias df='pydf'
