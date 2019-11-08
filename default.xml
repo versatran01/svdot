@@ -26,12 +26,13 @@
     <project name="google/googletest" path="gtest"/>
     <project name="google/glog" path="glog"/>
     <project name="gflags/gflags" path="gflags"/>
+    <project name="abseil/abseil-cpp" path="abseil"/>
 
     <!-- xtensor -->
-    <project name="QuantStack/xtensor" path="xtensor"/>
-    <project name="QuantStack/xtl" path="xtl"/>
-    <project name="QuantStack/xsimd" path="xsimd"/>
-    <project name="QuantStack/xframe" path="xframe"/>
+    <project name="xtensor-stack/xtensor" path="xtensor"/>
+    <project name="xtensor-stack/xtl" path="xtl"/>
+    <project name="xtensor-stack/xsimd" path="xsimd"/>
+    <project name="xtensor-stack/xframe" path="xframe"/>
 
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>
