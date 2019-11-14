@@ -378,7 +378,8 @@ function upal_gcc() {
     echo -e "need version number"
     return 0
   fi
-  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$1 100 --slave /usr/bin/g++ g++ /usr/bin/g++-$1
+  sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$1 100 --slave /usr/bin/g++ g++ /usr/bin/g++-$1 --slave /usr/bin/gcov gcov /usr/bin/gcov-$1
+
 }
 
 function upal_clang() {
