@@ -4,7 +4,6 @@
     <default revision="master" remote="github" sync-j="4"/>
 
     <!-- logging testing -->
-    <project name="catchorg/Catch2" path="catch"/>
     <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
     <project name="fmtlib/fmt" path="fmt"/>
     <project name="onqtam/doctest" path="doctest"/>
