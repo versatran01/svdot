@@ -12,7 +12,6 @@
     <!-- nlls -->
     <project name="borglab/gtsam" revision="develop" path="gtsam"/>
     <project name="ceres-solver/ceres-solver" path="ceres"/>
-    <project name="RainerKuemmerle/g2o" path="g2o"/>
 
     <!-- geometry -->
     <project name="anybotics/kindr" path="kindr"/>
