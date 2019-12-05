@@ -32,11 +32,14 @@
     <project name="xtensor-stack/xsimd" path="xsimd"/>
     <project name="xtensor-stack/xframe" path="xframe"/>
 
+    <!-- graphics  -->
+    <project name="stevenlovegrove/pangolin" path="pangolin"/>
+    <project name="mosra/corrade" path="corrade"/>
+    <project name="mosra/magnum" path="magnum"/>
+
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>
     <project name="jlblancoc/nanoflann" path="nanoflann"/>
     <project name="kmhofmann/selene" path="selene"/>
-    <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="jbeder/yaml-cpp" path="yaml-cpp"/>
-    <project name="pybind/pybind11" path="pybind11"/>
 </manifest>
