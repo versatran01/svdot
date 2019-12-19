@@ -17,7 +17,7 @@
   <style name="Number" foreground="#d3869b"/>
   <style name="String" foreground="#b8bb26"/>
   <style name="Type" foreground="#fabd2f"/>
-  <style name="Local" foreground="#ebdbb2"/>
+  <style name="Local" foreground="#e9b96e"/>
   <style name="Global" foreground="#ce5c00"/>
   <style name="Field" foreground="#83a598"/>
   <style name="Static" foreground="#d3869b"/>
