@@ -64,7 +64,7 @@ alias cbr='catkin build -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wex
 alias cbd='catkin build -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias cbrv='catkin build -v --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra"'
 alias crt='catkin run_tests'
-alias crtp='  catkin run_tests --no-deps --this'
+alias crtp='catkin run_tests --no-deps --this'
 
 # python 
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
