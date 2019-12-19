@@ -17,7 +17,7 @@
   <style name="Number" foreground="#d3869b"/>
   <style name="String" foreground="#b8bb26"/>
   <style name="Type" foreground="#fabd2f"/>
-  <style name="Local" foreground="#e9b96e"/>
+  <style name="Local" foreground="#ebdbb2"/>
   <style name="Global" foreground="#ce5c00"/>
   <style name="Field" foreground="#83a598"/>
   <style name="Static" foreground="#d3869b"/>
@@ -27,7 +27,7 @@
   <style name="PrimitiveType" foreground="#fb4934"/>
   <style name="Operator" foreground="#ebdbb2"/>
   <style name="Overloaded Operator" foreground="#00677c"/>
-  <style name="Punctuation" foreground="#ebdbb2" background="#282828"/>
+  <style name="Punctuation"/>
   <style name="Preprocessor" foreground="#8ec07c"/>
   <style name="Label" foreground="#fb4934"/>
   <style name="Comment" foreground="#928374" italic="true"/>
@@ -62,6 +62,6 @@
   <style name="Error" underlineColor="#ff0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#ff0000" underlineStyle="DotLine"/>
   <style name="Declaration" bold="true"/>
-  <style name="FunctionDefinition" foreground="#ebdbb2" background="#282828"/>
+  <style name="FunctionDefinition"/>
   <style name="OutputArgument" italic="true"/>
 </style-scheme>
