@@ -44,6 +44,7 @@ alias grt='cd $(git rev-parse --show-cdup)'
 
 # source bashrc
 alias sbrc='source ~/.bashrc'
+alias szrc='source ~/.zshrc'
 alias scat='source devel/setup.bash'
 
 #cd
