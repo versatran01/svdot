@@ -118,3 +118,11 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+source ~/.bash_aliases
+
+# 256 for terminal
+export TERM=xterm-256color
+
+# source inputrc
+export INPUTRC=~/.inputrc
