@@ -63,7 +63,7 @@ alias rosenv='env | grep ROS'
 alias cbr='catkin build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbd='catkin build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbt='catkin build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -DBUILD_TESTING=On -- '
-alias crt='catkin build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -DBUILD_TESTING=On --make-args test -- '
+alias crt='catkin build --verbose --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -DBUILD_TESTING=On --make-args test -- '
 
 # python 
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
