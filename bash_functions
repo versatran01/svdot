@@ -390,6 +390,14 @@ function upal_clang() {
   sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1
 }
 
+function upal_clang_format() {
+  if [ $# -eq 0 ]; then
+    echo -e "need version number"
+    return 0
+  fi
+  sudo update-alternatives --install /usr/bin/clang-format clang-format /usr/bin/clang-format-$1 100 
+}
+
 j() {
     if [[ "$#" -ne 0 ]]; then
         cd $(autojump $@)
