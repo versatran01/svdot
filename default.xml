@@ -3,6 +3,9 @@
 
     <default revision="master" remote="github" sync-j="4"/>
 
+
+    <project name="microsoft/GSL" path="gsl"/>
+
     <!-- logging testing -->
     <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
     <project name="fmtlib/fmt" path="fmt"/>
