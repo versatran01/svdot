@@ -74,5 +74,7 @@ alias rl='roslaunch'
 
 # alias
 alias cmk='cmake .. -DBUILD_SHARED_LIBS=On -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=Off'
+alias cpuperf='sudo cpupower frequency-set --governor performance'
+alias cpusave='sudo cpupower frequency-set --governor powersave'
                                       
 
