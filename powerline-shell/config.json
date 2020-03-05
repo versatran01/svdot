@@ -12,7 +12,6 @@
     "ssh",
     "cwd",
     "git",
-    "hg",
     "jobs",
     "root"
   ],
