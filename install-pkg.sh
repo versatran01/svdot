@@ -82,4 +82,4 @@ cargo install procs
 cargo install bat
 cargo install ripgrep
 cargo install fd-find
-cargo install dust
+cargo install du-dust
