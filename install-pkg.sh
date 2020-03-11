@@ -83,3 +83,5 @@ cargo install bat
 cargo install ripgrep
 cargo install fd-find
 cargo install du-dust
+cargo install hx
+cargo install bingrep
