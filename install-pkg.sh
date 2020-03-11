@@ -75,3 +75,11 @@ ln -s -f ~/.tmux/.tmux.conf ~/.tmux.conf
 
 # powerline
 sudo pip3 install -U powerline-shell
+
+# cargo
+cargo install exa
+cargo install procs
+cargo install bat
+cargo install ripgrep
+cargo install fd-find
+cargo install dust
