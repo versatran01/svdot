@@ -85,3 +85,4 @@ cargo install fd-find
 cargo install du-dust
 cargo install hx
 cargo install bingrep
+cargo install skim
