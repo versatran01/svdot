@@ -2,6 +2,8 @@
 export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:??:rm*"
 export HISTTIMEFORMAT="%y/%m/%d %T"
 export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=20000
+export HISTFILESIZE=20000
 
 # More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
 # Update the hash table properly
