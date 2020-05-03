@@ -58,8 +58,10 @@ alias cd......='cd ../../../../..'
 #ros
 alias ck='catkin'
 alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure'
+alias rqttf='rosrun rqt_tf_tree rqt_tf_tree'
 alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rqt_image_view'
+alias rqtgh='rqt_graph'
 alias rosenv='env | grep ROS'
 # alias cbr='catkin build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -DBUILD_TESTING=Off -- '
@@ -72,6 +74,7 @@ alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
 alias rrviz='sros && rviz'
 alias rcore='sros && roscore'
 alias rl='roslaunch'
+alias rtp='rostopic'
 
 # alias
 alias cmk='cmake .. -DBUILD_SHARED_LIBS=On -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=Off'
