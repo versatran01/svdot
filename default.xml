@@ -3,7 +3,6 @@
 
     <default revision="master" remote="github" sync-j="4"/>
 
-
     <project name="microsoft/GSL" path="gsl"/>
 
     <!-- logging testing -->
@@ -40,6 +39,7 @@
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="mosra/corrade" path="corrade"/>
     <project name="mosra/magnum" path="magnum"/>
+    <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>
