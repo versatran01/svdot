@@ -3,12 +3,10 @@
 
     <default revision="master" remote="github" sync-j="4"/>
 
-
     <project name="microsoft/GSL" path="gsl"/>
 
     <!-- logging testing -->
     <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
-    <project name="docopt/docopt.cpp" path="docopt"/>
     <project name="fmtlib/fmt" path="fmt"/>
     <project name="onqtam/doctest" path="doctest"/>
     <project name="nlohmann/json" path="json"/>
@@ -40,6 +38,7 @@
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="mosra/corrade" path="corrade"/>
     <project name="mosra/magnum" path="magnum"/>
+    <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
     <project name="autodiff/autodiff" path="autodiff"/>

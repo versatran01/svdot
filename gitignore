@@ -216,6 +216,7 @@ doc/
 .cache/
 .pytest_cache/
 *.creator.user*
+.vscode
 
 *.cflags
 *.config
