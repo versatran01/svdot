@@ -313,6 +313,11 @@ function sros()  {
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
+function srosn()  {
+  source /opt/ros/noetic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
 # catkin_jump
 cj() {
   if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
