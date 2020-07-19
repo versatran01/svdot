@@ -76,4 +76,5 @@ if [ -f ~/.bash_functions ]; then
 fi
 
 export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
+export CUDA_VISIBLE_DEVICES=0
 
