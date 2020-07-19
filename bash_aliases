@@ -81,10 +81,3 @@ alias cmk='cmake .. -DBUILD_SHARED_LIBS=On -DCMAKE_EXPORT_COMPILE_COMMANDS=On -D
 alias cpuperf='sudo cpupower frequency-set --governor performance'
 alias cpusave='sudo cpupower frequency-set --governor powersave'
 
-# docker
-alias dk="docker"
-alias dki="docker image"
-alias dkc="docker container"
-alias dkrm="docker rm $(docker ps -a -q -f status=exited | tr '\n' ' ')"
-                                      
-

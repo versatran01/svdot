@@ -34,13 +34,10 @@ else
   [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 fi
 
-# fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[[ -e "$HOME/.fzf-extras/fzf-extras.sh" ]] \
-  && source "$HOME/.fzf-extras/fzf-extras.sh"
-
 # rust
-source ~/.cargo/env
+if [ -f ~/.cargo/env ]; then
+  . ~/.cargo/env
+fi
 
 # 256 for terminal
 export TERM=xterm-256color
@@ -50,11 +47,11 @@ export INPUTRC=~/.inputrc
 
 # powerline-shell
 function _update_ps1() {
-    PS1=$(powerline-shell $?)
+  PS1=$(powerline-shell $?)
 }
 
 if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
 
@@ -75,14 +72,8 @@ export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
+  . ~/.bash_functions
 fi
-
-# export FZF_DEFAULT_COMMAND='fd --type f'
-# export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export CUDA_VISIBLE_DEVICES=0
-VISUAL=vim; export VISUAL EDITOR=vim; export EDITOR
 
 export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
 
