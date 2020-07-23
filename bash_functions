@@ -306,7 +306,6 @@ function srosn()  {
 # catkin_jump
 cj() {
   if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
-    sros
     source $ROSWS_HOME_DIR/$1/devel/setup.bash
     echo "source $ROSWS_HOME_DIR/$1/devel/setup.bash"
     # HACK prepend stuff that should go even before this in path
