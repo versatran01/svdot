@@ -7,7 +7,7 @@ tmux.conf.local
 gitconfig
 gitignore
 inputrc
-zshrc
+ideavimrc
 )
 
 for file in "${FILES[@]}"
