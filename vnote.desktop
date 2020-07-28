@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=VNote
+Exec=vnote
+Icon=/home/chao/.local/share/applications/vnote.png
+Type=Application
+Terminal=false
+Categories=Office;
+MimeType=text/plain
