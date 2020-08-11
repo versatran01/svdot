@@ -279,6 +279,18 @@ function rosmu_help() {
   return 0
 }
 
+function srosm() {
+  source /opt/ros/melodic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
+function srosn()  {
+  source /opt/ros/noetic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
+export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
+
 if [ -z $ROSWS_HOME_DIR ]; then
   echo rosws_switch: Please set ROSWS_HOME_DIR to the directory containing ROS workspaces for this script to work.
 fi
@@ -293,15 +305,6 @@ _roscomplete_rosws_switch() {
   return 0
 }
 
-function sros() {
-  source /opt/ros/melodic/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
-}
-
-function srosn()  {
-  source /opt/ros/noetic/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
-}
 
 # catkin_jump
 cj() {
@@ -315,7 +318,6 @@ cj() {
   else
     echo "$1 does not exist in $ROSWS_HOME_DIR"
   fi
-
 }
 
 complete -F _roscomplete_rosws_switch cj

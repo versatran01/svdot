@@ -64,8 +64,6 @@ export LESS_TERMCAP_me=$'\E[0m'           # end mode
 export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 
-export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
-
 # Functions definitions.
 # You may want to put all your funtions into a separate file like
 # ~/.bash_functions, instead of adding them here directly.
