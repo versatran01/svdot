@@ -284,6 +284,11 @@ function srosm() {
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
+function srosf() {
+  source /opt/ros/melodic/setup.bash
+  export VIRTUAL_ENV=$ROS_DISTRO
+}
+
 function srosn()  {
   source /opt/ros/noetic/setup.bash
   export VIRTUAL_ENV=$ROS_DISTRO
@@ -306,7 +311,7 @@ _roscomplete_rosws_switch() {
 }
 
 
-# catkin_jump
+# catkin/colcon_jump
 cj() {
   if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
     source $ROSWS_HOME_DIR/$1/devel/setup.bash
@@ -314,6 +319,12 @@ cj() {
     # HACK prepend stuff that should go even before this in path
     export VIRTUAL_ENV="$1"
     export PATH=$ROS_PATH_OVERLAY:$PATH
+    cd $ROSWS_HOME_DIR/$1
+  elif [ -e $ROSWS_HOME_DIR/$1/install/setup.bash ]; then
+    source $ROSWS_HOME_DIR/$1/install/setup.bash
+    echo "source $ROSWS_HOME_DIR/$1/install/setup.bash"
+    export VIRTUAL_ENV="$1"
+    # export PATH=$ROS_PATH_OVERLAY:$PATH
     cd $ROSWS_HOME_DIR/$1
   else
     echo "$1 does not exist in $ROSWS_HOME_DIR"
