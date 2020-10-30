@@ -1,6 +1,6 @@
 [user]
-	  name = chao
-    email = versatran01@gmail.com
+	name = chao
+	email = quchao@seas.upenn.edu
 [core]
     editor = vim
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
@@ -51,7 +51,7 @@
 [push]
     default = simple
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+	  clean = git-lfs clean -- %f
+	  smudge = git-lfs smudge -- %f
+	  process = git-lfs filter-process
+	  required = true
