@@ -14,12 +14,8 @@
     bra = branch -a
     cm = commit
     st = status
-    df = diff
-    pl = pull
-    ps = push
-    sh = stash
-    sbpull = subtree pull --squash --prefix
-    sbpush = subtree push --prefix
+    stpull = subtree pull --squash --prefix
+    stpush = subtree push --prefix
     last = log -1 HEAD
     vis = !gitg &
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold magenta)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
