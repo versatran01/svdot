@@ -285,7 +285,7 @@ function srosm() {
 }
 
 function srosf() {
-  source /opt/ros/melodic/setup.bash
+  source /opt/ros/foxy/setup.bash
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
