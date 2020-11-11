@@ -38,8 +38,6 @@
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="mosra/corrade" path="corrade"/>
     <project name="mosra/magnum" path="magnum"/>
-    <project name="mosra/magnum-integration" path="magnum-integration"/>
-    <project name="mosra/magnum-plugins" path="magnum-plugins"/>
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
