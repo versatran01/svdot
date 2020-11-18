@@ -36,8 +36,8 @@
 
     <!-- graphics  -->
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
-    <project name="mosra/corrade" path="corrade"/>
-    <project name="mosra/magnum" path="magnum"/>
+    <!-- <project name="mosra/corrade" path="corrade"/> -->
+    <!-- <project name="mosra/magnum" path="magnum"/> -->
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
