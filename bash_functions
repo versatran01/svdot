@@ -19,21 +19,21 @@ function sharenet() {
   # check command-line commands
   cmd=$1
   case $cmd in
-  on)
-    sudo su -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
-    echo "Enable sharing internet from $if_from to $if_to"
-    sudo /sbin/iptables -A FORWARD -i $if_to -o $if_from -j ACCEPT
-    sudo /sbin/iptables -A FORWARD -i $if_from -o $if_to -m state --state RELATED,ESTABLISHED -j ACCEPT
-    sudo /sbin/iptables -t nat -A POSTROUTING -o $if_from -j MASQUERADE
-    ;;
-  off)
-    sudo su -c "echo 0 > /proc/sys/net/ipv4/ip_forward"
-    echo "Disable sharing internet from $if_from to $if_to"
-    ;;
-  *)
-    echo "sharenet: $1: invalid command"
-    echo "usage: sharenet <on/off>"
-    ;;
+    on)
+      sudo su -c "echo 1 > /proc/sys/net/ipv4/ip_forward"
+      echo "Enable sharing internet from $if_from to $if_to"
+      sudo /sbin/iptables -A FORWARD -i $if_to -o $if_from -j ACCEPT
+      sudo /sbin/iptables -A FORWARD -i $if_from -o $if_to -m state --state RELATED,ESTABLISHED -j ACCEPT
+      sudo /sbin/iptables -t nat -A POSTROUTING -o $if_from -j MASQUERADE
+      ;;
+    off)
+      sudo su -c "echo 0 > /proc/sys/net/ipv4/ip_forward"
+      echo "Disable sharing internet from $if_from to $if_to"
+      ;;
+    *)
+      echo "sharenet: $1: invalid command"
+      echo "usage: sharenet <on/off>"
+      ;;
   esac
 }
 
@@ -43,7 +43,8 @@ function myip() {
   echo "${myip}"
 }
 
-function ii() { # get current host related info
+# get current host related info
+function ii() { 
   echo -e "\nYou are logged on ${bldpur}$(hostname)"
   echo -e "\nAdditionnal information:$txtrst "
   uname -a
@@ -68,32 +69,32 @@ function ii() { # get current host related info
 function dirsize() {
   du -shx * .[a-zA-Z0-9_]* 2>/dev/null |
     egrep '^ *[0-9.]*[MG]' | sort -n >/tmp/list
-  egrep '^ *[0-9.]*M' /tmp/list
-  egrep '^ *[0-9.]*G' /tmp/list
-  rm -rf /tmp/list
-}
+      egrep '^ *[0-9.]*M' /tmp/list
+      egrep '^ *[0-9.]*G' /tmp/list
+      rm -rf /tmp/list
+    }
 
 # Easy extact
 function extract() {
   if [ -f $1 ]; then
     case $1 in
-    *.tar.bz2) tar xvjf $1 ;;
-    *.tar.gz) tar xvzf $1 ;;
-    *.bz2) bunzip2 $1 ;;
-    *.rar) rar x $1 ;;
-    *.gz) gunzip $1 ;;
-    *.tar) tar xvf $1 ;;
-    *.tbz2) tar xvjf $1 ;;
-    *.tgz) tar xvzf $1 ;;
-    *.apk) unzip $1 ;;
-    *.epub) unzip $1 ;;
-    *.xpi) unzip $1 ;;
-    *.zip) unzip $1 ;;
-    *.war) unzip $1 ;;
-    *.jar) unzip $1 ;;
-    *.Z) uncompress $1 ;;
-    *.7z) 7z x $1 ;;
-    *) echo "don't know how to extract '$1'..." ;;
+      *.tar.bz2) tar xvjf $1 ;;
+      *.tar.gz) tar xvzf $1 ;;
+      *.bz2) bunzip2 $1 ;;
+      *.rar) rar x $1 ;;
+      *.gz) gunzip $1 ;;
+      *.tar) tar xvf $1 ;;
+      *.tbz2) tar xvjf $1 ;;
+      *.tgz) tar xvzf $1 ;;
+      *.apk) unzip $1 ;;
+      *.epub) unzip $1 ;;
+      *.xpi) unzip $1 ;;
+      *.zip) unzip $1 ;;
+      *.war) unzip $1 ;;
+      *.jar) unzip $1 ;;
+      *.Z) uncompress $1 ;;
+      *.7z) 7z x $1 ;;
+      *) echo "don't know how to extract '$1'..." ;;
     esac
   else
     echo "'$1' is not a valid file!"
@@ -105,38 +106,16 @@ function compress() {
   if [ -n "$1" ]; then
     FILE=$1
     case $FILE in
-    *.tar) shift && tar cf $FILE $* ;;
-    *.tar.bz2) shift && tar cjf $FILE $* ;;
-    *.tar.gz) shift && tar czf $FILE $* ;;
-    *.tgz) shift && tar czf $FILE $* ;;
-    *.zip) shift && zip $FILE $* ;;
-    *.rar) shift && rar $FILE $* ;;
+      *.tar) shift && tar cf $FILE $* ;;
+      *.tar.bz2) shift && tar cjf $FILE $* ;;
+      *.tar.gz) shift && tar czf $FILE $* ;;
+      *.tgz) shift && tar czf $FILE $* ;;
+      *.zip) shift && zip $FILE $* ;;
+      *.rar) shift && rar $FILE $* ;;
     esac
   else
     echo "usage: compress <foo.tar.gz> ./foo ./bar"
   fi
-}
-
-function ethif() {
-  local val=$(ifconfig | grep enp | cut -d: -f2 | head -1 | awk '{print $1}')
-  echo "$val"
-}
-
-function wlanif() {
-  local val=$(ifconfig | grep wlp | cut -d: -f2 | head -1 | awk '{print $1}')
-  echo "$val"
-}
-
-function ethip() {
-  local eth=$(ethif)
-  local myip=$(ifconfig ${eth} | grep 'inet addr:' | cut -d: -f3 | awk '{print $1}')
-  echo "$myip"
-}
-
-function wlanip() {
-  local wlan=$(wlanif)
-  local myip=$(ifconfig ${wlan} | grep 'inet addr:' | cut -d: -f3 | awk '{print $1}')
-  echo "$myip"
 }
 
 # set ROS_IP
@@ -150,13 +129,13 @@ function rosip() {
   # check command-line options
   if [ -n "$(echo $1 | grep '^-')" ]; then
     case $1 in
-    --help | -h)
-      rosip_help
-      ;;
-    *)
-      echo "rosip: $1: invalid option"
-      rosip_help
-      ;;
+      --help | -h)
+        rosip_help
+        ;;
+      *)
+        echo "rosip: $1: invalid option"
+        rosip_help
+        ;;
     esac
     return 0
   fi
@@ -164,32 +143,32 @@ function rosip() {
   cmd=$1
   local rx='([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
   case $cmd in
-  set)
-    if [ "$2" == "-h" ]; then
-      echo -e "rosip set set ROS_IP to the given IP address"
-      echo -e "usage: rosip set 192.168.129.1"
-    elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
-      # validating IP address using regexp
-      echo -e "rosip: set: invalid IP address"
-      echo -e "usage: rosip set 192.168.129.1"
-    else
-      export ROS_IP="$2"
-      rosip_disp
-    fi
-    ;;
-  reset)
-    if [ "$2" == "-h" ]; then
-      echo -e "rosip reset reset ROS_IP to empty"
-      echo -e "usage: rosip reset"
-    else
-      export ROS_IP=localhost
-      rosip_disp
-    fi
-    ;;
-  *)
-    echo "rosip: $1: invalid command"
-    rosip_help
-    ;;
+    set)
+      if [ "$2" == "-h" ]; then
+        echo -e "rosip set set ROS_IP to the given IP address"
+        echo -e "usage: rosip set 192.168.129.1"
+      elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
+        # validating IP address using regexp
+        echo -e "rosip: set: invalid IP address"
+        echo -e "usage: rosip set 192.168.129.1"
+      else
+        export ROS_IP="$2"
+        rosip_disp
+      fi
+      ;;
+    reset)
+      if [ "$2" == "-h" ]; then
+        echo -e "rosip reset reset ROS_IP to empty"
+        echo -e "usage: rosip reset"
+      else
+        export ROS_IP=localhost
+        rosip_disp
+      fi
+      ;;
+    *)
+      echo "rosip: $1: invalid command"
+      rosip_help
+      ;;
   esac
 }
 
@@ -220,13 +199,13 @@ function rosmu() {
   # check command-line options
   if [ -n "$(echo $1 | grep '^-')" ]; then
     case $1 in
-    --help | -h)
-      rosmu_help
-      ;;
-    *)
-      echo "rosmu: $1: invalid option"
-      rosmu_help
-      ;;
+      --help | -h)
+        rosmu_help
+        ;;
+      *)
+        echo "rosmu: $1: invalid option"
+        rosmu_help
+        ;;
     esac
     return 0
   fi
@@ -234,32 +213,32 @@ function rosmu() {
   cmd=$1
   local rx='([1-9]?[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])'
   case $cmd in
-  set)
-    if [ "$2" == "-h" ]; then
-      echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
-      echo -e "usage: rosmu set 192.168.129.1"
-    elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
-      # validating IP address using regexp
-      echo -e "rosmu: set: invalid IP address"
-      echo -e "usage: rosmu set 192.168.129.1"
-    else
-      export ROS_MASTER_URI="http://$2:11311"
-      rosmu_disp
-    fi
-    ;;
-  reset)
-    if [ "$2" == "-h" ]; then
-      echo -e "rosmu reset reset ROS_MASTER_URI to local host"
-      echo -e "usage: rosmu reset"
-    else
-      export ROS_MASTER_URI="http://localhost:11311"
-      rosmu_disp
-    fi
-    ;;
-  *)
-    echo "rosmu: $1: invalid command"
-    rosmu_help
-    ;;
+    set)
+      if [ "$2" == "-h" ]; then
+        echo -e "rosmu set set ROS_MASTER_URI to the given IP address"
+        echo -e "usage: rosmu set 192.168.129.1"
+      elif [[ ! $2 =~ ^$rx\.$rx\.$rx\.$rx$ ]]; then
+        # validating IP address using regexp
+        echo -e "rosmu: set: invalid IP address"
+        echo -e "usage: rosmu set 192.168.129.1"
+      else
+        export ROS_MASTER_URI="http://$2:11311"
+        rosmu_disp
+      fi
+      ;;
+    reset)
+      if [ "$2" == "-h" ]; then
+        echo -e "rosmu reset reset ROS_MASTER_URI to local host"
+        echo -e "usage: rosmu reset"
+      else
+        export ROS_MASTER_URI="http://localhost:11311"
+        rosmu_disp
+      fi
+      ;;
+    *)
+      echo "rosmu: $1: invalid command"
+      rosmu_help
+      ;;
   esac
 }
 
@@ -284,13 +263,13 @@ function srosm() {
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
-function srosf() {
-  source /opt/ros/foxy/setup.bash
+function srosn()  {
+  source /opt/ros/noetic/setup.bash
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
-function srosn()  {
-  source /opt/ros/noetic/setup.bash
+function srosf() {
+  source /opt/ros/foxy/setup.bash
   export VIRTUAL_ENV=$ROS_DISTRO
 }
 
@@ -383,91 +362,4 @@ function upal_clang() {
     return 0
   fi
   sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1 --slave /usr/bin/clang-format clang-format /usr/bin/clang-format-$1 --slave /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-$1
-}
-
-j() {
-  if [[ "$#" -ne 0 ]]; then
-    cd $(autojump $@)
-    return
-  fi
-  cd "$(autojump -s | sort -k1gr | awk '$1 ~ /[0-9]:/ && $2 ~ /^\// { for (i=2; i<=NF; i++) { print $(i) } }' | fzf --height 40% --reverse --inline-info)"
-}
-
-fman() {
-  man -k . | fzf --prompt='Man> ' | awk '{print $1}' | xargs -r man
-}
-
-function fl() {
-  ll | awk '{print $9}' | fzf
-}
-
-function fp() {
-  # Try bat, highlight, coderay, rougify in turn, then fall back to cat
-  fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (bat --style=numbers --color=always {} ||
-                  highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500'
-}
-
-function clang-format-all() {
-  # Variable that will hold the name of the clang-format command
-  FMT=""
-
-  # Some distros just call it clang-format. Others (e.g. Ubuntu) are insistent
-  # that the version number be part of the command. We prefer clang-format if
-  # that's present, otherwise we work backwards from highest version to lowest
-  # version.
-  for clangfmt in clang-format{,-{4,3}.{9,8,7,6,5,4,3,2,1,0}}; do
-    if which "$clangfmt" &>/dev/null; then
-      FMT="$clangfmt"
-      break
-    fi
-  done
-
-  # Check if we found a working clang-format
-  if [ -z "$FMT" ]; then
-    echo "failed to find clang-format"
-    exit 1
-  fi
-
-  # Check all of the arguments first to make sure they're all directories
-  for dir in "$@"; do
-    if [ ! -d "${dir}" ]; then
-      echo "${dir} is not a directory"
-      usage
-    fi
-  done
-
-  # Find a dominating file, starting from a given directory and going up.
-  find-dominating-file() {
-    if [ -r "$1"/"$2" ]; then
-      return 0
-    fi
-    if [ "$1" = "/" ]; then
-      return 1
-    fi
-    find-dominating-file "$(realpath "$1"/..)" "$2"
-    return $?
-  }
-
-  # Run clang-format -i on all of the things
-  for dir in "$@"; do
-    pushd "${dir}" &>/dev/null
-    if ! find-dominating-file . .clang-format; then
-      echo "Failed to find dominating .clang-format starting at $PWD"
-      continue
-    fi
-    find . \
-      \( -name '*.c' \
-      -o -name '*.cc' \
-      -o -name '*.cpp' \
-      -o -name '*.h' \
-      -o -name '*.hh' \
-      -o -name '*.hpp' \) \
-      -exec "${FMT}" -i '{}' \;
-    popd &>/dev/null
-  done
 }
