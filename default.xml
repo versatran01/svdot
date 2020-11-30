@@ -41,5 +41,5 @@
     <!-- other -->
     <project name="microsoft/GSL" path="gsl"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <project name="danmar/cppcheck" path="cppcheck"/>
+    <project name="danmar/cppcheck" path="cppcheck" revision="main"/>
 </manifest>
