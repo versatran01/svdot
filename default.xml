@@ -1,31 +1,29 @@
 <manifest>
     <remote name="github" fetch="https://github.com"/>
 
-    <default revision="master" remote="github" sync-j="4"/>
-
-    <project name="microsoft/GSL" path="gsl"/>
+    <default revision="master" remote="github" sync-j="8"/>
 
     <!-- logging testing -->
-    <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
     <project name="fmtlib/fmt" path="fmt"/>
-    <project name="onqtam/doctest" path="doctest"/>
     <project name="nlohmann/json" path="json"/>
+    <project name="onqtam/doctest" path="doctest"/>
+    <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
 
     <!-- nlls -->
-    <project name="borglab/gtsam" revision="develop" path="gtsam"/>
     <project name="ceres-solver/ceres-solver" path="ceres"/>
+    <project name="borglab/gtsam" revision="develop" path="gtsam"/>
 
     <!-- geometry -->
     <project name="anybotics/kindr" path="kindr"/>
-    <project name="artivis/manif" path="manif" revision="devel"/>
     <project name="strasdat/sophus" path="sophus"/>
-    <project name="laurentkneip/opengv" path="opengv"/>
+    <project name="artivis/manif" path="manif" revision="devel"/>
+    <!-- <project name="laurentkneip/opengv" path="opengv"/> -->
 
     <!-- google -->
-    <project name="google/benchmark" path="gbench"/>
-    <project name="google/googletest" path="gtest"/>
     <project name="google/glog" path="glog"/>
     <project name="gflags/gflags" path="gflags"/>
+    <project name="google/googletest" path="gtest"/>
+    <project name="google/benchmark" path="gbench"/>
     <project name="abseil/abseil-cpp" path="abseil"/>
 
     <!-- xtensor -->
@@ -41,6 +39,7 @@
     <!-- <project name="mosra/magnum" path="magnum"/> -->
 
     <!-- other -->
+    <project name="microsoft/GSL" path="gsl"/>
     <project name="autodiff/autodiff" path="autodiff"/>
     <project name="danmar/cppcheck" path="cppcheck"/>
 </manifest>
