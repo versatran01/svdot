@@ -26,6 +26,7 @@ alias qtc='/opt/Qt/Tools/QtCreator/bin/qtcreator &'
 alias gtop='gpustat --no-header --color -u -P -i'
 alias spd='spyder --new-instance &'
 alias ft='fzf-tmux'
+alias bat='batcat'
 
 # git
 alias groot='cd "$(git rev-parse --show-toplevel)"'
