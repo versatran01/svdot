@@ -19,9 +19,9 @@ dependencies:
   - atomicwrites=1.4.0=py_0
   - attrs=20.3.0=pyhd3eb1b0_0
   - autopep8=1.5.4=py_0
-  - aws-c-common=0.4.59=h36c2ea0_1
+  - aws-c-common=0.4.59=he6710b0_0
   - aws-c-event-stream=0.1.6=had2084c_6
-  - aws-checksums=0.1.10=h4e93380_0
+  - aws-checksums=0.1.10=h2531618_0
   - aws-sdk-cpp=1.8.70=h57dc084_1
   - babel=2.9.0=pyhd3eb1b0_0
   - backcall=0.2.0=py_0
@@ -31,19 +31,20 @@ dependencies:
   - blessings=1.7=py38_1002
   - blinker=1.4=py38_0
   - bpython=0.20.1=py38h06a4308_1
-  - brotli=1.0.9=he1b5a44_3
+  - brotli=1.0.9=he6710b0_2
   - brotlipy=0.7.0=py38h27cfd23_1003
   - bzip2=1.0.8=h7b6447c_0
   - c-ares=1.17.1=h27cfd23_0
   - ca-certificates=2020.12.8=h06a4308_0
   - cachetools=4.2.0=pyhd3eb1b0_0
   - cairo=1.16.0=h9f066cc_1006
-  - certifi=2020.12.5=py38h578d9bd_0
+  - certifi=2020.12.5=py38h06a4308_0
   - cffi=1.14.3=py38h1bdcb99_1
   - chardet=3.0.4=py38h06a4308_1003
   - click=7.1.2=py_0
   - cloudpickle=1.6.0=py_0
-  - conda=4.9.2=py38h578d9bd_0
+  - colorama=0.4.4=pyhd3eb1b0_0
+  - conda=4.9.2=py38h06a4308_0
   - conda-package-handling=1.7.2=py38h03888b9_0
   - cryptography=3.3.1=py38h3c74f83_0
   - cudatoolkit=11.0.221=h6bb024c_0
@@ -63,9 +64,9 @@ dependencies:
   - fsspec=0.8.4=py_0
   - future=0.18.2=py38_1
   - gettext=0.19.8.1=hd7bead4_3
-  - gflags=2.2.2=he1b5a44_1004
+  - gflags=2.2.2=he6710b0_0
   - glib=2.66.3=h58526e2_0
-  - glog=0.4.0=h49b9bf7_3
+  - glog=0.4.0=he6710b0_0
   - gmp=6.2.1=h58526e2_0
   - gnutls=3.6.13=h85f3911_1
   - google-auth=1.24.0=pyhd3eb1b0_0
@@ -113,7 +114,7 @@ dependencies:
   - libclang=10.0.1=default_hb85057a_2
   - libcurl=7.71.1=hcdd3856_8
   - libedit=3.1.20191231=h14c3975_1
-  - libev=4.33=h516909a_1
+  - libev=4.33=h7b6447c_0
   - libevent=2.1.10=hcdb4288_3
   - libffi=3.2.1=hf484d3e_1007
   - libgcc-ng=9.1.0=hdf63c60_0
@@ -123,14 +124,14 @@ dependencies:
   - liblapack=3.8.0=21_mkl
   - liblapacke=3.8.0=21_mkl
   - libllvm10=10.0.1=hbcb73fb_5
-  - libnghttp2=1.41.0=h8cfc5f6_2
+  - libnghttp2=1.41.0=hf8bcb03_2
   - libopencv=4.5.0=py38_3
   - libpng=1.6.37=hbc83047_0
   - libpq=12.3=h5513abc_2
   - libprotobuf=3.13.0.1=hd408876_0
   - libsodium=1.0.18=h7b6447c_0
   - libspatialindex=1.9.3=he6710b0_0
-  - libssh2=1.9.0=hab1572f_5
+  - libssh2=1.9.0=h1ba5d50_1
   - libstdcxx-ng=9.1.0=hdf63c60_0
   - libthrift=0.13.0=h5aa387f_6
   - libtiff=4.1.0=h2733197_1
@@ -234,7 +235,7 @@ dependencies:
   - qtawesome=1.0.1=py_0
   - qtconsole=4.7.7=py_0
   - qtpy=1.9.0=py_0
-  - re2=2020.11.01=h58526e2_0
+  - re2=2020.11.01=h2531618_1
   - readline=8.0=h7b6447c_0
   - regex=2020.11.13=py38h27cfd23_0
   - requests=2.25.1=pyhd3eb1b0_0
@@ -248,10 +249,10 @@ dependencies:
   - secretstorage=3.3.0=py38h06a4308_0
   - setuptools=51.0.0=py38h06a4308_2
   - six=1.15.0=py38h06a4308_0
-  - snappy=1.1.8=he1b5a44_3
+  - snappy=1.1.8=he6710b0_0
   - snowballstemmer=2.0.0=py_0
   - sortedcontainers=2.3.0=pyhd3eb1b0_0
-  - sphinx=3.3.1=pyhd8ed1ab_0
+  - sphinx=3.4.0=pyhd3eb1b0_0
   - sphinxcontrib-applehelp=1.0.2=py_0
   - sphinxcontrib-devhelp=1.0.2=py_0
   - sphinxcontrib-htmlhelp=1.0.3=py_0
@@ -259,7 +260,7 @@ dependencies:
   - sphinxcontrib-qthelp=1.0.3=py_0
   - sphinxcontrib-serializinghtml=1.1.4=py_0
   - spyder=4.2.0=py38h06a4308_0
-  - spyder-kernels=1.10.0=py38h06a4308_0
+  - spyder-kernels=1.10.1=py38h06a4308_0
   - sqlite=3.33.0=h62c20be_0
   - tbb=2020.3=hfd86e86_0
   - tensorboard=2.3.0=pyh4dce500_0
@@ -311,7 +312,6 @@ dependencies:
     - argon2-cffi==20.1.0
     - bravado==11.0.2
     - bravado-core==5.17.0
-    - colorama==0.4.4
     - configparser==5.0.1
     - dataclasses==0.6
     - docker-pycreds==0.4.0
