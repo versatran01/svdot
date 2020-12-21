@@ -72,4 +72,5 @@ fi
 
 export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
 export CUDA_VISIBLE_DEVICES=0
+export PATH="${HOME}/.local/bin:${PATH}"
 
