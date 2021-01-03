@@ -271,7 +271,6 @@ dependencies:
   - tk=8.6.10=hbc83047_0
   - toml=0.10.1=py_0
   - torchaudio=0.7.2=py38
-  - torchvision=0.2.2=py_3
   - tornado=6.1=py38h27cfd23_0
   - tqdm=4.54.1=pyhd3eb1b0_0
   - traitlets=5.0.5=py_0
@@ -340,6 +339,7 @@ dependencies:
     - open3d==0.11.2
     - opt-einsum==3.3.0
     - plyfile==0.7.2
+    - pretty-errors==1.2.19
     - prometheus-client==0.9.0
     - promise==2.3
     - py-cpuinfo==7.0.0
@@ -362,6 +362,7 @@ dependencies:
     - subprocess32==3.5.4
     - swagger-spec-validator==2.7.3
     - terminado==0.9.1
+    - torchvision==0.8.2
     - wandb==0.10.11
     - webcolors==1.11.1
     - websocket-client==0.57.0
