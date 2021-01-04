@@ -313,6 +313,7 @@ dependencies:
     - bravado-core==5.17.0
     - configparser==5.0.1
     - dataclasses==0.6
+    - dearpygui==0.6.119
     - docker-pycreds==0.4.0
     - docopt==0.6.2
     - eagerpy==0.29.0
