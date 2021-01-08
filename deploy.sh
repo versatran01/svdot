@@ -8,6 +8,7 @@ gitconfig
 gitignore
 inputrc
 ideavimrc
+pylintrc
 )
 
 for file in "${FILES[@]}"
