@@ -27,7 +27,7 @@ dependencies:
   - backcall=0.2.0=py_0
   - black=20.8b1=py_1
   - blas=1.0=mkl
-  - bleach=3.2.1=py_0
+  - bleach=3.2.2=pyhd3eb1b0_0
   - blessings=1.7=py38_1002
   - blinker=1.4=py38_0
   - bpython=0.20.1=py38h06a4308_1
@@ -180,7 +180,7 @@ dependencies:
   - openssl=1.1.1i=h27cfd23_0
   - orc=1.6.5=hd3605a7_0
   - packaging=20.8=pyhd3eb1b0_0
-  - pandas=1.2.0=py38ha9443f7_0
+  - pandas=1.2.1=py38ha9443f7_0
   - pandoc=2.11.2=h36c2ea0_0
   - pandocfilters=1.4.3=py38h06a4308_1
   - parquet-cpp=1.5.1=2
@@ -225,10 +225,10 @@ dependencies:
   - python-language-server=0.36.2=pyhd3eb1b0_0
   - python_abi=3.8=1_cp38
   - pytorch=1.7.1=py3.8_cuda11.0.221_cudnn8.0.5_0
-  - pytorch-lightning=1.1.4=pyhd8ed1ab_0
+  - pytorch-lightning=1.1.5=pyhd8ed1ab_0
   - pytz=2020.5=pyhd3eb1b0_0
   - pyxdg=0.27=pyhd3eb1b0_0
-  - pyyaml=5.3.1=py38h7b6447c_1
+  - pyyaml=5.4.1=py38h27cfd23_1
   - pyzmq=20.0.0=py38h2531618_1
   - qdarkstyle=2.8.1=py_0
   - qt=5.12.9=h1f2b2cb_0
@@ -250,7 +250,7 @@ dependencies:
   - setuptools=51.3.3=py38h06a4308_4
   - six=1.15.0=py38h06a4308_0
   - snappy=1.1.8=he6710b0_0
-  - snowballstemmer=2.0.0=py_0
+  - snowballstemmer=2.1.0=pyhd3eb1b0_0
   - sortedcontainers=2.3.0=pyhd3eb1b0_0
   - sphinx=3.4.3=pyhd3eb1b0_0
   - sphinxcontrib-applehelp=1.0.2=py_0
@@ -277,7 +277,7 @@ dependencies:
   - typed-ast=1.4.2=py38h27cfd23_1
   - typing-extensions=3.7.4.3=0
   - typing_extensions=3.7.4.3=py_0
-  - ujson=4.0.1=py38he6710b0_0
+  - ujson=4.0.2=py38h2531618_0
   - urllib3=1.26.2=pyhd3eb1b0_0
   - urwid=2.1.2=py38h7b6447c_0
   - watchdog=0.10.4=py38h06a4308_0
