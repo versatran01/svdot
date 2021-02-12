@@ -42,5 +42,6 @@
     <project name="microsoft/GSL" path="gsl"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
+    <project name="boost-ext/sml" path="sml"/>
     <project name="danmar/cppcheck" path="cppcheck" revision="main"/>
 </manifest>
