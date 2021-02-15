@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Sourcetrail
-Exec=sourcetrail
-Icon=/home/chao/.local/share/applications/sourcetrail.png
-Type=Application
-Terminal=false
-Categories=Development;
-MimeType=text/plain

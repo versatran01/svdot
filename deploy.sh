@@ -9,6 +9,7 @@ gitignore
 inputrc
 ideavimrc
 pylintrc
+condarc
 )
 
 for file in "${FILES[@]}"
