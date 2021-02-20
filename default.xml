@@ -39,7 +39,7 @@
     <!-- <project name="mosra/magnum" path="magnum"/> -->
 
     <!-- other -->
-    <project name="microsoft/GSL" path="gsl"/>
+    <project name="microsoft/GSL" path="gsl" revision="main"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
     <project name="boost-ext/sml" path="sml"/>
