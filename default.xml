@@ -7,7 +7,6 @@
     <project name="fmtlib/fmt" path="fmt"/>
     <project name="nlohmann/json" path="json"/>
     <project name="onqtam/doctest" path="doctest"/>
-    <project name="gabime/spdlog" revision="v1.x" path="spdlog"/>
 
     <!-- nlls -->
     <project name="ceres-solver/ceres-solver" path="ceres"/>
@@ -27,10 +26,9 @@
     <project name="abseil/abseil-cpp" path="abseil"/>
 
     <!-- xtensor -->
-    <project name="xtensor-stack/xtensor" path="xtensor"/>
     <project name="xtensor-stack/xtl" path="xtl"/>
     <project name="xtensor-stack/xsimd" path="xsimd"/>
-    <project name="xtensor-stack/xframe" path="xframe"/>
+    <project name="xtensor-stack/xtensor" path="xtensor"/>
 
     <!-- graphics  -->
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
@@ -39,9 +37,9 @@
     <!-- <project name="mosra/magnum" path="magnum"/> -->
 
     <!-- other -->
-    <project name="microsoft/GSL" path="gsl" revision="main"/>
+    <project name="boost-ext/sml" path="sml"/>
+    <project name="facebook/folly" path="folly"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <project name="boost-ext/sml" path="sml"/>
     <project name="danmar/cppcheck" path="cppcheck" revision="main"/>
 </manifest>
