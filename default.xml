@@ -41,5 +41,5 @@
     <!-- <project name="facebook/folly" path="folly"/> -->
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <project name="danmar/cppcheck" path="cppcheck" revision="main"/>
+    <!-- <project name="danmar/cppcheck" path="cppcheck" revision="main"/> -->
 </manifest>
