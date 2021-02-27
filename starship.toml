@@ -1,3 +1,26 @@
+scan_timeout = 10
+add_newline = false
+format = """
+$username\
+$hostname\
+$conda\
+$env_var\
+$shlvl\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$package\
+$python\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$status\
+$character"""
+
 [username]
 style_user = "white bold"
 style_root = "black bold"
@@ -6,15 +29,27 @@ disabled = false
 show_always = true
 
 [hostname]
+ssh_only = false
 format =  "[$hostname](bold red) "
+trim_at = ""
 disabled = false
 
 [conda]
-format = "[$symbol$environment](dimmed green) "
+symbol = ""
+ignore_base = false
+format = "[$symbol$environment]($style) "
+
+[env_var]
+variable = "CUDA_VISIBLE_DEVICES"
+default = ""
+format = "[$env_value]($style) "
 
 [directory]
+truncation_length = 4
+truncate_to_repo = false
 disabled = false
 
 [git_branch]
-symbol = "🌱 "
+symbol = ""
 truncation_symbol = ""
+format = "[$symbol$branch]($style) "
