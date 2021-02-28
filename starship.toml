@@ -3,10 +3,9 @@ add_newline = false
 format = """
 $username\
 $hostname\
+$env_var\
 $conda\
 $custom\
-$env_var\
-$shlvl\
 $directory\
 $git_branch\
 $git_commit\
@@ -33,40 +32,52 @@ style = "bold fg:white bg:purple"
 format =  "[ $hostname ]($style)"
 disabled = false
 
-[conda]
-symbol = "🅒"
-ignore_base = false
-style = "bold fg:black bg:cyan"
-format = "[ $symbol $environment ]($style)"
-
 [env_var]
 variable = "CUDA_VISIBLE_DEVICES"
 default = ""
 style = "bold fg:white bg:green"
 format = "[ $env_value ]($style)"
 
+[conda]
+symbol = "🅒"
+ignore_base = false
+style = "bold fg:white bg:cyan"
+format = "[ $symbol $environment ]($style)"
+
+[custom.ros]
+command = "echo $ROS_DISTRO $CATKIN_WS_NAME"
+style = "bold fg:white bg:blue"
+symbol = "🅡"
+when = """ test ! -z "$ROS_DISTRO" """
+format = "[ $symbol $output ]($style)"
+disabled = false
+
 [directory]
 truncation_length = 4
 truncate_to_repo = false
+style = "fg:white bg:#3A3A3A"
+read_only_style = "bg:#3A3A3A"
 disabled = false
-format = "[ $path ]($style)[$read_only]($read_only_style)"
+format = "[ $read_only]($read_only_style)[$path ]($style)"
 
 [git_branch]
-symbol = ""
+symbol = "🌱"
 truncation_symbol = ""
-format = "[ $symbol$branch ]($style)"
+style = "bold 11"
+format = "[ ${symbol} $branch ]($style)"
 
-[cmd_duration]
-format = "[ $duration ]($style)"
+[git_commit]
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
 [python]
 symbol = "🐍"
-format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
+format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\)) ]($style)'
+python_binary = "python"
 
-[custom.ros]
-command = "echo $ROS_DISTRO"
-symbol = "🅡"
-when = "ls"
-style = "bold fg:black bg:blue"
-format = "[ $symbol $output ]($style)"
-disabled = false
+[cmd_duration]
+style = "red"
+format = "[ $duration ]($style)"

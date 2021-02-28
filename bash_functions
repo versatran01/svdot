@@ -260,17 +260,14 @@ function rosmu_help() {
 
 function srosm() {
   source /opt/ros/melodic/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
 }
 
 function srosn()  {
   source /opt/ros/noetic/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
 }
 
 function srosf() {
   source /opt/ros/foxy/setup.bash
-  export VIRTUAL_ENV=$ROS_DISTRO
 }
 
 export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
