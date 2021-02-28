@@ -4,6 +4,7 @@ format = """
 $username\
 $hostname\
 $conda\
+$custom\
 $env_var\
 $shlvl\
 $directory\
@@ -12,17 +13,16 @@ $git_commit\
 $git_state\
 $git_status\
 $docker_context\
-$package\
 $python\
-$custom\
+$status\
 $cmd_duration\
 $line_break\
 $jobs\
-$status\
 $character"""
 
 [username]
 style_user = "bold fg:black bg:yellow"
+style_root = "bold fg:black bg:red"
 format = "[ $user ]($style)"
 disabled = false
 show_always = true
@@ -34,15 +34,15 @@ format =  "[ $hostname ]($style)"
 disabled = false
 
 [conda]
-symbol = ""
+symbol = "🅒"
 ignore_base = false
 style = "bold fg:black bg:cyan"
-format = "[ $symbol$environment ]($style)"
+format = "[ $symbol $environment ]($style)"
 
 [env_var]
 variable = "CUDA_VISIBLE_DEVICES"
 default = ""
-style = "bold fg:white bg:blue"
+style = "bold fg:white bg:green"
 format = "[ $env_value ]($style)"
 
 [directory]
@@ -58,3 +58,15 @@ format = "[ $symbol$branch ]($style)"
 
 [cmd_duration]
 format = "[ $duration ]($style)"
+
+[python]
+symbol = "🐍"
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\))]($style)'
+
+[custom.ros]
+command = "echo $ROS_DISTRO"
+symbol = "🅡"
+when = "ls"
+style = "bold fg:black bg:blue"
+format = "[ $symbol $output ]($style)"
+disabled = false
