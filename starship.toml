@@ -3,9 +3,10 @@ add_newline = false
 format = """
 $username\
 $hostname\
+${custom.ssh}\
 $env_var\
 $conda\
-$custom\
+${custom.ros}\
 $directory\
 $git_branch\
 $git_commit\
@@ -21,7 +22,7 @@ $character"""
 
 [username]
 style_user = "bold fg:black bg:yellow"
-style_root = "bold fg:black bg:red"
+style_root = "bold fg:red bg:yellow"
 format = "[ $user ]($style)"
 disabled = false
 show_always = true
@@ -29,7 +30,15 @@ show_always = true
 [hostname]
 ssh_only = false
 style = "bold fg:white bg:purple"
-format =  "[ $hostname ]($style)"
+format = "[ $hostname ]($style)"
+disabled = false
+
+[custom.ssh]
+command = "echo SSH"
+style = "bold fg:white bg:red"
+symbol = "🅢"
+when = """ test ! -z "$SSH_CLIENT" """
+format = "[ $symbol $output ]($style)"
 disabled = false
 
 [env_var]

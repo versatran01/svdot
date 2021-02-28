@@ -27,31 +27,11 @@ shopt -s progcomp
 # Warn me if I try to shift when there's nothing there
 shopt -s shift_verbose
 
-# autojump
-if [ -f /usr/share/autojump/autojump.sh ]; then
-  source /usr/share/autojump/autojump.sh
-else
-  [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
-fi
-
 # 256 for terminal
 export TERM=xterm-256color
 
 # source inputrc
 export INPUTRC=~/.inputrc
-
-# starship
-export STARSHIP_CONFIG=~/.starship.toml
-eval "$(starship init bash)"
-
-# powerline-shell
-# function _update_ps1() {
-  # PS1=$(powerline-shell $?)
-# }
-#
-# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-  # PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-# fi
 
 # Less Colors for Man Pages
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -73,6 +53,23 @@ fi
 
 export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
 export CUDA_VISIBLE_DEVICES=0
-export PATH="{HOME}/.local/bin:${PATH}"
 
+# autojump
+if [ -f /usr/share/autojump/autojump.sh ]; then
+  source /usr/share/autojump/autojump.sh
+else
+  [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+fi
 
+# starship
+export STARSHIP_CONFIG=~/.starship.toml
+eval "$(starship init bash)"
+
+# powerline-shell
+# function _update_ps1() {
+  # PS1=$(powerline-shell $?)
+# }
+#
+# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+  # PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# fi

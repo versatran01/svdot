@@ -294,7 +294,7 @@ cj() {
     echo "source $ROSWS_HOME_DIR/$1/devel/setup.bash"
     # HACK prepend stuff that should go even before this in path
     export CATKIN_WS_NAME="$1"
-    export PATH=$ROS_PATH_OVERLAY:$PATH
+    # export PATH=$ROS_PATH_OVERLAY:$PATH
     cd $ROSWS_HOME_DIR/$1
   elif [ -e $ROSWS_HOME_DIR/$1/install/setup.bash ]; then
     source $ROSWS_HOME_DIR/$1/install/setup.bash
