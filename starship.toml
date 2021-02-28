@@ -53,7 +53,7 @@ format = "[ $symbol $output ]($style)"
 disabled = false
 
 [directory]
-truncation_length = 4
+truncation_length = 8
 truncate_to_repo = false
 style = "fg:white bg:#3A3A3A"
 read_only_style = "bg:#3A3A3A"
