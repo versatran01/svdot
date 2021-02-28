@@ -10,20 +10,11 @@ inputrc
 ideavimrc
 pylintrc
 condarc
+starship.toml
 )
 
 for file in "${FILES[@]}"
 do
   echo Linking "$file" to $HOME
   ln -sf $(pwd)/$file ~/.$file
-done
-
-DIRS=(
-powerline-shell
-)
-
-for dir in "${DIRS[@]}"
-do
-  echo Linking "$dir" to $HOME/.config
-  ln -sf $(pwd)/$dir ~/.config/$dir
 done

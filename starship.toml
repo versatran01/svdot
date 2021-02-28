@@ -22,34 +22,39 @@ $status\
 $character"""
 
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[$user]($style) "
+style_user = "bold fg:black bg:yellow"
+format = "[ $user ]($style)"
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format =  "[$hostname](bold red) "
-trim_at = ""
+style = "bold fg:white bg:purple"
+format =  "[ $hostname ]($style)"
 disabled = false
 
 [conda]
 symbol = ""
 ignore_base = false
-format = "[$symbol$environment]($style) "
+style = "bold fg:black bg:cyan"
+format = "[ $symbol$environment ]($style)"
 
 [env_var]
 variable = "CUDA_VISIBLE_DEVICES"
 default = ""
-format = "[$env_value]($style) "
+style = "bold fg:white bg:blue"
+format = "[ $env_value ]($style)"
 
 [directory]
 truncation_length = 4
 truncate_to_repo = false
 disabled = false
+format = "[ $path ]($style)[$read_only]($read_only_style)"
 
 [git_branch]
 symbol = ""
 truncation_symbol = ""
-format = "[$symbol$branch]($style) "
+format = "[ $symbol$branch ]($style)"
+
+[cmd_duration]
+format = "[ $duration ]($style)"
