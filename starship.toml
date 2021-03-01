@@ -72,10 +72,7 @@ format = "[ $read_only]($read_only_style)[$path ]($style)"
 [git_branch]
 symbol = "🌱"
 truncation_symbol = ""
-style = "bold 11"
 format = "[ ${symbol} $branch ]($style)"
-
-[git_commit]
 
 [git_status]
 ahead = "⇡${count}"
@@ -88,5 +85,4 @@ format = '[ ${symbol}${pyenv_prefix}(${version} )(\($virtualenv\)) ]($style)'
 python_binary = "python"
 
 [cmd_duration]
-style = "red"
 format = "[ $duration ]($style)"
