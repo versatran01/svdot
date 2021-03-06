@@ -205,23 +205,14 @@ target/
 .spyderproject
 .spyderworkspace
 
-.vscode
 
 *~
 .kdev4/
 *.kdev4
 .spyproject/
 
-doc/
 .cache/
 .pytest_cache/
 *.creator.user*
 .vscode
-
-*.cflags
-*.config
-*.creator
-*.cxxflags
-*.files
-*.includes
 *.srctrl*

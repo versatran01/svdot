@@ -44,7 +44,7 @@ function myip() {
 }
 
 # get current host related info
-function ii() { 
+function hostinfo() { 
   echo -e "\nYou are logged on ${bldpur}$(hostname)"
   echo -e "\nAdditionnal information:$txtrst "
   uname -a
@@ -73,6 +73,7 @@ function dirsize() {
       egrep '^ *[0-9.]*G' /tmp/list
       rm -rf /tmp/list
     }
+
 
 # Easy extact
 function extract() {
@@ -350,3 +351,4 @@ function upal_clang() {
   fi
   sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1 --slave /usr/bin/clang-format clang-format /usr/bin/clang-format-$1 --slave /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-$1
 }
+

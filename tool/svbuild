@@ -2,8 +2,7 @@
 import os
 from pathlib import Path
 import subprocess as sp
-import click
-
+from loguru import logger as L
 
 cwd = Path.cwd()
 print(cwd)
@@ -12,7 +11,7 @@ for pkg in cwd.iterdir():
     if not pkg.is_dir():
         continue
 
-    print(pkg)
+    L.info(pkg)
     os.chdir(pkg)
 
     build_dir = pkg / "build"
