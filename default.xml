@@ -5,8 +5,8 @@
 
     <!-- logging testing -->
     <project name="fmtlib/fmt" path="fmt"/>
-    <!-- <project name="nlohmann/json" path="json"/> -->
-    <project name="boostorg/json" path="json"/>
+    <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
+    <project name="boostorg/json" path="boost_json"/>
     <project name="onqtam/doctest" path="doctest"/>
 
     <!-- nlls -->
