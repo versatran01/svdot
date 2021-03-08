@@ -4,45 +4,38 @@
     <default revision="master" remote="github" sync-j="8"/>
 
     <!-- logging testing -->
-    <project name="fmtlib/fmt" path="ext/fmt"/>
+    <project name="fmtlib/fmt" path="fmt"/>
     <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
-    <project name="boostorg/json" path="ext/boost_json"/>
-    <project name="onqtam/doctest" path="ext/doctest"/>
+    <project name="boostorg/json" path="boost_json"/>
+    <project name="onqtam/doctest" path="doctest"/>
 
     <!-- nlls -->
-    <project name="ceres-solver/ceres-solver" path="ext/ceres"/>
-    <project name="borglab/gtsam" revision="develop" path="ext/gtsam"/>
+    <project name="ceres-solver/ceres-solver" path="ceres"/>
+    <project name="borglab/gtsam" revision="develop" path="gtsam"/>
 
     <!-- geometry -->
-    <project name="anybotics/kindr" path="ext/kindr"/>
-    <project name="strasdat/sophus" path="ext/sophus"/>
-    <project name="artivis/manif" path="ext/manif" revision="devel"/>
-    <!-- <project name="laurentkneip/opengv" path="opengv"/> -->
+    <project name="anybotics/kindr" path="kindr"/>
+    <project name="strasdat/sophus" path="sophus"/>
+    <project name="artivis/manif" path="manif" revision="devel"/>
 
     <!-- google -->
-    <project name="google/glog" path="ext/glog"/>
-    <project name="gflags/gflags" path="ext/gflags"/>
-    <project name="google/googletest" path="ext/gtest"/>
-    <project name="google/benchmark" path="ext/gbench"/>
-    <project name="abseil/abseil-cpp" path="ext/abseil"/>
+    <project name="google/glog" path="glog"/>
+    <project name="gflags/gflags" path="gflags"/>
+    <project name="google/googletest" path="gtest"/>
+    <project name="google/benchmark" path="gbench"/>
+    <project name="abseil/abseil-cpp" path="abseil"/>
 
     <!-- xtensor -->
-    <project name="xtensor-stack/xtl" path="ext/xtl"/>
-    <project name="xtensor-stack/xsimd" path="ext/xsimd"/>
-    <project name="xtensor-stack/xtensor" path="ext/xtensor"/>
+    <project name="xtensor-stack/xtl" path="xtl"/>
+    <project name="xtensor-stack/xsimd" path="xsimd"/>
+    <project name="xtensor-stack/xtensor" path="xtensor"/>
 
     <!-- graphics  -->
-    <project name="stevenlovegrove/pangolin" path="ext/pangolin"/>
-    <project name="AcademySoftwareFoundation/openvdb" path="ext/openvdb"/>
+    <project name="stevenlovegrove/pangolin" path="pangolin"/>
+    <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
-    <project name="boost-ext/sml" path="ext/sml"/>
-    <project name="taskflow/taskflow" path="ext/taskflow"/>
-    <project name="autodiff/autodiff" path="ext/autodiff"/>
-
-    <!-- apps -->
-    <project name="danmar/cppcheck" path="apps/cppcheck" revision="main"/>
-    <project name="ccache/ccache" path="apps/ccache"/>
-    <project name="albertlauncher/albert" path="apps/albert"/>
-    <project name="colmap/colmap" path="apps/colmap" revision="dev"/>
+    <project name="boost-sml" path="sml"/>
+    <project name="taskflow/taskflow" path="taskflow"/>
+    <project name="autodiff/autodiff" path="autodiff"/>
 </manifest>
