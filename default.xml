@@ -35,7 +35,7 @@
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
-    <project name="boost-sml" path="sml"/>
+    <project name="boost-ext/sml" path="sml"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
 </manifest>
