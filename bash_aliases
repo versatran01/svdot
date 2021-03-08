@@ -61,7 +61,8 @@ alias cnbd='colcon build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMA
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
 
 # alias
-alias cmk='cmake .. -DBUILD_SHARED_LIBS=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+alias cmk='cmake -DBUILD_SHARED_LIBS=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
 alias cpuperf='sudo cpupower frequency-set --governor performance'
 alias cpusave='sudo cpupower frequency-set --governor powersave'
+alias init_cmk='mkdir build; cd build; cmk ..; ccmake ..'
 
