@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="https://github.com"/>
+
+    <default revision="master" remote="github" sync-j="8"/>
+
+    <project name="danmar/cppcheck" path="cppcheck" revision="main"/>
+    <project name="cache/ccache" path="ccache"/>
+    <project name="albertlauncher/albert" path="albert"/>
+    <project name="colmap/colmap" path="colmap" revision="dev"/>
+</manifest>
