@@ -42,7 +42,7 @@
 
     <!-- apps -->
     <project name="danmar/cppcheck" path="apps/cppcheck" revision="main"/>
-    <project name="cache/ccache" path="apps/ccache"/>
+    <project name="ccache/ccache" path="apps/ccache"/>
     <project name="albertlauncher/albert" path="apps/albert"/>
     <project name="colmap/colmap" path="apps/colmap" revision="dev"/>
 </manifest>
