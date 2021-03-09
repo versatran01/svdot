@@ -64,6 +64,8 @@ fi
 export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init bash)"
 
+export EDITOR=vim
+
 # powerline-shell
 # function _update_ps1() {
   # PS1=$(powerline-shell $?)
