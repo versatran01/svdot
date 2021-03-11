@@ -216,3 +216,10 @@ target/
 *.creator.user*
 .vscode
 *.srctrl*
+
+*.cflags
+*.config
+*.creator
+*.cxxflags
+*.files
+*.includes
