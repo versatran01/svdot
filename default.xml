@@ -3,12 +3,6 @@
 
     <default revision="master" remote="github" sync-j="8"/>
 
-    <!-- logging testing -->
-    <project name="fmtlib/fmt" path="fmt"/>
-    <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
-    <project name="boostorg/json" path="boost_json"/>
-    <project name="onqtam/doctest" path="doctest"/>
-
     <!-- nlls -->
     <project name="ceres-solver/ceres-solver" path="ceres"/>
     <project name="borglab/gtsam" revision="develop" path="gtsam"/>
@@ -35,7 +29,11 @@
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
-    <project name="boost-ext/sml" path="sml"/>
+    <project name="fmtlib/fmt" path="fmt"/>
+    <project name="onqtam/doctest" path="doctest"/>
+    <project name="boost-ext/sml" path="boost_sml"/>
+    <project name="boostorg/json" path="boost_json"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
+    <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
 </manifest>
