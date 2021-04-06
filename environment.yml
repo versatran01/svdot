@@ -287,6 +287,7 @@ dependencies:
   - sqlite=3.35.2=h74cdb3f_0
   - tensorboard=2.4.1=pyhd8ed1ab_0
   - tensorboard-plugin-wit=1.8.0=pyh44b312d_0
+  - termcolor=1.1.0=py_2
   - terminado=0.9.3=py38h578d9bd_0
   - testpath=0.4.4=py_0
   - textdistance=4.2.1=pyhd8ed1ab_0
@@ -296,9 +297,7 @@ dependencies:
   - tk=8.6.10=h21135ba_1
   - toml=0.10.2=pyhd8ed1ab_0
   - toolz=0.11.1=py_0
-  - torchaudio=0.8.1=py38
   - torchmetrics=0.2.0=pyhd8ed1ab_0
-  - torchvision=0.2.2=py_3
   - tornado=6.1=py38h497a2fe_1
   - tqdm=4.59.0=pyhd8ed1ab_0
   - traitlets=5.0.5=py_0
@@ -339,15 +338,10 @@ dependencies:
   - zstd=1.4.9=ha95c52a_0
   - pip:
     - dataclasses==0.6
-    - docopt==0.6.2
-    - gitdb==4.0.5
     - gitpython==3.1.13
     - jsonpickle==1.5.2
-    - munch==2.5.0
-    - py-cpuinfo==7.0.0
     - pykitti==0.3.1
     - sacred==0.8.2
-    - smmap==3.0.5
-    - termcolor==1.1.0
     - thop==0.0.31-2005241907
+    - torchvision==0.9.1
 prefix: /home/chao/miniconda3
