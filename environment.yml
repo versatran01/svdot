@@ -13,6 +13,7 @@ dependencies:
   - appdirs=1.4.4=pyh9f0ad1d_0
   - argh=0.26.2=pyh9f0ad1d_1002
   - argon2-cffi=20.1.0=py38h497a2fe_2
+  - arrow=1.0.3=py38h578d9bd_0
   - astroid=2.5.2=py38h578d9bd_0
   - async-timeout=3.0.1=py_1000
   - async_generator=1.10=py_0
@@ -23,6 +24,7 @@ dependencies:
   - backcall=0.2.0=pyh9f0ad1d_0
   - backports=1.0=py_2
   - backports.functools_lru_cache=1.6.3=pyhd8ed1ab_0
+  - binaryornot=0.4.4=py_1
   - black=20.8b1=py_1
   - blas=2.108=mkl
   - blas-devel=3.9.0=8_mkl
@@ -48,6 +50,7 @@ dependencies:
   - colorama=0.4.4=pyh9f0ad1d_0
   - conda=4.10.0=py38h578d9bd_1
   - conda-package-handling=1.7.2=py38h8df0ef7_0
+  - cookiecutter=1.7.2=pyh9f0ad1d_0
   - cryptography=3.4.7=py38ha5dfef3_0
   - cudatoolkit=11.2.2=he111cf0_8
   - curtsies=0.3.4=py38h578d9bd_1
@@ -56,10 +59,10 @@ dependencies:
   - cytoolz=0.11.0=py38h497a2fe_3
   - dask-core=2021.4.0=pyhd8ed1ab_0
   - dbus=1.13.6=h48d8840_2
-  - decorator=5.0.4=pyhd8ed1ab_0
+  - decorator=5.0.5=pyhd8ed1ab_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
   - diff-match-patch=20200713=pyh9f0ad1d_0
-  - docutils=0.16=py38h578d9bd_3
+  - docutils=0.17=py38h578d9bd_0
   - einops=0.3.0=py_0
   - entrypoints=0.3=pyhd8ed1ab_1003
   - expat=2.3.0=h9c3ff4c_0
@@ -67,7 +70,7 @@ dependencies:
   - flake8=3.8.4=py_0
   - fontconfig=2.13.1=hba837de_1004
   - freetype=2.10.4=h0708190_1
-  - fsspec=0.8.7=pyhd8ed1ab_0
+  - fsspec=0.9.0=pyhd8ed1ab_0
   - future=0.18.2=py38h578d9bd_3
   - gettext=0.19.8.1=h0b5b191_1005
   - giflib=5.2.1=h36c2ea0_2
@@ -92,6 +95,7 @@ dependencies:
   - imagesize=1.2.0=py_0
   - importlib-metadata=3.10.0=py38h578d9bd_0
   - importlib_metadata=3.10.0=hd8ed1ab_0
+  - inflection=0.5.1=pyh9f0ad1d_0
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - intervaltree=3.0.2=py_0
   - ipykernel=5.5.3=py38hd0cf306_0
@@ -103,6 +107,7 @@ dependencies:
   - jedi=0.17.2=py38h578d9bd_1
   - jeepney=0.6.0=pyhd8ed1ab_0
   - jinja2=2.11.3=pyh44b312d_0
+  - jinja2-time=0.2.0=py_2
   - joblib=1.0.1=pyhd8ed1ab_0
   - jpeg=9d=h36c2ea0_0
   - jsonschema=3.2.0=pyhd8ed1ab_3
@@ -137,12 +142,12 @@ dependencies:
   - liblapack=3.9.0=8_mkl
   - liblapacke=3.9.0=8_mkl
   - libllvm10=10.0.1=he513fc3_3
-  - libllvm11=11.1.0=hf817b99_1
+  - libllvm11=11.1.0=hf817b99_2
   - libnghttp2=1.43.0=h812cca2_0
   - libopencv=4.5.1=py38hfb05350_1
   - libpng=1.6.37=h21135ba_2
   - libpq=13.1=hfd2b0eb_2
-  - libprotobuf=3.15.6=h780b84a_0
+  - libprotobuf=3.15.7=h780b84a_0
   - libsodium=1.0.18=h36c2ea0_1
   - libspatialindex=1.9.3=h9c3ff4c_3
   - libssh2=1.9.0=ha56f1ee_6
@@ -210,9 +215,10 @@ dependencies:
   - pluggy=0.13.1=py38h578d9bd_4
   - plyfile=0.7.3=pyh44b312d_0
   - pooch=1.3.0=pyhd8ed1ab_0
+  - poyo=0.5.0=py_0
   - prometheus_client=0.10.0=pyhd8ed1ab_0
   - prompt-toolkit=3.0.18=pyha770c72_0
-  - protobuf=3.15.6=py38h709712a_0
+  - protobuf=3.15.7=py38h709712a_0
   - psutil=5.8.0=py38h497a2fe_1
   - pthread-stubs=0.4=h36c2ea0_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
@@ -239,11 +245,12 @@ dependencies:
   - pyqtwebengine=5.12.1=py38h7400c14_7
   - pyrsistent=0.17.3=py38h497a2fe_2
   - pysocks=1.7.1=py38h578d9bd_3
-  - pytest=6.2.2=py38h578d9bd_0
+  - pytest=6.2.3=py38h578d9bd_0
   - python=3.8.8=hffdb5ce_0_cpython
   - python-dateutil=2.8.1=py_0
   - python-jsonrpc-server=0.4.0=pyh9f0ad1d_0
   - python-language-server=0.36.2=pyhd8ed1ab_0
+  - python-slugify=4.0.1=pyh9f0ad1d_0
   - python_abi=3.8=1_cp38
   - pytorch=1.8.0=cpu_py38he614459_0
   - pytorch-lightning=1.2.6=pyhd8ed1ab_0
@@ -252,13 +259,14 @@ dependencies:
   - pyxdg=0.26=py_0
   - pyyaml=5.4.1=py38h497a2fe_0
   - pyzmq=22.0.3=py38h2035c66_1
-  - qdarkstyle=2.8.1=pyhd8ed1ab_2
+  - qdarkstyle=3.0.2=pyhd8ed1ab_0
+  - qstylizer=0.1.10=pyhd8ed1ab_0
   - qt=5.12.9=hda022c4_4
   - qtawesome=1.0.2=pyhd8ed1ab_0
   - qtconsole=5.0.3=pyhd8ed1ab_0
   - qtpy=1.9.0=py_0
   - readline=8.0=he28a2e2_2
-  - regex=2021.3.17=py38h497a2fe_0
+  - regex=2021.4.4=py38h497a2fe_0
   - requests=2.25.1=pyhd3deb0d_0
   - requests-oauthlib=1.3.0=pyh9f0ad1d_0
   - rope=0.18.0=pyh9f0ad1d_0
@@ -283,18 +291,20 @@ dependencies:
   - sphinxcontrib-jsmath=1.0.1=py_0
   - sphinxcontrib-qthelp=1.0.3=py_0
   - sphinxcontrib-serializinghtml=1.1.4=py_0
-  - spyder=4.2.5=py38h578d9bd_0
-  - spyder-kernels=1.10.2=py38h578d9bd_0
-  - sqlite=3.35.3=h74cdb3f_0
+  - spyder=5.0.0=py38h578d9bd_0
+  - spyder-kernels=2.0.1=py38h578d9bd_0
+  - sqlite=3.35.4=h74cdb3f_0
   - tensorboard=2.4.1=pyhd8ed1ab_0
   - tensorboard-plugin-wit=1.8.0=pyh44b312d_0
   - termcolor=1.1.0=py_2
   - terminado=0.9.4=py38h578d9bd_0
   - testpath=0.4.4=py_0
+  - text-unidecode=1.3=py_0
   - textdistance=4.2.1=pyhd8ed1ab_0
   - threadpoolctl=2.1.0=pyh5ca1d4c_0
   - three-merge=0.1.1=pyh9f0ad1d_0
   - tifffile=2021.3.17=pyhd8ed1ab_0
+  - tinycss=0.4=pyhd8ed1ab_1002
   - tk=8.6.10=h21135ba_1
   - toml=0.10.2=pyhd8ed1ab_0
   - toolz=0.11.1=py_0
@@ -307,6 +317,7 @@ dependencies:
   - typing-extensions=3.7.4.3=0
   - typing_extensions=3.7.4.3=py_0
   - ujson=4.0.2=py38h709712a_0
+  - unidecode=1.2.0=pyhd8ed1ab_0
   - urllib3=1.26.4=pyhd8ed1ab_0
   - urwid=2.1.2=py38h497a2fe_3
   - watchdog=1.0.2=py38h578d9bd_1
@@ -314,6 +325,7 @@ dependencies:
   - webencodings=0.5.1=py_1
   - werkzeug=1.0.1=pyh9f0ad1d_0
   - wheel=0.36.2=pyhd3deb0d_0
+  - whichcraft=0.6.1=py_0
   - widgetsnbextension=3.5.1=py38h578d9bd_4
   - wrapt=1.12.1=py38h497a2fe_3
   - wurlitzer=2.1.0=py38h578d9bd_0
