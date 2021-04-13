@@ -36,5 +36,5 @@
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
     <project name="skypjack/entt" path="entt"/>
-    <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
+    <project name="nlohmann/json" path="nlohmann_json"/>
 </manifest>
