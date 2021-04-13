@@ -35,5 +35,5 @@
     <project name="boostorg/json" path="boost_json"/>
     <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <!-- <project name="nlohmann/json" path="nlohmann_json"/> -->
+    <project name="nlohmann/json" path="nlohmann_json"/>
 </manifest>
