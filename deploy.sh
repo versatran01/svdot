@@ -1,5 +1,6 @@
 #!/bin/bash
 FILES=(
+profile
 bash_local
 bash_aliases
 bash_functions
