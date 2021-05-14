@@ -1,5 +1,11 @@
 additional_commands:
-  sv_add_lib:
+  catkin_package:
+    kwargs:
+      INCLUDE_DIRS: "*"
+      LIBRARIES: "*"
+      CATKIN_DEPENDS: "*"
+      DEPENDS: "*"
+  cc_library:
     flags:
       - INTERFACE
     kwargs:
@@ -9,15 +15,15 @@ additional_commands:
       DEFINES: "*"
       LINKOPTS: "*"
       DEPS: "*"
-      INCIRS: "*"
-  sv_add_exe:
+      INCDIRS: "*"
+  cc_binary:
     kwargs:
       SRCS: "*"
       COPTS: "*"
       DEFINES: "*"
       LINKOPTS: "*"
       DEPS: "*"
-  sv_add_test:
+  cc_gtest:
     kwargs:
       SRCS: "*"
       COPTS: "*"
@@ -28,4 +34,4 @@ dangle_parens: false
 line_ending: unix
 line_width: 80
 tab_size: 2
-max_pargs_hwrap: 3
+
