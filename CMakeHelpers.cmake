@@ -45,12 +45,8 @@
 # )
 # cmake-format: on
 function(cc_library)
-  cmake_parse_arguments(
-    CC_LIB
-    "INTERFACE"
-    "NAME"
-    "HDRS;SRCS;COPTS;DEFINES;LINKOPTS;DEPS;INCDIRS"
-    ${ARGN})
+  cmake_parse_arguments(CC_LIB "INTERFACE" "NAME"
+                        "HDRS;SRCS;COPTS;DEFINES;LINKOPTS;DEPS;INCDIRS" ${ARGN})
 
   if(CC_TARGET_PREFIX)
     set(_NAME "${CC_TARGET_PREFIX}_${CC_LIB_NAME}")
@@ -149,12 +145,8 @@ endfunction()
 # )
 # cmake-format: on
 function(cc_binary)
-  cmake_parse_arguments(
-    CC_BIN
-    ""
-    "NAME"
-    "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
-    ${ARGN})
+  cmake_parse_arguments(CC_BIN "" "NAME" "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
+                        ${ARGN})
 
   if(CC_TARGET_PREFIX)
     set(_NAME "${CC_TARGET_PREFIX}_${CC_BIN_NAME}")
@@ -222,12 +214,8 @@ function(cc_gtest)
     return()
   endif()
 
-  cmake_parse_arguments(
-    CC_TEST
-    ""
-    "NAME"
-    "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
-    ${ARGN})
+  cmake_parse_arguments(CC_TEST "" "NAME" "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
+                        ${ARGN})
 
   if(CC_TARGET_PREFIX)
     set(_NAME "${CC_TARGET_PREFIX}_${CC_TEST_NAME}")
@@ -244,11 +232,7 @@ function(cc_gtest)
   target_link_libraries(
     ${_NAME}
     PUBLIC ${CC_TEST_DEPS}
-    PRIVATE ${CC_TEST_LINKOPTS}
-            fmt::fmt
-            glog::glog
-            GTest::GTest
-            GTest::Main)
+    PRIVATE ${CC_TEST_LINKOPTS} GTest::GTest GTest::Main)
 
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD 17)
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
