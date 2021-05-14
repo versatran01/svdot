@@ -206,7 +206,6 @@ endfunction()
 #   DEPS
 #     sv::awesome
 #     gmock
-#     gtest_main
 # )
 # cmake-format: on
 function(cc_gtest)
@@ -240,3 +239,69 @@ function(cc_gtest)
   add_test(NAME ${_NAME} COMMAND ${_NAME})
   set_tests_properties(${_NAME} PROPERTIES FAIL_REGULAR_EXPRESSION ".*FAILED.*")
 endfunction()
+
+# cmake-format: off
+# cc_bench()
+# adapted from absl_cc_test()
+#
+# Parameters:
+# NAME: name of target (see Usage below)
+# SRCS: List of source files for the binary
+# DEPS: List of other libraries to be linked in to the binary targets
+# COPTS: List of private compile options
+# DEFINES: List of public defines
+# LINKOPTS: List of link options
+#
+# Note:
+# By default, cc_bench will always create a binary named ${CC_TARGET_PREFIX}_${NAME}.
+# This will also add it to ctest list as ${CC_TARGET_PREFIX}_${NAME}.
+#
+# Usage:
+# cc_library(
+#   NAME
+#     awesome
+#   HDRS
+#     "a.h"
+#   SRCS
+#     "a.cc"
+#   PUBLIC
+# )
+#
+# cc_bench(
+#   NAME
+#     awesome_bench
+#   SRCS
+#     "awesome_bench.cc"
+#   DEPS
+#     sv::awesome
+# )
+# cmake-format: on
+function(cc_bench)
+  if(NOT BUILD_TESTING)
+    return()
+  endif()
+
+  cmake_parse_arguments(CC_BENCH "" "NAME" "SRCS;COPTS;DEFINES;LINKOPTS;DEPS"
+                        ${ARGN})
+
+  if(CC_TARGET_PREFIX)
+    set(_NAME "${CC_TARGET_PREFIX}_${CC_BENCH_NAME}")
+  else()
+    set(_NAME ${CC_BENCH_NAME})
+  endif()
+
+  add_executable(${_NAME} "")
+  target_sources(${_NAME} PRIVATE ${CC_BENCH_SRCS})
+
+  target_compile_definitions(${_NAME} PUBLIC ${CC_BENCH_DEFINES})
+  target_compile_options(${_NAME} PRIVATE ${CC_BENCH_COPTS})
+
+  target_link_libraries(
+    ${_NAME}
+    PUBLIC ${CC_BENCH_DEPS}
+    PRIVATE ${CC_BENCH_LINKOPTS} benchmark::benchmark benchmark::benchmark_main)
+
+  set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD 17)
+  set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
+endfunction()
+
