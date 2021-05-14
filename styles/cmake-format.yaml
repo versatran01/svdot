@@ -1,12 +1,29 @@
 additional_commands:
-  foo:
+  sv_add_lib:
     flags:
-      - BAR
-      - BAZ
+      - INTERFACE
     kwargs:
-      DEPENDS: "*"
-      HEADERS: "*"
-      SOURCES: "*"
+      HDRS: "*"
+      SRCS: "*"
+      COPTS: "*"
+      DEFINES: "*"
+      LINKOPTS: "*"
+      DEPS: "*"
+      INCIRS: "*"
+  sv_add_exe:
+    kwargs:
+      SRCS: "*"
+      COPTS: "*"
+      DEFINES: "*"
+      LINKOPTS: "*"
+      DEPS: "*"
+  sv_add_test:
+    kwargs:
+      SRCS: "*"
+      COPTS: "*"
+      DEFINES: "*"
+      LINKOPTS: "*"
+      DEPS: "*"
 dangle_parens: false
 line_ending: unix
 line_width: 80
