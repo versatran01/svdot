@@ -5,6 +5,7 @@ additional_commands:
       LIBRARIES: "*"
       CATKIN_DEPENDS: "*"
       DEPENDS: "*"
+      CFG_EXTRAS: "*"
   cc_library:
     flags:
       - INTERFACE
