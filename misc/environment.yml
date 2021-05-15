@@ -47,19 +47,19 @@ dependencies:
   - cffi=1.14.5=py38ha65f79e_0
   - chardet=4.0.0=py38h578d9bd_1
   - charls=2.2.0=h9c3ff4c_0
-  - click=7.1.2=pyh9f0ad1d_0
+  - click=8.0.0=py38h578d9bd_0
   - cloudpickle=1.6.0=py_0
   - colorama=0.4.4=pyh9f0ad1d_0
   - conda=4.10.1=py38h578d9bd_0
   - conda-package-handling=1.7.3=py38h497a2fe_0
-  - cookiecutter=1.7.2=pyh9f0ad1d_0
+  - cookiecutter=1.6.0=py38_1000
   - cryptography=3.4.7=py38ha5dfef3_0
   - cudatoolkit=11.1.1=h6406543_8
   - curtsies=0.3.4=py38h578d9bd_1
   - cycler=0.10.0=py_2
   - cython=0.29.23=py38h709712a_0
   - cytoolz=0.11.0=py38h497a2fe_3
-  - dask-core=2021.4.1=pyhd8ed1ab_0
+  - dask-core=2021.5.0=pyhd8ed1ab_0
   - dbus=1.13.6=h48d8840_2
   - decorator=4.4.2=py_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
@@ -72,7 +72,7 @@ dependencies:
   - flake8=3.8.4=py_0
   - fontconfig=2.13.1=hba837de_1005
   - freetype=2.10.4=h0708190_1
-  - fsspec=2021.4.0=pyhd8ed1ab_0
+  - fsspec=2021.5.0=pyhd8ed1ab_0
   - future=0.18.2=py38h578d9bd_3
   - gettext=0.19.8.1=h0b5b191_1005
   - giflib=5.2.1=h36c2ea0_2
@@ -100,7 +100,7 @@ dependencies:
   - inflection=0.5.1=pyh9f0ad1d_0
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - intervaltree=3.0.2=py_0
-  - ipykernel=5.5.4=py38hd0cf306_0
+  - ipykernel=5.5.5=py38hd0cf306_0
   - ipython=7.23.1=py38hd0cf306_0
   - ipython_genutils=0.2.0=py_1
   - ipywidgets=7.6.3=pyhd3deb0d_0
@@ -108,7 +108,7 @@ dependencies:
   - jasper=1.900.1=h07fcdf6_1006
   - jedi=0.17.2=py38h578d9bd_1
   - jeepney=0.6.0=pyhd8ed1ab_0
-  - jinja2=2.11.3=pyh44b312d_0
+  - jinja2=3.0.0=pyhd8ed1ab_0
   - jinja2-time=0.2.0=py_2
   - joblib=1.0.1=pyhd8ed1ab_0
   - jpeg=9d=h36c2ea0_0
@@ -120,7 +120,7 @@ dependencies:
   - jxrlib=1.1=h7f98852_2
   - keyring=23.0.1=py38h578d9bd_0
   - kiwisolver=1.3.1=py38h1fd1430_1
-  - krb5=1.17.2=h926e7f8_0
+  - krb5=1.19.1=hcc1bbae_0
   - lame=3.100=h7f98852_1001
   - lazy-object-proxy=1.6.0=py38h497a2fe_0
   - lcms2=2.12=hddcbb42_0
@@ -130,7 +130,7 @@ dependencies:
   - libblas=3.9.0=8_mkl
   - libcblas=3.9.0=8_mkl
   - libclang=11.1.0=default_ha53f305_1
-  - libcurl=7.76.1=hc4aaa36_1
+  - libcurl=7.76.1=h2574ce0_2
   - libdeflate=1.7=h7f98852_5
   - libedit=3.1.20191231=he28a2e2_2
   - libev=4.33=h516909a_1
@@ -150,7 +150,7 @@ dependencies:
   - libopencv=4.5.2=py38hcdf9bf1_0
   - libopus=1.3.1=h7f98852_1
   - libpng=1.6.37=h21135ba_2
-  - libpq=13.2=hfd2b0eb_2
+  - libpq=13.3=hd57d9b9_0
   - libprotobuf=3.15.8=h780b84a_0
   - libsodium=1.0.18=h36c2ea0_1
   - libspatialindex=1.9.3=h9c3ff4c_3
@@ -163,14 +163,14 @@ dependencies:
   - libwebp-base=1.2.0=h7f98852_2
   - libxcb=1.13=h7f98852_1003
   - libxkbcommon=1.0.3=he3ba5ed_0
-  - libxml2=2.9.10=h72842e0_4
+  - libxml2=2.9.12=h72842e0_0
   - libzopfli=1.0.3=h9c3ff4c_0
   - llvm-openmp=11.1.0=h4bd325d_1
   - llvmlite=0.36.0=py38h4630a5e_0
   - locket=0.2.0=py_2
   - lz4-c=1.9.3=h9c3ff4c_0
   - markdown=3.3.4=pyhd8ed1ab_0
-  - markupsafe=1.1.1=py38h497a2fe_3
+  - markupsafe=2.0.0=py38h497a2fe_0
   - matplotlib=3.4.2=py38h578d9bd_0
   - matplotlib-base=3.4.2=py38hcc49a3a_0
   - matplotlib-inline=0.1.2=pyhd8ed1ab_2
@@ -207,7 +207,7 @@ dependencies:
   - openssl=1.1.1k=h7f98852_0
   - packaging=20.9=pyh44b312d_0
   - pandas=1.2.4=py38h1abd341_0
-  - pandoc=2.12=h7f98852_0
+  - pandoc=2.13=h7f98852_0
   - pandocfilters=1.4.2=py_1
   - parso=0.7.0=pyh9f0ad1d_0
   - partd=1.2.0=pyhd8ed1ab_0
@@ -257,7 +257,6 @@ dependencies:
   - python-dateutil=2.8.1=py_0
   - python-jsonrpc-server=0.4.0=pyh9f0ad1d_0
   - python-language-server=0.36.2=pyhd8ed1ab_0
-  - python-slugify=5.0.2=pyhd8ed1ab_0
   - python_abi=3.8=1_cp38
   - pytorch=1.8.1=py3.8_cuda11.1_cudnn8.0.5_0
   - pytorch-lightning=1.3.1=pyhd8ed1ab_0
@@ -303,9 +302,8 @@ dependencies:
   - sqlite=3.35.5=h74cdb3f_0
   - tensorboard=2.4.1=pyhd8ed1ab_0
   - tensorboard-plugin-wit=1.8.0=pyh44b312d_0
-  - terminado=0.9.4=py38h578d9bd_0
+  - terminado=0.9.5=py38h578d9bd_0
   - testpath=0.4.4=py_0
-  - text-unidecode=1.3=py_0
   - textdistance=4.2.1=pyhd8ed1ab_0
   - threadpoolctl=2.1.0=pyh5ca1d4c_0
   - three-merge=0.1.1=pyh9f0ad1d_0
@@ -323,13 +321,12 @@ dependencies:
   - typing-extensions=3.7.4.3=0
   - typing_extensions=3.7.4.3=py_0
   - ujson=4.0.2=py38h709712a_0
-  - unidecode=1.2.0=pyhd8ed1ab_0
   - urllib3=1.26.4=pyhd8ed1ab_0
   - urwid=2.1.2=py38h497a2fe_3
   - watchdog=1.0.2=py38h578d9bd_1
   - wcwidth=0.2.5=pyh9f0ad1d_2
   - webencodings=0.5.1=py_1
-  - werkzeug=1.0.1=pyh9f0ad1d_0
+  - werkzeug=2.0.0=pyhd8ed1ab_0
   - wheel=0.36.2=pyhd3deb0d_0
   - whichcraft=0.6.1=py_0
   - widgetsnbextension=3.5.1=py38h578d9bd_4
