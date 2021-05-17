@@ -172,7 +172,7 @@ function(cc_binary)
 endfunction()
 
 # cmake-format: off
-# cc_gtest()
+# cc_test()
 # adapted from absl_cc_test()
 #
 # Parameters:
@@ -184,7 +184,7 @@ endfunction()
 # LINKOPTS: List of link options
 #
 # Note:
-# By default, cc_gtest will always create a binary named ${CC_TARGET_PREFIX}_${NAME}.
+# By default, cc_test will always create a binary named ${CC_TARGET_PREFIX}_${NAME}.
 # This will also add it to ctest list as ${CC_TARGET_PREFIX}_${NAME}.
 #
 # Usage:
@@ -198,7 +198,7 @@ endfunction()
 #   PUBLIC
 # )
 #
-# cc_gtest(
+# cc_test(
 #   NAME
 #     awesome_test
 #   SRCS
@@ -208,7 +208,7 @@ endfunction()
 #     gmock
 # )
 # cmake-format: on
-function(cc_gtest)
+function(cc_test)
   if(NOT BUILD_TESTING)
     return()
   endif()
@@ -304,4 +304,3 @@ function(cc_bench)
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD 17)
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
 endfunction()
-
