@@ -49,8 +49,10 @@ alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbd='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
-alias cbt='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
-alias crt="catkin run_tests | sed -En '/^-- run_tests.py/,/^-- run_tests.py/p'"
+# alias cbt='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
+alias cbt='catkin build --make-args tests -- '
+alias crt="catkin run_tests | sed -En '/^.*-- run_tests.py/,/^-- run_tests.py/p'"
+alias crtc="catkin run_tests --no-status --summarize --no-deps --this"
 
 # colcon
 alias cn="colcon"
