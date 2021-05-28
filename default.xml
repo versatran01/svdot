@@ -14,7 +14,7 @@
 
     <!-- google -->
     <project name="google/glog" path="glog"/>
-    <project name="gflags/gflags" path="gflags"/>
+    <!-- <project name="gflags/gflags" path="gflags"/> -->
     <project name="google/googletest" path="gtest"/>
     <project name="google/benchmark" path="gbench"/>
     <project name="abseil/abseil-cpp" path="abseil"/>
