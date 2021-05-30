@@ -145,6 +145,7 @@ srv_gen/
 build/
 bin/
 lib/
+debug/
 
 # ==========
 # Others
