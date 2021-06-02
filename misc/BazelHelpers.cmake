@@ -167,8 +167,6 @@ function(cc_binary)
 
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD 17)
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
-
-  add_test(NAME ${_NAME} COMMAND ${_NAME})
 endfunction()
 
 # cmake-format: off
