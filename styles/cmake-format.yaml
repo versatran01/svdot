@@ -25,6 +25,8 @@ additional_commands:
       LINKOPTS: "*"
       DEPS: "*"
   cc_test:
+    flags:
+      - CATKIN
     kwargs:
       SRCS: "*"
       COPTS: "*"
