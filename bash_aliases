@@ -49,7 +49,6 @@ alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
 alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbd='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
-# alias cbt='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbt='catkin build --make-args tests -- '
 alias crt="catkin run_tests | sed -En '/^.*-- run_tests.py/,/^-- run_tests.py/p'"
 alias crtc="catkin run_tests --no-status --summarize --no-deps --this"
@@ -62,9 +61,11 @@ alias cnbd='colcon build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMA
 # python 
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
 
-# alias
-alias cmk='cmake -DBUILD_SHARED_LIBS=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+# cmake
+alias cmmk='cmake -S . -B build -DBUILD_SHARED_LIBS=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+alias cmnj='cmake -GNinja -S . -B build -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+alias cmbr='cmake --build build --config Release'
+
 alias cpuperf='sudo cpupower frequency-set --governor performance'
 alias cpusave='sudo cpupower frequency-set --governor powersave'
-alias cmk_init='mkdir build; cd build; cmk ..; ccmake ..'
 
