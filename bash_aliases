@@ -42,11 +42,14 @@ alias cd.....='cd ../../../..'
 alias cd......='cd ../../../../..'
 
 #ros
+export SV_CMAKE_FLAGS='-DBUILD_SHARED_LIBS=1 -DCMAKE_POSITION_INDEPENDENT_CODE=1 -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+
 alias rqtrc='rosrun rqt_reconfigure rqt_reconfigure'
 alias rqttf='rosrun rqt_tf_tree rqt_tf_tree'
 alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rqt_image_view'
 alias rosenv='env | grep ROS'
+
 alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbd='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -Wno-deprecated-copy -fdiagnostics-color=always" -- '
 alias cbt='catkin build --make-args tests -- '
@@ -62,7 +65,7 @@ alias cnbd='colcon build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMA
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
 
 # cmake
-alias cmmk='cmake .. -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
+alias cmmk='cmake .. "$SV_CMAKE_FLAGS"'
 alias cmnj='cmake -GNinja -S . -B build -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
 alias cmbr='cmake --build build --config Release'
 
