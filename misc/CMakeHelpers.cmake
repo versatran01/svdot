@@ -45,8 +45,9 @@
 # )
 # cmake-format: on
 function(cc_library)
-  cmake_parse_arguments(CC_LIB "INTERFACE" "NAME"
-                        "HDRS;SRCS;COPTS;DEFINES;LINKOPTS;DEPS;INCDIRS" ${ARGN})
+  cmake_parse_arguments(
+    CC_LIB "INTERFACE" "NAME" "HDRS;SRCS;COPTS;DEFINES;LINKOPTS;DEPS;INCLUDES"
+    ${ARGN})
 
   if(CC_TARGET_PREFIX)
     set(_NAME "${CC_TARGET_PREFIX}_${CC_LIB_NAME}")
@@ -85,7 +86,7 @@ function(cc_library)
     # unconditionally.
     set_property(TARGET ${_NAME} PROPERTY LINKER_LANGUAGE "CXX")
 
-    target_include_directories(${_NAME} PUBLIC ${CC_LIB_INCDIRS})
+    target_include_directories(${_NAME} PUBLIC ${CC_LIB_INCLUDES})
     target_compile_options(${_NAME} PRIVATE ${CC_LIB_COPTS})
     target_compile_definitions(${_NAME} PUBLIC ${CC_LIB_DEFINES})
 
@@ -95,7 +96,7 @@ function(cc_library)
   else()
     # Generating header-only library
     add_library(${_NAME} INTERFACE)
-    target_include_directories(${_NAME} INTERFACE ${CC_LIB_INCDIRS})
+    target_include_directories(${_NAME} INTERFACE ${CC_LIB_INCLUDES})
 
     target_link_libraries(${_NAME} INTERFACE ${CC_LIB_DEPS} ${CC_LIB_LINKOPTS})
     target_compile_definitions(${_NAME} INTERFACE ${CC_LIB_DEFINES})
@@ -316,7 +317,6 @@ function(cc_bench)
   set_property(TARGET ${_NAME} PROPERTY CXX_STANDARD_REQUIRED ON)
 endfunction()
 
-
 # static analyzers
 option(ENABLE_CPPCHECK "Enable static analysis with cppcheck" OFF)
 option(ENABLE_CLANG_TIDY "Enable static analysis with clang-tidy" OFF)
@@ -442,14 +442,14 @@ function(enable_warnings TARGET)
       -Wnon-virtual-dtor # warn the user if a class with virtual functions has a
                          # non-virtual destructor. This helps catch hard to
                          # track down memory errors
-      -Wold-style-cast # warn for c-style casts
+      # -Wold-style-cast # warn for c-style casts
       -Wcast-align # warn for potential performance problem casts
       -Wunused # warn on anything being unused
       -Woverloaded-virtual # warn if you overload (not override) a virtual
                            # function
       -Wpedantic # warn if non-standard C++ is used
       -Wconversion # warn on type conversions that may lose data
-      -Wsign-conversion # warn on sign conversions
+      # -Wsign-conversion # warn on sign conversions
       -Wnull-dereference # warn if a null dereference is detected
       -Wdouble-promotion # warn if float is implicit promoted to double
       -Wformat=2 # warn on security issues around functions that format output
