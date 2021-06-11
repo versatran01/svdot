@@ -16,7 +16,7 @@ additional_commands:
       DEFINES: "*"
       LINKOPTS: "*"
       DEPS: "*"
-      INCDIRS: "*"
+      INCLUDES: "*"
   cc_binary:
     kwargs:
       SRCS: "*"
@@ -25,6 +25,9 @@ additional_commands:
       LINKOPTS: "*"
       DEPS: "*"
   cc_test:
+    flags:
+      - CATKIN
+      - OTHER
     kwargs:
       SRCS: "*"
       COPTS: "*"
