@@ -218,9 +218,4 @@ target/
 .vscode
 *.srctrl*
 
-*.cflags
-*.config
-*.creator
-*.cxxflags
-*.files
-*.includes
+cmake-build*/
