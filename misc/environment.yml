@@ -17,7 +17,7 @@ dependencies:
   - argh=0.26.2=pyh9f0ad1d_1002
   - argon2-cffi=20.1.0=py38h497a2fe_2
   - arrow=1.1.1=pyhd8ed1ab_0
-  - astroid=2.6.0=py38h578d9bd_0
+  - astroid=2.6.2=py38h578d9bd_0
   - async-timeout=3.0.1=py_1000
   - async_generator=1.10=py_0
   - atomicwrites=1.4.0=pyh9f0ad1d_0
@@ -35,7 +35,8 @@ dependencies:
   - blinker=1.4=py_1
   - blosc=1.21.0=h9c3ff4c_0
   - bpython=0.20.1=py38h578d9bd_0
-  - brotli=1.0.9=h9c3ff4c_4
+  - brotli=1.0.9=h7f98852_5
+  - brotli-bin=1.0.9=h7f98852_5
   - brotlipy=0.7.0=py38h497a2fe_1001
   - brunsli=0.1=h9c3ff4c_0
   - bzip2=1.0.8=h7f98852_4
@@ -52,9 +53,9 @@ dependencies:
   - cloudpickle=1.6.0=py_0
   - colorama=0.4.4=pyh9f0ad1d_0
   - commonmark=0.9.1=py_0
-  - conda=4.10.2=py38h578d9bd_0
+  - conda=4.10.3=py38h578d9bd_0
   - conda-package-handling=1.7.3=py38h497a2fe_0
-  - cookiecutter=1.7.0=py_0
+  - cookiecutter=1.7.3=pyh6c4a22f_0
   - cryptography=3.4.7=py38ha5dfef3_0
   - cudatoolkit=10.2.89=h8f6ccaa_8
   - curtsies=0.3.4=py38h578d9bd_1
@@ -64,6 +65,7 @@ dependencies:
   - dask-core=2021.6.2=pyhd8ed1ab_0
   - dataclasses=0.8=pyhc8e2a94_1
   - dbus=1.13.6=h48d8840_2
+  - debugpy=1.3.0=py38h709712a_0
   - decorator=4.4.2=py_0
   - defusedxml=0.7.1=pyhd8ed1ab_0
   - diff-match-patch=20200713=pyh9f0ad1d_0
@@ -104,8 +106,8 @@ dependencies:
   - inflection=0.5.1=pyh9f0ad1d_0
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - intervaltree=3.0.2=py_0
-  - ipykernel=5.5.5=py38hd0cf306_0
-  - ipython=7.25.0=py38hd0cf306_0
+  - ipykernel=6.0.1=py38hd0cf306_0
+  - ipython=7.25.0=py38hd0cf306_1
   - ipython_genutils=0.2.0=py_1
   - ipywidgets=7.6.3=pyhd3deb0d_0
   - isort=5.9.1=pyhd8ed1ab_0
@@ -113,7 +115,7 @@ dependencies:
   - jbig=2.1=h7f98852_2003
   - jedi=0.17.2=py38h578d9bd_1
   - jeepney=0.6.0=pyhd8ed1ab_0
-  - jinja2=3.0.1=pyhd8ed1ab_0
+  - jinja2=2.11.3=pyh44b312d_0
   - jinja2-time=0.2.0=py_2
   - joblib=1.0.1=pyhd8ed1ab_0
   - jpeg=9d=h36c2ea0_0
@@ -135,10 +137,13 @@ dependencies:
   - lame=3.100=h7f98852_1001
   - lazy-object-proxy=1.6.0=py38h497a2fe_0
   - lcms2=2.12=hddcbb42_0
-  - ld_impl_linux-64=2.35.1=hea4e1c9_2
+  - ld_impl_linux-64=2.36.1=hea4e1c9_0
   - lerc=2.2.1=h9c3ff4c_0
   - libaec=1.0.5=h9c3ff4c_0
   - libblas=3.9.0=6_mkl
+  - libbrotlicommon=1.0.9=h7f98852_5
+  - libbrotlidec=1.0.9=h7f98852_5
+  - libbrotlienc=1.0.9=h7f98852_5
   - libcblas=3.9.0=6_mkl
   - libclang=11.1.0=default_ha53f305_1
   - libcurl=7.77.0=h2574ce0_0
@@ -181,12 +186,12 @@ dependencies:
   - locket=0.2.0=py_2
   - lz4-c=1.9.3=h9c3ff4c_0
   - markdown=3.3.4=pyhd8ed1ab_0
-  - markupsafe=2.0.1=py38h497a2fe_0
+  - markupsafe=1.1.1=py38h497a2fe_3
   - matplotlib=3.4.2=py38h578d9bd_0
   - matplotlib-base=3.4.2=py38hcc49a3a_0
   - matplotlib-inline=0.1.2=pyhd8ed1ab_2
   - mccabe=0.6.1=py_1
-  - mistune=0.8.4=py38h497a2fe_1003
+  - mistune=0.8.4=py38h497a2fe_1004
   - mkl=2020.4=h726a3e6_304
   - more-itertools=8.8.0=pyhd8ed1ab_0
   - multidict=5.1.0=py38h497a2fe_1
@@ -217,7 +222,7 @@ dependencies:
   - openjpeg=2.4.0=hb52868f_1
   - openssl=1.1.1k=h7f98852_0
   - packaging=20.9=pyh44b312d_0
-  - pandas=1.2.5=py38h1abd341_0
+  - pandas=1.3.0=py38h1abd341_0
   - pandoc=2.14.0.3=h7f98852_0
   - pandocfilters=1.4.2=py_1
   - parso=0.7.0=pyh9f0ad1d_0
@@ -226,7 +231,7 @@ dependencies:
   - pcre=8.45=h9c3ff4c_0
   - pexpect=4.8.0=pyh9f0ad1d_2
   - pickleshare=0.7.5=py_1003
-  - pillow=8.2.0=py38ha0e1e83_1
+  - pillow=8.3.0=py38h8e6f84c_0
   - pip=21.1.3=pyhd8ed1ab_0
   - pixman=0.40.0=h36c2ea0_0
   - pluggy=0.13.1=py38h578d9bd_4
@@ -253,7 +258,7 @@ dependencies:
   - pyflakes=2.2.0=pyh9f0ad1d_0
   - pygments=2.9.0=pyhd8ed1ab_0
   - pyjwt=2.1.0=pyhd8ed1ab_0
-  - pylint=2.8.2=pyhd8ed1ab_0
+  - pylint=2.9.3=pyhd8ed1ab_0
   - pyls-black=0.4.6=pyh9f0ad1d_0
   - pyls-spyder=0.3.2=pyhd8ed1ab_0
   - pyopenssl=20.0.1=pyhd8ed1ab_0
@@ -270,9 +275,10 @@ dependencies:
   - python-dateutil=2.8.1=py_0
   - python-jsonrpc-server=0.4.0=pyh9f0ad1d_0
   - python-language-server=0.36.2=pyhd8ed1ab_0
+  - python-slugify=5.0.2=pyhd8ed1ab_0
   - python_abi=3.8=2_cp38
   - pytorch=1.9.0=py3.8_cuda10.2_cudnn7.6.5_0
-  - pytorch-lightning=1.3.7=pyhd8ed1ab_0
+  - pytorch-lightning=1.3.8=pyhd8ed1ab_0
   - pytz=2021.1=pyhd8ed1ab_0
   - pyu2f=0.1.5=pyhd8ed1ab_0
   - pywavelets=1.1.1=py38h5c078b8_3
@@ -283,10 +289,10 @@ dependencies:
   - qstylizer=0.2.0=pyhd8ed1ab_1
   - qt=5.12.9=hda022c4_4
   - qtawesome=1.0.3=pyhd8ed1ab_0
-  - qtconsole=5.1.0=pyhd8ed1ab_0
+  - qtconsole=5.1.1=pyhd8ed1ab_0
   - qtpy=1.9.0=py_0
   - readline=8.1=h46c0cb4_0
-  - regex=2021.4.4=py38h497a2fe_0
+  - regex=2021.7.1=py38h497a2fe_0
   - requests=2.25.1=pyhd3deb0d_0
   - requests-oauthlib=1.3.0=pyh9f0ad1d_0
   - requests-unixsocket=0.2.0=py_0
@@ -321,6 +327,7 @@ dependencies:
   - termcolor=1.1.0=py_2
   - terminado=0.10.1=py38h578d9bd_0
   - testpath=0.5.0=pyhd8ed1ab_0
+  - text-unidecode=1.3=py_0
   - textdistance=4.2.1=pyhd8ed1ab_0
   - threadpoolctl=2.1.0=pyh5ca1d4c_0
   - three-merge=0.1.1=pyh9f0ad1d_0
@@ -329,7 +336,7 @@ dependencies:
   - tk=8.6.10=h21135ba_1
   - toml=0.10.2=pyhd8ed1ab_0
   - toolz=0.11.1=py_0
-  - torchmetrics=0.3.2=pyhd8ed1ab_0
+  - torchmetrics=0.4.0=pyhd8ed1ab_0
   - tornado=6.1=py38h497a2fe_1
   - tqdm=4.61.1=pyhd8ed1ab_0
   - traitlets=5.0.5=py_0
@@ -337,6 +344,7 @@ dependencies:
   - typing-extensions=3.10.0.0=hd8ed1ab_0
   - typing_extensions=3.10.0.0=pyha770c72_0
   - ujson=4.0.2=py38h709712a_0
+  - unidecode=1.2.0=pyhd8ed1ab_0
   - urllib3=1.26.6=pyhd8ed1ab_0
   - urwid=2.1.2=py38h497a2fe_3
   - watchdog=2.1.3=py38h578d9bd_0
@@ -345,7 +353,6 @@ dependencies:
   - websocket-client=0.57.0=py38h578d9bd_4
   - werkzeug=2.0.1=pyhd8ed1ab_0
   - wheel=0.36.2=pyhd3deb0d_0
-  - whichcraft=0.6.1=py_0
   - widgetsnbextension=3.5.1=py38h578d9bd_4
   - wrapt=1.12.1=py38h497a2fe_3
   - wurlitzer=2.1.0=py38h578d9bd_0
@@ -364,7 +371,7 @@ dependencies:
   - xz=5.2.5=h516909a_1
   - yaml=0.2.5=h516909a_0
   - yapf=0.31.0=pyhd8ed1ab_0
-  - yarl=1.6.3=py38h497a2fe_1
+  - yarl=1.6.3=py38h497a2fe_2
   - zeromq=4.3.4=h9c3ff4c_0
   - zfp=0.5.5=h9c3ff4c_5
   - zipp=3.4.1=pyhd8ed1ab_0
@@ -374,6 +381,7 @@ dependencies:
     - antlr4-python3-runtime==4.8
     - colorlog==5.0.1
     - docopt==0.6.2
+    - eagerpy==0.29.0
     - hydra-colorlog==1.1.0
     - hydra-core==1.1.0
     - importlib-resources==5.1.4
@@ -383,5 +391,6 @@ dependencies:
     - sacred==0.8.2
     - smmap==4.0.0
     - thop==0.0.31-2005241907
+    - timm==0.4.12
     - torchvision==0.10.0
 prefix: /home/chao/miniconda3
