@@ -1,6 +1,5 @@
 name: base
 channels:
-  - pytorch
   - open3d-admin
   - conda-forge
   - defaults
@@ -140,6 +139,7 @@ dependencies:
   - ld_impl_linux-64=2.35.1=hea4e1c9_2
   - lerc=2.2.1=h9c3ff4c_0
   - libaec=1.0.5=h9c3ff4c_0
+  - libarchive=3.5.1=hccf745f_2
   - libblas=3.9.0=6_mkl
   - libcblas=3.9.0=6_mkl
   - libclang=11.1.0=default_ha53f305_1
@@ -168,6 +168,7 @@ dependencies:
   - libpq=13.3=hd57d9b9_0
   - libprotobuf=3.15.8=h780b84a_0
   - libsodium=1.0.18=h36c2ea0_1
+  - libsolv=0.7.19=h780b84a_2
   - libspatialindex=1.9.3=h9c3ff4c_3
   - libssh2=1.9.0=ha56f1ee_6
   - libstdcxx-ng=9.3.0=h6de172a_19
@@ -184,6 +185,8 @@ dependencies:
   - llvmlite=0.36.0=py38h4630a5e_0
   - locket=0.2.0=py_2
   - lz4-c=1.9.3=h9c3ff4c_0
+  - lzo=2.10=h516909a_1000
+  - mamba=0.14.1=py38h2aa5da1_0
   - markdown=3.3.4=pyhd8ed1ab_0
   - markupsafe=2.0.1=py38h497a2fe_0
   - matplotlib=3.4.2=py38h578d9bd_0
@@ -277,7 +280,6 @@ dependencies:
   - python-jsonrpc-server=0.4.0=pyh9f0ad1d_0
   - python-language-server=0.36.2=pyhd8ed1ab_0
   - python_abi=3.8=2_cp38
-  - pytorch=1.8.1=py3.8_cuda10.2_cudnn7.6.5_0
   - pytorch-lightning=1.3.8=pyhd8ed1ab_0
   - pytz=2021.1=pyhd8ed1ab_0
   - pyu2f=0.1.5=pyhd8ed1ab_0
@@ -293,6 +295,8 @@ dependencies:
   - qtpy=1.9.0=py_0
   - readline=8.1=h46c0cb4_0
   - regex=2021.4.4=py38h497a2fe_0
+  - reproc=14.2.1=h36c2ea0_0
+  - reproc-cpp=14.2.1=h58526e2_0
   - requests=2.25.1=pyhd3deb0d_0
   - requests-oauthlib=1.3.0=pyh9f0ad1d_0
   - requests-unixsocket=0.2.0=py_0
@@ -380,7 +384,6 @@ dependencies:
   - pip:
     - antlr4-python3-runtime==4.8
     - colorlog==5.0.1
-    - docopt==0.6.2
     - eagerpy==0.29.0
     - hydra-colorlog==1.1.0
     - hydra-core==1.1.0
@@ -392,5 +395,6 @@ dependencies:
     - sophuspy==0.0.8
     - thop==0.0.31-2005241907
     - timm==0.4.12
+    - torch==1.9.0
     - torchvision==0.10.0
 prefix: /home/chao/miniconda3
