@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+import click
+import subprocess
+import termcolor
+
+
+@click.command()
+@click.option('--std',
+              default=17,
+              type=int,
+              help="CMAKE_CXX_STANDARD, [11, 14, 17]")
+@click.option('--type',
+              default="Release",
+              type=str,
+              help="CMAKE_BUILD_TYPE, [Release, Debug, RelWithDebInfo]")
+@click.option('--shared/--static',
+              default=True,
+              type=bool,
+              help="BUILD_SHARED_LIBS")
+@click.option('--cache',
+              default=True,
+              type=bool,
+              help="CMAKE_CXX_COMPILER_LAUNCHER")
+@click.option('--export',
+              default=True,
+              type=bool,
+              help="CMAKE_EXPORT_COMPILE_COMMANDS")
+def main(std, type, shared, cache, export):
+    commands = ["cmake", ".."]
+    commands.append(f"-DCMAKE_CXX_STANDARD={std}")
+    commands.append(f"-DCMAKE_BUILD_TYPE={type}")
+
+    if shared:
+        commands.append(f"-DBUILD_SHARED_LIBS=On")
+    else:
+        commands.append(f"-DBUILD_SHARED_LIBS=Off")
+        commands.append(f"-DCMAKE_POSITION_INDEPENDENT_CODE=On")
+
+    if cache:
+        commands.append("-DCMAKE_CXX_COMPILER_LAUNCHER=ccache")
+        commands.append('-DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"')
+
+    if export:
+        commands.append("-DCMAKE_EXPORT_COMPILE_COMMANDS=On")
+    print(termcolor.colored(" ".join(commands), "yellow"))
+    subprocess.run(commands)
+
+
+if __name__ == '__main__':
+    main()

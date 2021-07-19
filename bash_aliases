@@ -48,29 +48,15 @@ alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rosrun rqt_image_view rqt_image_view'
 alias rosenv='env | grep ROS'
 
-# alias ckcfg='catkin config --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always"'
 alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" -- '
 alias cbrd='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" -- '
 # alias ckbt='catkin build --make-args tests -- '
 # alias crt="catkin run_tests | sed -En '/^.*-- run_tests.py/,/^-- run_tests.py/p'"
 # alias crtc="catkin run_tests --no-status --summarize --no-deps --this"
 
-# colcon
-# alias cn="colcon"
-# alias cnbr='colcon build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" --symlink-install'
-# alias cnbd='colcon build --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" --symlink-install'
-
-# python 
+# python
 alias ppwd='export PYTHONPATH=$(pwd):$PYTHONPATH'
-
-# cmake
-alias cmk='cmake .. -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
-alias cmks='cmake .. -DBUILD_SHARED_LIBS=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
-alias cmka='cmake .. -DBUILD_SHARED_LIBS=Off -DCMAKE_POSITION_INDEPENDENT_CODE=On -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
-# alias cmnj='cmake -GNinja -S . -B build -DCMAKE_CXX_STANDARD=17 -DCMAKE_EXPORT_COMPILE_COMMANDS=On -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-fdiagnostics-color=always"'
-# alias cmbr='cmake --build build --config Release'
 
 # cpu
 alias cpuperf='sudo cpupower frequency-set --governor performance'
 alias cpusave='sudo cpupower frequency-set --governor powersave'
-

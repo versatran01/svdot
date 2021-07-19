@@ -32,14 +32,14 @@ export TERM=xterm-256color
 export INPUTRC=~/.inputrc
 
 # Less Colors for Man Pages
-export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
-export LESS_TERMCAP_md=$'\e[01;32m'       # begin bold
-export LESS_TERMCAP_so=$'\e[01;44m'       # begin standout-mode - info box
-export LESS_TERMCAP_us=$'\e[01;33m'       # begin underline
-export LESS_TERMCAP_me=$'\e[0m'           # end mode
-export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
-export LESS_TERMCAP_ue=$'\e[0m'           # end underline
-export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+export LESS_TERMCAP_mb=$'\e[01;31m' # begin blinking
+export LESS_TERMCAP_md=$'\e[01;32m' # begin bold
+export LESS_TERMCAP_so=$'\e[01;44m' # begin standout-mode - info box
+export LESS_TERMCAP_us=$'\e[01;33m' # begin underline
+export LESS_TERMCAP_me=$'\e[0m'     # end mode
+export LESS_TERMCAP_se=$'\e[0m'     # end standout-mode
+export LESS_TERMCAP_ue=$'\e[0m'     # end underline
+export GROFF_NO_SGR=1               # for konsole and gnome-terminal
 
 # Functions definitions.
 # You may want to put all your funtions into a separate file like
@@ -47,7 +47,7 @@ export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_functions ]; then
-  . ~/.bash_functions
+    . ~/.bash_functions
 fi
 
 export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
@@ -55,9 +55,9 @@ export CUDA_VISIBLE_DEVICES=0
 
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
-  source /usr/share/autojump/autojump.sh
+    source /usr/share/autojump/autojump.sh
 else
-  [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
+    [[ -s /etc/profile.d/autojump.bash ]] && . /etc/profile.d/autojump.bash
 fi
 
 # starship
@@ -65,13 +65,13 @@ export STARSHIP_CONFIG=~/.starship.toml
 eval "$(starship init bash)"
 
 export EDITOR=vim
+export GTEST_COLOR=1
 
 # powerline-shell
 # function _update_ps1() {
-  # PS1=$(powerline-shell $?)
+# PS1=$(powerline-shell $?)
 # }
 #
 # if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-  # PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 # fi
-export GTEST_COLOR=1
