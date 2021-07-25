@@ -258,51 +258,38 @@ function rosmu_help() {
     return 0
 }
 
-function srosm() {
-    source /opt/ros/melodic/setup.bash
-}
+export ROS_WS_TOP_DIR="/home/chao/Workspace/ws"
 
-function srosn() {
-    source /opt/ros/noetic/setup.bash
-}
-
-function srosf() {
-    source /opt/ros/foxy/setup.bash
-}
-
-export ROSWS_HOME_DIR="/home/chao/Workspace/ws"
-
-if [ -z $ROSWS_HOME_DIR ]; then
-    echo rosws_switch: Please set ROSWS_HOME_DIR to the directory containing ROS workspaces for this script to work.
+if [ -z $ROS_WS_TOP_DIR ]; then
+    echo "cj(): Please set ROS_WS_TOP_DIR to the directory containing ROS/catkin workspaces for this script to work."
 fi
 
 _roscomplete_rosws_switch() {
     local cur WORKSPACES
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
-    WORKSPACES=$(find $ROSWS_HOME_DIR -mindepth 1 -maxdepth 1 -type d | grep -v "^.$" | sed 's/.*\///')
-
+    WORKSPACES=$(find $ROS_WS_TOP_DIR -mindepth 1 -maxdepth 1 -type d | grep -v "^.$" | sed 's/.*\///')
     COMPREPLY=($(compgen -W "${WORKSPACES}" -- ${cur}))
     return 0
 }
 
 # catkin/colcon_jump
 cj() {
-    if [ -e $ROSWS_HOME_DIR/$1/devel/setup.bash ]; then
-        source $ROSWS_HOME_DIR/$1/devel/setup.bash
-        echo "source $ROSWS_HOME_DIR/$1/devel/setup.bash"
+    if [ -e $ROS_WS_TOP_DIR/$1/devel/setup.bash ]; then
+        echo "source $ROS_WS_TOP_DIR/$1/devel/setup.bash"
+        source $ROS_WS_TOP_DIR/$1/devel/setup.bash
         # HACK prepend stuff that should go even before this in path
         export CATKIN_WS_NAME="$1"
         # export PATH=$ROS_PATH_OVERLAY:$PATH
-        cd $ROSWS_HOME_DIR/$1
-    elif [ -e $ROSWS_HOME_DIR/$1/install/setup.bash ]; then
-        source $ROSWS_HOME_DIR/$1/install/setup.bash
-        echo "source $ROSWS_HOME_DIR/$1/install/setup.bash"
+        cd $ROS_WS_TOP_DIR/$1
+    elif [ -e $ROS_WS_TOP_DIR/$1/install/setup.bash ]; then
+        echo "source $ROS_WS_TOP_DIR/$1/install/setup.bash"
+        source $ROS_WS_TOP_DIR/$1/install/setup.bash
         export CATKIN_WS_NAME="$1"
         # export PATH=$ROS_PATH_OVERLAY:$PATH
-        cd $ROSWS_HOME_DIR/$1
+        cd $ROS_WS_TOP_DIR/$1
     else
-        echo "$1 does not exist in $ROSWS_HOME_DIR"
+        echo "$1 does not exist in $ROS_WS_TOP_DIR"
     fi
 }
 
@@ -322,7 +309,7 @@ function catkin_run_coverage() {
     gcovr -r .
 }
 
-# source conda
+# source conda + env
 function scon() {
     eval "$(/home/chao/miniconda3/bin/conda shell.bash hook)"
     if [ $# -eq 1 ]; then
