@@ -48,8 +48,9 @@ alias rqtrt='rosrun rqt_runtime_monitor rqt_runtime_monitor'
 alias rqtiv='rosrun rqt_image_view rqt_image_view'
 alias rosenv='env | grep ROS'
 
-alias cbr='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" -- '
-alias cbrd='catkin build -j8 --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always" -- '
+alias ccfg='catkin config --cmake-args -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DCMAKE_CXX_FLAGS="-Wall -Wextra -fdiagnostics-color=always"'
+alias cbr='catkin build -j8 --cmake-args -DCMAKE_BUILD_TYPE=Release'
+alias cbd='catkin build -j8 --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo'
 # alias ckbt='catkin build --make-args tests -- '
 # alias crt="catkin run_tests | sed -En '/^.*-- run_tests.py/,/^-- run_tests.py/p'"
 # alias crtc="catkin run_tests --no-status --summarize --no-deps --this"

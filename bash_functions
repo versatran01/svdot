@@ -325,6 +325,11 @@ function catkin_run_coverage() {
 # source conda
 function scon() {
     eval "$(/home/chao/miniconda3/bin/conda shell.bash hook)"
+    if [ $# -eq 1 ]; then
+        echo "source env $1"
+        conda activate $1
+    fi
+    return 0
 }
 
 # set gpu id
