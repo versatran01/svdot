@@ -338,6 +338,7 @@ dependencies:
   - ros-noetic-geometry-msgs=1.13.1=py38he9ab703_6
   - ros-noetic-geometry-tutorials=0.2.3=py38he9ab703_6
   - ros-noetic-gl-dependency=1.1.2=py38he9ab703_6
+  - ros-noetic-image-geometry=1.15.0=py38h66a3a3d_11
   - ros-noetic-image-transport=1.12.0=py38he9ab703_6
   - ros-noetic-interactive-marker-tutorials=0.11.0=py38he9ab703_6
   - ros-noetic-interactive-markers=1.12.0=py38he9ab703_6
