@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import click
 import subprocess
-import termcolor
 
 
 @click.command()
@@ -42,7 +41,7 @@ def main(std, type, shared, cache, export):
 
     if export:
         commands.append("-DCMAKE_EXPORT_COMPILE_COMMANDS=On")
-    print(termcolor.colored(" ".join(commands), "yellow"))
+    print(" ".join(commands))
     subprocess.run(commands)
 
 
