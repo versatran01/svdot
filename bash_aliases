@@ -34,6 +34,7 @@ alias gdh='git diff HEAD'
 
 # source bashrc
 alias sbrc='source ~/.bashrc'
+alias srosn='scon ros1n'
 
 #cd
 alias cd..='cd ..'
