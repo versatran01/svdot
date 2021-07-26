@@ -275,6 +275,7 @@ _roscomplete_rosws_switch() {
 
 # catkin/colcon_jump
 cj() {
+    scon ros1n
     if [ -e $ROS_WS_TOP_DIR/$1/devel/setup.bash ]; then
         echo "source $ROS_WS_TOP_DIR/$1/devel/setup.bash"
         source $ROS_WS_TOP_DIR/$1/devel/setup.bash
