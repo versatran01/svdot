@@ -19,11 +19,6 @@
     <project name="google/benchmark" path="gbench" revision="main"/>
     <project name="abseil/abseil-cpp" path="abseil"/>
 
-    <!-- xtensor -->
-    <project name="xtensor-stack/xtl" path="xtl"/>
-    <project name="xtensor-stack/xsimd" path="xsimd"/>
-    <project name="xtensor-stack/xtensor" path="xtensor"/>
-
     <!-- graphics  -->
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
