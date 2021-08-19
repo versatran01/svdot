@@ -2,6 +2,9 @@
 export HISTIGNORE="&:ls:cd:[bf]g:exit:?:??:??:rm*"
 export HISTSIZE=20000
 export HISTFILESIZE=20000
+# avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+export PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # More shopt # Autocorrect fudged paths in cd calls shopt -s cdspell
 # Update the hash table properly
@@ -50,9 +53,6 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
-export CUDA_VISIBLE_DEVICES=0
-
 # autojump
 if [ -f /usr/share/autojump/autojump.sh ]; then
     source /usr/share/autojump/autojump.sh
@@ -66,12 +66,5 @@ eval "$(starship init bash)"
 
 export EDITOR=vim
 export GTEST_COLOR=1
-
-# powerline-shell
-# function _update_ps1() {
-# PS1=$(powerline-shell $?)
-# }
-#
-# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-# PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-# fi
+export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
+export CUDA_VISIBLE_DEVICES=0
