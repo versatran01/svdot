@@ -168,7 +168,7 @@ dependencies:
   - liblapacke=3.9.0=11_linux64_openblas
   - libllvm10=10.0.1=he513fc3_3
   - libllvm11=11.1.0=hf817b99_2
-  - libnetcdf=4.8.0=nompi_hcd642e3_103
+  - libnetcdf=4.8.1=nompi_hcd642e3_100
   - libnghttp2=1.43.0=h812cca2_0
   - libogg=1.3.4=h7f98852_1
   - libopenblas=0.3.17=pthreads_h8fe5266_1
@@ -208,7 +208,7 @@ dependencies:
   - mccabe=0.6.1=py_1
   - metis=5.1.0=h58526e2_1006
   - mistune=0.8.4=py38h497a2fe_1004
-  - more-itertools=8.8.0=pyhd8ed1ab_0
+  - more-itertools=8.9.0=pyhd8ed1ab_0
   - mpfr=4.1.0=h9202a9a_1
   - mypy_extensions=0.4.3=py38h578d9bd_3
   - mysql-common=8.0.25=ha770c72_2
@@ -231,7 +231,7 @@ dependencies:
   - openexr=2.5.5=hf817b99_0
   - openh264=2.1.1=h780b84a_0
   - openjpeg=2.4.0=hb52868f_1
-  - openssl=1.1.1k=h7f98852_1
+  - openssl=1.1.1l=h7f98852_0
   - orocos-kdl=1.4.0=h9c3ff4c_0
   - osrf_pycommon=0.2.1=pyhd8ed1ab_0
   - packaging=21.0=pyhd8ed1ab_0
@@ -245,7 +245,7 @@ dependencies:
   - pcre=8.45=h9c3ff4c_0
   - pexpect=4.8.0=py38h32f6830_1
   - pickleshare=0.7.5=py38h32f6830_1002
-  - pillow=8.3.1=py38h8e6f84c_0
+  - pillow=8.3.2=py38h8e6f84c_0
   - pip=21.2.4=pyhd8ed1ab_0
   - pixman=0.40.0=h36c2ea0_0
   - pkg-config=0.29.2=h36c2ea0_1008
@@ -303,7 +303,7 @@ dependencies:
   - qt=5.12.9=hda022c4_4
   - qtawesome=1.0.3=pyhd8ed1ab_0
   - qtconsole=5.1.1=pyhd8ed1ab_0
-  - qtpy=1.10.0=pyhd8ed1ab_0
+  - qtpy=1.11.0=pyhd8ed1ab_0
   - readline=8.1=h46c0cb4_0
   - regex=2021.8.28=py38h497a2fe_0
   - requests=2.26.0=pyhd3eb1b0_0
@@ -551,14 +551,14 @@ dependencies:
   - typed-ast=1.4.3=py38h497a2fe_0
   - typing_extensions=3.10.0.0=pyha770c72_0
   - ujson=4.0.2=py38h709712a_0
-  - unidecode=1.2.0=pyhd8ed1ab_0
+  - unidecode=1.3.0=pyhd8ed1ab_0
   - unixodbc=2.3.9=hb166930_0
   - urdfdom=2.3.5=h4bd325d_0
   - urdfdom_headers=1.0.5=h4bd325d_2
   - urllib3=1.26.6=pyhd8ed1ab_0
   - urwid=2.1.2=py38h497a2fe_3
   - utfcpp=3.2.1=ha770c72_0
-  - vtk=9.0.3=no_osmesa_py38hc87893f_101
+  - vtk=9.0.3=no_osmesa_py38h441f375_103
   - watchdog=2.1.5=py38h578d9bd_0
   - wcwidth=0.2.5=pyh9f0ad1d_2
   - webencodings=0.5.1=py_1
