@@ -12,25 +12,11 @@
     <project name="strasdat/sophus" path="sophus"/>
     <project name="artivis/manif" path="manif" revision="devel"/>
 
-    <!-- google -->
-    <project name="google/glog" path="glog"/>
-    <!-- <project name="gflags/gflags" path="gflags"/> -->
-    <project name="google/googletest" path="gtest"/>
-    <project name="google/benchmark" path="gbench" revision="main"/>
-    <project name="abseil/abseil-cpp" path="abseil"/>
-
     <!-- graphics  -->
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 
     <!-- other -->
-    <project name="microsoft/gsl" path="gsl" revision="main"/>
-    <project name="fmtlib/fmt" path="fmt"/>
     <project name="onqtam/doctest" path="doctest"/>
-    <project name="boost-ext/sml" path="boost_sml"/>
-    <project name="boostorg/json" path="boost_json"/>
-    <project name="taskflow/taskflow" path="taskflow"/>
     <project name="autodiff/autodiff" path="autodiff"/>
-    <project name="skypjack/entt" path="entt"/>
-    <project name="nlohmann/json" path="nlohmann_json"/>
 </manifest>
