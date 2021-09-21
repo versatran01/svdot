@@ -407,6 +407,7 @@ dependencies:
   - pip:
     - antlr4-python3-runtime==4.8
     - colorlog==5.0.1
+    - docopt==0.6.2
     - eagerpy==0.29.0
     - hydra-colorlog==1.1.0
     - hydra-core==1.1.0
@@ -421,6 +422,5 @@ dependencies:
     - sophuspy==0.0.8
     - thop==0.0.31-2005241907
     - timm==0.4.12
-    - torch==1.9.0
     - torchvision==0.10.0
 prefix: /home/chao/miniconda3

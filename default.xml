@@ -4,7 +4,6 @@
     <default revision="master" remote="github" sync-j="8"/>
 
     <!-- nlls -->
-    <project name="ceres-solver/ceres-solver" path="ceres"/>
     <project name="borglab/gtsam" revision="develop" path="gtsam"/>
 
     <!-- geometry -->
@@ -15,8 +14,4 @@
     <!-- graphics  -->
     <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
-
-    <!-- other -->
-    <project name="onqtam/doctest" path="doctest"/>
-    <project name="autodiff/autodiff" path="autodiff"/>
 </manifest>
