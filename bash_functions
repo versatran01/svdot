@@ -273,7 +273,7 @@ _roscomplete_rosws_switch() {
     return 0
 }
 
-# catkin/colcon_jump
+# catkin_jump
 cj() {
     scon ros1n
     if [ -e $ROS_WS_TOP_DIR/$1/devel/setup.bash ]; then
@@ -334,14 +334,6 @@ function upal_gcc() {
     sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-$1 100 --slave /usr/bin/g++ g++ /usr/bin/g++-$1 --slave /usr/bin/gcov gcov /usr/bin/gcov-$1
 
 }
-
-# function upal_clang() {
-#     if [ $# -eq 0 ]; then
-#         echo -e "need version number"
-#         return 0
-#     fi
-#     sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-$1 100 --slave /usr/bin/clang++ clang++ /usr/bin/clang++-$1 --slave /usr/bin/clang-format clang-format /usr/bin/clang-format-$1 --slave /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-$1
-# }
 
 function upal_clang {
     if [ $# -eq 0 ]; then
