@@ -9,7 +9,6 @@ FILES=(
     gitignore
     inputrc
     ideavimrc
-    pylintrc
     condarc
     starship.toml
 )
