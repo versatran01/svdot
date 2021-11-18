@@ -12,6 +12,5 @@
     <project name="artivis/manif" path="manif" revision="devel"/>
 
     <!-- graphics  -->
-    <project name="stevenlovegrove/pangolin" path="pangolin"/>
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 </manifest>
