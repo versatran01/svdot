@@ -8,6 +8,7 @@ dependencies:
   - _openmp_mutex=4.5=1_gnu
   - abseil-cpp=20210324.2=h9c3ff4c_0
   - absl-py=1.0.0=pyhd8ed1ab_0
+  - adwaita-icon-theme=41.0=ha770c72_1
   - alabaster=0.7.12=py_0
   - alsa-lib=1.2.3=h516909a_0
   - aom=3.2.0=h9c3ff4c_2
@@ -17,13 +18,15 @@ dependencies:
   - argh=0.26.2=py38_1001
   - arrow=1.2.1=pyhd8ed1ab_0
   - assimp=5.0.1=hedfc422_7
-  - astroid=2.6.6=py38h578d9bd_0
+  - astroid=2.9.0=py38h578d9bd_0
   - async_generator=1.10=py_0
+  - at-spi2-atk=2.38.0=h0630a04_3
+  - at-spi2-core=2.40.3=h0630a04_0
   - atk-1.0=2.36.0=h3371d22_4
   - atomicwrites=1.4.0=pyh9f0ad1d_0
   - attrs=21.2.0=pyhd8ed1ab_0
   - autodiff=0.6.4=py38h95d56e6_0
-  - autopep8=1.6.0=pyhd8ed1ab_0
+  - autopep8=1.6.0=pyhd8ed1ab_1
   - babel=2.9.1=pyh44b312d_0
   - backcall=0.2.0=pyh9f0ad1d_0
   - backports=1.0=py_2
@@ -32,7 +35,7 @@ dependencies:
   - beautifulsoup4=4.10.0=pyha770c72_0
   - benchmark=1.6.0=h9c3ff4c_0
   - binaryornot=0.4.4=py_1
-  - black=21.10b0=pyhd8ed1ab_0
+  - black=21.12b0=pyhd8ed1ab_0
   - bleach=4.1.0=pyhd8ed1ab_0
   - blessings=1.7=py38h578d9bd_1005
   - boost=1.74.0=py38h2b96118_4
@@ -46,20 +49,24 @@ dependencies:
   - ca-certificates=2021.10.8=ha878542_0
   - cairo=1.16.0=h6cf1ce9_1008
   - catkin_pkg=0.4.24=pyhd8ed1ab_1
-  - catkin_tools=0.7.2=pyhd8ed1ab_0
+  - catkin_tools=0.8.2=pyhd8ed1ab_0
   - ceres-solver=2.0.0=hc79d1a1_4
   - certifi=2021.10.8=py38h578d9bd_1
   - cffi=1.15.0=py38h3931269_0
   - chardet=4.0.0=py38h578d9bd_2
-  - charset-normalizer=2.0.7=pyhd8ed1ab_0
+  - charset-normalizer=2.0.8=pyhd8ed1ab_0
   - click=8.0.3=py38h578d9bd_1
   - cloudpickle=2.0.0=pyhd8ed1ab_0
   - cmake=3.21.3=h8897547_0
+  - cmake-format=0.6.11=pyh9f0ad1d_0
   - colorama=0.4.4=pyh9f0ad1d_0
   - console_bridge=1.0.1=h4bd325d_0
   - cookiecutter=1.7.3=pyh6c4a22f_0
-  - coverage=6.1.2=py38h497a2fe_0
-  - cryptography=35.0.0=py38h3e25421_2
+  - coverage=6.2=py38h497a2fe_0
+  - cppzmq=4.8.1=hf7cf922_0
+  - cryptography=36.0.0=py38h3e25421_0
+  - cudatoolkit=11.2.2=he111cf0_9
+  - cupy=9.6.0=py38h177b0fd_0
   - curl=7.80.0=h2574ce0_0
   - curtsies=0.3.4=py38h578d9bd_2
   - cycler=0.11.0=pyhd8ed1ab_0
@@ -71,13 +78,15 @@ dependencies:
   - diff-match-patch=20200713=pyh9f0ad1d_0
   - distro=1.6.0=pyhd8ed1ab_0
   - docutils=0.17.1=py38h578d9bd_1
-  - double-conversion=3.1.5=h9c3ff4c_2
+  - double-conversion=3.1.6=h9c3ff4c_0
   - eigen=3.4.0=h4bd325d_0
   - empy=3.3.4=pyh9f0ad1d_1
   - entrypoints=0.3=py38h32f6830_1002
+  - epoxy=1.5.9=h7f98852_0
   - expat=2.4.1=h9c3ff4c_0
+  - fastrlock=0.8=py38h709712a_1
   - ffmpeg=4.4.1=h6987444_0
-  - flake8=3.9.2=pyhd8ed1ab_0
+  - flake8=4.0.1=pyhd8ed1ab_0
   - flann=1.9.1=h2e58136_1008
   - fmt=8.0.1=h4bd325d_0
   - font-ttf-dejavu-sans-mono=2.37=hab24e00_0
@@ -87,11 +96,13 @@ dependencies:
   - fontconfig=2.13.1=hba837de_1005
   - fonts-conda-ecosystem=1=0
   - fonts-conda-forge=1=0
-  - fonttools=4.28.1=py38h497a2fe_0
+  - fonttools=4.28.3=py38h497a2fe_0
   - freeimage=3.18.0=h88c329d_7
   - freetype=2.10.4=h0708190_1
   - fribidi=1.0.10=h36c2ea0_0
   - future=0.18.2=py38h578d9bd_4
+  - gazebo=11.5.0=h5fc56bc_1
+  - gdbm=1.18=h0a1914f_2
   - gdk-pixbuf=2.42.6=h04a7f16_0
   - gettext=0.19.8.1=h73d1719_1008
   - gflags=2.2.2=he1b5a44_1004
@@ -104,18 +115,21 @@ dependencies:
   - gmock=1.10.0=h4bd325d_7
   - gmp=6.2.1=h58526e2_0
   - gnutls=3.6.13=h85f3911_1
-  - gpgme=1.16.0=h9c3ff4c_0
+  - gpgme=1.15.1=h9c3ff4c_0
+  - gpustat=0.6.0=pyhd8ed1ab_1
   - graphite2=1.3.13=h58526e2_1001
-  - graphviz=2.49.3=h85b4f2f_0
+  - graphviz=2.50.0=h85b4f2f_0
   - greenlet=1.1.2=py38h709712a_1
   - gst-plugins-base=1.18.5=hf529b03_2
   - gstreamer=1.18.5=h9f60fe5_2
   - gtest=1.10.0=h4bd325d_7
   - gtk2=2.24.33=h539f30e_1
+  - gtk3=3.24.29=h8879c87_2
   - gts=0.7.6=h64030ff_2
   - harfbuzz=2.9.1=h83ec7ef_1
   - hdf4=4.2.15=h10796ff_3
   - hdf5=1.10.6=nompi_h6a2412b_1114
+  - hicolor-icon-theme=0.17=ha770c72_2
   - icu=68.2=h9c3ff4c_0
   - idna=3.1=pyhd3deb0d_0
   - ilmbase=2.5.5=h780b84a_0
@@ -126,26 +140,27 @@ dependencies:
   - inflection=0.5.1=pyh9f0ad1d_0
   - iniconfig=1.1.1=pyh9f0ad1d_0
   - intervaltree=3.0.2=py_0
-  - ipykernel=6.5.0=py38he5a9106_1
-  - ipython=7.29.0=py38he5a9106_2
+  - ipykernel=6.6.0=py38he5a9106_0
+  - ipython=7.30.1=py38h578d9bd_0
   - ipython_genutils=0.2.0=py_1
   - isort=5.10.1=pyhd8ed1ab_0
   - jasper=1.900.1=h07fcdf6_1006
   - jax=0.2.25=pyhd8ed1ab_0
-  - jaxlib=0.1.73=py38h43a58ef_1
+  - jaxlib=0.1.75=py38h43a58ef_0
   - jbig=2.1=h7f98852_2003
   - jedi=0.18.1=py38h578d9bd_0
   - jeepney=0.7.1=pyhd8ed1ab_0
+  - jellyfish=0.8.9=py38h497a2fe_1
   - jinja2=2.11.3=pyh44b312d_0
   - jinja2-time=0.2.0=py_2
   - jpeg=9d=h36c2ea0_0
   - jsoncpp=1.9.4=h4bd325d_3
   - jsonschema=4.2.1=pyhd8ed1ab_0
-  - jupyter_client=6.1.12=pyhd8ed1ab_0
+  - jupyter_client=7.1.0=pyhd8ed1ab_0
   - jupyter_core=4.9.1=py38h578d9bd_1
   - jupyterlab_pygments=0.1.2=pyh9f0ad1d_0
   - jxrlib=1.1=h7f98852_2
-  - keyring=23.2.1=py38h578d9bd_1
+  - keyring=23.4.0=py38h578d9bd_0
   - kiwisolver=1.3.2=py38h1fd1430_1
   - krb5=1.19.2=hcc1bbae_3
   - lame=3.100=h7f98852_1001
@@ -162,10 +177,12 @@ dependencies:
   - libbrotlidec=1.0.9=h7f98852_6
   - libbrotlienc=1.0.9=h7f98852_6
   - libcblas=3.9.0=12_linux64_openblas
+  - libccd=2.1=h9c3ff4c_1
   - libclang=11.1.0=default_ha53f305_1
+  - libcups=2.3.3=hf5a7f15_1
   - libcurl=7.80.0=h2574ce0_0
   - libdeflate=1.8=h7f98852_0
-  - libdrm=2.4.108=h7f98852_0
+  - libdrm=2.4.109=h7f98852_0
   - libedit=3.1.20191231=he28a2e2_2
   - libev=4.33=h516909a_1
   - libevent=2.1.10=h9b69904_4
@@ -179,27 +196,36 @@ dependencies:
   - libgomp=11.2.0=h1d223b6_11
   - libgpg-error=1.42=h9c3ff4c_0
   - libiconv=1.16=h516909a_0
+  - libignition-cmake2=2.9.0=h9c3ff4c_1
+  - libignition-common3=3.11.1=h4b9f6df_0
+  - libignition-fuel-tools4=4.3.0=hf08c594_2
+  - libignition-math6=6.9.2=h9c3ff4c_0
+  - libignition-msgs5=5.3.0=hc438e01_6
+  - libignition-tools1=1.4.1=h33ecc0d_2
+  - libignition-transport8=8.1.0=h3ef4182_6
   - liblapack=3.9.0=12_linux64_openblas
   - liblapacke=3.9.0=12_linux64_openblas
   - libllvm10=10.0.1=he513fc3_3
   - libllvm11=11.1.0=hf817b99_2
-  - libnetcdf=4.8.0=nompi_hcd642e3_103
+  - libnetcdf=4.8.1=nompi_hcd642e3_100
   - libnghttp2=1.43.0=h812cca2_1
   - libnsl=2.0.0=h7f98852_0
   - libogg=1.3.4=h7f98852_1
   - libopenblas=0.3.18=pthreads_h8fe5266_0
-  - libopencv=4.5.2=py38hd24989e_1
+  - libopencv=4.5.2=py38hcdf9bf1_0
   - libopus=1.3.1=h7f98852_1
   - libpciaccess=0.16=h516909a_0
   - libpng=1.6.37=h21135ba_2
-  - libpq=13.3=hd57d9b9_3
-  - libprotobuf=3.16.0=h780b84a_0
+  - libpq=13.5=hd57d9b9_0
+  - libprotobuf=3.15.8=h780b84a_1
   - libraw=0.20.2=h10796ff_1
   - librsvg=2.52.4=hc3c00ef_0
+  - libsdformat=9.3.0=h21f569a_5
   - libsodium=1.0.18=h36c2ea0_1
   - libspatialindex=1.9.3=h9c3ff4c_4
   - libssh2=1.10.0=ha56f1ee_2
   - libstdcxx-ng=11.2.0=he4da1e4_11
+  - libtar=1.2.20=h7f98852_1003
   - libtheora=1.1.1=h7f98852_1005
   - libtiff=4.3.0=h6f004c6_2
   - libtool=2.4.6=h9c3ff4c_1008
@@ -220,18 +246,18 @@ dependencies:
   - log4cxx=0.11.0=h291d653_3
   - loguru=0.5.3=py38h578d9bd_3
   - lxml=4.6.4=py38hf1fe3a4_0
-  - lz4=3.1.3=py38hebdc3cf_1
+  - lz4=3.1.10=py38hebdc3cf_0
   - lz4-c=1.9.3=h9c3ff4c_1
   - make=4.3=hd18ef5c_1
   - markupsafe=1.1.1=py38h497a2fe_3
-  - matplotlib=3.5.0=py38h578d9bd_0
-  - matplotlib-base=3.5.0=py38hf4fb855_0
+  - matplotlib=3.5.1=py38h578d9bd_0
+  - matplotlib-base=3.5.1=py38hf4fb855_0
   - matplotlib-inline=0.1.3=pyhd8ed1ab_0
   - mccabe=0.6.1=py_1
   - mesalib=18.3.1=h590aaf7_0
   - metis=5.1.0=h58526e2_1006
   - mistune=0.8.4=py38h497a2fe_1005
-  - more-itertools=8.11.0=pyhd8ed1ab_0
+  - more-itertools=8.12.0=pyhd8ed1ab_0
   - mpfr=4.1.0=h9202a9a_1
   - munkres=1.1.4=pyh9f0ad1d_0
   - mypy_extensions=0.4.3=py38h578d9bd_4
@@ -241,15 +267,16 @@ dependencies:
   - nbconvert=6.3.0=py38h578d9bd_1
   - nbformat=5.1.3=pyhd8ed1ab_0
   - ncurses=6.2=h58526e2_4
-  - nest-asyncio=1.5.1=pyhd8ed1ab_0
+  - nest-asyncio=1.5.4=pyhd8ed1ab_0
   - netifaces=0.10.9=py38h497a2fe_1004
   - nettle=3.6=he412f7d_0
   - nose=1.3.7=py38h32f6830_1004
   - nspr=4.32=h9c3ff4c_1
-  - nss=3.72=hb5efdd6_0
+  - nss=3.73=hb5efdd6_0
   - numba=0.53.1=py38h8b71fd7_1
   - numpy=1.21.4=py38he2449b9_0
   - numpydoc=1.1.0=py_1
+  - nvidia-ml=7.352.0=py_0
   - ogre=1.10.12=hf655ca9_7
   - olefile=0.46=pyh9f0ad1d_1
   - openexr=2.5.5=hf817b99_0
@@ -257,17 +284,17 @@ dependencies:
   - openjpeg=2.4.0=hb52868f_1
   - openssl=1.1.1l=h7f98852_0
   - opt_einsum=3.3.0=pyhd8ed1ab_1
-  - orocos-kdl=1.5.1=h709712a_2
+  - orocos-kdl=1.4.0=h9c3ff4c_0
   - osrf_pycommon=0.2.1=pyhd8ed1ab_0
   - packaging=21.3=pyhd8ed1ab_0
-  - pandoc=2.16.1=h7f98852_0
+  - pandoc=2.16.2=h7f98852_0
   - pandocfilters=1.5.0=pyhd8ed1ab_0
   - pango=1.48.10=hb8ff022_1
-  - paramiko=2.8.0=pyhd8ed1ab_0
-  - parso=0.8.2=pyhd8ed1ab_0
+  - paramiko=2.8.1=pyhd8ed1ab_0
+  - parso=0.8.3=pyhd8ed1ab_0
   - pathspec=0.9.0=pyhd8ed1ab_0
   - patsy=0.5.2=pyhd8ed1ab_0
-  - pcl=1.11.1=h0430080_5
+  - pcl=1.11.1=h39b1736_3
   - pcre=8.45=h9c3ff4c_0
   - pexpect=4.8.0=py38h32f6830_1
   - pickleshare=0.7.5=py38h32f6830_1002
@@ -277,29 +304,30 @@ dependencies:
   - pkg-config=0.29.2=h36c2ea0_1008
   - platformdirs=2.3.0=pyhd8ed1ab_0
   - pluggy=1.0.0=py38h578d9bd_2
-  - poco=1.11.0=h9c89518_2
+  - poco=1.10.1=h9c89518_1
   - poyo=0.5.0=py_0
-  - proj=7.2.0=h277dcde_2
+  - proj=8.2.0=h277dcde_0
   - prompt-toolkit=3.0.22=pyha770c72_0
+  - protobuf=3.15.8=py38h709712a_0
   - psutil=5.8.0=py38h497a2fe_2
   - pthread-stubs=0.4=h36c2ea0_1001
   - ptyprocess=0.7.0=pyhd3deb0d_0
   - pugixml=1.11.4=h9c3ff4c_0
   - py=1.11.0=pyh6c4a22f_0
-  - py-opencv=4.5.2=py38hd0cf306_1
+  - py-opencv=4.5.2=py38hd0cf306_0
   - pybind11=2.8.1=py38h1fd1430_1
   - pybind11-abi=4=hd8ed1ab_3
   - pybind11-global=2.8.1=py38h1fd1430_1
   - pycairo=1.20.1=py38hf61ee4a_1
-  - pycodestyle=2.7.0=pyhd8ed1ab_0
+  - pycodestyle=2.8.0=pyhd8ed1ab_0
   - pycparser=2.21=pyhd8ed1ab_0
-  - pycryptodome=3.11.0=py38h80e8405_1
-  - pycryptodomex=3.11.0=py38h497a2fe_1
+  - pycryptodome=3.12.0=py38h80e8405_0
+  - pycryptodomex=3.12.0=py38h497a2fe_0
   - pydocstyle=6.1.1=pyhd8ed1ab_0
   - pydot=1.4.2=py38h578d9bd_1
-  - pyflakes=2.3.1=pyhd8ed1ab_0
+  - pyflakes=2.4.0=pyhd8ed1ab_0
   - pygments=2.10.0=pyhd8ed1ab_0
-  - pylint=2.9.6=pyhd8ed1ab_0
+  - pylint=2.12.2=pyhd8ed1ab_0
   - pyls-spyder=0.4.0=pyhd8ed1ab_0
   - pynacl=1.4.0=py38h497a2fe_3
   - pyopengl=3.1.5=py_0
@@ -316,15 +344,15 @@ dependencies:
   - python=3.8.12=hb7a2778_2_cpython
   - python-dateutil=2.8.2=pyhd8ed1ab_0
   - python-flatbuffers=2.0=pyhd8ed1ab_0
-  - python-gnupg=0.4.7=pyhd8ed1ab_0
+  - python-gnupg=0.4.8=pyhd8ed1ab_0
   - python-jsonrpc-server=0.4.0=pyh9f0ad1d_0
-  - python-lsp-black=1.0.0=pyhd8ed1ab_0
+  - python-lsp-black=1.0.1=pyhd8ed1ab_0
   - python-lsp-jsonrpc=1.0.0=pyhd8ed1ab_0
-  - python-lsp-server=1.2.4=pyhd8ed1ab_0
-  - python-orocos-kdl=1.5.1=py38h709712a_2
+  - python-lsp-server=1.3.2=pyhd8ed1ab_0
+  - python-orocos-kdl=1.4.0=py38h709712a_0
   - python-slugify=5.0.2=pyhd8ed1ab_0
   - python_abi=3.8=2_cp38
-  - pytransform3d=1.10.0=pyh8a188c0_0
+  - pytransform3d=1.11.0=pyh8a188c0_0
   - pytz=2021.3=pyhd8ed1ab_0
   - pyxdg=0.27=pyhd8ed1ab_0
   - pyyaml=6.0=py38h497a2fe_3
@@ -333,240 +361,279 @@ dependencies:
   - qhull=2020.2=h4bd325d_2
   - qstylizer=0.2.1=pyhd8ed1ab_0
   - qt=5.12.9=hda022c4_4
-  - qtawesome=1.1.0=pyhd8ed1ab_0
-  - qtconsole=5.2.0=pyhd8ed1ab_0
-  - qtpy=1.11.2=pyhd8ed1ab_0
+  - qtawesome=1.1.1=pyhd8ed1ab_0
+  - qtconsole=5.2.1=pyhd8ed1ab_0
+  - qtpy=1.11.3=pyhd8ed1ab_0
+  - qwt=6.1.6=h7ec6b3e_0
   - readline=8.1=h46c0cb4_0
   - regex=2021.11.10=py38h497a2fe_0
-  - requests=2.26.0=pyhd3eb1b0_0
+  - requests=2.26.0=pyhd8ed1ab_1
   - rhash=1.4.1=h7f98852_0
-  - rope=0.21.1=pyhd8ed1ab_0
-  - ros-distro-mutex=0.2.0=noetic
-  - ros-noetic-actionlib=1.13.2=py38h14b2acc_12
-  - ros-noetic-actionlib-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-actionlib-tutorials=0.2.0=py38he9ab703_12
-  - ros-noetic-angles=1.9.13=py38he9ab703_12
-  - ros-noetic-bond=1.8.6=py38he9ab703_12
-  - ros-noetic-bond-core=1.8.6=py38he9ab703_12
-  - ros-noetic-bondcpp=1.8.6=py38hbce7a70_12
-  - ros-noetic-bondpy=1.8.6=py38he9ab703_12
-  - ros-noetic-catkin=0.8.10=py38he9ab703_12
-  - ros-noetic-class-loader=0.5.0=py38ha7d6be6_12
-  - ros-noetic-cmake-modules=0.5.0=py38he9ab703_12
-  - ros-noetic-common-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-common-tutorials=0.2.0=py38he9ab703_12
-  - ros-noetic-control-msgs=1.5.2=py38he9ab703_12
-  - ros-noetic-controller-interface=0.19.5=py38he9ab703_12
-  - ros-noetic-controller-manager=0.19.5=py38he9ab703_12
-  - ros-noetic-controller-manager-msgs=0.19.5=py38he9ab703_12
-  - ros-noetic-cpp-common=0.7.2=py38haa43186_12
-  - ros-noetic-cv-bridge=1.15.0=py38h7198b11_12
-  - ros-noetic-depth-image-proc=1.15.3=py38h266acf0_12
+  - rope=0.22.0=pyhd8ed1ab_0
+  - ros-distro-mutex=0.1.1=noetic
+  - ros-noetic-actionlib=1.13.2=py38h14b2acc_6
+  - ros-noetic-actionlib-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-actionlib-tutorials=0.2.0=py38he9ab703_6
+  - ros-noetic-angles=1.9.13=py38he9ab703_6
+  - ros-noetic-bond=1.8.6=py38he9ab703_6
+  - ros-noetic-bond-core=1.8.6=py38he9ab703_6
+  - ros-noetic-bondcpp=1.8.6=py38hbce7a70_6
+  - ros-noetic-bondpy=1.8.6=py38he9ab703_6
+  - ros-noetic-camera-calibration=1.15.3=py38he9ab703_11
+  - ros-noetic-camera-calibration-parsers=1.12.0=py38h266acf0_6
+  - ros-noetic-camera-info-manager=1.12.0=py38h266acf0_6
+  - ros-noetic-catkin=0.8.10=py38he9ab703_9
+  - ros-noetic-class-loader=0.5.0=py38h6655857_6
+  - ros-noetic-cmake-modules=0.5.0=py38he9ab703_6
+  - ros-noetic-common-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-common-tutorials=0.2.0=py38he9ab703_6
+  - ros-noetic-compressed-depth-image-transport=1.14.0=py38he9ab703_11
+  - ros-noetic-compressed-image-transport=1.14.0=py38he9ab703_11
+  - ros-noetic-control-msgs=1.5.2=py38he9ab703_6
+  - ros-noetic-control-toolbox=1.18.2=py38he9ab703_6
+  - ros-noetic-controller-interface=0.19.4=py38he9ab703_6
+  - ros-noetic-controller-manager=0.19.4=py38he9ab703_6
+  - ros-noetic-controller-manager-msgs=0.19.4=py38he9ab703_6
+  - ros-noetic-cpp-common=0.7.2=py38haa43186_6
+  - ros-noetic-cv-bridge=1.15.0=py38hdbd0d64_10
+  - ros-noetic-depth-image-proc=1.15.3=py38h266acf0_11
   - ros-noetic-desktop=1.5.0=py38he9ab703_3
-  - ros-noetic-diagnostic-aggregator=1.10.4=py38he9ab703_12
-  - ros-noetic-diagnostic-analysis=1.10.4=py38he9ab703_12
-  - ros-noetic-diagnostic-common-diagnostics=1.10.4=py38he9ab703_12
-  - ros-noetic-diagnostic-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-diagnostic-updater=1.10.4=py38he9ab703_12
-  - ros-noetic-diagnostics=1.10.4=py38he9ab703_12
-  - ros-noetic-dynamic-reconfigure=1.7.1=py38h14b2acc_12
-  - ros-noetic-eigen-conversions=1.13.2=py38he9ab703_12
-  - ros-noetic-eigen-stl-containers=0.1.8=py38he9ab703_12
-  - ros-noetic-executive-smach=2.5.0=py38he9ab703_12
-  - ros-noetic-filters=1.9.1=py38h14b2acc_12
-  - ros-noetic-gencpp=0.6.5=py38he9ab703_12
-  - ros-noetic-geneus=3.0.0=py38he9ab703_12
-  - ros-noetic-genlisp=0.4.18=py38he9ab703_12
-  - ros-noetic-genmsg=0.5.16=py38he9ab703_12
-  - ros-noetic-gennodejs=2.0.2=py38he9ab703_12
-  - ros-noetic-genpy=0.6.15=py38hb5abb7c_12
-  - ros-noetic-geometry=1.13.2=py38he9ab703_12
-  - ros-noetic-geometry-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-geometry-tutorials=0.2.3=py38he9ab703_12
-  - ros-noetic-gl-dependency=1.1.2=py38he9ab703_12
-  - ros-noetic-hardware-interface=0.19.5=py38he9ab703_12
-  - ros-noetic-hector-map-tools=0.5.2=py38he9ab703_12
-  - ros-noetic-hector-nav-msgs=0.5.2=py38he9ab703_12
-  - ros-noetic-hector-trajectory-server=0.5.2=py38he9ab703_12
-  - ros-noetic-image-geometry=1.15.0=py38h66a3a3d_12
-  - ros-noetic-image-transport=1.12.0=py38he9ab703_12
-  - ros-noetic-interactive-marker-tutorials=0.11.0=py38he9ab703_12
-  - ros-noetic-interactive-markers=1.12.0=py38he9ab703_12
-  - ros-noetic-joint-state-publisher=1.15.0=py38he9ab703_12
-  - ros-noetic-joint-state-publisher-gui=1.15.0=py38he9ab703_12
-  - ros-noetic-kdl-conversions=1.13.2=py38he9ab703_12
-  - ros-noetic-kdl-parser=1.14.1=py38h45b2f2b_12
-  - ros-noetic-laser-geometry=1.6.7=py38h266acf0_12
-  - ros-noetic-librviz-tutorial=0.11.0=py38h7d895da_12
-  - ros-noetic-map-msgs=1.14.1=py38he9ab703_12
-  - ros-noetic-media-export=0.3.0=py38he9ab703_12
-  - ros-noetic-message-filters=1.15.13=py38h14b2acc_12
-  - ros-noetic-message-generation=0.4.1=py38he9ab703_12
-  - ros-noetic-message-runtime=0.4.13=py38he9ab703_12
-  - ros-noetic-mk=1.15.8=py38he9ab703_12
-  - ros-noetic-nav-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-nodelet=1.10.2=py38h343f6d5_12
-  - ros-noetic-nodelet-core=1.10.2=py38he9ab703_12
-  - ros-noetic-nodelet-topic-tools=1.10.2=py38h266acf0_12
-  - ros-noetic-nodelet-tutorial-math=0.2.0=py38he9ab703_12
-  - ros-noetic-pcl-conversions=1.7.3=py38h8fc0257_12
-  - ros-noetic-pcl-msgs=0.3.0=py38he9ab703_12
-  - ros-noetic-pcl-ros=1.7.3=py38h8fc0257_12
-  - ros-noetic-pluginlib=1.13.0=py38h3d5e8a6_12
-  - ros-noetic-pluginlib-tutorials=0.2.0=py38he9ab703_12
-  - ros-noetic-python-qt-binding=0.4.4=py38h7d895da_12
-  - ros-noetic-qt-dotgraph=0.4.2=py38he9ab703_12
-  - ros-noetic-qt-gui=0.4.2=py38h7d895da_12
-  - ros-noetic-qt-gui-cpp=0.4.2=py38h7d895da_12
-  - ros-noetic-qt-gui-py-common=0.4.2=py38he9ab703_12
-  - ros-noetic-qwt-dependency=1.1.1=py38he9ab703_12
-  - ros-noetic-realtime-tools=1.16.1=py38he9ab703_12
-  - ros-noetic-resource-retriever=1.12.6=py38h91cbfbb_12
-  - ros-noetic-robot=1.5.0=py38he9ab703_12
-  - ros-noetic-robot-state-publisher=1.15.2=py38he9ab703_12
-  - ros-noetic-ros=1.15.8=py38he9ab703_12
-  - ros-noetic-ros-base=1.5.0=py38he9ab703_12
-  - ros-noetic-ros-comm=1.15.13=py38he9ab703_12
-  - ros-noetic-ros-core=1.5.0=py38he9ab703_12
-  - ros-noetic-ros-environment=1.3.2=py38he9ab703_12
-  - ros-noetic-ros-tutorials=0.10.2=py38he9ab703_12
-  - ros-noetic-rosbag=1.15.13=py38h14b2acc_12
-  - ros-noetic-rosbag-migration-rule=1.0.1=py38he9ab703_12
-  - ros-noetic-rosbag-storage=1.15.13=py38hdab94cb_12
-  - ros-noetic-rosbash=1.15.8=py38he9ab703_12
-  - ros-noetic-rosboost-cfg=1.15.8=py38he9ab703_12
-  - ros-noetic-rosbuild=1.15.8=py38he9ab703_12
-  - ros-noetic-rosclean=1.15.8=py38he9ab703_12
-  - ros-noetic-rosconsole=1.14.3=py38hb51d2b2_12
-  - ros-noetic-rosconsole-bridge=0.5.4=py38hcda8483_12
-  - ros-noetic-roscpp=1.15.13=py38h14b2acc_12
-  - ros-noetic-roscpp-core=0.7.2=py38he9ab703_12
-  - ros-noetic-roscpp-serialization=0.7.2=py38he9ab703_12
-  - ros-noetic-roscpp-traits=0.7.2=py38he9ab703_12
-  - ros-noetic-roscpp-tutorials=0.10.2=py38h14b2acc_12
-  - ros-noetic-roscreate=1.15.8=py38he9ab703_12
-  - ros-noetic-rosgraph=1.15.13=py38he9ab703_12
-  - ros-noetic-rosgraph-msgs=1.11.3=py38he9ab703_12
-  - ros-noetic-roslang=1.15.8=py38he9ab703_12
-  - ros-noetic-roslaunch=1.15.13=py38he9ab703_12
-  - ros-noetic-roslib=1.15.8=py38h14b2acc_12
-  - ros-noetic-roslint=0.12.0=py38he9ab703_12
-  - ros-noetic-roslisp=1.9.24=py38he9ab703_12
-  - ros-noetic-roslz4=1.15.13=py38he9ab703_12
-  - ros-noetic-rosmake=1.15.8=py38he9ab703_12
-  - ros-noetic-rosmaster=1.15.13=py38he9ab703_12
-  - ros-noetic-rosmsg=1.15.13=py38he9ab703_12
-  - ros-noetic-rosnode=1.15.13=py38he9ab703_12
-  - ros-noetic-rosout=1.15.13=py38he9ab703_12
-  - ros-noetic-rospack=2.6.2=py38h3d5e8a6_12
-  - ros-noetic-rosparam=1.15.13=py38he9ab703_12
-  - ros-noetic-rospy=1.15.13=py38he9ab703_12
-  - ros-noetic-rospy-tutorials=0.10.2=py38he9ab703_12
-  - ros-noetic-rosservice=1.15.13=py38he9ab703_12
-  - ros-noetic-rostest=1.15.13=py38h14b2acc_12
-  - ros-noetic-rostime=0.7.2=py38h14b2acc_12
-  - ros-noetic-rostopic=1.15.13=py38he9ab703_12
-  - ros-noetic-rosunit=1.15.8=py38he9ab703_12
-  - ros-noetic-roswtf=1.15.13=py38he9ab703_12
-  - ros-noetic-rqt-action=0.4.9=py38he9ab703_12
-  - ros-noetic-rqt-bag=0.5.1=py38he9ab703_12
-  - ros-noetic-rqt-bag-plugins=0.5.1=py38he9ab703_12
-  - ros-noetic-rqt-common-plugins=0.4.9=py38he9ab703_12
-  - ros-noetic-rqt-console=0.4.11=py38he9ab703_12
-  - ros-noetic-rqt-dep=0.4.12=py38he9ab703_12
-  - ros-noetic-rqt-graph=0.4.14=py38he9ab703_12
-  - ros-noetic-rqt-gui=0.5.2=py38he9ab703_12
-  - ros-noetic-rqt-gui-cpp=0.5.2=py38h7d895da_12
-  - ros-noetic-rqt-gui-py=0.5.2=py38he9ab703_12
-  - ros-noetic-rqt-image-view=0.4.16=py38h7d895da_12
-  - ros-noetic-rqt-launch=0.4.9=py38he9ab703_12
-  - ros-noetic-rqt-logger-level=0.4.11=py38he9ab703_12
-  - ros-noetic-rqt-moveit=0.5.10=py38he9ab703_12
-  - ros-noetic-rqt-msg=0.4.10=py38he9ab703_12
-  - ros-noetic-rqt-nav-view=0.5.7=py38he9ab703_12
-  - ros-noetic-rqt-plot=0.4.13=py38he9ab703_12
-  - ros-noetic-rqt-pose-view=0.5.11=py38he9ab703_12
-  - ros-noetic-rqt-publisher=0.4.10=py38he9ab703_12
-  - ros-noetic-rqt-py-common=0.5.2=py38he9ab703_12
-  - ros-noetic-rqt-py-console=0.4.10=py38he9ab703_12
-  - ros-noetic-rqt-reconfigure=0.5.4=py38he9ab703_12
-  - ros-noetic-rqt-robot-dashboard=0.5.8=py38he9ab703_12
-  - ros-noetic-rqt-robot-monitor=0.5.13=py38he9ab703_12
-  - ros-noetic-rqt-robot-plugins=0.5.8=py38he9ab703_12
-  - ros-noetic-rqt-robot-steering=0.5.12=py38he9ab703_12
-  - ros-noetic-rqt-runtime-monitor=0.5.9=py38he9ab703_12
-  - ros-noetic-rqt-rviz=0.7.0=py38h4fa06b8_12
-  - ros-noetic-rqt-service-caller=0.4.10=py38he9ab703_12
-  - ros-noetic-rqt-shell=0.4.11=py38he9ab703_12
-  - ros-noetic-rqt-srv=0.4.9=py38he9ab703_12
-  - ros-noetic-rqt-tf-tree=0.6.2=py38he9ab703_12
-  - ros-noetic-rqt-top=0.4.10=py38he9ab703_12
-  - ros-noetic-rqt-topic=0.4.12=py38he9ab703_12
-  - ros-noetic-rqt-web=0.4.10=py38he9ab703_12
-  - ros-noetic-rviz=1.14.10=py38h641b9ce_12
-  - ros-noetic-rviz-plugin-tutorials=0.11.0=py38h7d895da_12
-  - ros-noetic-rviz-python-tutorial=0.11.0=py38he9ab703_12
-  - ros-noetic-self-test=1.10.4=py38he9ab703_12
-  - ros-noetic-sensor-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-shape-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-smach=2.5.0=py38he9ab703_12
-  - ros-noetic-smach-msgs=2.5.0=py38he9ab703_12
-  - ros-noetic-smach-ros=2.5.0=py38he9ab703_12
-  - ros-noetic-smclib=1.8.6=py38he9ab703_12
-  - ros-noetic-std-msgs=0.5.13=py38he9ab703_12
-  - ros-noetic-std-srvs=1.11.3=py38he9ab703_12
-  - ros-noetic-stereo-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-tf=1.13.2=py38h46efa8d_12
-  - ros-noetic-tf-conversions=1.13.2=py38he9ab703_12
-  - ros-noetic-tf2=0.7.5=py38hcda8483_12
-  - ros-noetic-tf2-eigen=0.7.5=py38he9ab703_12
-  - ros-noetic-tf2-geometry-msgs=0.7.5=py38he9ab703_12
-  - ros-noetic-tf2-kdl=0.7.5=py38he9ab703_12
-  - ros-noetic-tf2-msgs=0.7.5=py38he9ab703_12
-  - ros-noetic-tf2-py=0.7.5=py38he9ab703_12
-  - ros-noetic-tf2-ros=0.7.5=py38he9ab703_12
-  - ros-noetic-topic-tools=1.15.13=py38he9ab703_12
-  - ros-noetic-trajectory-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-turtle-actionlib=0.2.0=py38he9ab703_12
-  - ros-noetic-turtle-tf=0.2.3=py38he9ab703_12
-  - ros-noetic-turtle-tf2=0.2.3=py38he9ab703_12
-  - ros-noetic-turtlesim=0.10.2=py38h5258f4b_12
-  - ros-noetic-urdf=1.13.2=py38h45b2f2b_12
-  - ros-noetic-urdf-parser-plugin=1.13.2=py38he9ab703_12
-  - ros-noetic-urdf-tutorial=0.5.0=py38he9ab703_12
-  - ros-noetic-visualization-marker-tutorials=0.11.0=py38he9ab703_12
-  - ros-noetic-visualization-msgs=1.13.1=py38he9ab703_12
-  - ros-noetic-visualization-tutorials=0.11.0=py38he9ab703_12
+  - ros-noetic-desktop-full=1.5.0=py38he9ab703_6
+  - ros-noetic-diagnostic-aggregator=1.10.3=py38he9ab703_6
+  - ros-noetic-diagnostic-analysis=1.10.3=py38he9ab703_6
+  - ros-noetic-diagnostic-common-diagnostics=1.10.3=py38he9ab703_6
+  - ros-noetic-diagnostic-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-diagnostic-updater=1.10.3=py38he9ab703_6
+  - ros-noetic-diagnostics=1.10.3=py38he9ab703_6
+  - ros-noetic-diff-drive-controller=0.18.1=py38h266acf0_6
+  - ros-noetic-dynamic-reconfigure=1.7.1=py38h14b2acc_6
+  - ros-noetic-eigen-conversions=1.13.2=py38he9ab703_6
+  - ros-noetic-eigen-stl-containers=0.1.8=py38he9ab703_6
+  - ros-noetic-executive-smach=2.5.0=py38he9ab703_6
+  - ros-noetic-filters=1.9.1=py38h14b2acc_6
+  - ros-noetic-forward-command-controller=0.18.1=py38he9ab703_6
+  - ros-noetic-gazebo-dev=2.9.1=py38h5931335_6
+  - ros-noetic-gazebo-msgs=2.9.1=py38he9ab703_6
+  - ros-noetic-gazebo-plugins=2.9.2=py38hcec579c_11
+  - ros-noetic-gazebo-ros=2.9.1=py38he9ab703_6
+  - ros-noetic-gazebo-ros-control=2.9.1=py38he9ab703_6
+  - ros-noetic-gazebo-ros-pkgs=2.9.1=py38he9ab703_6
+  - ros-noetic-gencpp=0.6.5=py38he9ab703_6
+  - ros-noetic-geneus=3.0.0=py38he9ab703_6
+  - ros-noetic-genlisp=0.4.18=py38he9ab703_6
+  - ros-noetic-genmsg=0.5.16=py38he9ab703_6
+  - ros-noetic-gennodejs=2.0.2=py38he9ab703_6
+  - ros-noetic-genpy=0.6.14=py38he9ab703_6
+  - ros-noetic-geometry=1.13.2=py38he9ab703_6
+  - ros-noetic-geometry-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-geometry-tutorials=0.2.3=py38he9ab703_6
+  - ros-noetic-gl-dependency=1.1.2=py38he9ab703_6
+  - ros-noetic-hardware-interface=0.19.4=py38he9ab703_6
+  - ros-noetic-hector-map-tools=0.5.2=py38he9ab703_9
+  - ros-noetic-hector-nav-msgs=0.5.2=py38he9ab703_9
+  - ros-noetic-hector-trajectory-server=0.5.2=py38he9ab703_10
+  - ros-noetic-image-common=1.12.0=py38he9ab703_6
+  - ros-noetic-image-geometry=1.15.0=py38h66a3a3d_11
+  - ros-noetic-image-pipeline=1.15.3=py38he9ab703_6
+  - ros-noetic-image-proc=1.15.3=py38h266acf0_11
+  - ros-noetic-image-publisher=1.15.3=py38he9ab703_11
+  - ros-noetic-image-rotate=1.15.3=py38he9ab703_11
+  - ros-noetic-image-transport=1.12.0=py38he9ab703_6
+  - ros-noetic-image-transport-plugins=1.14.0=py38he9ab703_6
+  - ros-noetic-image-view=1.15.3=py38h63836f4_11
+  - ros-noetic-interactive-marker-tutorials=0.11.0=py38he9ab703_6
+  - ros-noetic-interactive-markers=1.12.0=py38he9ab703_6
+  - ros-noetic-joint-limits-interface=0.19.4=py38he9ab703_6
+  - ros-noetic-joint-state-controller=0.18.1=py38he9ab703_6
+  - ros-noetic-joint-state-publisher=1.15.0=py38he9ab703_6
+  - ros-noetic-joint-state-publisher-gui=1.15.0=py38he9ab703_6
+  - ros-noetic-kdl-conversions=1.13.2=py38he9ab703_6
+  - ros-noetic-kdl-parser=1.14.1=py38he9ab703_6
+  - ros-noetic-laser-assembler=1.7.8=py38he9ab703_6
+  - ros-noetic-laser-filters=1.8.11=py38he9ab703_6
+  - ros-noetic-laser-geometry=1.6.7=py38h266acf0_6
+  - ros-noetic-laser-pipeline=1.6.4=py38he9ab703_6
+  - ros-noetic-librviz-tutorial=0.11.0=py38h7d895da_6
+  - ros-noetic-map-msgs=1.14.1=py38he9ab703_6
+  - ros-noetic-media-export=0.3.0=py38he9ab703_6
+  - ros-noetic-message-filters=1.15.9=py38h14b2acc_6
+  - ros-noetic-message-generation=0.4.1=py38he9ab703_6
+  - ros-noetic-message-runtime=0.4.13=py38he9ab703_6
+  - ros-noetic-mk=1.15.7=py38he9ab703_6
+  - ros-noetic-nav-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-nodelet=1.10.1=py38h343f6d5_6
+  - ros-noetic-nodelet-core=1.10.1=py38he9ab703_6
+  - ros-noetic-nodelet-topic-tools=1.10.1=py38h266acf0_6
+  - ros-noetic-nodelet-tutorial-math=0.2.0=py38he9ab703_6
+  - ros-noetic-pcl-conversions=1.7.2=py38he9ab703_6
+  - ros-noetic-pcl-msgs=0.3.0=py38he9ab703_6
+  - ros-noetic-pcl-ros=1.7.2=py38he9ab703_6
+  - ros-noetic-perception=1.5.0=py38he9ab703_6
+  - ros-noetic-perception-pcl=1.7.2=py38he9ab703_6
+  - ros-noetic-pluginlib=1.13.0=py38h14b2acc_6
+  - ros-noetic-pluginlib-tutorials=0.2.0=py38he9ab703_6
+  - ros-noetic-polled-camera=1.12.0=py38he9ab703_6
+  - ros-noetic-position-controllers=0.18.1=py38he9ab703_6
+  - ros-noetic-python-qt-binding=0.4.3=py38h7d895da_6
+  - ros-noetic-qt-dotgraph=0.4.2=py38he9ab703_6
+  - ros-noetic-qt-gui=0.4.2=py38h7d895da_6
+  - ros-noetic-qt-gui-cpp=0.4.2=py38h7d895da_6
+  - ros-noetic-qt-gui-py-common=0.4.2=py38he9ab703_6
+  - ros-noetic-qwt-dependency=1.1.1=py38he9ab703_6
+  - ros-noetic-realtime-tools=1.16.1=py38he9ab703_6
+  - ros-noetic-resource-retriever=1.12.6=py38h91cbfbb_6
+  - ros-noetic-robot=1.5.0=py38he9ab703_6
+  - ros-noetic-robot-state-publisher=1.15.0=py38he9ab703_6
+  - ros-noetic-ros=1.15.7=py38he9ab703_6
+  - ros-noetic-ros-base=1.5.0=py38he9ab703_6
+  - ros-noetic-ros-comm=1.15.9=py38he9ab703_6
+  - ros-noetic-ros-core=1.5.0=py38he9ab703_6
+  - ros-noetic-ros-environment=1.3.2=py38he9ab703_6
+  - ros-noetic-ros-tutorials=0.10.2=py38he9ab703_6
+  - ros-noetic-rosbag=1.15.9=py38h14b2acc_6
+  - ros-noetic-rosbag-migration-rule=1.0.1=py38he9ab703_6
+  - ros-noetic-rosbag-storage=1.15.9=py38hda0ab37_6
+  - ros-noetic-rosbash=1.15.7=py38he9ab703_6
+  - ros-noetic-rosboost-cfg=1.15.7=py38he9ab703_6
+  - ros-noetic-rosbuild=1.15.7=py38he9ab703_6
+  - ros-noetic-rosclean=1.15.7=py38he9ab703_6
+  - ros-noetic-rosconsole=1.14.3=py38hb51d2b2_6
+  - ros-noetic-rosconsole-bridge=0.5.4=py38hcda8483_6
+  - ros-noetic-roscpp=1.15.9=py38h14b2acc_6
+  - ros-noetic-roscpp-core=0.7.2=py38he9ab703_6
+  - ros-noetic-roscpp-serialization=0.7.2=py38he9ab703_6
+  - ros-noetic-roscpp-traits=0.7.2=py38he9ab703_6
+  - ros-noetic-roscpp-tutorials=0.10.2=py38h14b2acc_6
+  - ros-noetic-roscreate=1.15.7=py38he9ab703_6
+  - ros-noetic-rosgraph=1.15.9=py38he9ab703_6
+  - ros-noetic-rosgraph-msgs=1.11.3=py38he9ab703_6
+  - ros-noetic-roslang=1.15.7=py38he9ab703_6
+  - ros-noetic-roslaunch=1.15.9=py38he9ab703_6
+  - ros-noetic-roslib=1.15.7=py38h14b2acc_6
+  - ros-noetic-roslint=0.12.0=py38he9ab703_6
+  - ros-noetic-roslisp=1.9.24=py38he9ab703_6
+  - ros-noetic-roslz4=1.15.9=py38he9ab703_6
+  - ros-noetic-rosmake=1.15.7=py38he9ab703_6
+  - ros-noetic-rosmaster=1.15.9=py38he9ab703_6
+  - ros-noetic-rosmsg=1.15.9=py38he9ab703_6
+  - ros-noetic-rosnode=1.15.9=py38he9ab703_6
+  - ros-noetic-rosout=1.15.9=py38he9ab703_6
+  - ros-noetic-rospack=2.6.2=py38h14b2acc_6
+  - ros-noetic-rosparam=1.15.9=py38he9ab703_6
+  - ros-noetic-rospy=1.15.9=py38he9ab703_6
+  - ros-noetic-rospy-tutorials=0.10.2=py38he9ab703_6
+  - ros-noetic-rosservice=1.15.9=py38he9ab703_6
+  - ros-noetic-rostest=1.15.9=py38h14b2acc_6
+  - ros-noetic-rostime=0.7.2=py38h14b2acc_6
+  - ros-noetic-rostopic=1.15.9=py38he9ab703_6
+  - ros-noetic-rosunit=1.15.7=py38he9ab703_6
+  - ros-noetic-roswtf=1.15.9=py38he9ab703_6
+  - ros-noetic-rqt-action=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-bag=0.5.1=py38he9ab703_6
+  - ros-noetic-rqt-bag-plugins=0.5.1=py38he9ab703_6
+  - ros-noetic-rqt-common-plugins=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-console=0.4.11=py38he9ab703_6
+  - ros-noetic-rqt-dep=0.4.10=py38he9ab703_6
+  - ros-noetic-rqt-graph=0.4.14=py38he9ab703_6
+  - ros-noetic-rqt-gui=0.5.2=py38he9ab703_6
+  - ros-noetic-rqt-gui-cpp=0.5.2=py38h7d895da_6
+  - ros-noetic-rqt-gui-py=0.5.2=py38he9ab703_6
+  - ros-noetic-rqt-image-view=0.4.16=py38h7d895da_11
+  - ros-noetic-rqt-launch=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-logger-level=0.4.11=py38he9ab703_6
+  - ros-noetic-rqt-moveit=0.5.9=py38he9ab703_6
+  - ros-noetic-rqt-msg=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-nav-view=0.5.7=py38he9ab703_6
+  - ros-noetic-rqt-plot=0.4.13=py38he9ab703_6
+  - ros-noetic-rqt-pose-view=0.5.10=py38he9ab703_6
+  - ros-noetic-rqt-publisher=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-py-common=0.5.2=py38he9ab703_6
+  - ros-noetic-rqt-py-console=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-reconfigure=0.5.3=py38he9ab703_6
+  - ros-noetic-rqt-robot-dashboard=0.5.8=py38he9ab703_6
+  - ros-noetic-rqt-robot-monitor=0.5.13=py38he9ab703_6
+  - ros-noetic-rqt-robot-plugins=0.5.8=py38he9ab703_6
+  - ros-noetic-rqt-robot-steering=0.5.12=py38he9ab703_6
+  - ros-noetic-rqt-runtime-monitor=0.5.8=py38he9ab703_6
+  - ros-noetic-rqt-rviz=0.6.1=py38h4fa06b8_6
+  - ros-noetic-rqt-service-caller=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-shell=0.4.10=py38he9ab703_6
+  - ros-noetic-rqt-srv=0.4.8=py38he9ab703_6
+  - ros-noetic-rqt-tf-tree=0.6.2=py38he9ab703_6
+  - ros-noetic-rqt-top=0.4.9=py38he9ab703_6
+  - ros-noetic-rqt-topic=0.4.12=py38he9ab703_6
+  - ros-noetic-rqt-web=0.4.9=py38he9ab703_6
+  - ros-noetic-rviz=1.14.7=py38h7d895da_10
+  - ros-noetic-rviz-plugin-tutorials=0.11.0=py38h7d895da_6
+  - ros-noetic-rviz-python-tutorial=0.11.0=py38he9ab703_6
+  - ros-noetic-self-test=1.10.3=py38he9ab703_6
+  - ros-noetic-sensor-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-shape-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-simulators=1.5.0=py38he9ab703_6
+  - ros-noetic-smach=2.5.0=py38he9ab703_6
+  - ros-noetic-smach-msgs=2.5.0=py38he9ab703_6
+  - ros-noetic-smach-ros=2.5.0=py38he9ab703_6
+  - ros-noetic-smclib=1.8.6=py38he9ab703_6
+  - ros-noetic-std-msgs=0.5.13=py38he9ab703_6
+  - ros-noetic-std-srvs=1.11.3=py38he9ab703_6
+  - ros-noetic-stereo-image-proc=1.15.3=py38he9ab703_11
+  - ros-noetic-stereo-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-tf=1.13.2=py38h5038f88_6
+  - ros-noetic-tf-conversions=1.13.2=py38he9ab703_6
+  - ros-noetic-tf2=0.7.5=py38hcda8483_6
+  - ros-noetic-tf2-eigen=0.7.5=py38he9ab703_6
+  - ros-noetic-tf2-geometry-msgs=0.7.5=py38he9ab703_6
+  - ros-noetic-tf2-kdl=0.7.5=py38he9ab703_6
+  - ros-noetic-tf2-msgs=0.7.5=py38he9ab703_6
+  - ros-noetic-tf2-py=0.7.5=py38he9ab703_6
+  - ros-noetic-tf2-ros=0.7.5=py38he9ab703_6
+  - ros-noetic-theora-image-transport=1.14.0=py38he9ab703_11
+  - ros-noetic-topic-tools=1.15.9=py38he9ab703_6
+  - ros-noetic-trajectory-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-transmission-interface=0.19.4=py38he9ab703_6
+  - ros-noetic-turtle-actionlib=0.2.0=py38he9ab703_6
+  - ros-noetic-turtle-tf=0.2.3=py38he9ab703_6
+  - ros-noetic-turtle-tf2=0.2.3=py38he9ab703_6
+  - ros-noetic-turtlesim=0.10.2=py38h5258f4b_6
+  - ros-noetic-urdf=1.13.2=py38he9ab703_10
+  - ros-noetic-urdf-parser-plugin=1.13.2=py38he9ab703_6
+  - ros-noetic-urdf-sim-tutorial=0.5.1=py38he9ab703_6
+  - ros-noetic-urdf-tutorial=0.5.0=py38he9ab703_6
+  - ros-noetic-vision-opencv=1.15.0=py38he9ab703_11
+  - ros-noetic-visualization-marker-tutorials=0.11.0=py38he9ab703_6
+  - ros-noetic-visualization-msgs=1.13.1=py38he9ab703_6
+  - ros-noetic-visualization-tutorials=0.11.0=py38he9ab703_6
   - ros-noetic-viz=1.5.0=py38he9ab703_3
-  - ros-noetic-webkit-dependency=1.1.2=py38he9ab703_12
-  - ros-noetic-xacro=1.14.10=py38he9ab703_12
-  - ros-noetic-xmlrpcpp=1.15.13=py38h14b2acc_12
+  - ros-noetic-webkit-dependency=1.1.2=py38he9ab703_6
+  - ros-noetic-xacro=1.14.6=py38he9ab703_6
+  - ros-noetic-xmlrpcpp=1.15.9=py38h14b2acc_6
   - rosdep=0.21.0=pyhd8ed1ab_0
   - rosdistro=0.8.3=py38h578d9bd_3
   - rospkg=1.3.0=pyhd8ed1ab_1
-  - rtree=0.9.7=py38h02d302b_2
+  - rtree=0.9.7=py38h02d302b_3
+  - ruby=2.7.2=h86e321c_7
   - sbcl=1.5.4=0
-  - scipy=1.7.2=py38h56a6a73_0
+  - scipy=1.7.3=py38h56a6a73_0
   - sdl2=2.0.12=h9c3ff4c_1
   - seaborn=0.11.2=hd8ed1ab_0
   - seaborn-base=0.11.2=pyhd8ed1ab_0
   - secretstorage=3.3.1=py38h578d9bd_1
-  - setuptools=59.1.1=py38h578d9bd_0
+  - setuptools=59.4.0=py38h578d9bd_0
   - sip=4.19.25=py38h709712a_1
   - six=1.16.0=pyh6c4a22f_0
   - snowballstemmer=2.2.0=pyhd8ed1ab_0
   - sortedcontainers=2.4.0=pyhd8ed1ab_0
-  - soupsieve=2.3=pyhd8ed1ab_0
-  - sphinx=4.3.0=pyh6c4a22f_0
+  - soupsieve=2.3.1=pyhd8ed1ab_0
+  - sphinx=4.3.1=pyh6c4a22f_0
   - sphinxcontrib-applehelp=1.0.2=py_0
   - sphinxcontrib-devhelp=1.0.2=py_0
   - sphinxcontrib-htmlhelp=2.0.0=pyhd8ed1ab_0
   - sphinxcontrib-jsmath=1.0.1=py_0
   - sphinxcontrib-qthelp=1.0.3=py_0
   - sphinxcontrib-serializinghtml=1.1.5=pyhd8ed1ab_1
-  - spyder=5.1.5=py38h578d9bd_0
-  - spyder-kernels=2.1.3=py38h578d9bd_1
-  - sqlite=3.36.0=h9cd32fc_2
+  - spyder=5.2.0=py38h578d9bd_0
+  - spyder-kernels=2.2.0=py38h578d9bd_0
+  - sqlite=3.37.0=h9cd32fc_0
   - statsmodels=0.13.1=py38h6c62de6_0
   - suitesparse=5.10.1=hd8046ac_0
   - svt-av1=0.8.7=h9c3ff4c_1
@@ -577,18 +644,18 @@ dependencies:
   - text-unidecode=1.3=py_0
   - textdistance=4.2.2=pyhd8ed1ab_0
   - three-merge=0.1.1=pyh9f0ad1d_0
-  - tinycss2=1.1.0=pyhd8ed1ab_0
+  - tinycss2=1.1.1=pyhd8ed1ab_0
   - tinyxml=2.6.2=h4bd325d_2
-  - tinyxml2=9.0.0=h9c3ff4c_1
+  - tinyxml2=8.0.0=h9c3ff4c_1
   - tk=8.6.11=h27826a3_1
   - toml=0.10.2=pyhd8ed1ab_0
   - tomli=1.2.2=pyhd8ed1ab_0
   - tornado=6.1=py38h497a2fe_2
   - tqdm=4.62.3=pyhd8ed1ab_0
   - traitlets=5.1.1=pyhd8ed1ab_0
-  - typed-ast=1.5.0=py38h497a2fe_0
-  - typing-extensions=4.0.0=hd8ed1ab_0
-  - typing_extensions=4.0.0=pyha770c72_0
+  - typed-ast=1.5.1=py38h497a2fe_0
+  - typing-extensions=4.0.1=hd8ed1ab_0
+  - typing_extensions=4.0.1=pyha770c72_0
   - ujson=4.2.0=py38h709712a_1
   - unicodedata2=13.0.0.post2=py38h497a2fe_4
   - unidecode=1.3.2=pyhd8ed1ab_0
@@ -598,33 +665,49 @@ dependencies:
   - urllib3=1.26.7=pyhd8ed1ab_0
   - urwid=2.1.2=py38h497a2fe_4
   - utfcpp=3.2.1=ha770c72_0
-  - vtk=9.0.1=no_osmesa_py38h3850a3d_109
+  - vtk=9.1.0=no_osmesa_py38h7a5b95d_100
   - watchdog=2.1.6=py38h578d9bd_1
   - wcwidth=0.2.5=pyh9f0ad1d_2
   - webencodings=0.5.1=py_1
   - wheel=0.37.0=pyhd8ed1ab_1
-  - wrapt=1.12.1=py38h497a2fe_3
+  - wrapt=1.13.3=py38h497a2fe_1
   - wurlitzer=3.0.2=py38h578d9bd_1
   - x264=1!161.3030=h7f98852_1
   - x265=3.5=h4bd325d_1
+  - xorg-compositeproto=0.4.2=h7f98852_1001
+  - xorg-damageproto=1.2.1=h7f98852_1002
+  - xorg-fixesproto=5.0=h7f98852_1002
+  - xorg-inputproto=2.3.2=h7f98852_1002
   - xorg-kbproto=1.0.7=h7f98852_1002
   - xorg-libice=1.0.10=h7f98852_0
   - xorg-libsm=1.2.3=hd9c2040_1000
   - xorg-libx11=1.6.12=h36c2ea0_0
   - xorg-libxau=1.0.9=h7f98852_0
   - xorg-libxaw=1.0.14=h7f98852_0
+  - xorg-libxcomposite=0.4.5=h7f98852_0
+  - xorg-libxcursor=1.2.0=h516909a_0
+  - xorg-libxdamage=1.1.5=h7f98852_0
   - xorg-libxdmcp=1.1.3=h7f98852_0
   - xorg-libxext=1.3.4=h516909a_0
+  - xorg-libxfixes=5.0.3=h516909a_1004
+  - xorg-libxi=1.7.10=h516909a_0
+  - xorg-libxinerama=1.1.4=h9c3ff4c_1001
   - xorg-libxmu=1.1.3=h516909a_0
   - xorg-libxpm=3.5.13=h516909a_0
+  - xorg-libxrandr=1.5.2=h516909a_1
   - xorg-libxrender=0.9.10=h516909a_1002
   - xorg-libxt=1.1.5=h516909a_1003
+  - xorg-libxtst=1.2.3=h516909a_1002
+  - xorg-randrproto=1.5.0=h7f98852_1001
+  - xorg-recordproto=1.14.2=h7f98852_1002
   - xorg-renderproto=0.11.1=h7f98852_1002
+  - xorg-util-macros=1.19.3=h7f98852_0
   - xorg-xextproto=7.3.0=h7f98852_1002
+  - xorg-xineramaproto=1.2.1=h7f98852_1001
   - xorg-xproto=7.0.31=h7f98852_1007
-  - xsimd=8.0.3=h4bd325d_1
+  - xsimd=8.0.5=h4bd325d_0
   - xtensor=0.24.0=h4bd325d_0
-  - xtl=0.7.3=h4bd325d_0
+  - xtl=0.7.4=h4bd325d_0
   - xz=5.2.5=h516909a_1
   - yaml=0.2.5=h516909a_0
   - yaml-cpp=0.6.3=he1b5a44_4
