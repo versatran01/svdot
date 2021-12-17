@@ -366,7 +366,7 @@ function upal_clang {
         --slave   /usr/bin/llvm-symbolizer   llvm-symbolizer  /usr/bin/llvm-symbolizer-${version} \
         --slave   /usr/bin/llvm-tblgen       llvm-tblgen      /usr/bin/llvm-tblgen-${version} \
         --slave   /usr/bin/llvm-objcopy      llvm-objcopy     /usr/bin/llvm-objcopy-${version} \
-        --slave   /usr/bin/llvm-strip	       llvm-strip       /usr/bin/llvm-strip-${version}
+        --slave   /usr/bin/llvm-strip	     llvm-strip       /usr/bin/llvm-strip-${version}
 
     sudo update-alternatives \
         --verbose \
@@ -374,4 +374,5 @@ function upal_clang {
         --slave   /usr/bin/clang++            clang++          /usr/bin/clang++-${version} \
         --slave   /usr/bin/clang-format       clang-format     /usr/bin/clang-format-${version} \
         --slave   /usr/bin/clang-tidy         clang-tidy       /usr/bin/clang-tidy-${version}
+
 }
