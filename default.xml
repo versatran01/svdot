@@ -3,14 +3,10 @@
 
     <default revision="master" remote="github" sync-j="8"/>
 
-    <!-- nlls -->
+    <project name="abseil/abseil-cpp" path="abseil"/>
     <project name="borglab/gtsam" revision="develop" path="gtsam"/>
-
-    <!-- geometry -->
     <project name="anybotics/kindr" path="kindr"/>
     <project name="strasdat/sophus" path="sophus"/>
     <project name="artivis/manif" path="manif" revision="devel"/>
-
-    <!-- graphics  -->
     <project name="AcademySoftwareFoundation/openvdb" path="openvdb"/>
 </manifest>
