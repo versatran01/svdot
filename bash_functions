@@ -258,7 +258,7 @@ function rosmu_help() {
     return 0
 }
 
-export ROS_WS_TOP_DIR="/home/chao/Workspace/ws"
+export ROS_WS_TOP_DIR="$HOME/Workspace/ws"
 
 if [ -z $ROS_WS_TOP_DIR ]; then
     echo "cj(): Please set ROS_WS_TOP_DIR to the directory containing ROS/catkin workspaces for this script to work."
@@ -312,7 +312,7 @@ function catkin_run_coverage() {
 
 # source conda + env
 function scon() {
-    eval "$(/home/chao/miniconda3/bin/conda shell.bash hook)"
+    eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
     if [ $# -eq 1 ]; then
         echo "source env $1"
         conda activate $1
