@@ -13,7 +13,6 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$git_metrics\
 $docker_context\
 $python\
 $status\
@@ -92,7 +91,7 @@ disabled = false
 
 [python]
 symbol = "🐍"
-format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\)) ]($style)'
+format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
 python_binary = "python"
 
 [cmd_duration]
