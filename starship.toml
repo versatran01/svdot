@@ -83,10 +83,11 @@ style = "bold fg:208"
 ahead = "⇡${count}"
 diverged = "⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
+format = ' ([\[$all_status$ahead_behind\]]($style))'
 
 [git_metrics]
 added_style = "bold green"
-format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+format = ' [+$added]($added_style)/[-$deleted]($deleted_style)'
 disabled = false
 
 [python]
