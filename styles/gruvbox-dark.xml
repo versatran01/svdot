@@ -19,6 +19,7 @@
   <style name="Number" foreground="#d3869b"/>
   <style name="String" foreground="#b8bb26"/>
   <style name="Type" foreground="#fabd2f"/>
+  <style name="Namespace" foreground="#fabd2f"/>
   <style name="Local" foreground="#e9b96e"/>
   <style name="Parameter" foreground="#729fcf"/>
   <style name="Global" foreground="#ce5c00"/>
@@ -69,7 +70,8 @@
   <style name="WarningContext" underlineColor="#ffbe00" underlineStyle="DotLine"/>
   <style name="Error" underlineColor="#ff0000" underlineStyle="SingleUnderline"/>
   <style name="ErrorContext" underlineColor="#ff0000" underlineStyle="DotLine"/>
-  <style name="Declaration" bold="true"/>
+  <style name="Declaration" foreground="#e9b96e" bold="true"/>
   <style name="FunctionDefinition"/>
   <style name="OutputArgument" italic="true"/>
+  <style name="StaticMember"/>
 </style-scheme>
