@@ -4,12 +4,12 @@ channels:
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
-  - _openmp_mutex=4.5=1_gnu
+  - _openmp_mutex=4.5=1_llvm
   - brotlipy=0.7.0=py39h27cfd23_1003
   - bzip2=1.0.8=h7f98852_4
   - c-ares=1.18.1=h7f98852_0
-  - ca-certificates=2022.3.29=h06a4308_0
-  - certifi=2021.10.8=py39h06a4308_2
+  - ca-certificates=2022.3.29=h06a4308_1
+  - certifi=2021.10.8=py39hf3d152e_2
   - cffi=1.15.0=py39hd667e15_1
   - charset-normalizer=2.0.4=pyhd3eb1b0_0
   - colorama=0.4.4=pyhd3eb1b0_0
@@ -17,7 +17,7 @@ dependencies:
   - conda-content-trust=0.1.1=pyhd3eb1b0_0
   - conda-package-handling=1.8.1=py39h7f8727e_0
   - cryptography=36.0.0=py39h9ce1e76_0
-  - icu=68.2=h9c3ff4c_0
+  - icu=70.1=h27087fc_0
   - idna=3.3=pyhd3eb1b0_0
   - keyutils=1.6.1=h166bdaf_0
   - krb5=1.19.3=h3790be6_0
@@ -27,22 +27,22 @@ dependencies:
   - libedit=3.1.20210910=h7f8727e_0
   - libev=4.33=h516909a_1
   - libffi=3.3=he6710b0_2
-  - libgcc-ng=11.2.0=h1d223b6_14
-  - libgomp=11.2.0=h1d223b6_14
+  - libgcc-ng=11.2.0=h1d223b6_15
   - libiconv=1.16=h516909a_0
-  - libmamba=0.22.1=h9c208ef_0
-  - libmambapy=0.22.1=py39h3216e65_0
+  - libmamba=0.22.1=hd8a31e3_1
+  - libmambapy=0.22.1=py39hd55135b_1
   - libnghttp2=1.47.0=h727a467_0
-  - libsolv=0.7.20=h4ff587b_0
+  - libsolv=0.7.22=h6239696_0
   - libssh2=1.10.0=ha56f1ee_2
-  - libstdcxx-ng=11.2.0=he4da1e4_14
-  - libxml2=2.9.12=h72842e0_0
-  - libzlib=1.2.11=h36c2ea0_1013
+  - libstdcxx-ng=11.2.0=he4da1e4_15
+  - libxml2=2.9.13=h22db469_0
+  - libzlib=1.2.11=h166bdaf_1014
+  - llvm-openmp=13.0.1=he0ac6c6_1
   - lz4-c=1.9.3=h9c3ff4c_1
   - lzo=2.10=h516909a_1000
-  - mamba=0.22.1=py39hfa8f2c8_0
+  - mamba=0.22.1=py39hfa8f2c8_1
   - ncurses=6.3=h7f8727e_2
-  - openssl=1.1.1n=h7f8727e_0
+  - openssl=1.1.1n=h166bdaf_0
   - pip=21.2.4=py39h06a4308_0
   - pybind11-abi=4=hd8ed1ab_3
   - pycosat=0.6.3=py39h27cfd23_0
@@ -62,11 +62,11 @@ dependencies:
   - tk=8.6.11=h1ccaba5_0
   - tqdm=4.63.0=pyhd3eb1b0_0
   - tzdata=2022a=hda174b7_0
-  - urllib3=1.26.8=pyhd3eb1b0_0
+  - urllib3=1.26.9=py39h06a4308_0
   - wheel=0.37.1=pyhd3eb1b0_0
   - xz=5.2.5=h7b6447c_0
   - yaml=0.2.5=h7b6447c_0
   - yaml-cpp=0.6.3=he1b5a44_4
-  - zlib=1.2.11=h36c2ea0_1013
-  - zstd=1.5.0=ha4553b6_1
+  - zlib=1.2.11=h166bdaf_1014
+  - zstd=1.5.2=ha95c52a_0
 prefix: /home/chao/miniconda3
