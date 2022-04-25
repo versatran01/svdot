@@ -27,14 +27,14 @@ dependencies:
   - libedit=3.1.20210910=h7f8727e_0
   - libev=4.33=h516909a_1
   - libffi=3.3=he6710b0_2
-  - libgcc-ng=11.2.0=h1d223b6_15
+  - libgcc-ng=11.2.0=h1d223b6_16
   - libiconv=1.16=h516909a_0
   - libmamba=0.22.1=hd8a31e3_1
   - libmambapy=0.22.1=py39hd55135b_1
   - libnghttp2=1.47.0=h727a467_0
   - libsolv=0.7.22=h6239696_0
   - libssh2=1.10.0=ha56f1ee_2
-  - libstdcxx-ng=11.2.0=he4da1e4_15
+  - libstdcxx-ng=11.2.0=he4da1e4_16
   - libxml2=2.9.13=h22db469_0
   - libzlib=1.2.11=h166bdaf_1014
   - llvm-openmp=13.0.1=he0ac6c6_1
@@ -60,7 +60,7 @@ dependencies:
   - six=1.16.0=pyhd3eb1b0_1
   - sqlite=3.38.2=hc218d9a_0
   - tk=8.6.11=h1ccaba5_0
-  - tqdm=4.63.0=pyhd3eb1b0_0
+  - tqdm=4.64.0=py39h06a4308_0
   - tzdata=2022a=hda174b7_0
   - urllib3=1.26.9=py39h06a4308_0
   - wheel=0.37.1=pyhd3eb1b0_0
