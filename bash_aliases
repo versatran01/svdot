@@ -24,6 +24,7 @@ alias sug='sudo apt upgrade'
 alias smi='sudo make install'
 alias acl='sudo apt autoclean'
 alias arm='sudo apt autoremove'
+alias mup='mamba update --all -c conda-forge'
 
 # git
 alias grt='cd $(git rev-parse --show-toplevel)'
