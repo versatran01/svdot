@@ -312,7 +312,6 @@ function catkin_run_coverage() {
 
 # source conda + env
 function scon() {
-    eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
     if [ $# -eq 1 ]; then
         echo "source env $1"
         conda activate $1
