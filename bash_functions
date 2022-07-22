@@ -314,7 +314,7 @@ function catkin_run_coverage() {
 function scon() {
     if [ $# -eq 1 ]; then
         echo "source env $1"
-        conda activate $1
+        mamba activate $1
     fi
     return 0
 }
