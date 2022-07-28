@@ -66,5 +66,5 @@ eval "$(starship init bash)"
 
 export EDITOR=vim
 export GTEST_COLOR=1
-export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}]: ${message}'
+export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${node}] [L${line}]: ${message}'
 export CUDA_VISIBLE_DEVICES=0
