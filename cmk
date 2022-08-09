@@ -7,7 +7,7 @@ import subprocess
 @click.option('--std',
               default=17,
               type=int,
-              help="CMAKE_CXX_STANDARD, [11, 14, 17]")
+              help="CMAKE_CXX_STANDARD, [11, 14, 17, 20]")
 @click.option('--type',
               default="Release",
               type=str,
@@ -24,7 +24,8 @@ import subprocess
               default=True,
               type=bool,
               help="CMAKE_EXPORT_COMPILE_COMMANDS")
-def main(std, type, shared, cache, export):
+@click.argument('flags', nargs=-1)
+def main(std, type, shared, cache, export, flags):
     commands = ["cmake", ".."]
     commands.append(f"-DCMAKE_CXX_STANDARD={std}")
     commands.append(f"-DCMAKE_BUILD_TYPE={type}")
@@ -41,6 +42,10 @@ def main(std, type, shared, cache, export):
 
     if export:
         commands.append("-DCMAKE_EXPORT_COMPILE_COMMANDS=On")
+    
+    for flag in flags:
+        commands.append(f"-D{flag}")
+    
     print(" ".join(commands))
     subprocess.run(commands)
 
