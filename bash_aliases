@@ -15,6 +15,7 @@ alias dstat='dstat -cdlmnpsy'
 alias ft='fzf-tmux'
 alias df='pydf'
 alias fd='fdfind'
+alias nnn='nnn -e'
 
 # programs
 alias xc='xclip -se c'

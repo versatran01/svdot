@@ -68,3 +68,5 @@ export EDITOR=vim
 export GTEST_COLOR=1
 export ROSCONSOLE_FORMAT='[${severity}][${time}][${node}][L${line}]: ${message}'
 export CUDA_VISIBLE_DEVICES=0
+export NNN_PLUG='j:autojump;p:preview-tui;t:preview-tabbed;f:finder;o:fzopen;v:imgview;y:.cbcp'
+export NNN_FIFO="/tmp/nnn.fifo"
