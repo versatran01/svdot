@@ -1,0 +1,27 @@
+$include /etc/inputrc
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# Completion Options
+set page-completions on
+set show-all-if-unmodified on
+set visible-stats on
+
+# Filename completion/expansion
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# If there are more than x possible completions, aks
+set completion-query-items 200
+
+# Match all files
+set match-hidden-files on
+
+# Useful stuff for UTF-8
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+set colored-stats on
+set colored-completion-prefix on
